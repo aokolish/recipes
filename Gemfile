@@ -11,6 +11,8 @@ gem "nifty-generators", :group => :development
 
 gem 'nokogiri'
 
+gem 'jquery-rails'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

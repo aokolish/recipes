@@ -1,0 +1,10 @@
+<% title "Recipes" %>
+
+<div data-role="content">	
+	<ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b"> 
+		<% @recipes.each do |recipe| %>
+		<li><%= link_to recipe.title, recipe %></li>
+		<% end %>
+	</ul>
+</div>
+

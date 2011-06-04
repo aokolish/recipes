@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title><%= yield(:title) || "Untitled" %></title>
+    <%= stylesheet_link_tag "jquery.mobile-1.0a4.1.css" %>
+    <%= javascript_include_tag "http://code.jquery.com/jquery-1.4.3.min.js", "jquery.mobile-1.0a4.1.js", "mobile" %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div data-role="page" data-theme="a">
+			<div data-role="header">
+				<h1><%= yield(:title) %></h1>
+			</div>
+
+      <%= yield %>
+
+			<div data-role="footer" class="ui-bar">
+				<%= link_to "Full Site", root_url(:mobile => 0), :class => "ui-btn-right", :rel => "external", 'data-role' => 'button' %>
+			</div>			
+    </div>
+  </body>
+</html>
