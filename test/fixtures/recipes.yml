@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  author: MyString
+  source_url: MyString
+  total_time: 1
+  yield: MyString
+  ingredients: MyText
+  directions: MyText
+
+two:
+  author: MyString
+  source_url: MyString
+  total_time: 1
+  yield: MyString
+  ingredients: MyText
+  directions: MyText

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @recipe.author %>
+</p>
+
+<% unless @recipe.source_url.empty?  %>
+	<p>
+	  <b>Source url:</b>
+		<%= link_to @recipe.source_url, @recipe.source_url, :target => '_blank' %>
+	</p>
+<% end %>
+
+<p>
+  <b>Total time:</b>
+  <%= @recipe.total_time %> minutes
+</p>
+
+<p>
+  <b>Yield:</b>
+  <%= @recipe.yield %>
+</p>
+
+<p>
+  <b>Ingredients:</b>
+  <%=raw @recipe.ingredients %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @recipe.directions %>
+</p>
+
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

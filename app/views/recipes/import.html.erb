@@ -1,0 +1,11 @@
+<h1>Import A Recipe</h1>
+
+<%= form_for(@recipe, :url => { :action => "create_from_import" }) do |f| %>
+	<div class="field">
+    <%= f.label :source_url %><br />
+    <%= f.text_field :source_url, :autofocus => "autofocus" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
