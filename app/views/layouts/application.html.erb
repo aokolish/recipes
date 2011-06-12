@@ -10,11 +10,7 @@
   <body>
     <div id="container">
 			<p>
-			  <% if mobile_device? %>
-			    <%= link_to "Full Site", :mobile => 0 %>
-			  <% else %>
 			    <%= link_to "Mobile Site", :mobile => 1 %>
-			  <% end %>
 			</p>
 			
       <% flash.each do |name, msg| %>
@@ -22,6 +18,12 @@
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
+
+			<footer>
+				<%= link_to 'Home', "/" %>
+				<%= link_to 'New Recipe', new_recipe_path %>
+				<%= link_to 'Import a Recipe', import_recipes_path %>
+			</footer>
     </div>
   </body>
 </html>
