@@ -73,3 +73,11 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+footer {
+	margin-top: 50px;
+}
+
+footer a {
+	padding-right: 15px;
+}
