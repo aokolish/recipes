@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  # GET /recipes
+
   def index
     @recipes = Recipe.all
   end
@@ -9,7 +9,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-  # GET /recipes/new
   def new
     @recipe = Recipe.new
   end
@@ -19,7 +18,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  # GET /recipes/1/edit
   def edit
     @recipe = Recipe.find(params[:id])
   end
@@ -28,24 +26,25 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(params[:recipe])
 
-    respond_to do |format|
-      if @recipe.save
-        redirect_to(@recipe, :notice => 'Recipe was successfully created.')
-      else
-        render :action => "new"
-      end
+    if @recipe.save
+      redirect_to(@recipe, :notice => 'Recipe was successfully created.')
+    else
+      render :action => "new"
     end
   end
   
   def create_from_import
     url = params[:recipe][:source_url]
     @recipe = Recipe.from_import(url)
-    puts "recipe: #{@recipe}"
                           
     if @recipe.save
       redirect_to(@recipe, :notice => 'Recipe was successfully created.')
+    elsif @recipe.errors[:source_url] == ['has already been taken']
+      redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.")      
     else
-      render :action => "import", :notice => 'Could not create a recipe from that url'
+      # really? there could be other errors!!
+      # redirect_to(new_recipe_url, :notice => 'errors occured', :recipe => @recipe)
+      redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.")
     end
 
   end
@@ -54,12 +53,10 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
 
-    respond_to do |format|
-      if @recipe.update_attributes(params[:recipe])
-        redirect_to(@recipe, :notice => 'Recipe was successfully updated.')
-      else
-        render :action => "edit"
-      end
+    if @recipe.update_attributes(params[:recipe])
+      redirect_to(@recipe, :notice => 'Recipe was successfully updated.')
+    else
+      render :action => "edit"
     end
   end
 
