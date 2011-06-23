@@ -7,13 +7,17 @@ class Recipe < ActiveRecord::Base
   end
   
   #total_time can be stored as an integer??
-  # def total_time
-  #   ChronicDuration.output time_spent
-  # end
-  # 
-  # def total_time= text
-  #   self.total_time = ChronicDuration.parse text
-  #   # logger.debug "time_spent: '#{self.time_spent_text}' for text '#{text}'"
-  # end
+  def total_time
+    # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
+    ChronicDuration.output self[:total_time]
+  end
+  
+  def total_time=(text)
+    if text.class == String
+      self[:total_time] = ChronicDuration.parse text
+    else
+      self[:total_time] = text
+    end
+  end
   
 end
