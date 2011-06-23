@@ -20,6 +20,7 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    @recipe.change_pipes_to_newlines
   end
 
   # POST /recipes

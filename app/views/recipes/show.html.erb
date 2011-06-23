@@ -29,7 +29,9 @@
 
 <p>
   <b>Directions:</b>
-  <%= @recipe.directions %>
+	<% @recipe.directions_array.each do |direction| %>
+		<p><%= direction %></p>
+	<% end %>
 </p>
 
 
