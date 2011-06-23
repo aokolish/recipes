@@ -9,7 +9,13 @@ gem 'sqlite3'
 
 gem "nifty-generators", :group => :development
 
+gem 'awesome_print', :require => 'ap', :group => :development
+
+gem 'ruby-debug'
+
 gem 'nokogiri'
+
+gem 'chronic_duration'
 
 gem 'jquery-rails'
 

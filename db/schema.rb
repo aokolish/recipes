@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110510015404) do
+ActiveRecord::Schema.define(:version => 20110613113138) do
 
   create_table "recipes", :force => true do |t|
     t.string   "title"
     t.string   "author"
     t.string   "source_url"
-    t.integer  "total_time"
+    t.integer  "total_time",  :default => 1800
     t.string   "yield"
     t.text     "ingredients"
     t.text     "directions"
