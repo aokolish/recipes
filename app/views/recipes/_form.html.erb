@@ -3,7 +3,7 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :autofocus => 'autofocus' %>
   </div>
   <div class="field">
     <%= f.label :author %><br />
@@ -14,8 +14,8 @@
     <%= f.text_field :source_url %>
   </div>
   <div class="field">
-    <%= f.label :total_time %> (in minutes)<br />
-    <%= f.text_field :total_time %>
+    <%= f.label :total_time %><br />
+		<%= f.text_field :total_time, :value => @recipe.total_time %>
   </div>
   <div class="field">
     <%= f.label :yield %><br />
