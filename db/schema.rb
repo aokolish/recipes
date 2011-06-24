@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20110613113138) do
     t.string   "title"
     t.string   "author"
     t.string   "source_url"
-    t.integer  "total_time",  :default => 1800
+    t.integer  "total_time",  :limit => 255
     t.string   "yield"
     t.text     "ingredients"
     t.text     "directions"

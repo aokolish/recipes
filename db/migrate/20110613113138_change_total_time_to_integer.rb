@@ -8,11 +8,10 @@ class ChangeTotalTimeToInteger < ActiveRecord::Migration
     #   recipe.save
     # end
     
-    # default is 30 minutes (1800 seconds)
-    change_column :recipes, :total_time, :integer, :default => 1800
+    change_column :recipes, :total_time, :integer
   end
 
   def self.down
-    change_column :recipes, :total_time, :string
+    change_column :recipes, :total_time, :string, :default => nil
   end
 end
