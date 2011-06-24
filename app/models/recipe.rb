@@ -10,7 +10,9 @@ class Recipe < ActiveRecord::Base
   # storing total_time as an integer. customer getter/setter:
   def total_time
     # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
-    ChronicDuration.output self[:total_time]
+    unless self[:total_time].nil?
+      ChronicDuration.output self[:total_time]
+    end
   end
   
   def total_time=(text)
