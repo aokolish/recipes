@@ -5,6 +5,10 @@
 	<p>Total time: <%= @recipe.total_time %> minutes</p>
 	<p>Yield: <%= @recipe.yield %></p>
 	<p>Ingredients: <%=raw @recipe.ingredients %></p>
-	<p>Directions: <%= @recipe.directions %></p>
+	<p>Directions: 
+		<% @recipe.directions_array.each do |direction| %>
+			<p><%= direction %></p>
+		<% end %>
+	</p>
 </div>
 
