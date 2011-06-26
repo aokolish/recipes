@@ -35,17 +35,21 @@ class Recipe < ActiveRecord::Base
   private
   
   def cleanup_directions
-    # no harm in running this on directions that are already pipe-delimited
-    dirs = self.directions
+    if self.directions.nil?
+      return nil
+    else
+      # no harm in running this on directions that are already pipe-delimited
+      dirs = self.directions  
+    end
     
     # change new lines or breaks to pipes
     dirs.gsub!(/((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, '|')
     
-    # remove leading or trailing pipes
-    dirs.gsub!(/(\A\||\|\z)/, '')
-    
     # remove back to back pipes
     dirs.squeeze('|')
+    
+    # remove leading or trailing pipes
+    dirs.gsub!(/(\A\||\|\z)/, '')
     
     # strip whitespace
     final_dirs = dirs.strip
