@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 require 'uri'
-# require 'chronic_duration'
 
 class Scraper 
   
@@ -43,7 +42,8 @@ class Scraper
       directions += direction.text
     end
     
-    @recipe = Recipe.new( :title => title, :author => '', :source_url => url, :total_time => time, :yield => yields, :ingredients => ingredients, :directions => directions)  
+    @recipe = Recipe.new( :title => title, :author => '', :source_url => url, :total_time => time, 
+                          :yield => yields, :ingredients => ingredients, :directions => directions)  
   end
   
   def self.from_cooking_channel_tv(url)
@@ -64,9 +64,18 @@ class Scraper
     end
     directions = ''
     doc.css(".instructions").each do |direction|
-      directions += direction.text + '|'
+      direction = self.replace_breaks_with_pipes(direction)
+      ap direction
+      directions += direction.content + '|'
     end
     
-    @recipe = Recipe.new( :title => title, :author => author, :source_url => url, :total_time => time, :yield => yields, :ingredients => ingredients, :directions => directions)
+    @recipe = Recipe.new( :title => title, :author => author, :source_url => url, :total_time => time, 
+                          :yield => yields, :ingredients => ingredients, :directions => directions)
+  end
+  
+  def self.replace_breaks_with_pipes(node)
+    # searches a node for br tags and replaces with pipes
+    node.search('br').each{ |br| br.replace("|") }
+    node
   end
 end
