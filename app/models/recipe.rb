@@ -4,7 +4,7 @@ class Recipe < ActiveRecord::Base
   before_validation :cleanup_directions
       
   def self.from_import(url)
-    @recipe = Scraper.scrape(url)   # see models/scraper.rb for scraping code
+    @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end
   
   # storing total_time as an integer. customer getter/setter:

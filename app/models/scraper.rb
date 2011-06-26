@@ -4,18 +4,19 @@ require 'uri'
 
 class Scraper 
   
-  def self.scrape(url)
+  def scrape(url)
+    @url = url
     # protocol must be present in order for me to grab the host
-    unless url =~ /(http:\/\/|https:\/\/)/
-      url = 'http://' + url
+    unless @url =~ /(http:\/\/|https:\/\/)/
+      url = 'http://' + @url
     end
-    host = URI.parse(url).host
+    host = URI.parse(@url).host
     
     case host
       when "www.foodnetwork.com"
-        @recipe = self.from_food_network(url)
+        @recipe = from_food_network
       when "www.cookingchanneltv.com"
-        @recipe = self.from_cooking_channel_tv(url)
+        @recipe = from_cooking_channel_tv
       else
         @recipe = Recipe.new
         # throw an exception or something?
@@ -24,9 +25,11 @@ class Scraper
     end
     @recipe
   end
+
+  private
   
-  def self.from_food_network(url)
-    doc = Nokogiri::HTML(open(url))
+  def from_food_network
+    doc = Nokogiri::HTML(open(@url))
     
     author = ''
     title = doc.at_css(".fn").text 
@@ -42,12 +45,12 @@ class Scraper
       directions += direction.text
     end
     
-    @recipe = Recipe.new( :title => title, :author => '', :source_url => url, :total_time => time, 
+    @recipe = Recipe.new( :title => title, :author => '', :source_url => @url, :total_time => time, 
                           :yield => yields, :ingredients => ingredients, :directions => directions)  
   end
   
-  def self.from_cooking_channel_tv(url)
-    doc = Nokogiri::HTML(open(url))    
+  def from_cooking_channel_tv
+    doc = Nokogiri::HTML(open(@url))    
     
     if doc.at_css(".r-attribution .rByline > a")
       author = doc.at_css(".r-attribution .rByline > a").text
@@ -64,16 +67,16 @@ class Scraper
     end
     directions = ''
     doc.css(".instructions").each do |direction|
-      direction = self.replace_breaks_with_pipes(direction)
+      direction = replace_breaks_with_pipes(direction)
       ap direction
       directions += direction.content + '|'
     end
     
-    @recipe = Recipe.new( :title => title, :author => author, :source_url => url, :total_time => time, 
+    @recipe = Recipe.new( :title => title, :author => author, :source_url => @url, :total_time => time, 
                           :yield => yields, :ingredients => ingredients, :directions => directions)
   end
   
-  def self.replace_breaks_with_pipes(node)
+  def replace_breaks_with_pipes(node)
     # searches a node for br tags and replaces with pipes
     node.search('br').each{ |br| br.replace("|") }
     node
