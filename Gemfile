@@ -28,4 +28,5 @@ group :development, :test do
   gem 'ruby-debug'
   gem 'awesome_print', :require => 'ap'
   gem "nifty-generators"
+  gem 'turn'  # makes test output much prettier in the console
 end
