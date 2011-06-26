@@ -68,7 +68,6 @@ class Scraper
     directions = ''
     doc.css(".instructions").each do |direction|
       direction = replace_breaks_with_pipes(direction)
-      ap direction
       directions += direction.content + '|'
     end
     
