@@ -2,15 +2,17 @@
 
 one:
   author: MyString
-  source_url: MyString
+  source_url: bar.com
+  title: TheTitle
   total_time: 1
   yield: MyString
   ingredients: MyText
-  directions: MyText
+  directions: Step1|Step2|Step3
 
 two:
   author: MyString
-  source_url: MyString
+  source_url: foo.com
+  title: TheTitle
   total_time: 1
   yield: MyString
   ingredients: MyText

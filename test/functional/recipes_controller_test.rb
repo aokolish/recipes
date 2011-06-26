@@ -18,6 +18,7 @@ class RecipesControllerTest < ActionController::TestCase
 
   test "should create recipe" do
     assert_difference('Recipe.count') do
+      @recipe.source_url = 'different'  # have to make this unique
       post :create, :recipe => @recipe.attributes
     end
 
