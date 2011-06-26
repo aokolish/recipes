@@ -44,6 +44,9 @@ class Recipe < ActiveRecord::Base
     # remove leading or trailing pipes
     dirs.gsub!(/(\A\||\|\z)/, '')
     
+    # remove back to back pipes
+    dirs.squeeze('|')
+    
     # strip whitespace
     final_dirs = dirs.strip
     self.directions = final_dirs
