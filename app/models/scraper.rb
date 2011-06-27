@@ -31,21 +31,24 @@ class Scraper
   def from_food_network
     doc = Nokogiri::HTML(open(@url))
     
-    author = ''
+    author = doc.css('p.author a').inner_text
     title = doc.at_css(".fn").text 
     yields = doc.at_css(".yield").text
-    time = doc.at_css(".rcp-info :nth-child(1) p").text
+    if doc.at_css(".rcp-info :nth-child(1) p")
+      time = doc.at_css(".rcp-info :nth-child(1) p").text
+    else
+      time = doc.at_css("dd.duration").text
+    end
     ingredients = ''
     doc.css("li.ingredient").each do |ingredient|
       ingredients += ingredient.text
     end
     directions = ''
-    # had to use xpath in order to get this to return a collection of p tags (couldn't get it to work with css)
-    doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "instructions", " " ))]//p').each do |direction|
-      directions += direction.text
+    doc.css('div.instructions > p').each do |direction|
+      directions += direction.text + '|'
     end
     
-    @recipe = Recipe.new( :title => title, :author => '', :source_url => @url, :total_time => time, 
+    @recipe = Recipe.new( :title => title, :author => author, :source_url => @url, :total_time => time, 
                           :yield => yields, :ingredients => ingredients, :directions => directions)  
   end
   
