@@ -1,0 +1,19 @@
+<% title "Import A Recipe" %>
+
+<div class="ui-body ui-body-a">
+	<p>Find a recipe on any of the following sites, paste the url in to this form, and save the recipe on our site automatically. Let
+		us know if you experience any problems</p>
+
+	<h2>Supported Sites</h2>
+	<ul class="supported_domains">
+		<li>www.foodnetwork.com</li>
+		<li>www.cookingchanneltv.com</li>
+	</ul>
+	
+	<%= form_for(@recipe, :url => { :action => "create_from_import" }) do |f| %>
+	    <%= f.label :source_url, "Recipe Url:" %><br />
+	    <%= f.text_field :source_url, :type => 'url', :required => 'required' %>
+	    <%= f.submit "Submit", 'data-theme' => 'a' %>
+	<% end %>
+	
+</div>
