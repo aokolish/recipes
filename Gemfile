@@ -10,6 +10,8 @@ gem 'chronic_duration'
 
 gem 'jquery-rails'
 
+gem 'ruby-units'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
