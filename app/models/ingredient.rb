@@ -31,7 +31,11 @@ class Ingredient < ActiveRecord::Base
     comma_index = str.index ',' #index of first comma
     unless comma_index.nil?
       self.name = str[0, comma_index]
+      prep = str[comma_index+1,str.length]
+      prep.strip!
+      self.preparation = prep
     else
+      # assuming there is no preparation
       self.name = str
     end
   end
