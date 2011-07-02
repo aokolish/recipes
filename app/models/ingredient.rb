@@ -17,13 +17,12 @@ class Ingredient < ActiveRecord::Base
       self.quantity = qty
       
       begin
-        first_word = str.match(/\w+\s/)[0].strip  # I am NOT super confident about this regex
-        u = Unit.new("#{qty} #{first_word}")  #if the first word is not a unit, exception will be thrown
-        self.unit_of_measure = first_word # e.g. 'cups', '
+        first_word = str.match(/\w+\b/)[0].strip
+        u = Unit.new("#{qty} #{first_word}")  #if the first word is not a unit, exception will be thrown here
+        self.unit_of_measure = first_word
         str.gsub!(/#{first_word}/, '')
         str.strip!
       rescue ArgumentError
-        puts 'first word is not a unit of measurement'
         # should I be more specific? meaning, is length an acceptable method of measurement?
       end
     end
@@ -41,7 +40,7 @@ class Ingredient < ActiveRecord::Base
   end
   
   def to_s
-    # output like "2 shallots, minced"
+    # put everything together like "2 shallots, minced"
     if self.quantity.nil?
       s = ''
     else 
@@ -50,6 +49,7 @@ class Ingredient < ActiveRecord::Base
     s += " #{self.unit_of_measure}" unless self.unit_of_measure.nil?
     s += " #{self.name}" unless self.name.nil?
     s += ", #{self.preparation}" unless self.preparation.nil?
+    s.strip!
     s
   end
 end
