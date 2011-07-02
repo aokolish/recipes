@@ -59,6 +59,14 @@ class IngredientsTest < ActiveSupport::TestCase
     ing = Ingredient.new
     ing.parse "8 ounces beer"
     assert_not_nil ing.unit_of_measure
+    
+    ing = Ingredient.new
+    ing.parse "1 C water"
+    assert_not_nil ing.unit_of_measure
+    
+    ing = Ingredient.new
+    ing.parse "1/2 tsp cumin"
+    assert_not_nil ing.unit_of_measure
   end
   
   test "everything after the first comma is stored as 'preparation'" do
@@ -69,5 +77,12 @@ class IngredientsTest < ActiveSupport::TestCase
     ing = Ingredient.new
     ing.parse "2 small green chiles, seeds removed, flesh chopped"
     assert_equal "seeds removed, flesh chopped", ing.preparation
+  end
+  
+  test "requires a name" do
+    ing = Ingredient.new
+    assert_equal nil, ing.name
+    assert_equal false, ing.valid?
+    assert ing.errors[:name].any?
   end
 end
