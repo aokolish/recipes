@@ -22,7 +22,11 @@
 
 <p>
   <b>Ingredients:</b>
-  <%=raw @recipe.ingredients %>
+	<ul>
+		<% @recipe.ingredients.each do |ingredient| %>
+			<li><%= ingredient %></li>
+		<% end %>
+	</ul>
 </p>
 
 <p>
