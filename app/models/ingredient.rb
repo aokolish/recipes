@@ -1,9 +1,22 @@
 class Ingredient < ActiveRecord::Base
+  belongs_to :recipe
   attr_accessible :quantity, :unit_of_measure, :name, :preparation
   validates :name, :presence => true
   # regex should match fractions "1 1/4", decimals "1.5", integers "12"
   validates_format_of :quantity, :with => /(((\d+)\s?)?(\d+)\/(\d+))|((\d+)\.(\d{1,3}))|(\d+)/,
-                      :message => "should be an integer, fraction, or decimal number"
+                      :message => "should be an integer, fraction, or decimal number",
+                      :allow_nil => true
+                      
+  def self.parse_and_associate(ingredients, recipe)
+    ingredients.strip!
+    ar = ingredients.split(/\r\n/)
+    ar.reject!(&:blank?)
+    ar.each do |string|
+      ingredient = recipe.ingredients.build
+      ingredient.parse(string)
+      ingredient.save
+    end
+  end
 
   def parse(str)
     # parse a string such as '4 small corn tortillas, warmed' and 

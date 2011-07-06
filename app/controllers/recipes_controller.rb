@@ -28,6 +28,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(params[:recipe])
 
     if @recipe.save
+      Ingredient.parse_and_associate(params[:raw_ingredients], @recipe)
       redirect_to(@recipe, :notice => 'Recipe was successfully created.')
     else
       render :action => "new"
