@@ -12,16 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110702202340) do
 
-  create_table "ingredients", :force => true do |t|
-    t.string   "quantity"
-    t.string   "unit_of_measure"
-    t.string   "name"
-    t.string   "preparation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "recipe_id"
-  end
-
   create_table "recipes", :force => true do |t|
     t.string   "title"
     t.string   "author"

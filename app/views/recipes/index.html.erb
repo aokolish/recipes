@@ -15,7 +15,7 @@
   <tr>
 		<td><%= recipe.title %></td>
     <td><%= recipe.author %></td>
-    <td><%= truncate(recipe.ingredients_str, :length => 60) %></td>
+    <td><%= truncate(recipe.ingredients, :length => 60) %></td>
     <td><%= truncate(recipe.directions, :length => 60) %></td>
     <td><%= link_to 'Show', recipe %></td>
     <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
