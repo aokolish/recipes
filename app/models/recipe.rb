@@ -2,7 +2,7 @@ class Recipe < ActiveRecord::Base
   validates :title, :author, :directions, :presence => true
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
   # validates_associated :ingredients
-  before_validation :cleanup_directions
+  before_validation :cleanup_directions_and_ingredients
       
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
@@ -24,12 +24,6 @@ class Recipe < ActiveRecord::Base
     end
   end
   
-  # def ingredients
-  #   unless self.ingredients =~ /\|/.nil?
-  #     self.ingredients.gsub!(/\|/, "\n\n")
-  #   end
-  # end
-  
   def directions_array
     self.directions.split('|') 
   end
@@ -40,31 +34,35 @@ class Recipe < ActiveRecord::Base
   
   def change_pipes_to_newlines
     # want to do this in some cases. for example, user is about to edit directions
-    self.directions.gsub!(/\|/, "\n\n") unless self.directions =~ /\|/.nil?
+    [:directions,:ingredients].each do |attr|
+      self[attr].gsub!(/\|/, "\n\n") unless self[attr] =~ /\|/.nil?
+    end  
   end
   
   private
   
-  def cleanup_directions
-    if self.directions.nil?
-      return nil
-    else
-      # no harm in running this on directions that are already pipe-delimited
-      dirs = self.directions  
+  def cleanup_directions_and_ingredients
+    [:directions,:ingredients].each do |attr|
+      if self[attr].nil?
+        return nil
+      else
+        # no harm in running this on attributes that are already pipe-delimited
+        attr = self[attr]  
+      end
+    
+      # change new lines or breaks to pipes
+      attr.gsub!(/((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, '|')
+    
+      # remove back to back pipes
+      attr.squeeze('|')
+    
+      # remove leading or trailing pipes
+      attr.gsub!(/(\A\||\|\z)/, '')
+    
+      # strip whitespace
+      final = attr.strip
+      self[attr] = final
     end
-    
-    # change new lines or breaks to pipes
-    dirs.gsub!(/((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, '|')
-    
-    # remove back to back pipes
-    dirs.squeeze('|')
-    
-    # remove leading or trailing pipes
-    dirs.gsub!(/(\A\||\|\z)/, '')
-    
-    # strip whitespace
-    final_dirs = dirs.strip
-    self.directions = final_dirs
   end
   
 end
