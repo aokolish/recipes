@@ -1,6 +1,8 @@
 class Recipe < ActiveRecord::Base
-  validates :title, :author, :ingredients, :directions, :presence => true
+  has_many :ingredients, :dependent => :destroy
+  validates :title, :author, :directions, :presence => true
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
+  # validates_associated :ingredients
   before_validation :cleanup_directions
       
   def self.from_import(url)
@@ -25,6 +27,10 @@ class Recipe < ActiveRecord::Base
   
   def directions_array
     self.directions.split('|') 
+  end
+  
+  def ingredients_str(sep=" ")
+    self.ingredients.join(sep)
   end
   
   def change_pipes_to_newlines

@@ -24,9 +24,8 @@
   <div class="field">
 		<%# I can call this whatever I want %>
 		<%= label_tag(:raw_ingredients, "Ingredients") %><br />
-	  <%= text_area_tag(:raw_ingredients, nil, :cols => 40, :rows => 20) %>
+	  <%= text_area_tag(:raw_ingredients, @recipe.ingredients_str("\n"), :cols => 40, :rows => 20) %>
   </div>
-	
   <div class="field">
     <%= f.label :directions %><br />
     <%= f.text_area :directions %>

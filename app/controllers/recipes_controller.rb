@@ -56,6 +56,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     if @recipe.update_attributes(params[:recipe])
+      Ingredient.parse_and_associate(params[:raw_ingredients], @recipe)
       redirect_to(@recipe, :notice => 'Recipe was successfully updated.')
     else
       render :action => "edit"
