@@ -23,7 +23,7 @@
 <p>
   <b>Ingredients:</b>
 	<ul>
-		<% @recipe.ingredients.each do |ingredient| %>
+		<% @recipe.ingredients_array.each do |ingredient| %>
 			<li><%= ingredient %></li>
 		<% end %>
 	</ul>

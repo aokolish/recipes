@@ -1,5 +1,4 @@
 class Recipe < ActiveRecord::Base
-  has_many :ingredients, :dependent => :destroy
   validates :title, :author, :directions, :presence => true
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
   # validates_associated :ingredients
@@ -25,12 +24,18 @@ class Recipe < ActiveRecord::Base
     end
   end
   
+  # def ingredients
+  #   unless self.ingredients =~ /\|/.nil?
+  #     self.ingredients.gsub!(/\|/, "\n\n")
+  #   end
+  # end
+  
   def directions_array
     self.directions.split('|') 
   end
   
-  def ingredients_str(sep=" ")
-    self.ingredients.join(sep)
+  def ingredients_array
+    self.ingredients.split('|') 
   end
   
   def change_pipes_to_newlines
