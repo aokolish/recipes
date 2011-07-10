@@ -2,6 +2,9 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @recipes.each do |recipe|
+      recipe.replace_pipes(' ')
+    end
   end
 
   # GET /recipes/1
@@ -20,7 +23,7 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    @recipe.change_pipes_to_newlines
+    @recipe.replace_pipes
   end
 
   # POST /recipes
