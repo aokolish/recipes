@@ -6,7 +6,7 @@ one:
   title: TheTitle
   total_time: 1
   yield: MyString
-  ingredients: MyText
+  ingredients: 1 egg|2 cups milk|cheddar cheese
   directions: Step1|Step2|Step3
 
 two:
