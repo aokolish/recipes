@@ -44,9 +44,20 @@ class RecipeTest < ActiveSupport::TestCase
     assert_equal Array, @recipe.directions_array.class
   end
   
-  test "pipes in directions can be changed to newlines" do
-    @recipe.change_pipes_to_newlines
+  test "pipes in directions/ingredients can be replaced with newlines" do
+    @recipe.replace_pipes
     assert @recipe.directions =~ /\n\n/
+    assert @recipe.ingredients =~/\n\n/
+    assert_no_match(/\|/, @recipe.directions)
+    assert_no_match(/\|/, @recipe.ingredients)
+  end
+  
+  test "pipes in directions/ingredients can be replaced with another separator" do
+    @recipe.replace_pipes('*')
+    assert @recipe.directions =~ /\*/
+    assert @recipe.ingredients =~/\*/
+    assert_no_match(/\|/, @recipe.directions)
+    assert_no_match(/\|/, @recipe.ingredients)
   end
   
   test "before validation, breaks and newlines will be replaced by pipes" do
