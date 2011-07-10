@@ -10,6 +10,12 @@ class RecipesControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:recipes)
   end
+  
+  test "should get index for mobile" do
+    get :index, {'mobile' => '1'}
+    assert_response :success
+    assert_not_nil assigns(:recipes)
+  end
 
   test "should get new" do
     get :new
@@ -29,9 +35,24 @@ class RecipesControllerTest < ActionController::TestCase
     get :show, :id => @recipe.to_param
     assert_response :success
   end
+  
+  test "should show recipe for mobile" do
+    get :show, {'mobile' => '1', 'id' => @recipe.to_param}
+    assert_response :success
+  end
 
   test "should get edit" do
     get :edit, :id => @recipe.to_param
+    assert_response :success
+  end
+  
+  test "should get import" do
+    get :import
+    assert_response :success
+  end
+  
+  test "should get import for mobile" do
+    get :import, {'mobile' => '1'}
     assert_response :success
   end
 
