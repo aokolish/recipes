@@ -1,27 +1,29 @@
+<h1><%= @recipe.title %></h1>
+
 <p>
-  <b>Author:</b>
+  <h2>Author:</h2>
   <%= @recipe.author %>
 </p>
 
 <% unless @recipe.source_url.empty?  %>
 	<p>
-	  <b>Source url:</b>
+	  <h2>Source url:</h2>
 		<%= link_to @recipe.source_url, @recipe.source_url, :target => '_blank' %>
 	</p>
 <% end %>
 
 <p>
-  <b>Total time:</b>
+  <h2>Total time:</h2>
   <%= @recipe.total_time %>
 </p>
 
 <p>
-  <b>Yield:</b>
+  <h2>Yield:</h2>
   <%= @recipe.yield %>
 </p>
 
 <p>
-  <b>Ingredients:</b>
+  <h2>Ingredients:</h2>
 	<ul>
 		<% @recipe.ingredients_array.each do |ingredient| %>
 			<li><%= ingredient %></li>
@@ -30,7 +32,7 @@
 </p>
 
 <p>
-  <b>Directions:</b>
+  <h2>Directions:</h2>
 	<% @recipe.directions_array.each do |direction| %>
 		<p><%= direction %></p>
 	<% end %>
