@@ -1,7 +1,6 @@
 class Recipe < ActiveRecord::Base
-  validates :title, :author, :directions, :presence => true
+  validates :title, :author, :directions, :ingredients, :presence => true
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
-  # validates_associated :ingredients
   before_validation :cleanup_directions_and_ingredients
       
   def self.from_import(url)
@@ -32,10 +31,10 @@ class Recipe < ActiveRecord::Base
     self.ingredients.split('|') 
   end
   
-  def change_pipes_to_newlines
+  def replace_pipes(sep = "\n\n")
     # want to do this in some cases. for example, user is about to edit directions
     [:directions,:ingredients].each do |attr|
-      self[attr].gsub!(/\|/, "\n\n") unless self[attr] =~ /\|/.nil?
+      self[attr].gsub!(/\|/, sep) unless self[attr] =~ /\|/.nil?
     end  
   end
   
