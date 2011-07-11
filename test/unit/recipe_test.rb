@@ -62,14 +62,19 @@ class RecipeTest < ActiveSupport::TestCase
   
   test "before validation, breaks and newlines will be replaced by pipes" do
     @recipe.directions = "step1\n\nstep2<br><br />step3<br>\n  "
-    @recipe.save
+    @recipe.valid?
     # no more breaks/newlines
-    assert_no_match /((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, @recipe.directions
+    assert_no_match(/((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, @recipe.directions)
     # for some reason, I have to save again to remove the last pipe
     @recipe.save
     # no pipes at beginning or end
     assert_no_match /(\A\||\|\z)/, @recipe.directions
     # there should be some pipes in there
     assert_not_nil @recipe.directions =~ /(\|)/
+    
+    @recipe.directions = "step1|step2| |step3"
+    @recipe.valid?
+    # ensure there are no blank pipe delimited sections e.g. "...| |..." or back to back pipes
+    assert_no_match(/\|\s*\|/, @recipe.directions)
   end
 end
