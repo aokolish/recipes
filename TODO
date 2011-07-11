@@ -1,4 +1,8 @@
 6/27/11 Replace Fixtures with factories (using factory girl or machinist?)
-6/27/11 Modify scraping code to create ingredients
-6/30/11 Throw an error when recipe.total_time cannot be saved as a time (e.g. user puts in 'asdf')
 6/30/11 Order recipes on index page by something (updated/created at perhaps? what are they ordered by now?)
+
+# how to delete latest <n> recipes
+# latest = Recipe.last(10)
+# latest.each do |r|
+# 	r.destroy
+# end
