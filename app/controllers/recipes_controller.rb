@@ -23,7 +23,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    @recipe.replace_pipes
+    @recipe.replace_pipes "\n\n", [:directions]
+    @recipe.replace_pipes "\n", [:ingredients]
   end
 
   # POST /recipes
