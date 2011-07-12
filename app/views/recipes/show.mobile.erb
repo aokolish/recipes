@@ -1,14 +1,22 @@
 <% title @recipe.title %>
-
-<div data-role="content">	
-	<p><%= @recipe.author %></p>
-	<p>Total time: <%= @recipe.total_time %></p>
-	<p>Yield: <%= @recipe.yield %></p>
-	<p>Ingredients: <%=raw @recipe.ingredients %></p>
-	<p>Directions: 
-		<% @recipe.directions_array.each do |direction| %>
-			<p><%= direction %></p>
+	
+	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+		<li data-role="list-divider"><%= @recipe.title %></li>
+		<li>Author: <%= @recipe.author %></li>
+		<li>Total time: <%= @recipe.total_time %></li>
+		<li>Ingredients: <%= @recipe.yield %></li>
+	</ul>
+		
+	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+		<li data-role="list-divider">Ingredients</li>
+		<% @recipe.ingredients_array.each do |ingredient| %>
+			<li><%= ingredient %></li>
 		<% end %>
-	</p>
-</div>
-
+	</ul>
+	
+	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+		<li data-role="list-divider">Directions</li>
+		<% @recipe.directions_array.each do |direction| %>
+			<li><%= direction %></li>
+		<% end %>
+	</ul>
