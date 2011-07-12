@@ -41,7 +41,7 @@ class Scraper
     end
     ingredients = ''
     doc.css("li.ingredient").each do |ingredient|
-      ingredients += ingredient.text
+      ingredients += "#{ingredient.text}|"
     end
     directions = ''
     doc.css('div.instructions > p').each do |direction|
