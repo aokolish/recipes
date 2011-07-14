@@ -42,16 +42,20 @@ class RecipesController < ApplicationController
     url = params[:recipe][:source_url]
     @recipe = Recipe.from_import(url)
                           
-    if @recipe.save
-      redirect_to(@recipe, :notice => 'Recipe was successfully created.')
-    elsif @recipe.errors[:source_url] == ['has already been taken']
-      redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.")      
-    else
-      # really? there could be other errors!!
-      # redirect_to(new_recipe_url, :notice => 'errors occured', :recipe => @recipe)
-      redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.")
+    respond_to do |format|                          
+      if @recipe.save
+        format.html { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
+        format.mobile { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
+      elsif @recipe.errors[:source_url] == ['has already been taken']
+        format.html { redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.") }      
+        format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.") }
+      else
+        format.html { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
+        # format.mobile { render :js => "$('ul').css('display', 'none');", :content_type => 'text/javascript'  }
+        format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
+        
+      end
     end
-
   end
 
   # PUT /recipes/1
