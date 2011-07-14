@@ -4,7 +4,7 @@
     <title><%= yield(:title) || "Untitled" %></title>
     <%= stylesheet_link_tag "jquery.mobile-1.0a4.1.css" %>
 		<%= stylesheet_link_tag "mobile" %>
-    <%= javascript_include_tag "http://code.jquery.com/jquery-1.4.3.min.js", "jquery.mobile-1.0a4.1.js", "mobile" %>
+    <%= javascript_include_tag "jquery", "jquery_ujs", "mobile", "jquery.mobile-1.0a4.1.js" %>
     <%= yield(:head) %>
   </head>
   <body>
@@ -14,6 +14,9 @@
 			</div>
 			
 			<div data-role="content">
+				<% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <% end %>
 	      <%= yield %>
 
 				<ul data-role="listview" data-inset="true" id="footer" data-theme='b'>
