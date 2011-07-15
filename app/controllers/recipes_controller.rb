@@ -51,9 +51,7 @@ class RecipesController < ApplicationController
         format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.") }
       else
         format.html { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
-        # format.mobile { render :js => "$('ul').css('display', 'none');", :content_type => 'text/javascript'  }
         format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
-        
       end
     end
   end
