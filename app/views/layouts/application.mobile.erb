@@ -14,9 +14,13 @@
 			</div>
 			
 			<div data-role="content">
-				<% flash.each do |name, msg| %>
-	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	      <% end %>
+				<% if flash[:notice] %>
+					<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+					<% flash.each do |name, msg| %>
+		        <%= content_tag :li, msg, :id => "flash_#{name}", 'data-role' => 'list-divider' %>
+		      <% end %>
+					</ul>
+				<% end %>
 	      <%= yield %>
 
 				<ul data-role="listview" data-inset="true" id="footer" data-theme='b'>
