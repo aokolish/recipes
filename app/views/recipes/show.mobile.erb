@@ -12,14 +12,14 @@
 			</ul>
 		</div>
 		
-	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e" class="ingredients">
 		<li data-role="list-divider">Ingredients</li>
 		<% @recipe.ingredients_array.each do |ingredient| %>
 			<li><%= ingredient %></li>
 		<% end %>
 	</ul>
 	
-	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e">
+	<ul data-role="listview" data-theme="d" data-inset="true" data-divider-theme="e" class="directions">
 		<li data-role="list-divider">Directions</li>
 		<% @recipe.directions_array.each do |direction| %>
 			<li><%= direction %></li>
