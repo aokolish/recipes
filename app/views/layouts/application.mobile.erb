@@ -2,9 +2,13 @@
 <html>
  <head>
     <title><%= yield(:title) || "Untitled" %></title>
+		<!-- looks good when you change to landscape -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<!-- does not look good when you change to landscape. supposedly, an iOS bug
+				<meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <%= stylesheet_link_tag "jquery.mobile-1.0a4.1.css" %>
 		<%= stylesheet_link_tag "mobile" %>
-    <%= javascript_include_tag "jquery", "jquery_ujs", "mobile", "jquery.mobile-1.0a4.1.js" %>
+    <%= javascript_include_tag "jquery", "jquery_ujs", "double_tap", "mobile", "jquery.mobile-1.0b1.min" %>
     <%= yield(:head) %>
   </head>
   <body>
