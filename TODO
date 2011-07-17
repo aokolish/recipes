@@ -6,9 +6,3 @@
 				that you could swipe a row (for example, a direction), press delete and it fires an update request.
 				I'm finding that the scraping code sometimes adds stuff that I do not want to see.
 7/16/11 Figure out how to reload the recipes after an import!!!
-
-# how to delete latest <n> recipes
-# latest = Recipe.last(10)
-# latest.each do |r|
-# 	r.destroy
-# end
