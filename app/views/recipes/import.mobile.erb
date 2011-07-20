@@ -10,12 +10,4 @@
 	<li>www.cookingchanneltv.com</li>
 </ul>
 
-<%= form_tag create_from_import_recipes_path, :method => :post do %>
-	<div class="field">
-		<%= label_tag :source_url %><br />
-		<%= text_field_tag :source_url, params[:source_url], :autofocus => "autofocus", :required => 'required' %>
-	</div>
-	<div class="actions">
-		<%= submit_tag "Submit" %>
-	</div>
-<% end %>
+<%= render 'import_form.html.erb' %>
