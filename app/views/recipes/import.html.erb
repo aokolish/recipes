@@ -9,13 +9,13 @@
 	<li>www.cookingchanneltv.com</li>
 </ul>
 
-<%= form_for(@recipe, :url => { :action => "create_from_import" }) do |f| %>
+<%= form_tag create_from_import_recipes_path, :method => :post do %>
 	<div class="field">
-    <%= f.label :source_url %><br />
-    <%= f.text_field :source_url, :autofocus => "autofocus", :required => 'required' %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Submit" %>
-  </div>
+		<%= label_tag :source_url %><br />
+		<%= text_field_tag :source_url, params[:source_url], :autofocus => "autofocus", :required => 'required' %>
+	</div>
+	<div class="actions">
+		<%= submit_tag "Submit" %>
+	</div>
 <% end %>
 

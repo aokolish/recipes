@@ -10,8 +10,12 @@
 	<li>www.cookingchanneltv.com</li>
 </ul>
 
-<%= form_for(@recipe, :url => { :action => "create_from_import" }, :id => 'import_recipe', :html => {'data-transition' => 'slideup'}) do |f| %>
-    <%= f.label :source_url, "Recipe Url:" %><br />
-    <%= f.text_field :source_url, :type => 'url', :required => 'required' %>
-    <%= f.submit "Submit", 'data-theme' => 'a' %>
+<%= form_tag create_from_import_recipes_path, :method => :post do %>
+	<div class="field">
+		<%= label_tag :source_url %><br />
+		<%= text_field_tag :source_url, params[:source_url], :autofocus => "autofocus", :required => 'required' %>
+	</div>
+	<div class="actions">
+		<%= submit_tag "Submit" %>
+	</div>
 <% end %>

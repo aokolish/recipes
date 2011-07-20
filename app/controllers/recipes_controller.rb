@@ -39,7 +39,7 @@ class RecipesController < ApplicationController
   end
   
   def create_from_import
-    url = params[:recipe][:source_url]
+    url = params[:source_url]
     @recipe = Recipe.from_import(url)
                           
     respond_to do |format|                          
