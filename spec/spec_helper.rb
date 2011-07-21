@@ -22,4 +22,8 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  
+  # cache external pages for use in various tests
+  response = `curl -is http://www.foodnetwork.com/recipes/strawberries-and-cream-tart-recipe/index.html`
+  FakeWeb.register_uri(:get, "http://www.foodnetwork.com/example", :response => response)
 end
