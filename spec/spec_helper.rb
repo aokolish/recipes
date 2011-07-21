@@ -26,4 +26,7 @@ RSpec.configure do |config|
   # cache external pages for use in various tests
   response = `curl -is http://www.foodnetwork.com/recipes/strawberries-and-cream-tart-recipe/index.html`
   FakeWeb.register_uri(:get, "http://www.foodnetwork.com/example", :response => response)
+  
+  response = `curl -is http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake-recipe/index.html`
+  FakeWeb.register_uri(:get, "http://www.cookingchanneltv.com/example", :response => response)
 end
