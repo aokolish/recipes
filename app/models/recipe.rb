@@ -2,7 +2,7 @@ class Recipe < ActiveRecord::Base
   validates :title, :author, :directions, :ingredients, :presence => true
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
   validate :ensure_total_time_is_a_time
-  before_validation :cleanup_directions_and_ingredients
+  before_validation :cleanup_input
       
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
@@ -45,7 +45,7 @@ class Recipe < ActiveRecord::Base
   
   private
   
-  def cleanup_directions_and_ingredients
+  def cleanup_input
     [:directions,:ingredients].each do |attr|
       unless self[attr].nil?
         # no harm in running this on attributes that are already pipe-delimited
@@ -61,6 +61,12 @@ class Recipe < ActiveRecord::Base
         # ensure that no blank items are in the string e.g. "...| |...."
         arr = str.split('|').delete_if {|item| item.blank?}
         self[attr] = arr.join("|")
+      end
+    end
+   
+    [:title,:author,:yield ].each do |attr|
+      unless self[attr].nil?
+        self[attr].strip!
       end
     end
   end
