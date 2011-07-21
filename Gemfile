@@ -21,4 +21,5 @@ group :development, :test do
   gem "capybara"
   gem "guard-rspec"
   gem "rspec-rails"
+  gem "fakeweb"
 end
