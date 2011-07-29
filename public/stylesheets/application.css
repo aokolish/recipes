@@ -81,3 +81,13 @@ footer {
 footer a {
 	padding-right: 15px;
 }
+
+.recipes-index .recipe-title {
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.recipes-index .directions {
+	width: 550px;
+}
