@@ -3,6 +3,7 @@ Recipes::Application.routes.draw do
   resources :recipes do
     collection do
       get 'import'
+      get 'search'
       post 'create_from_import', :as => :create_from_import
     end
   end

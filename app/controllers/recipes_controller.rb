@@ -1,10 +1,25 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.paginate :page => params[:page], :order => 'created_at DESC'
+
     @recipes.each do |recipe|
-      recipe.replace_pipes(' ')
+      recipe.replace_pipes
     end
+  end
+  
+  # GET /recipes/search?search=some_search?page=2
+  def search
+    @recipes = Recipe.search_tank params[:search], :page => params[:page], :per_page => 3
+    
+    if @recipes.empty?
+      flash[:notice] = "Sorry, you searched for #{params[:search]} and no results were found."
+    end
+    
+    @recipes.each do |recipe|
+      recipe.replace_pipes
+    end
+    render 'index'
   end
 
   # GET /recipes/1
