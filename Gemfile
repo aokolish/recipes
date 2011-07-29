@@ -22,4 +22,6 @@ group :development, :test do
   gem "guard-rspec"
   gem "rspec-rails"
   gem "fakeweb"
+  gem 'tanker'
+  gem 'will_paginate'
 end
