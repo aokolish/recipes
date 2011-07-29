@@ -1,25 +1,7 @@
 <h1>Listing recipes</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Ingredients</th>
-    <th>Directions</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @recipes.each do |recipe| %>
-  <tr>
-		<td><%= recipe.title %></td>
-    <td><%= recipe.author %></td>
-    <td><%= truncate(recipe.ingredients, :length => 60) %></td>
-    <td><%= truncate(recipe.directions, :length => 60) %></td>
-    <td><%= link_to 'Show', recipe %></td>
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
+	<i><%= recipe.author %></i>
+	<p class="directions"><%= truncate(recipe.directions, :length => 360) %></p>
 <% end %>
-</table>
