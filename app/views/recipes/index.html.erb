@@ -1,7 +1,16 @@
+<% form_tag search_recipes_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], 'required' => 'true' %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <h1>Listing recipes</h1>
 
 <% @recipes.each do |recipe| %>
 	<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
-	<i><%= recipe.author %></i>
+	<p class="author"><%= recipe.author %></p>
 	<p class="directions"><%= truncate(recipe.directions, :length => 360) %></p>
 <% end %>
+
+<%= will_paginate @recipes %>
