@@ -3,6 +3,19 @@ class Recipe < ActiveRecord::Base
   validates_uniqueness_of :source_url   # do not import the same recipe twice  
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
+  
+  # just include the Tanker module
+  include Tanker
+  
+  tankit 'test' do
+    indexes :title
+    indexes :author
+    indexes :directions
+    indexes :ingredients
+  end
+  
+  after_save :update_tank_indexes
+  after_destroy :delete_tank_indexes
       
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
