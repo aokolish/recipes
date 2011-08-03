@@ -10,10 +10,10 @@ class RecipesController < ApplicationController
   
   # GET /recipes/search?search=some_search?page=2
   def search
-    @recipes = Recipe.search_tank params[:search], :page => params[:page]
+    @recipes = Recipe.search(params[:search], params[:page])
     
     if @recipes.empty?
-      flash[:notice] = "Sorry, you searched for #{params[:search]} and no results were found."
+      flash[:notice] = "Sorry, you searched for '#{params[:search]}' and no results were found."
     end
     
     @recipes.each do |recipe|
