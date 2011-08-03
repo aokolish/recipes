@@ -32,4 +32,7 @@ Recipes::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  # Use index for test
+  config.indextank_index = 'test_index'
 end

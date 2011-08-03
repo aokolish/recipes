@@ -22,5 +22,8 @@ Recipes::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Use index for dev
+  config.indextank_index = 'dev_index'
 end
 
