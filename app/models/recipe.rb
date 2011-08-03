@@ -1,21 +1,26 @@
 class Recipe < ActiveRecord::Base
   validates :title, :author, :directions, :ingredients, :presence => true
-  validates_uniqueness_of :source_url   # do not import the same recipe twice  
+  validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
   
   # just include the Tanker module
   include Tanker
   
-  tankit 'test' do
+  # using different index for each environment
+  tankit Rails.configuration.indextank_index do
     indexes :title
     indexes :author
     indexes :directions
     indexes :ingredients
   end
   
-  after_save :update_tank_indexes
-  after_destroy :delete_tank_indexes
+  after_save :update_tank_indexes   # add one document to the index
+  after_destroy :delete_tank_indexes    # should delete one document from index 
+  
+  def self.search(search, page)
+    Recipe.search_tank search, :page => page
+  end
       
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
