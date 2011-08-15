@@ -7,10 +7,12 @@
 
 <h1>Listing recipes</h1>
 
-<% @recipes.each do |recipe| %>
-	<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
-	<p class="author"><%= recipe.author %></p>
-	<p class="directions"><%= truncate(recipe.directions, :length => 225) %></p>
-<% end %>
+<% unless @recipes.nil? %>
+	<% @recipes.each do |recipe| %>
+		<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
+		<p class="author"><%= recipe.author %></p>
+		<p class="directions"><%= truncate(recipe.directions, :length => 225) %></p>
+	<% end %>
 
-<%= will_paginate @recipes %>
+	<%= will_paginate @recipes %>
+<% end %>
