@@ -22,7 +22,7 @@ class Recipe < ActiveRecord::Base
     begin
       Recipe.search_tank search, :page => page
     rescue ArgumentError
-      return nil
+      return []
     end
   end
       

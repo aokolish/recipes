@@ -5,9 +5,9 @@
   </p>
 <% end %>
 
-<h1>Listing recipes</h1>
-
-<% unless @recipes.nil? %>
+<% unless @recipes.empty? %>
+	<h1>Listing recipes</h1>
+	
 	<% @recipes.each do |recipe| %>
 		<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
 		<p class="author"><%= recipe.author %></p>
