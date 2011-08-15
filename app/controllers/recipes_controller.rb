@@ -12,13 +12,14 @@ class RecipesController < ApplicationController
   def search
     @recipes = Recipe.search(params[:search], params[:page])
     
-    if @recipes.empty?
+    if @recipes.nil?
       flash[:notice] = "Sorry, you searched for '#{params[:search]}' and no results were found."
-    end
+    else 
+      @recipes.each do |recipe|
+        recipe.replace_pipes
+      end
+    end 
     
-    @recipes.each do |recipe|
-      recipe.replace_pipes
-    end
     render 'index'
   end
 
