@@ -3,59 +3,60 @@ require 'spec_helper'
 describe Recipe do
   describe "#search" do
     before(:all) do
-      # Recipe.tanker_reindex
-      # Factory(:recipe)
-      @recipe = Recipe.create(  :title => "Scrambled Eggs", 
-                                :author => "Alex", 
-                                :directions => "whisk eggs|slowly cook eggs in a non-stick pan", 
-                                :ingredients => "eggs|sausage|basil")
+      Recipe.destroy_all
+      Recipe.create(  :title => "Scrambled Eggs", 
+                      :author => "Alex", 
+                      :directions => "whisk eggs|slowly cook eggs in a non-stick pan", 
+                      :ingredients => "eggs|sausage|basil")
       @from_db = Recipe.find_by_title "Scrambled Eggs"
     end
 
     it "finds a recipe by title" do
-      result = Recipe.search_tank "Scrambled Eggs"
+      result = Recipe.search "Scrambled Eggs"
       result.should include(@from_db)
     end
     
     it "finds a recipe by author" do
-      result = Recipe.search_tank "Alex"
+      result = Recipe.search "Alex"
       result.should include(@from_db)
     end
     
     it "finds a recipe by directions" do
-      result = Recipe.search_tank "cook eggs in a"
+      result = Recipe.search "cook eggs in a"
       result.should include(@from_db)
     end
     
     it "finds a recipe by ignredients" do
-      result = Recipe.search_tank "sausage basil"
+      result = Recipe.search "sausage basil"
       result.should include(@from_db)
     end
     
     it "returns an empty array for a bogus search" do
-      result = Recipe.search_tank "adsfasdfasdf"
+      result = Recipe.search "adsfasdfasdf"
       result.should be_empty
     end
     
     it "handles exception raised by invalid queries" do
       # some queries are not allowed such as '*' by the external api
+      result = Recipe.search "*"
+      # result.should be_empty
     end
 
     it "should update search index after destroying a recipe" do
       create_another_recipe
-      result = Recipe.search_tank "Anonymous"
+      result = Recipe.search "Anonymous"
       result.should include(@other_recipe) 
       
       recipe = Recipe.last
       recipe.destroy
       
-      result = Recipe.search_tank "Anonymous"
+      result = Recipe.search "Anonymous"
       result.should_not include(@other_recipe)
     end
 
     it "should update search index after saving a recipe" do
       create_another_recipe
-      result = Recipe.search_tank "Anonymous"
+      result = Recipe.search "Anonymous"
       result.should include(@other_recipe)
       
       # update and search based on updated field
@@ -63,7 +64,7 @@ describe Recipe do
       recipe.author = 'Captain America'
       recipe.save
       
-      result = Recipe.search_tank "Captain America"
+      result = Recipe.search "Captain America"
       result.should include(@other_recipe)
     end
     
