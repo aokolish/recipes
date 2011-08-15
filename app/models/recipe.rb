@@ -18,8 +18,12 @@ class Recipe < ActiveRecord::Base
   after_save :update_tank_indexes   # add one document to the index
   after_destroy :delete_tank_indexes    # should delete one document from index 
   
-  def self.search(search, page)
-    Recipe.search_tank search, :page => page
+  def self.search(search, page=1)
+    begin
+      Recipe.search_tank search, :page => page
+    rescue ArgumentError
+      return nil
+    end
   end
       
   def self.from_import(url)
