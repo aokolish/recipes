@@ -3,5 +3,12 @@
 <ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b"> 
 	<% @recipes.each do |recipe| %>
 	<li><%= link_to recipe.title, recipe %></li>
-	<% end %>
+	<% end %>		
+	
 </ul>
+
+<%= will_paginate(@recipes, 
+	:renderer => PaginationListLinkRenderer,
+  :previous_label => "Prev",
+  :next_label => "Next"
+	) %>
