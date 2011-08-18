@@ -6,6 +6,25 @@
 	margin-top: 15px;
 }
 
+#recipes {
+	margin-bottom: 15px;
+}
+
 .pagination {
-	margin-top: 20px;
+	min-height: 55px;
+}
+
+.recipes-search .ui-content,
+.recipes-index .ui-content {
+	padding: 0 15px 15px;	
+}
+
+.recipes-search .ui-field-contain,
+.recipes-index .ui-field-contain {
+	margin: 0;
+	padding: 1em 0 1.5em;
+}
+
+.ui-input-search input {
+	color: white;
 }

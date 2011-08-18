@@ -1,6 +1,15 @@
 <% title "Recipes" %>
 
-<ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b"> 
+<%= form_tag search_recipes_path, :method => 'get' do %>
+	<div data-role="fieldcontain">
+    <input type="search" name="search" id="search" value="" placeholder="Search recipes"/>
+		<!-- <%= text_field_tag :search, params[:search], 'required' => 'true' %> -->
+	</div>
+    
+    <!-- <%= submit_tag "Search", :name => nil %> -->
+<% end %>
+
+<ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b" id="recipes"> 
 	<% @recipes.each do |recipe| %>
 	<li><%= link_to recipe.title, recipe %></li>
 	<% end %>		
