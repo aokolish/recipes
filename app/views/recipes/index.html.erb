@@ -1,6 +1,6 @@
 <%= form_tag search_recipes_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search], 'required' => 'true' %>
+    <%= text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
