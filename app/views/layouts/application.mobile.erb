@@ -12,7 +12,7 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div data-role="page" data-theme="a">
+    <div data-role="page" data-theme="a" class="<%= "#{params[:controller]}-#{params[:action]}" %>">
 			<div data-role="header">
 				<h1><%= yield(:title) %></h1>
 			</div>
