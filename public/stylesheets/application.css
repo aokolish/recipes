@@ -18,6 +18,20 @@ a {
   overflow: hidden;
 }
 
+#header {
+	margin-bottom: 40px;
+}
+
+#header a,
+#header form {
+	float: left;
+}
+
+#header a,
+footer a {
+	padding-right: 15px;
+}
+
 #container {
   width: 75%;
   margin: 0 auto;
@@ -25,6 +39,10 @@ a {
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
+}
+
+#content {
+	clear: both;
 }
 
 #flash_notice, #flash_error, #flash_alert {
@@ -76,11 +94,6 @@ a {
 
 footer {
 	margin-top: 50px;
-}
-
-footer a,
-.header a {
-	padding-right: 15px;
 }
 
 .recipes-search .recipe-title, 
