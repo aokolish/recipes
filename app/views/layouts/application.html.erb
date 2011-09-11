@@ -10,17 +10,23 @@
   </head>
   <body class="<%= "#{params[:controller]}-#{params[:action]}" %>">
     <div id="container">
-			<p class="header">
+			<div id="header">
 				<%= link_to "Mobile Site", root_url(:mobile => 1) %>
 				<%= link_to 'New Recipe', new_recipe_path %>
 				<%= link_to 'Import a Recipe', import_recipes_path %>
-			</p>
-			
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
+				
+				<%= form_tag search_recipes_path, :method => 'get' do %>
+				    <%= text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
+				    <%= submit_tag "Search", :name => nil %>
+				<% end %>
+			</div>
+			<div id="content">
+	      <% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <% end %>
+	      <%= content_tag :h1, yield(:title) if show_title? %>
+	      <%= yield %>
+			</div>
 
 			<footer>
 				<%= link_to 'Home', "/" %>

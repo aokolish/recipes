@@ -1,12 +1,9 @@
-<%= form_tag search_recipes_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-
 <% unless @recipes.empty? %>
-	<h1>Listing recipes</h1>
+	<h1><%= @header %></h1>
+	
+	<% if params[:action] == 'search' %>
+		<p><%= page_entries_info @recipes %></p>
+	<% end %>
 	
 	<% @recipes.each do |recipe| %>
 		<%= link_to recipe.title, recipe, :class => 'recipe-title' %>
