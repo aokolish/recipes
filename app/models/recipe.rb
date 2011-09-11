@@ -20,7 +20,12 @@ class Recipe < ActiveRecord::Base
   
   def self.search(search, page=1)
     begin
-      Recipe.search_tank search, :page => page
+      recipes = Recipe.search_tank search, :page => page
+      
+      # remove delimiting pipes
+      recipes.each do |recipe|
+        recipe.replace_pipes
+      end
     rescue ArgumentError
       return []
     end
