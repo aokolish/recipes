@@ -58,6 +58,8 @@ class Scraper
     if doc.at_css(".r-attribution .rByline > a")
       author = doc.at_css(".r-attribution .rByline > a").text
     else 
+      # remove html inside the element I'm going to use
+      doc.css(".r-attribution .rByline *").remove
       author = doc.at_css(".r-attribution .rByline").text
     end
     
@@ -71,6 +73,15 @@ class Scraper
     directions = ''
     doc.css(".instructions").each do |direction|
       direction = replace_breaks_with_pipes(direction)
+      
+      if direction.at_css('p')
+        # there are p tags in here
+        # add a pipe before each p tag
+        direction.search('p').each do |p| 
+          p.before("|")
+        end
+      end
+      
       directions += direction.content + '|'
     end
     
