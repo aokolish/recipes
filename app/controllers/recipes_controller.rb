@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.paginate :page => params[:page], :order => 'created_at DESC'
+    @recipes = Recipe.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC'
 
     @recipes.each do |recipe|
       recipe.replace_pipes
