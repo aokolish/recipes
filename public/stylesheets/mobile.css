@@ -7,11 +7,17 @@
 }
 
 #recipes {
+	margin-top: 0;
 	margin-bottom: 15px;
 }
 
 .pagination {
 	min-height: 55px;
+}
+
+.recipes-search h1 {
+	margin: 0;
+	font-size: 1.8em;
 }
 
 .recipes-search .ui-content,
@@ -27,4 +33,13 @@
 
 .ui-input-search input {
 	color: white;
+}
+
+#search-recipes .ui-field-contain {
+	padding-bottom: 12px;
+	border: none;
+}
+
+.displaying {
+	margin-top: 0;
 }
