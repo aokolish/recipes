@@ -1,23 +1,28 @@
 <% title "Recipes" %>
 
-<%= form_tag search_recipes_path, :method => 'get' do %>
+<%= form_tag search_recipes_path, :method => 'get', :id => 'search-recipes' do %>
 	<div data-role="fieldcontain">
-    <input type="search" name="search" id="search" value="" placeholder="Search recipes"/>
-		<!-- <%= text_field_tag :search, params[:search], 'required' => 'true' %> -->
+		<%= search_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
 	</div>
-    
-    <!-- <%= submit_tag "Search", :name => nil %> -->
 <% end %>
 
-<ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b" id="recipes"> 
-	<% @recipes.each do |recipe| %>
-	<li><%= link_to recipe.title, recipe %></li>
-	<% end %>		
+<% unless @recipes.empty? %>
 	
-</ul>
+	<% if params[:action] == 'search' %>
+		<p class="displaying"><%= page_entries_info @recipes %></p>
+	<% end %>
 
-<%= will_paginate(@recipes, 
-	:renderer => PaginationListLinkRenderer,
-  :previous_label => "Prev",
-  :next_label => "Next"
-	) %>
+	<ul data-role="listview" data-inset="false" data-theme="a" data-dividertheme="b" id="recipes"> 
+		<% @recipes.each do |recipe| %>
+		<li><%= link_to recipe.title, recipe %></li>
+		<% end %>		
+	
+	</ul>
+
+	<%= will_paginate(@recipes, 
+		:renderer => PaginationListLinkRenderer,
+	  :previous_label => "Prev",
+	  :next_label => "Next"
+		) %>
+
+<% end %>
