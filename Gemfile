@@ -6,6 +6,8 @@ gem 'nokogiri'
 gem 'chronic_duration'
 gem 'jquery-rails'
 gem 'ruby-units'
+gem 'tanker'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'ruby-debug19'
@@ -17,7 +19,5 @@ group :development, :test do
   gem "guard-rspec"
   gem "rspec-rails"
   gem "fakeweb"
-  gem 'tanker'
-  gem 'will_paginate'
   gem 'localtunnel'
 end
