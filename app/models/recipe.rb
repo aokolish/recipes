@@ -4,8 +4,9 @@ class Recipe < ActiveRecord::Base
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
   
-  # just include the Tanker module
   include Tanker
+  after_save :update_tank_indexes   # add one document to the index
+  after_destroy :delete_tank_indexes    # should delete one document from index
   
   # using different index for each environment
   tankit Rails.configuration.indextank_index do
@@ -14,9 +15,6 @@ class Recipe < ActiveRecord::Base
     indexes :directions
     indexes :ingredients
   end
-  
-  after_save :update_tank_indexes   # add one document to the index
-  after_destroy :delete_tank_indexes    # should delete one document from index 
   
   def self.search(search, page=1)
     begin
