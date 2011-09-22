@@ -1,35 +1,11 @@
-<%= form_for(@recipe) do |f| %>
+<%= simple_form_for(@recipe) do |f| %>
 	<%= f.error_messages %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :autofocus => 'autofocus' %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :source_url %><br />
-    <%= f.text_field :source_url %>
-  </div>
-  <div class="field">
-    <%= f.label :total_time %><br />
-		<%= f.text_field :total_time, :value => @recipe.total_time %>
-  </div>
-  <div class="field">
-    <%= f.label :yield %><br />
-    <%= f.text_field :yield %>
-  </div>
-  <div class="field">
-		<%= f.label :ingredients %><br />
-    <%= f.text_area :ingredients %>
-  </div>
-  <div class="field">
-    <%= f.label :directions %><br />
-    <%= f.text_area :directions %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<%= f.input :title, :autofocus => 'autofocus' %>
+	<%= f.input :author %>
+	<%= f.input :source_url, :disabled => true %>
+	<%= f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time } %>
+	<%= f.input :yield %>
+	<%= f.input :ingredients %>
+	<%= f.input :directions %>
+	<%= f.button :submit %>
 <% end %>

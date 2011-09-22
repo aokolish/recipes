@@ -8,6 +8,8 @@ gem 'jquery-rails'
 gem 'ruby-units'
 gem 'tanker'
 gem 'will_paginate'
+gem 'sorcery'
+gem 'simple_form'
 
 group :development, :test do
   gem 'ruby-debug19'
@@ -20,4 +22,5 @@ group :development, :test do
   gem "rspec-rails"
   gem "fakeweb"
   gem 'localtunnel'
+  gem 'indextank'
 end

@@ -112,4 +112,8 @@ footer {
 .recipes-search .directions,
 .recipes-index .directions {
 	width: 550px;
+} 
+
+.field label {
+	display: block;
 }
