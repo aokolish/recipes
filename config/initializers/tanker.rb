@@ -18,7 +18,7 @@ module Tanker
       id_map.each do |klass, ids|
         # BEGIN MY PATCH
         # narrow ids down to records that exist 
-        ids = ids.find_all {|x| constantize(klass).exists? x}
+        # ids = ids.find_all {|x| constantize(klass).exists? x}
         # END MY PATCH
         
         # replace the id list with an eager-loaded list of records for this model
