@@ -117,3 +117,7 @@ footer {
 .field label {
 	display: block;
 }
+
+form .field_with_errors input {
+	background: #C00;
+}
