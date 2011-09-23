@@ -8,8 +8,8 @@ gem 'jquery-rails'
 gem 'ruby-units'
 gem 'tanker'
 gem 'will_paginate'
-gem 'sorcery'
 gem 'simple_form'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 group :development, :test do
   gem 'ruby-debug19'
