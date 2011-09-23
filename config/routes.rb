@@ -1,5 +1,8 @@
 Recipes::Application.routes.draw do
-  
+  get "sign_up" => "users#new"
+  get "login" => "sessions#new"
+  get "logout" => "sessions#destroy"
+
   resources :recipes do
     collection do
       get 'import'
@@ -8,33 +11,10 @@ Recipes::Application.routes.draw do
     end
   end
   
-  # match 'recipes/import' => 'recipes#import', :as => :import_recipe
-
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  resources :users
+  resources :sessions
+  
+  root :to => "recipes#index"
 
   # Sample resource route with sub-resources:
   #   resources :products do
@@ -49,14 +29,4 @@ Recipes::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  root :to => "recipes#index"
-
 end
