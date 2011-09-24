@@ -24,4 +24,5 @@ group :development, :test do
   gem "fakeweb"
   gem 'localtunnel'
   gem 'indextank'
+  gem 'launchy'
 end
