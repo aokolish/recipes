@@ -6,6 +6,7 @@ describe "login/logout" do
   it "requires you to log in for some pages" do
     visit new_recipe_path
     current_path.should eq(login_path)
+    page.should have_content("Please log in")
   end
   
   it "redirects you when you log in" do
@@ -23,14 +24,19 @@ describe "login/logout" do
   end
   
   it "allows you to log out" do
-    # visit new_user_path
-    # fill_in "user_email", :with => "1234"
-    # fill_in "user_password", :with => "password"
-    # fill_in "user_password_confirmation", :with => "notmatching"
-    # click_button "Create User"
-    # 
-    # current_path.should eq(users_path)
-    # page.should have_content("Password doesn't match confirmation")
-    # page.should have_content("Email is an invalid format")
+    login
+    click_link "Log out"
+    
+    current_path.should eq(root_path)
+    page.should have_content("Logged out!")
+  end
+  
+  def login
+    visit root_path
+    click_link "log in"
+    
+    fill_in "email", :with => user.email
+    fill_in "password", :with => user.password
+    click_button "Log in"
   end
 end
