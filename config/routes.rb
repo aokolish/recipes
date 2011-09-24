@@ -1,5 +1,4 @@
 Recipes::Application.routes.draw do
-  get "sign_up" => "users#new"
   get "login" => "sessions#new"
   get "logout" => "sessions#destroy"
 
