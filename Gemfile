@@ -10,6 +10,7 @@ gem 'tanker'
 gem 'will_paginate'
 gem 'simple_form'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'escape_utils'
 
 group :development, :test do
   gem 'ruby-debug19'
