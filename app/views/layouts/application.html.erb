@@ -15,18 +15,18 @@
 				<%= link_to 'New Recipe', new_recipe_path %>
 				<%= link_to 'Import a Recipe', import_recipes_path %>
 				
-				<%= form_tag search_recipes_path, :method => 'get' do %>
-				    <%= text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
-				    <%= submit_tag "Search", :name => nil %>
-				<% end %>
-				
 				<% if current_user %>
 			    Logged in as <%= current_user.email %>.
 			    <%= link_to "Log out", logout_path %>
 			  <% else %>
-			    <%= link_to "Sign up", sign_up_path %>
+			    <%= link_to "Sign up", new_user_path %>
 			    <%= link_to "log in", login_path %>
 			  <% end %>
+			
+				<%= form_tag search_recipes_path, :method => 'get' do %>
+				    <%= text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes' %>
+				    <%= submit_tag "Search", :name => nil %>
+				<% end %>
 			</div>
 			<div id="content">
 	      <% flash.each do |name, msg| %>
