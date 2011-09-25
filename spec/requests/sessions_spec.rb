@@ -6,7 +6,7 @@ describe "login/logout" do
   it "requires you to log in for some pages" do
     visit new_recipe_path
     current_path.should eq(login_path)
-    page.should have_content("Please log in")
+    page.should have_content("Please log in or create an account.")
   end
   
   it "redirects you when you log in" do
