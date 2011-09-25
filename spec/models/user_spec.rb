@@ -1,68 +1,55 @@
 require 'spec_helper'
-include UserMacros
 
 describe User do
-  describe "#send_password_reset" do
-    # let(:user) { Factory(:user) }
-
-    it "generates a unique password_reset_token each time" do
-      puts valid_user_attributes
-      # user.send_password_reset
-      # last_token = user.password_reset_token
-      # user.send_password_reset
-      # user.password_reset_token.should_not eq(last_token)
+  describe "validation" do
+    let(:user) { Factory(:user) }
+    
+    it "should be invalid without an email" do
+      user.email = nil
+      user.should_not be_valid
+      user.errors[:email].should eq(["can't be blank", "is an invalid format"])
     end
-
-    it "saves the time the password reset was sent" do
-      # user.send_password_reset
-      # user.reload.password_reset_sent_at.should be_present
+    
+    it "should validate format of the email" do
+      user.email = '123'
+      user.should_not be_valid
+      user.errors[:email].should eq(["is an invalid format"])
+      user.email = '1234@example.com'
+      user.should be_valid
     end
-
-    it "delivers email to user" do
-      # user.send_password_reset
-      # last_email.to.should include(user.email)
+    
+    it "should be invalid without a password" do
+      user.password = nil
+      user.should_not be_valid
+      user.errors[:password].should eq(["can't be blank", "is too short (minimum is 4 characters)"])
+    end
+    
+    it "should require password of at least 4 characters" do
+      user.password = 'asd'
+      user.should_not be_valid
+      user.errors[:password].should eq(["is too short (minimum is 4 characters)"])
+      
+      user.password = 'asdf'
+      user.should be_valid
+    end
+    
+    it "should require password and password_confirmation to match" do
+      user.password = 'asdf'
+      user.password_confirmation = 'qewr'
+      user.should_not be_valid
+      user.errors[:password].should eq(["doesn't match confirmation"])
+    end
+  end
+  
+  describe "#authenticate" do
+    let(:user) { Factory(:user) }
+    
+    it "should authenticate with matching email and password" do
+      User.authenticate(user.email, user.password).should == user
+    end
+    
+    it "should not authenticate with matching email and password" do
+      User.authenticate(user.email, 'notcorrect').should be_nil
     end
   end
 end
-
-
-# context "A user (in general)" do
-#   include UserSpecHelper
-# 
-#   setup do
-#     @user = User.new
-#   end
-# 
-#   specify "should be invalid without a username" do
-#     @user.attributes = valid_user_attributes.except(:username)
-#     @user.should_not_be_valid
-#     @user.errors.on(:username).should_equal "is required"
-#     @user.username = 'someusername'
-#     @user.should_be_valid
-#   end
-# 
-#   specify "should be invalid without an email" do
-#     @user.attributes = valid_user_attributes.except(:email)
-#     @user.should_not_be_valid
-#     @user.errors.on(:email).should_equal "is required"
-#     @user.email = 'joe@bloggs.com'
-#     @user.should_be_valid
-#   end
-# 
-#   specify "should be invalid without a password" do
-#     @user.attributes = valid_user_attributes.except(:password)
-#     @user.should_not_be_valid
-#     @user.password = 'abcdefg'
-#     @user.should_be_valid
-#   end
-#   
-#   specify "should be invalid if password is not between 6 and 12 characters in length" do
-#     @user.attributes = valid_user_attributes.except(:password)
-#     @user.password = 'abcdefghijklm'
-#     @user.should_not_be_valid
-#     @user.password = 'abcde'
-#     @user.should_not_be_valid
-#     @user.password = 'abcdefg'
-#     @user.should_be_valid
-#   end
-# end
