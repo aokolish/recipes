@@ -79,9 +79,7 @@ describe Recipe do
       # index.document(docid).add({ :__any => text, :__id => "1234", :__type => "Recipe", :author => 'test', :directions => 'test', :title => 'test' })
       
       r = Recipe.last
-      ap r
       r.id = 4321
-      ap r
       r.update_tank_indexes     
       
       # TODO: WHY DOESN'T THIS RAISE AN ERROR WITH MY MONKEY PATCH REMOVED!?
@@ -92,7 +90,7 @@ describe Recipe do
       
       r = Recipe.search "This is a test"
       
-      return false
+      # return false
       
       # delete this fake record from the index to clean it up
       # index.delete_by_search "__any:test"
