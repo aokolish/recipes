@@ -25,4 +25,6 @@ group :development, :test do
   gem 'localtunnel'
   gem 'indextank'
   gem 'launchy'
+  gem 'spork', '> 0.9.0.rc' 
+  gem 'guard-spork'
 end
