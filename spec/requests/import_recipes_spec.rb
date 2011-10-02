@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "ImportRecipes" do
-  let(:user) { Factory(:user) }
+  let(:user) { FactoryGirl.build(:user) }
   
   # there is probably a better way to get a user logged in
   before(:all) do

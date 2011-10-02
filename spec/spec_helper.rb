@@ -41,10 +41,6 @@ end
 Spork.each_run do
   # This code will be run each time you run your specs.
   FactoryGirl.reload
-  # unless FactoryGirl.factories.blank? 
-  #   FactoryGirl.factories.clear
-  #   FactoryGirl.find_definitions
-  # end
 end
 
 # --- Instructions ---
