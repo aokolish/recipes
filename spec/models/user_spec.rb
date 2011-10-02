@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   describe "validation" do
-    let(:user) { Factory(:user) }
+    let(:user) { FactoryGirl.build(:user) }
     
     it "should be invalid without an email" do
       user.email = nil
