@@ -121,3 +121,19 @@ footer {
 form .field_with_errors input {
 	background: #C00;
 }
+
+.recipes-show #recipe_info {
+	float: right;
+	width: 300px;
+	margin-right: 40px;
+	padding: 15px;
+	background: lavender;
+}
+
+.recipes-show #recipe_info h2:first-child {
+	margin-top: 0;
+}
+
+.recipes-show #main_content {
+	width: 600px;
+}

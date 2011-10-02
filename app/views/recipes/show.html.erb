@@ -1,44 +1,40 @@
 <h1><%= @recipe.title %></h1>
 
-<p>
-  <h2>Author:</h2>
-  <%= @recipe.author %>
-</p>
-
-<% unless @recipe.source_url.empty?  %>
-	<p>
+<div id="recipe_info">
+	<h2>Author:</h2>
+	<p><%= @recipe.author %></p>
+	
+	<% unless @recipe.source_url.empty?  %>
 	  <h2>Source url:</h2>
-		<%= link_to @recipe.source_url, @recipe.source_url, :target => '_blank' %>
-	</p>
-<% end %>
+		<p>
+			<%= link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url %>
+		</p>
+	<% end %>
 
-<p>
-  <h2>Total time:</h2>
-  <%= @recipe.total_time %>
-</p>
+	<h2>Total time:</h2>
+	<p><%= @recipe.total_time %></p>
 
-<p>
-  <h2>Yield:</h2>
-  <%= @recipe.yield %>
-</p>
+	<h2>Yield:</h2>
+	<p><%= @recipe.yield %></p>
+</div>
 
-<p>
-  <h2>Ingredients:</h2>
+<div id="main_content">	
+	<h2>Ingredients:</h2>
 	<ul>
 		<% @recipe.ingredients_array.each do |ingredient| %>
 			<li><%= ingredient %></li>
 		<% end %>
 	</ul>
-</p>
 
-<p>
-  <h2>Directions:</h2>
+	<h2>Directions:</h2>
 	<% @recipe.directions_array.each do |direction| %>
-		<p><%= direction %></p>
+	<p><%= direction %></p>
 	<% end %>
-</p>
+</div>
 
+<% if current_user %>
+	<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+	<%= link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete %> |
+<% end %>	
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete %> |
 <%= link_to 'Back', recipes_path %>
