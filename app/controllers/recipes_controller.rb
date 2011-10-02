@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_before_filter :authorize, :only => [:index, :search, :show]
+  skip_before_filter :authorize, :only => [:index, :search, :show, :import]
 
   def index
     @recipes = Recipe.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC'
