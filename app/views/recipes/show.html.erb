@@ -4,7 +4,7 @@
 	<h2>Author:</h2>
 	<p><%= @recipe.author %></p>
 	
-	<% unless @recipe.source_url.empty?  %>
+	<% unless @recipe.source_url.blank?  %>
 	  <h2>Source url:</h2>
 		<p>
 			<%= link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url %>
