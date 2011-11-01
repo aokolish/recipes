@@ -33,7 +33,15 @@ class Scraper
     
     author = doc.css('p.author a').inner_text
     title = doc.at_css(".fn").text 
-    yields = doc.at_css("#recipe-meta :nth-child(3) .clrfix").text
+    
+    if doc.at_css("#recipe-meta .rm-block-wrap >div:nth-child(2) > dl:first-child dd")
+      yields = doc.at_css("#recipe-meta .rm-block-wrap >div:nth-child(2) > dl:first-child dd").text
+    elsif doc.at_css("#recipe-meta :nth-child(3) .clrfix")
+      yields = doc.at_css("#recipe-meta :nth-child(3) .clrfix").text
+    else
+      yields = nil
+    end
+
     if doc.at_css(".rcp-info :nth-child(1) p")
       time = doc.at_css(".rcp-info :nth-child(1) p").text
     else
