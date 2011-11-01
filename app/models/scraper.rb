@@ -32,6 +32,13 @@ class Scraper
     doc = Nokogiri::HTML(open(@url))
     
     author = doc.css('p.author a').inner_text
+    
+    if author =~ /,([^,]+),/
+      # there is some other stuff around the author's name
+      author = author.match(/,([^,]+),/)[1]
+      author.strip!
+    end
+    
     title = doc.at_css(".fn").text 
     
     if doc.at_css("#recipe-meta .rm-block-wrap >div:nth-child(2) > dl:first-child dd")
