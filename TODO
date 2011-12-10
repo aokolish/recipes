@@ -1,6 +1,0 @@
-6/27/11 Replace Fixtures with factories (using factory girl or machinist?)
-6/30/11 Order recipes on index page by something (updated/created at perhaps? what are they ordered by now?)
-7/16/11 Make it possible to delete parts of a recipe on mobile - not sure about this one, but I was thinking
-				that you could swipe a row (for example, a direction), press delete and it fires an update request.
-				I'm finding that the scraping code sometimes adds stuff that I do not want to see.
-7/16/11 Figure out how to reload the recipes after an import!!!
