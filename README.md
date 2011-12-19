@@ -1,12 +1,14 @@
-== Recipes
+# Recipes
 
-This is my second rails app. The purpose of it is to create a collection of recipes that 
-I care about that are available on a web app such that I can quickly find something delicious
-to cook. I hope to make this more convenient than keeping a binder full of print outs of recipes.
+The purpose of this app is for saving and sharing recipes. I used to keep all
+ of my recipes in a binder that I alphabetized. That system worked for a while 
+but I knew there had to be a better way; this is that better way.
 
-== Planned Features
+## Planned Features
 
-good experience on a mobile device
-search for recipes
-taggable recipes
-shopping list or the ability to send ingredients from recipe to another app
+* good experience on a mobile device
+* good search for recipes
+* taggable recipes
+* shopping list or the ability to send data to another shopping app
+* ratings and reviews
+* follow favorite contributors
