@@ -11,6 +11,7 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'escape_utils'
+gem 'pg'
 
 group :development, :test do
   gem 'ruby-debug19'
@@ -25,6 +26,5 @@ group :development, :test do
   gem 'localtunnel'
   gem 'indextank'
   gem 'launchy'
-  gem 'spork', '> 0.9.0.rc' 
-  gem 'guard-spork'
+  gem 'growl_notify'
 end
