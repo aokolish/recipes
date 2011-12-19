@@ -1,0 +1,45 @@
+.ui-li-static.ui-li {
+	padding: .7em 15px .7em 15px;
+}
+
+#footer {
+	margin-top: 15px;
+}
+
+#recipes {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.pagination {
+	min-height: 55px;
+}
+
+.recipes-search h1 {
+	margin: 0;
+	font-size: 1.8em;
+}
+
+.recipes-search .ui-content,
+.recipes-index .ui-content {
+	padding: 0 15px 15px;	
+}
+
+.recipes-search .ui-field-contain,
+.recipes-index .ui-field-contain {
+	margin: 0;
+	padding: 1em 0 1.5em;
+}
+
+.ui-input-search input {
+	color: white;
+}
+
+#search-recipes .ui-field-contain {
+	padding-bottom: 12px;
+	border: none;
+}
+
+.displaying {
+	margin-top: 0;
+}
