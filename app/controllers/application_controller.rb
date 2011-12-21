@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
 
   def prepare_for_mobile
     session[:mobile_param] = params[:mobile] if params[:mobile]
+    #turning off mobile for the time being
+    #I'm going to rethink my mobile strategy
     #request.format = :mobile if mobile_device?
   end
   
