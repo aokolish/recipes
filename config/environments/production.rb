@@ -47,9 +47,6 @@ Recipes::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # Use production index
-  config.indextank_index = 'prod_index'
-
   # Compress JavaScripts and CSS
   config.assets.compress = true
 

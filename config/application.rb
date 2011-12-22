@@ -49,10 +49,7 @@ module Recipes
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    
-    # Provide tanker gem with indextank api url
-    config.index_tank_url = 'http://:CttMv+vdUhAKVc@8ojrj.api.indextank.com'
-    
+
     ChronicDuration.raise_exceptions = true
   end
 end

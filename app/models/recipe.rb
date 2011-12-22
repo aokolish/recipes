@@ -3,18 +3,9 @@ class Recipe < ActiveRecord::Base
   validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
-  
-  # using different index for each environment
- # tankit Rails.configuration.indextank_index do
- #   indexes :title
- #   indexes :author
- #   indexes :directions
- #   indexes :ingredients
- # end
 
   def self.search(search, page=1)
     begin
-  #    recipes = Recipe.search_tank search, :page => page, :per_page => 15
       recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
 
       # remove delimiting pipes

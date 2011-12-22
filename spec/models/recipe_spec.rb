@@ -68,34 +68,6 @@ describe Recipe do
       result.should include(@other_recipe)
     end
 
-    it "should handle exception when records are not found in the db", :broken => true do 
-      # setup
-      # api = IndexTank::Client.new Rails.configuration.index_tank_url
-      # index = api.indexes Rails.configuration.indextank_index
-      # 
-      # # add a dummy document to the index that looks like a typical record
-      # docid = "Recipe 1234"
-      # text = ".This is a test"
-      # index.document(docid).add({ :__any => text, :__id => "1234", :__type => "Recipe", :author => 'test', :directions => 'test', :title => 'test' })
-
-      r = Recipe.last
-      r.id = 4321
-      r.update_tank_indexes     
-
-      # TODO: WHY DOESN'T THIS RAISE AN ERROR WITH MY MONKEY PATCH REMOVED!?
-
-      # ActiveRecord::RecordNotFound:
-      # Couldn't find all Recipes with IDs (980190966, 165) (found 1 results, but was looking for 2)
-      lambda {Recipe.search "Scrambled Eggs"}.should_not raise_error
-
-      r = Recipe.search "This is a test"
-
-      # return false
-
-      # delete this fake record from the index to clean it up
-      # index.delete_by_search "__any:test"
-    end
-
     def create_another_recipe
       @other_recipe = Recipe.create( :title => "Grilled Cheese", :author => "Anonymous", 
                                   :directions => "put cheese on bread|put on grill", :ingredients => "bread|cheese")
