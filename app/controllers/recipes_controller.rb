@@ -7,19 +7,19 @@ class RecipesController < ApplicationController
     @recipes.each do |recipe|
       recipe.replace_pipes
     end
-    
-    @header = 'All Recipes'
+
+    @header = 'Recipes'
   end
-  
+
   # GET /recipes/search?search=some_search?page=2
   def search
     @recipes = Recipe.search(params[:search], params[:page])
-    
+
     if @recipes.empty?
       flash.now[:notice] = "Sorry, you searched for '#{params[:search]}' and no results were found."
     end
     @header = 'Search Results'
-    
+
     render 'index'
   end
 
@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
   end
-  
+
   # GET /recipes/import
   def import
     @recipe = Recipe.new
@@ -53,12 +53,12 @@ class RecipesController < ApplicationController
       render :action => "new"
     end
   end
-  
+
   def create_from_import
     url = params[:source_url]
     @recipe = Recipe.from_import(url)
-                          
-    respond_to do |format|                          
+
+    respond_to do |format|
       if @recipe.save
         format.html { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
         format.mobile { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
