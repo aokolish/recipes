@@ -11,11 +11,12 @@ class Recipe < ActiveRecord::Base
  #   indexes :directions
  #   indexes :ingredients
  # end
-  
+
   def self.search(search, page=1)
     begin
   #    recipes = Recipe.search_tank search, :page => page, :per_page => 15
-      
+      recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page)
+
       # remove delimiting pipes
       recipes.each do |recipe|
         recipe.replace_pipes
@@ -24,11 +25,11 @@ class Recipe < ActiveRecord::Base
       return []
     end
   end
-      
+
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end
-  
+
   # storing total_time as an integer. customer getter/setter:
   def total_time
     # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
@@ -40,7 +41,7 @@ class Recipe < ActiveRecord::Base
       end
     end
   end
-  
+
   def total_time=(text)
     begin
       self[:total_time] = ChronicDuration.parse text
@@ -48,11 +49,11 @@ class Recipe < ActiveRecord::Base
       self[:total_time] = text
     end
   end
-  
+
   def directions_array
     self.directions.split('|') 
   end
-  
+
   def ingredients_array
     self.ingredients.split('|') 
   end
