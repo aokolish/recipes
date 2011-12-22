@@ -15,7 +15,7 @@ class Recipe < ActiveRecord::Base
   def self.search(search, page=1)
     begin
   #    recipes = Recipe.search_tank search, :page => page, :per_page => 15
-      recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page)
+      recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
 
       # remove delimiting pipes
       recipes.each do |recipe|
