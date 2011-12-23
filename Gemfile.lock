@@ -166,6 +166,8 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
+    simple-navigation (3.6.0)
+      activesupport (>= 2.3.2)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -214,6 +216,7 @@ DEPENDENCIES
   rspec-rails
   ruby-units
   sass-rails (~> 3.1.0)
+  simple-navigation
   simple_form
   uglifier
   will_paginate

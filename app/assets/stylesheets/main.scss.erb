@@ -28,13 +28,34 @@ header {
   overflow: hidden;
   height: 70px;
 
-  a, form {
+  nav {
     float: left;
+    margin-top: 30px;
+    padding-left: 15px;
+
+    ul {
+      padding-left: 0;
+
+      li {
+        list-style-type: none;
+        display: inline;
+
+        a {
+          padding: 8px;
+          color: $dark_gray;
+          text-decoration: none;
+          background: gray;
+          border-right: 1px solid $med_gray;
+        }
+      }
+      li.selected a {
+          background: $light_gray;
+      }
+    }
   }
 
-  a {
-    padding-right: 15px;
-    color: $dark_gray;
+  form {
+    float: left;
   }
 
   .logged-in {

@@ -1,5 +1,5 @@
-= link_to 'Home', "/"
-= link_to 'Import', import_recipes_path
+%nav
+  = render_navigation
 
 - if current_user
   %p(class="logged-in") Logged in as  #{current_user.email}
