@@ -1,44 +1,47 @@
+$dark_gray: #363636;
+$med_gray: #686868;
+$light_gray: #EEE;
+
 body {
-  background-color: #4B7399;
+  background: $med_gray url(<%= asset_path('noise.png') %>) repeat;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+a {
+  color: $dark_gray;
 }
 
 a img {
   border: none;
 }
 
-a {
-  color: #0000FF;
+h1, h2 {
+  color: $dark_gray;
 }
 
-.clear {
-  clear: both;
-  height: 0;
+header {
   overflow: hidden;
+  height: 70px;
 }
 
-#header {
-	margin-bottom: 40px;
-}
-
-#header a,
-#header form {
+header a,
+header form {
 	float: left;
 }
 
-#header a,
+header a,
 footer a {
 	padding-right: 15px;
+  color: $dark_gray;
 }
 
 #container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
+  background: $light_gray url(<%= asset_path('noise.png') %>) repeat;
   padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+  box-shadow: #363636 0px 10px 55px;
 }
 
 #content {
@@ -100,7 +103,8 @@ footer {
 .recipes-index .recipe-title {
 	display: block;
 	font-size: 20px;
-	font-weight: bold;
+  font-weight: bold;
+  color: $dark_gray;
 }
 
 .recipes-search .author,
@@ -125,9 +129,10 @@ form .field_with_errors input {
 .recipes-show #recipe_info {
 	float: right;
 	width: 300px;
-	margin-right: 40px;
-	padding: 15px;
-	background: lavender;
+	margin: 8px 40px 0 0;
+	padding-left: 30px;
+  border-left: 1px solid #B3B3B3;
+  box-shadow: inset #FFF 1px 0px 0px;
 }
 
 .recipes-show #recipe_info h2:first-child {

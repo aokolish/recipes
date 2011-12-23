@@ -1,0 +1,25 @@
+!!! 5
+%html
+%head
+  %meta(charset="utf-8")
+    %title= content_for?(:title) ? yield(:title) : "Recipes"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    = yield(:head)
+
+%body(class="#{params[:controller]}-#{params[:action]}")
+  %header
+    = render(:partial => 'partials/header')
+			
+  #container
+    #content
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      = content_tag :h1, yield(:title) if show_title?
+      = yield
+
+    %footer
+      = link_to 'Home', "/"
+      = link_to 'New Recipe', new_recipe_path
+      = link_to 'Import a Recipe', import_recipes_path

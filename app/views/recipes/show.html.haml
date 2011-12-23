@@ -1,0 +1,32 @@
+%h1 #{@recipe.title}
+
+#recipe_info
+  %h2 Author:
+  %p #{@recipe.author}
+
+  - unless @recipe.source_url.blank?
+    %h2 Source url:
+    %p
+      = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url
+
+  %h2 Total time:
+  %p #{@recipe.total_time}
+
+  %h2 Yield:
+  %p #{@recipe.yield}
+
+#main_content
+  %h2 Ingredients:
+  %ul
+    - @recipe.ingredients_array.each do |ingredient|
+      %li #{ingredient}
+
+  %h2 Directions:
+  - @recipe.directions_array.each do |direction|
+    %p #{direction}
+
+- if current_user
+  = link_to 'Edit', edit_recipe_path(@recipe)
+  = link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete
+
+= link_to 'Back', recipes_path
