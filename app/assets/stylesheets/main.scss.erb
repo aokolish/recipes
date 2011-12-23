@@ -2,6 +2,7 @@ $dark_gray: #363636;
 $med_gray: #686868;
 $light_gray: #EEE;
 
+//global stuff
 body {
   background: $med_gray url(<%= asset_path('noise.png') %>) repeat;
   font-family: Verdana, Helvetica, Arial;
@@ -22,20 +23,25 @@ h1, h2 {
   color: $dark_gray;
 }
 
+//header styles
 header {
   overflow: hidden;
   height: 70px;
-}
 
-header a,
-header form {
-	float: left;
-}
+  a, form {
+    float: left;
+  }
 
-header a,
-footer a {
-	padding-right: 15px;
-  color: $dark_gray;
+  a {
+    padding-right: 15px;
+    color: $dark_gray;
+  }
+
+  .logged-in {
+    float: left;
+    margin: 0;
+    padding-right: 7px;
+  }
 }
 
 #container {
@@ -48,6 +54,17 @@ footer a {
 	clear: both;
 }
 
+//footer styles
+footer {
+  margin-top: 50px;
+
+  a {
+    padding-right: 15px;
+    color: $dark_gray;
+  }
+}
+
+//flash stuff
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
@@ -63,6 +80,7 @@ footer a {
   border: solid 1px #C66;
 }
 
+//error styles
 .fieldWithErrors {
   display: inline;
 }
@@ -95,10 +113,7 @@ footer a {
   margin: 0;
 }
 
-footer {
-	margin-top: 50px;
-}
-
+//recipe page styles
 .recipes-search .recipe-title, 
 .recipes-index .recipe-title {
 	display: block;

@@ -1,9 +1,8 @@
-= link_to "Mobile Site", root_url(:mobile => 1)
-= link_to 'New Recipe', new_recipe_path
-= link_to 'Import a Recipe', import_recipes_path
+= link_to 'Home', "/"
+= link_to 'Import', import_recipes_path
 
 - if current_user
-  Logged in as  #{current_user.email}
+  %p(class="logged-in") Logged in as  #{current_user.email}
   = link_to "Log out", logout_path
 - else
   = link_to "Sign up", new_user_path
