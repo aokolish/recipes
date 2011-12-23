@@ -11,6 +11,7 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'escape_utils'
 gem 'pg'
 gem 'newrelic_rpm'
+gem 'haml'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
