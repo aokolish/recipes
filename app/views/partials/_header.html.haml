@@ -6,9 +6,10 @@
     %p(class="logged-in")
       Logged in as  #{current_user.email} | #{link_to "Log out", logout_path}
   - else
-    = link_to "Sign up", new_user_path
-    = link_to "log in", login_path
+    %p(class="logged-out")
+      = link_to "Sign up", new_user_path
+      = link_to "Log in", login_path
 
   = form_tag search_recipes_path, :method => 'get' do
     = text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes'
-    = submit_tag "Search", :name => nil, :id => 'search_submit'
+    = submit_tag "S", :name => nil, :id => 'search_submit'
