@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -16,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20110922114433) do
     t.string   "title"
     t.string   "author"
     t.string   "source_url"
-    t.integer  "total_time"
+    t.integer  "total_time",  :limit => 255
     t.string   "yield"
     t.text     "ingredients"
     t.text     "directions"

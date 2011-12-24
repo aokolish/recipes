@@ -9,7 +9,6 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'escape_utils'
-gem 'pg'
 gem 'newrelic_rpm'
 gem 'haml'
 gem 'simple-navigation'
@@ -26,10 +25,15 @@ group :development, :test do
   gem 'indextank'
   gem 'launchy'
   gem 'growl_notify'
+  gem 'sqlite3'
 end
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+end
+
+group :production do
+  gem 'pg'
 end
