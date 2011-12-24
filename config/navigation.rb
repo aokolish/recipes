@@ -50,7 +50,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
     p.item :home, 'Home', '/'
-    p.item :recipes, 'Recipes', recipes_path
+    p.item :recipes, 'Recipes', recipes_path, :highlights_on => /\/recipes(\/\d+|\/\d+\/edit|\/|\/new)?\/?$/   # http://rubular.com/r/ZeHA7m36Li
     p.item :import, 'Import', import_recipes_path
 
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
