@@ -1,0 +1,10 @@
+// Fontspring @Font-Face Syntax
+// http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+
+@font-face {
+	font-family: 'Signify';
+	src: url(font-path('signifylite.eot') + "?#iefix") format('embedded-opentype'),
+	     url(font-path('signifylite.woff')) format('woff'), 
+	     url(font-path('signifylite.ttf'))  format('truetype'),
+	     url(font-path('signifylite.svg') + "#Signify") format('svg');
+}
