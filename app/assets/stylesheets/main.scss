@@ -1,10 +1,7 @@
-$dark_gray: #363636;
-$med_gray: #686868;
-$light_gray: #EEE;
-
 //global styles
 body {
-  background: $med_gray url(<%= asset_path('noise.png') %>) repeat;
+
+  background: $med_gray image-url("noise.png") repeat;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   max-width: 1080px;
@@ -96,6 +93,10 @@ header {
         width: 260px;
         background-color: $light_gray;
         -webkit-transition: all .25s ease-out;
+
+        #search_submit {
+          color: black;
+        }
       }
 
       #search_submit {
@@ -107,7 +108,7 @@ header {
         background: transparent;
         border: none;
         font-family: 'Signify';
-        color: $light_gray;
+        color: gray;
         font-size: 112%;
       }
       #search_submit:focus {
@@ -118,7 +119,7 @@ header {
 }
 
 #container {
-  background: $light_gray url(<%= asset_path('noise.png') %>) repeat;
+  background: $light_gray image-url("noise.png") repeat;
   padding: 20px 40px;
   box-shadow: #363636 0px 10px 55px;
 }
