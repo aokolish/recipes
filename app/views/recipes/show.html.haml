@@ -1,30 +1,33 @@
-%h1 #{@recipe.title}
+#recipe
+  .main-content
+    %h1 #{@recipe.title}
 
-#recipe_info
-  %h2 Author:
-  %p #{@recipe.author}
+    %h2 Ingredients:
+    %ul
+      - @recipe.ingredients_array.each do |ingredient|
+        %li #{ingredient}
 
-  - unless @recipe.source_url.blank?
-    %h2 Source url:
-    %p
-      = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url
+    %h2 Directions:
+    - @recipe.directions_array.each do |direction|
+      %p #{direction}
 
-  %h2 Total time:
-  %p #{@recipe.total_time}
+    - if current_user
+      = link_to 'Edit', edit_recipe_path(@recipe)
+      = link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete
 
-  %h2 Yield:
-  %p #{@recipe.yield}
+  #recipe_info
+    %img(src="http://placekitten.com/g/266/200")
 
-#main_content
-  %h2 Ingredients:
-  %ul
-    - @recipe.ingredients_array.each do |ingredient|
-      %li #{ingredient}
+    %h3 Author:
+    %p #{@recipe.author}
 
-  %h2 Directions:
-  - @recipe.directions_array.each do |direction|
-    %p #{direction}
+    %h3 Total time:
+    %p #{@recipe.total_time}
 
-- if current_user
-  = link_to 'Edit', edit_recipe_path(@recipe)
-  = link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete
+    %h3 Yield:
+    %p #{@recipe.yield}
+
+    - unless @recipe.source_url.blank?
+      %h3 Source url:
+      %p
+        = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url

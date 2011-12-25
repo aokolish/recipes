@@ -80,7 +80,7 @@ header {
 
       #search {
         height: 10px;
-        width: 190px;
+        width: 240px;
         padding: 8px 15px;
         background-color: #4D4D4D;
         border-radius: 15px;
@@ -90,7 +90,7 @@ header {
       }
       #search:focus {
         outline: none;
-        width: 260px;
+        width: 300px;
         background-color: $light_gray;
         -webkit-transition: all .25s ease-out;
 
