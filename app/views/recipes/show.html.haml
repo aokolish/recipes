@@ -12,8 +12,9 @@
       %p #{direction}
 
     - if current_user
-      = link_to 'Edit', edit_recipe_path(@recipe)
-      = link_to 'Destroy', @recipe, :confirm => 'Are you sure?', :method => :delete
+      .actions
+        = link_to 'p', edit_recipe_path(@recipe), :class => 'edit'
+        = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete'
 
   #recipe_info
     %img(src="http://placekitten.com/g/266/200")

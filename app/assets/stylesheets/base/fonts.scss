@@ -4,7 +4,15 @@
 @font-face {
 	font-family: 'Signify';
 	src: url(font-path('signifylite.eot') + "?#iefix") format('embedded-opentype'),
-	     url(font-path('signifylite.woff')) format('woff'), 
+	     url(font-path('signifylite.woff')) format('woff'),
 	     url(font-path('signifylite.ttf'))  format('truetype'),
 	     url(font-path('signifylite.svg') + "#Signify") format('svg');
+}
+
+@font-face {
+	font-family: 'Iconic';
+	src: url(font-path('iconic_stroke.eot') + "?#iefix") format('embedded-opentype'),
+	     // url(font-path('iconic_stroke.woff')) format('woff'), 
+	     url(font-path('iconic_stroke.ttf'))  format('truetype'),
+	     url(font-path('iconic_stroke.svg') + "#Iconic") format('svg');
 }

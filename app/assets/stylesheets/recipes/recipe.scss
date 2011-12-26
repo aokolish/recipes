@@ -10,6 +10,32 @@
 	margin: 2px 0;
 }
 
+//pretty generic button style
+@mixin css_button($color) {
+  background: lighten($color, 30%);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 4px;
+  padding: 4px 3px 0 5px;
+  -webkit-transition: all .3s ease-out;
+
+  &:hover {
+    background: lighten($color, 20%);
+    color: darken($color, 10%);
+    border-color: darken($color, 10%);
+    -webkit-transition: all .3s ease-out;
+  }
+  &:active {
+    background: $color;
+    color: darken($color, 20%);
+    border-color: darken($color, 20%);
+    -webkit-transition: all .3s ease-out;
+  }
+}
+
 //recipe#show
 .recipes-show {
 
@@ -18,14 +44,36 @@
 
     .main-content {
       width: 600px;
+      padding-right: 95px;
       float: left;
+      position: relative;
+
+      .actions {
+        font-family: 'Iconic';
+        position: absolute;
+        top: 26px;
+        right: 20px;
+
+        a {
+          @include css_button(lighten($med_gray, 25%));
+          margin-bottom: 5px;
+          font-size: 28px;
+          line-height: 30px;
+        }
+
+        /*&:hover a {
+          color: $med_gray;
+          border: 1px solid $med_gray;
+          -webkit-transition: all .3s ease-out;
+        }*/
+      }
     }
   }
 
   #recipe_info {
     float: left;
     width: 210px;
-    margin: 8px 40px 0 95px;
+    margin: 25px 40px 0 0;
     padding-left: 30px;
     border-left: 1px solid #B3B3B3;
     box-shadow: inset #FFF 1px 0px 0px;
