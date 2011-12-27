@@ -3,13 +3,26 @@ body {
 
   background: $med_gray image-url("noise.png") repeat;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: .85em;
   max-width: 1080px;
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 992px) {
+  body { font-size: 1em; }
+}
+
+p {
+  font-size: 1em;
+}
+
 a {
   color: $dark_gray;
+  font-size: .85em;
+}
+
+img {
+  max-width: 100%;
 }
 
 a img {
@@ -27,7 +40,7 @@ header {
 
   nav {
     float: left;
-    margin-top: 30px;
+    margin-top: 27px;
     padding-left: 15px;
 
     ul {
@@ -41,6 +54,7 @@ header {
           padding: 9px 14px;
           color: $dark_gray;
           text-decoration: none;
+          font-size: .85em;
           background: gray;
           border-right: 1px solid $med_gray;
         }
@@ -63,12 +77,13 @@ header {
     p.logged-in {
       float: right;
       margin: 0;
-      font-size: 85%;
+      font-size: 0.75em;
       color: $light_gray;
 
       a {
         padding-left: 6px;
         color: $light_gray;
+        font-size: 12px;
       }
     }
 
@@ -77,6 +92,7 @@ header {
       float: right;
       margin-top: 5px;
       position: relative;
+      font-size: .85em;
 
       #search {
         height: 10px;
@@ -126,6 +142,7 @@ header {
 
 #content {
 	clear: both;
+  overflow: hidden;
 }
 
 //footer styles
@@ -169,14 +186,14 @@ footer {
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .error_messages h2 {
   text-align: left;
   font-weight: bold;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 1em;
   margin: 0;
   background-color: #c00;
   color: #fff;

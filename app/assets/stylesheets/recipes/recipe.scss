@@ -1,11 +1,19 @@
+$sidebar_full_width: 270px;
+$sidebar_med_width: 185px;
+
 //recipe#show
 .recipes-show {
 
   #recipe {
-    overflow: hidden;
+    overflow: visible;
+    margin-right: 400px;
+
+     @media only screen and (max-width: 992px) {
+      & { margin-right: $sidebar_med_width + 130; }
+    }
 
     .main-content {
-      width: 600px;
+      width: 100%;
       padding-right: 95px;
       float: left;
       position: relative;
@@ -44,8 +52,8 @@
 
   #recipe_info {
     float: left;
-    width: 210px;
-    margin: 25px 40px 0 0;
+    width: 270px;
+    margin: 25px -100% 0 0;
     padding-left: 30px;
     border-left: 1px solid #B3B3B3;
     box-shadow: inset #FFF 1px 0px 0px;
@@ -53,6 +61,10 @@
     h2:first-child {
       margin-top: 0;
     }
+  }
+
+  @media only screen and (max-width: 992px) {
+    #recipe_info { width: $sidebar_med_width; }
   }
 }
 
@@ -62,7 +74,7 @@
 
   .recipe-title {
     display: block;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: bold;
     color: $dark_gray;
   }
