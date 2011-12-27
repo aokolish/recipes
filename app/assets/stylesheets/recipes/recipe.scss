@@ -48,6 +48,11 @@
       float: left;
       position: relative;
 
+      ul.ingredients {
+        padding-left: 0;
+        list-style-type: none;
+      }
+
       .actions {
         font-family: 'Iconic';
         position: absolute;
@@ -55,10 +60,14 @@
         right: 20px;
 
         a {
-          @include css_button(lighten($med_gray, 25%));
+          @include button(darken($light_gray, 10%));
+          color: $med_gray;
+          text-decoration: none;
+          display: block;
           margin-bottom: 5px;
-          font-size: 28px;
+          font-size: 18px;
           line-height: 30px;
+          padding: 0 7px 0;
         }
 
         /*&:hover a {

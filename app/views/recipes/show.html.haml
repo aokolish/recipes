@@ -3,7 +3,7 @@
     %h1 #{@recipe.title}
 
     %h2 Ingredients:
-    %ul
+    %ul(class="ingredients")
       - @recipe.ingredients_array.each do |ingredient|
         %li #{ingredient}
 

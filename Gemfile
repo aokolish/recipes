@@ -12,6 +12,7 @@ gem 'escape_utils'
 gem 'newrelic_rpm'
 gem 'haml'
 gem 'simple-navigation'
+gem 'bourbon'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
