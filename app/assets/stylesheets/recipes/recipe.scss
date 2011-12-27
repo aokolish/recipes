@@ -1,15 +1,3 @@
-@mixin recipe_title {
-  display: block;
-	font-size: 20px;
-  font-weight: bold;
-  color: $dark_gray;
-}
-
-@mixin recipe_author {
-  font-style: italic;
-	margin: 2px 0;
-}
-
 //recipe#show
 .recipes-show {
 
@@ -68,15 +56,20 @@
   }
 }
 
-//recipe#search
+//search and index page share some styles
+.recipes-index,
 .recipes-search {
 
-  recipe-title {
-    @include recipe_title;
+  .recipe-title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: $dark_gray;
   }
 
   .author {
-    @include recipe_author;
+    font-style: italic;
+    margin: 2px 0;
   }
 
   .directions {
@@ -87,15 +80,4 @@
 //recipe#index
 .recipes-index {
 
-  .recipe-title {
-    @include recipe_title;
-  }
-
-  .author {
-    @include recipe_author;
-  }
-
-  .directions {
-    width: 550px;
-  }
 }
