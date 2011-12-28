@@ -47,14 +47,14 @@ h1, h2 {
 
 #content {
   overflow: visible;
-  margin-right: 400px;
+  margin-right: 0;
 
-  @media only screen and (max-width: 550px) {
-    margin-right: 0;
+  @media only screen and (min-width: 768px) {
+    margin-right: $sidebar_med_width + 100;
   }
 
-  @media only screen and (max-width: 992px) {
-    margin-right: $sidebar_med_width + 130;
+  @media only screen and (min-width: 992px) {
+    margin-right: $sidebar_full_width + 100;
   }
 
   > div {
@@ -63,19 +63,18 @@ h1, h2 {
 }
 
 #sidebar {
-  float: left;
-  width: 270px;
-  margin: 25px -100% 0 0;
+  float: none;
+  margin: 0;
 
-  @media only screen and (max-width: 550px) {
-    float: none;
-    margin: 0;
-  }
-
-  @media only screen and (max-width: 992px) {
+  @media only screen and (min-width: 768px) {
+    float: left;
     width: $sidebar_med_width;
+    margin: 25px -100% 0 0;
   }
 
+  @media only screen and (min-width: 992px) {
+    width: $sidebar_full_width;
+  }
 }
 
 //footer styles

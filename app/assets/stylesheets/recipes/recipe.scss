@@ -42,9 +42,12 @@ $sidebar_med_width: 185px;
   }
 
   #recipe_info {
-    padding-left: 30px;
-    border-left: 1px solid #B3B3B3;
-    box-shadow: inset #FFF 1px 0px 0px;
+
+    @media only screen and (min-width: 768px) {
+      padding-left: 30px;
+      border-left: 1px solid #B3B3B3;
+      box-shadow: inset #FFF 1px 0px 0px;
+    }
 
     h2:first-child {
       margin-top: 0;
