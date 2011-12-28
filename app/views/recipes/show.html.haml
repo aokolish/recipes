@@ -2,12 +2,10 @@
   .main-content
     %h1 #{@recipe.title}
 
-    %h2 Ingredients:
     %ul(class="ingredients")
       - @recipe.ingredients_array.each do |ingredient|
         %li #{ingredient}
 
-    %h2 Directions:
     - @recipe.directions_array.each do |direction|
       %p #{direction}
 
