@@ -5,55 +5,43 @@ $sidebar_med_width: 185px;
 .recipes-show {
 
   #recipe {
-    overflow: visible;
-    margin-right: 400px;
+    width: 100%;
+    padding-right: 95px;
+    float: left;
+    position: relative;
 
-     @media only screen and (max-width: 992px) {
-      & { margin-right: $sidebar_med_width + 130; }
+    ul.ingredients {
+      padding-left: 0;
+      list-style-type: none;
     }
 
-    .main-content {
-      width: 100%;
-      padding-right: 95px;
-      float: left;
-      position: relative;
+    .actions {
+      font-family: 'Iconic';
+      position: absolute;
+      top: 26px;
+      right: 20px;
+      opacity: .5;
+      @include transition(opacity .4s ease-out);
 
-      ul.ingredients {
-        padding-left: 0;
-        list-style-type: none;
+      a {
+        @include button(darken($light_gray, 10%));
+        color: $med_gray;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 0 7px 0;
       }
 
-      .actions {
-        font-family: 'Iconic';
-        position: absolute;
-        top: 26px;
-        right: 20px;
-        opacity: .5;
+      &:hover {
+        opacity: 1;
         @include transition(opacity .4s ease-out);
-
-        a {
-          @include button(darken($light_gray, 10%));
-          color: $med_gray;
-          text-decoration: none;
-          display: block;
-          margin-bottom: 5px;
-          font-size: 18px;
-          line-height: 30px;
-          padding: 0 7px 0;
-        }
-
-        &:hover {
-          opacity: 1;
-          @include transition(opacity .4s ease-out);
-        }
       }
     }
   }
 
   #recipe_info {
-    float: left;
-    width: 270px;
-    margin: 25px -100% 0 0;
     padding-left: 30px;
     border-left: 1px solid #B3B3B3;
     box-shadow: inset #FFF 1px 0px 0px;
@@ -61,10 +49,6 @@ $sidebar_med_width: 185px;
     h2:first-child {
       margin-top: 0;
     }
-  }
-
-  @media only screen and (max-width: 992px) {
-    #recipe_info { width: $sidebar_med_width; }
   }
 }
 

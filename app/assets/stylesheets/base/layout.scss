@@ -1,3 +1,6 @@
+$sidebar_full_width: 270px;
+$sidebar_med_width: 185px;
+
 //global styles
 body {
 
@@ -26,10 +29,6 @@ img {
   max-width: 100%;
 }
 
-a img {
-  border: none;
-}
-
 h1, h2 {
   color: $dark_gray;
 }
@@ -38,6 +37,8 @@ h1, h2 {
   background: $light_gray image-url("noise.png") repeat;
   padding: 10px 20px;
   box-shadow: #363636 0px 10px 55px;
+  clear: both;
+  overflow: hidden;
 
   @media only screen and (min-width: 992px) {
     padding: 20px 40px;
@@ -45,8 +46,36 @@ h1, h2 {
 }
 
 #content {
-	clear: both;
-  overflow: hidden;
+  overflow: visible;
+  margin-right: 400px;
+
+  @media only screen and (max-width: 550px) {
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: 992px) {
+    margin-right: $sidebar_med_width + 130;
+  }
+
+  > div {
+    float: left;
+  }
+}
+
+#sidebar {
+  float: left;
+  width: 270px;
+  margin: 25px -100% 0 0;
+
+  @media only screen and (max-width: 550px) {
+    float: none;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 992px) {
+    width: $sidebar_med_width;
+  }
+
 }
 
 //footer styles
@@ -55,6 +84,7 @@ footer {
   border-top: 1px solid #B3B3B3;
   box-shadow: inset #FFF 0px 1px 0px;
   padding-top: 15px;
+  clear: both;
 
   a {
     padding-right: 15px;

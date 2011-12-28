@@ -1,19 +1,19 @@
 #recipe
-  .main-content
-    %h1 #{@recipe.title}
+  %h1 #{@recipe.title}
 
-    %ul(class="ingredients")
-      - @recipe.ingredients_array.each do |ingredient|
-        %li #{ingredient}
+  %ul(class="ingredients")
+    - @recipe.ingredients_array.each do |ingredient|
+      %li #{ingredient}
 
-    - @recipe.directions_array.each do |direction|
-      %p #{direction}
+  - @recipe.directions_array.each do |direction|
+    %p #{direction}
 
-    - if current_user
-      .actions
-        = link_to 'p', edit_recipe_path(@recipe), :class => 'edit'
-        = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete'
+  - if current_user
+    .actions
+      = link_to 'p', edit_recipe_path(@recipe), :class => 'edit'
+      = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete'
 
+- content_for :sidebar do
   #recipe_info
     %img(src="http://placekitten.com/g/266/200")
 

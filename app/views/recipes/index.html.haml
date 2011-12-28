@@ -1,12 +1,13 @@
-- unless @recipes.empty?
-  %h1 #{@header}
+#recipes
+  - unless @recipes.empty?
+    %h1 #{@header}
 
-  - if params[:action] == 'search'
-    %p #{page_entries_info @recipes}
-	
-  - @recipes.each do |recipe|
-    = link_to recipe.title, recipe, :class => 'recipe-title'
-    %p(class="author") #{recipe.author}
-    %p(class="directions") #{truncate(recipe.directions, :length => 225)}
+    - if params[:action] == 'search'
+      %p #{page_entries_info @recipes}
 
-  = will_paginate
+    - @recipes.each do |recipe|
+      = link_to recipe.title, recipe, :class => 'recipe-title'
+      %p(class="author") #{recipe.author}
+      %p(class="directions") #{truncate(recipe.directions, :length => 225)}
+
+    = will_paginate
