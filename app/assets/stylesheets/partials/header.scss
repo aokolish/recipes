@@ -1,38 +1,3 @@
-//global styles
-body {
-
-  background: $med_gray image-url("noise.png") repeat;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: .85em;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 992px) {
-  body { font-size: 1em; }
-}
-
-p {
-  font-size: 1em;
-}
-
-a {
-  color: $dark_gray;
-  font-size: .85em;
-}
-
-img {
-  max-width: 100%;
-}
-
-a img {
-  border: none;
-}
-
-h1, h2 {
-  color: $dark_gray;
-}
-
 //header styles
 header {
   overflow: hidden;
@@ -40,8 +5,12 @@ header {
 
   nav {
     float: left;
-    margin-top: 27px;
+    margin-top: 2.3em;
     padding-left: 15px;
+
+    @media only screen and (min-width: 992px) {
+      margin-top: 27px;
+    }
 
     ul {
       padding-left: 0;
@@ -64,9 +33,6 @@ header {
       }
     }
   }
-}
-
-header {
 
   #other-stuff {
     float: right;
@@ -133,87 +99,4 @@ header {
     }
   }
 }
-
-#container {
-  background: $light_gray image-url("noise.png") repeat;
-  padding: 20px 40px;
-  box-shadow: #363636 0px 10px 55px;
-}
-
-#content {
-	clear: both;
-  overflow: hidden;
-}
-
-//footer styles
-footer {
-  margin-top: 50px;
-  border-top: 1px solid #B3B3B3;
-  box-shadow: inset #FFF 0px 1px 0px;
-  padding-top: 15px;
-
-  a {
-    padding-right: 15px;
-    color: $dark_gray;
-  }
-}
-
-//flash stuff
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
-
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
-}
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
-}
-
-//error styles
-.fieldWithErrors {
-  display: inline;
-}
-
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 1em;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 1em;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin: 0;
-}
-
-
-.field label {
-	display: block;
-}
-
-form .field_with_errors input {
-	background: #C00;
-}
-
 

@@ -10,7 +10,11 @@ $med_gray: #686868;
 $light_gray: #EEE;
 
 @import "bourbon";
+
 @import "base/normalize";
 @import "base/fonts";
-@import "base/main";
+@import "base/typography";
+@import "base/layout";
+@import "partials/header";
+
 @import "recipes/recipe";
