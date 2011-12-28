@@ -1,5 +1,13 @@
 %meta(charset="utf-8")
 %title= content_for?(:title) ? yield(:title) : "Recipes"
+%meta(name="keywords" content="#{content_for?(:keywords) ? yield(:keywords) : 'Gourmet Recipes, Home Cooking, Healthy Recipes, Food, Recipe, Cooking, Menus'}")
+%meta(name="description" content="#{content_for?(:description) ? yield(:description) : 'Open Recipes is the best place find and save recipes online with photos, ratings, reviews, and more.'}")
+
 = csrf_meta_tag
+<!-- http://t.co/dKP3o1e -->
+%meta(name="HandheldFriendly" content="True")
+%meta(name="MobileOptimized" content="320")
+%meta(name="viewport" content="width=device-width, initial-scale=1")
+
 = yield(:head)
 = stylesheet_link_tag "application"
