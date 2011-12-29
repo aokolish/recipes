@@ -17,40 +17,66 @@ $sidebar_med_width: 185px;
 
     .actions {
       font-family: 'Iconic';
-      position: absolute;
-      top: 26px;
-      right: 20px;
-      opacity: .5;
-      @include transition(opacity .4s ease-out);
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      @media only screen and (min-width: 768px) {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        opacity: .4;
+        @include transition(opacity .5s ease-out);
+      }
 
       a {
         @include button(darken($light_gray, 10%));
         color: $med_gray;
         text-decoration: none;
         display: block;
-        margin-bottom: 5px;
-        font-size: 18px;
+        font-size: 26px;
         line-height: 30px;
-        padding: 0 7px 0;
+        padding: 5px 11px;
+        float: left;
+        margin-right: 15px;
+
+        @media only screen and (min-width: 768px) {
+          float: none;
+          margin-bottom: 5px;
+          padding: 0 7px 0;
+          font-size: 18px;
+        }
       }
 
       &:hover {
         opacity: 1;
-        @include transition(opacity .4s ease-out);
+        @include transition(opacity .5s ease-out);
       }
     }
   }
 
   #recipe_info {
+    font-size: .85em;
 
     @media only screen and (min-width: 768px) {
-      padding-left: 30px;
+      padding: 0 20px;
       border-left: 1px solid #B3B3B3;
       box-shadow: inset #FFF 1px 0px 0px;
     }
 
-    h2:first-child {
-      margin-top: 0;
+    @media only screen and (min-width: 992px) {
+      padding: 0 30px;
+    }
+
+    > h3 {
+      margin: 0;
+    }
+
+    > h3.first {
+      margin-top: 12px;
+    }
+
+    > p {
+      margin: 0 0 10px;
     }
   }
 }

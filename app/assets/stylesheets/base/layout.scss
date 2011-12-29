@@ -64,10 +64,13 @@ h1, h2 {
 
 #sidebar {
   float: none;
+  clear: both;
+  padding: 0;
   margin: 0;
 
   @media only screen and (min-width: 768px) {
     float: left;
+    clear: none;
     width: $sidebar_med_width;
     margin: 25px -100% 0 0;
   }
