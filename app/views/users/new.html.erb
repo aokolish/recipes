@@ -1,9 +1,0 @@
-<h1>Sign Up</h1>
-
-<%= simple_form_for(@user) do |f| %>
-	<%= f.error_messages %>
-	<%= f.input :email, :autofocus => 'autofocus' %>
-	<%= f.input :password %>
-	<%= f.input :password_confirmation %>
-	<%= f.button :submit %>
-<% end %>

@@ -59,6 +59,8 @@ h1, h2 {
 
   > div {
     float: left;
+    width: 100%;
+    margin-bottom: 25px;
   }
 }
 
@@ -111,8 +113,12 @@ footer {
 }
 
 //form stuff
-input[type=submit] {
+form .field {
+  margin-bottom: 10px;
+}
+form .actions input[type=submit] {
   @include button($med_gray);
+  margin-bottom: 10px;
 }
 
 .fieldWithErrors {

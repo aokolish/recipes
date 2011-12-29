@@ -6,3 +6,4 @@
 //
 //= require jquery
 //= require viewport_fix
+//= require main

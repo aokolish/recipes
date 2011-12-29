@@ -1,0 +1,17 @@
+#account
+  %h1 Create Account
+
+  = simple_form_for(@user) do |f|
+    = f.error_messages
+    = f.input :email, :autofocus => 'autofocus'
+    = f.input :password
+    = f.input :password_confirmation
+    = f.button :submit
+
+-#- content_for :sidebar do
+-#  %h2 Benefits of an Account
+-#  %ul
+-#    %li Create a recipe box to save recipes that you're most interested in
+-#    %li Follow people who post awesome recipes
+-#    %li Import, add, and edit your own recipes
+

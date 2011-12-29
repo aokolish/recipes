@@ -9,6 +9,12 @@ $dark_gray: #363636;
 $med_gray: #686868;
 $light_gray: #EEE;
 
+@mixin fancy_left_border {
+  border-left: 1px solid #B3B3B3;
+  box-shadow: inset #FFF 1px 0px 0px;
+}
+
+
 @import "bourbon";
 
 @import "base/normalize";
@@ -18,3 +24,4 @@ $light_gray: #EEE;
 @import "partials/header";
 
 @import "recipes/recipe";
+@import "users/user";
