@@ -1,6 +1,11 @@
 $sidebar_full_width: 270px;
 $sidebar_med_width: 185px;
 
+@mixin fancy_left_border {
+  border-left: 1px solid #B3B3B3;
+  box-shadow: inset #FFF 1px 0px 0px;
+}
+
 //recipe#show
 .recipes-show {
 
@@ -102,7 +107,29 @@ $sidebar_med_width: 185px;
   }
 }
 
-//recipe#index
-.recipes-index {
+//recipe#import
+.recipes-import {
+  #import_form {
+    margin-bottom: 25px;
 
+    input[type=text] {
+      float: left;
+      width: 60%;
+      margin-right: 15px;
+    }
+    input[type=submit] {
+      @include button($med_gray);
+    }
+  }
+
+  #sidebar {
+
+    @media only screen and (min-width: 768px) {
+      @include fancy_left_border;
+      padding-left: 20px;
+    }
+
+    @media only screen and (min-width: 992px) {
+    }
+  }
 }

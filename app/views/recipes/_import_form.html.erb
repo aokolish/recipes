@@ -1,6 +1,6 @@
-<%= form_tag create_from_import_recipes_path, :method => :post do %>
+<%= form_tag create_from_import_recipes_path, :method => :post, :id => 'import_form' do %>
 	<div class="field">
-		<%= label_tag :source_url %><br />
+		<%= label_tag :source_url, 'Url:' %>
 		<%= text_field_tag :source_url, params[:source_url], :autofocus => "autofocus", :required => 'required' %>
 	</div>
 	<div class="actions">

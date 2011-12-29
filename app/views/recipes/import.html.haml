@@ -1,13 +1,15 @@
-%h1 Import A Recipe
+#import
+  %h1 Import A Recipe
 
-%p
-  Find a recipe on any of the following sites, paste the url in to this form, and create a recipe on our site automatically. Let
-  us know if you experience any problems
+  %p
+    Find a recipe on any of the following sites, paste the url in to this form, and create a recipe on our site automatically. Let
+    us know if you experience any problems
 
-%h2 Supported Sites
-%ul(class="supported_domains")
-  %li www.foodnetwork.com
-  %li www.cookingchanneltv.com
+  = render 'import_form'
 
-= render 'import_form'
+- content_for :sidebar do
 
+  %h2 Supported Sites
+  %ul(class="supported_domains")
+    %li www.foodnetwork.com
+    %li www.cookingchanneltv.com
