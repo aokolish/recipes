@@ -110,7 +110,11 @@ footer {
   border: solid 1px #C66;
 }
 
-//error styles
+//form stuff
+input[type=submit] {
+  @include button($med_gray);
+}
+
 .fieldWithErrors {
   display: inline;
 }
