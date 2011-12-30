@@ -113,10 +113,10 @@ footer {
 }
 
 //form stuff
-form .field {
+#container form .field {
   margin-bottom: 10px;
 }
-form .actions input[type=submit] {
+#container form input[type=submit] {
   @include button($med_gray);
   margin-bottom: 10px;
 }
