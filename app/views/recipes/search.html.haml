@@ -1,8 +1,8 @@
-#recipes
+#search_results
   - unless @recipes.empty?
     %h1 Search Results
 
-    %p #{page_entries_info @recipes}
+    %p(class="summary") #{page_entries_info @recipes}
 
     = form_tag search_recipes_path, :method => 'get', :id => 'search_recipes' do
       = text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes'

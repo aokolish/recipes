@@ -98,6 +98,36 @@ $sidebar_med_width: 185px;
   }
 }
 
+.recipes-search {
+  #search_results > h1 {
+    margin-bottom: 2px;
+    float: left;
+  }
+
+  .summary {
+    float: left;
+    margin: 35px 0 10px 20px;
+    font-size: .85em;
+    color: lighten($med_gray, 10%);
+  }
+
+  #search_recipes {
+    font-size: 1.5em;
+
+    input[type=text] {
+      width: 75%;
+    }
+
+    input[type=submit] {
+      font-family: 'Signify';
+      font-size: 1em;
+      padding: 0 18px 6px;
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
 //recipe#import
 .recipes-import {
   #import_form {
