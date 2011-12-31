@@ -7,8 +7,6 @@ class RecipesController < ApplicationController
     @recipes.each do |recipe|
       recipe.replace_pipes
     end
-
-    @header = 'Recipes'
   end
 
   # GET /recipes/search?search=some_search?page=2
@@ -18,9 +16,6 @@ class RecipesController < ApplicationController
     if @recipes.empty?
       flash.now[:notice] = "Sorry, you searched for '#{params[:search]}' and no results were found."
     end
-    @header = 'Search Results'
-
-    render 'index'
   end
 
   # GET /recipes/1

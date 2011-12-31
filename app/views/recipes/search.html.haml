@@ -1,0 +1,17 @@
+#recipes
+  - unless @recipes.empty?
+    %h1 Search Results
+
+    %p #{page_entries_info @recipes}
+
+    = form_tag search_recipes_path, :method => 'get', :id => 'search_recipes' do
+      = text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes'
+      = submit_tag "S", :name => nil, :id => 'search_submit'
+
+    - @recipes.each do |recipe|
+      = link_to recipe.title, recipe, :class => 'recipe-title'
+      %p(class="author") #{recipe.author}
+      %p(class="directions") #{truncate(recipe.directions, :length => 225)}
+
+    = will_paginate
+

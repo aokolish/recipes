@@ -1,9 +1,6 @@
 #recipes
   - unless @recipes.empty?
-    %h1 #{@header}
-
-    - if params[:action] == 'search'
-      %p #{page_entries_info @recipes}
+    %h1 Recipes
 
     - @recipes.each do |recipe|
       = link_to recipe.title, recipe, :class => 'recipe-title'
