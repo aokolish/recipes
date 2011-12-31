@@ -11,5 +11,5 @@
       = link_to "Log in", login_path
 
   = form_tag search_recipes_path, :method => 'get' do
-    = text_field_tag :search, params[:search], 'required' => 'true', 'placeholder' => 'Search Recipes'
+    = text_field_tag :search, nil, 'required' => 'true', 'placeholder' => 'Search Recipes'
     = submit_tag "S", :name => nil, :id => 'search_submit'
