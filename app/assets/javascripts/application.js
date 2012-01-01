@@ -6,4 +6,5 @@
 //
 //= require jquery
 //= require viewport_fix
+//= require tooltip
 //= require main
