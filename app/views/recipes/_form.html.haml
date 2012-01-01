@@ -1,11 +1,14 @@
-<%= simple_form_for(@recipe) do |f| %>
-	<%= f.error_messages %>
-	<%= f.input :title, :autofocus => 'autofocus' %>
-	<%= f.input :author %>
-	<%= f.input :source_url, :disabled => true %>
-	<%= f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time } %>
-	<%= f.input :yield %>
-	<%= f.input :ingredients %>
-	<%= f.input :directions %>
-	<%= f.button :submit %>
-<% end %>
+= simple_form_for @recipe, :wrapper_html => { :class => 'left-column' } do |f|
+  = f.error_messages
+  .main-fields
+    = f.input :title, :autofocus => 'autofocus'
+    = f.input :ingredients
+    = f.input :directions
+  .secondary-fields
+    = f.input :author
+    -#= f.input :source_url, :disabled => true
+    = f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time }
+    = f.input :yield
+  .actions
+    = f.button :submit, 'Submit'
+    = link_to 'Cancel', recipes_path, :class => 'button'
