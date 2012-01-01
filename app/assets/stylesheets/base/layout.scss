@@ -46,22 +46,7 @@ h1, h2 {
 }
 
 #content {
-  overflow: visible;
-  margin-right: 0;
-
-  @media only screen and (min-width: 768px) {
-    margin-right: $sidebar_med_width + 100;
-  }
-
-  @media only screen and (min-width: 992px) {
-    margin-right: $sidebar_full_width + 100;
-  }
-
-  > div {
-    float: left;
-    width: 100%;
-    margin-bottom: 25px;
-  }
+  @include left_column;
 }
 
 #sidebar {
@@ -116,9 +101,12 @@ footer {
 #container form .field {
   margin-bottom: 10px;
 }
-#container form input[type=submit] {
+#container form input[type=submit],
+a.button {
   @include button($med_gray);
   margin-bottom: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
 }
 
 .fieldWithErrors {
