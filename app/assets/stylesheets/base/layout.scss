@@ -29,13 +29,23 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2em;
+    margin-bottom: .67em;
+  }
+}
+
 h1, h2 {
   color: $dark_gray;
 }
 
 #container {
   background: $light_gray;
-  padding: 10px 20px;
+  padding: 0px 13px;
   box-shadow: #363636 0px 10px 55px;
   clear: both;
   overflow: hidden;
