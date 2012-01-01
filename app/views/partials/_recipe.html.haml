@@ -1,0 +1,7 @@
+.recipe
+  =link_to '', recipe, :class => 'underlay'
+  %img(src="http://placekitten.com/g/80/80")
+  = link_to "#{truncate(recipe.title, :length => 45)}", recipe, :class => 'title'
+  %p(class="info")
+    %span(class="author") #{truncate(recipe.author, :length => 40)} -
+    %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
