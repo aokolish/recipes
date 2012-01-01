@@ -6,9 +6,11 @@
     = f.input :directions
   .secondary-fields
     = f.input :author
-    -#= f.input :source_url, :disabled => true
     = f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time }
     = f.input :yield
+    .field
+      = f.label :source_url
+      = link_to @recipe.source_url, @recipe.source_url, :target => '_blank'
   .actions
     = f.button :submit, 'Submit'
     = link_to 'Cancel', @recipe, :class => 'button'
