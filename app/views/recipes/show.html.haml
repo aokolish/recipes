@@ -10,8 +10,8 @@
 
   - if current_user
     .actions
-      = link_to 'p', edit_recipe_path(@recipe), :class => 'edit'
-      = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete'
+      = link_to 'p', edit_recipe_path(@recipe), :class => 'edit', :title => 'Edit this recipe'
+      = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this recipe'
 
 - content_for :sidebar do
   #recipe_info
