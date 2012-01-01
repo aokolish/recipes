@@ -98,58 +98,74 @@ footer {
 }
 
 //form stuff
-#container form .field {
-  margin-bottom: 10px;
-}
-#container form input[type=submit],
-a.button {
-  @include button($med_gray);
-  margin-bottom: 10px;
-  text-decoration: none;
-  font-family: sans-serif;
+#container form {
+  .field {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    @include border-radius(4px);
+    @include box-shadow(inset 0 1px 0 #999);
+    margin-top: 2px;
+    padding: 6px;
+    border: 1px solid #BBB;
+    outline: none;
+
+    &:focus {
+      @include box-shadow(0 0 6px #006AFF);
+    }
+  }
+  input[type=submit],
+  a.button {
+    @include button($med_gray);
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+
+    &:focus {
+      @include box-shadow(0 0 6px #006AFF);
+      outline: none;
+    }
+  }
+  .field_with_errors input {
+    @include box-shadow(0 0 4px #C00);
+    border: 1px solid darken(#C00, 10%);
+    outline: none;
+  }
+
+  //error messages above the form
+  .error_messages {
+    width: 400px;
+    border: 2px solid #CF0000;
+    padding: 0px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    font-size: 1em;
+  }
+  .error_messages h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1em;
+    margin: 0;
+    background-color: #c00;
+    color: #fff;
+  }
+  .error_messages p {
+    margin: 8px 10px;
+  }
+  .error_messages ul {
+    margin: 0;
+  }
+  .field label {
+    display: block;
+  }
 }
 
-.fieldWithErrors {
-  display: inline;
-}
 
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 1em;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 1em;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin: 0;
-}
-
-
-.field label {
-	display: block;
-}
-
-form .field_with_errors input {
-	background: #C00;
-}
-
+//pagination styles
 .pagination {
   a {
     @include button;
