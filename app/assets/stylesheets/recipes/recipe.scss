@@ -1,6 +1,3 @@
-$sidebar_full_width: 270px;
-$sidebar_med_width: 185px;
-
 //recipe#show
 .recipes-show {
 
@@ -160,59 +157,75 @@ $sidebar_med_width: 185px;
   }
 }
 
+//new recipe and edit recipe should look the same
+.recipes-new,
 .recipes-edit {
-  #container form {
-    @include left_column;
-
-    .main-fields {
-      float: left;
-      width: 100%;
-      margin-bottom: 25px;
-
-      @media only screen and (min-width: 768px) {
-        @include fancy_right_border;
-      }
-
-      input[type=text],
-      textarea {
-        width: 80%;
-      }
-
-      #recipe_title {
-        font-size: 1.15em;
-      }
-      #recipe_ingredients {
-        height: 185px;
-      }
-    }
-
-  }
   #content {
     margin-right: 0;
 
-    .secondary-fields {
-      float: none;
-      clear: both;
-      padding: 0;
-      margin: 0;
+    form {
+      @include left_column;
 
-      @media only screen and (min-width: 768px) {
+      .main-fields {
         float: left;
-        clear: none;
-        width: $sidebar_med_width;
-        margin: 0 -100% 0 0;
-        padding-left: 25px;
-        //@include fancy_left_border;
-      }
+        width: 100%;
+        margin-bottom: 25px;
 
-      @media only screen and (min-width: 992px) {
-        width: $sidebar_full_width;
-      }
+        @media only screen and (min-width: 768px) {
+          @include fancy_right_border;
+        }
 
-      .field {
-        padding-bottom: 12px;
-        margin-bottom: 12px;
-        @include fancy_bottom_border;
+        input[type=text],
+        textarea {
+          width: 100%;
+
+          @media only screen and (min-width: 768px) {
+            width: 90%;
+          }
+          @media only screen and (min-width: 992px) {
+            width: 80%;
+          }
+        }
+
+        #recipe_title {
+          font-size: 1.15em;
+        }
+        #recipe_ingredients {
+          height: 185px;
+        }
+      }
+      .secondary-fields {
+        float: none;
+        clear: both;
+        padding: 0;
+        margin: 0;
+
+        @media only screen and (min-width: 768px) {
+          float: left;
+          clear: none;
+          width: 250px;
+          margin: 0 -100% 0 0;
+          padding-left: 15px;
+        }
+
+        @media only screen and (min-width: 992px) {
+          width: 300px;
+          padding-left: 25px;
+        }
+
+        .field {
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+          @include fancy_bottom_border;
+
+          input[type=text] {
+            width: 99%;
+
+            @media only screen and (min-width: 768px) {
+              width: 98%;
+            }
+          }
+        }
       }
     }
   }
