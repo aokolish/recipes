@@ -1,4 +1,4 @@
-= simple_form_for @recipe, :wrapper_html => { :class => 'left-column' } do |f|
+= simple_form_for @recipe do |f|
   = f.error_messages
   .main-fields
     = f.input :title, :autofocus => 'autofocus'
