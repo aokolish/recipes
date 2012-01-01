@@ -183,13 +183,19 @@
 
     .actions {
       float: left;
-      margin-top: -8px;
+      margin-top: 5px;
+      @media only screen and (min-width: 768px) {
+        margin-top: -8px;
+      }
     }
 
     input[type=text] {
       float: left;
-      width: 70%;
+      width: 95%;
       margin-right: 15px;
+      @media only screen and (min-width: 768px) {
+        width: 70%;
+      }
     }
     input[type=submit] {
       @include button($med_gray);
