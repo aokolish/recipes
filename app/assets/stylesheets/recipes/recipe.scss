@@ -80,7 +80,7 @@
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
-    padding: 10px 15px 10px 0;
+    padding: 10px 15px 10px 8px;
     @include transition(all 5.5s ease-out 2s);
 
     &:hover {
@@ -100,8 +100,7 @@
         width: 15px;
       }
     }
-
-    .underlay {
+    a.underlay {
       width: 100%;
       height: 100%;
       display: block;
@@ -109,29 +108,27 @@
       position: absolute;
       z-index: 1;
     }
-    img {
-      float: left;
-      margin-right: 15px;
-    }
-    .title {
+    a.title {
       display: block;
       margin-top: 10px;
       font-size: 1.2em;
       font-weight: bold;
       text-decoration: none;
       color: $dark_gray;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    }
+    img {
+      float: left;
+      margin-right: 15px;
     }
 
-    .info {
+    p.info {
       margin-top: 5px;
-      position: relative;
-      z-index: 10;
+      //uncomment to make this text selectable
+      //position: relative;
+      //z-index: 10;
+      //float: left;
 
-      .author {
+      span.author {
         margin: 2px 0;
       }
     }
@@ -202,7 +199,8 @@
 
 //new recipe and edit recipe should look the same
 .recipes-new,
-.recipes-edit {
+.recipes-edit,
+.recipes-update {
   #content {
     margin-right: 0;
 
