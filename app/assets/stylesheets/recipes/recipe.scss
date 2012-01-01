@@ -159,3 +159,61 @@ $sidebar_med_width: 185px;
     }
   }
 }
+
+.recipes-edit {
+  #container form {
+    @include left_column;
+
+    .main-fields {
+      float: left;
+      width: 100%;
+      margin-bottom: 25px;
+
+      @media only screen and (min-width: 768px) {
+        @include fancy_right_border;
+      }
+
+      input[type=text],
+      textarea {
+        width: 80%;
+      }
+
+      #recipe_title {
+        font-size: 1.15em;
+      }
+      #recipe_ingredients {
+        height: 185px;
+      }
+    }
+
+  }
+  #content {
+    margin-right: 0;
+
+    .secondary-fields {
+      float: none;
+      clear: both;
+      padding: 0;
+      margin: 0;
+
+      @media only screen and (min-width: 768px) {
+        float: left;
+        clear: none;
+        width: $sidebar_med_width;
+        margin: 0 -100% 0 0;
+        padding-left: 25px;
+        //@include fancy_left_border;
+      }
+
+      @media only screen and (min-width: 992px) {
+        width: $sidebar_full_width;
+      }
+
+      .field {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        @include fancy_bottom_border;
+      }
+    }
+  }
+}
