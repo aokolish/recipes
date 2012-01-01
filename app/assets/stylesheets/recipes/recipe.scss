@@ -78,26 +78,31 @@
   .recipe {
     clear: both;
     position: relative;
-    margin-bottom: 20px;
     overflow: hidden;
-    padding: 10px 15px 10px 8px;
+    padding: 10px 15px 10px 0;
     @include transition(all 5.5s ease-out 2s);
 
-    &:hover {
-      background: #CCE1FF;
-      @include transition(all 5.5s ease-out 2s);
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      padding-left: 8px;
 
-      &:after {
-        content: '2';
-        font-family: 'Signify';
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px #799ED2;
-        font-size: 1.5em;
-        position: absolute;
-        top: 30%;
-        right: 15px;
-        height: 15px;
-        width: 15px;
+      //this fanciness does not make sense on a mobile device
+      &:hover {
+        background: #CCE1FF;
+        @include transition(all 5.5s ease-out 2s);
+
+        &:after {
+          content: '2';
+          font-family: 'Signify';
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px #799ED2;
+          font-size: 1.5em;
+          position: absolute;
+          top: 30%;
+          right: 15px;
+          height: 15px;
+          width: 15px;
+        }
       }
     }
     a.underlay {
@@ -110,15 +115,21 @@
     }
     a.title {
       display: block;
-      margin-top: 10px;
       font-size: 1.2em;
       font-weight: bold;
       text-decoration: none;
       color: $dark_gray;
+      margin-top: 0;
+      @media only screen and (min-width: 768px) {
+        margin-top: 10px;
+      }
     }
     img {
       float: left;
-      margin-right: 15px;
+      margin-right: 10px;
+      @media only screen and (min-width: 768px) {
+        margin-right: 15px;
+      }
     }
 
     p.info {
