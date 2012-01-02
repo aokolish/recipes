@@ -25,11 +25,17 @@ header {
           text-decoration: none;
           font-size: .85em;
           background: #8F8F8F;
-          border-right: 1px solid $med_gray;
+          //@include linear-gradient(225deg,  transparent 8px, #8F8F8F 8px);
+          box-shadow: black -2px 5px 7px -2px;
+          //border-right: 1px solid $med_gray;
         }
       }
       li.selected a {
           background: $light_gray;
+          box-shadow: black 0 2px 7px 0px;
+          //@include linear-gradient(225deg,  transparent 8px, $light_gray 8px);
+          position: relative;
+          z-index: 5;
       }
     }
   }
