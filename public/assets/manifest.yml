@@ -8,6 +8,7 @@ signifylite.svg: signifylite-3c225217808f7be564db4ae62aed81e0.svg
 signifylite.ttf: signifylite-153b16c889f8a16482fbbaf5d42a3d5f.ttf
 signifylite.woff: signifylite-d67f49666e5bc350dd395f77f995431a.woff
 ajax-loader.png: ajax-loader-19ea758eb237ca9617d6a8c1fa1f6347.png
+fabric.png: fabric-4fa639e108c08e1572b299e09093e8ff.png
 noise.png: noise-b50f5bb0df7a704e38501c48184a6446.png
-application.js: application-11ccc6e5aef84883c23707bde944df12.js
-application.css: application-f0d19ad4ac7054965a1336aefb889214.css
+application.js: application-d6978eddd4adbff3e4fad6583a676ed3.js
+application.css: application-f68326353b482bb4aacb05448a2392c6.css
