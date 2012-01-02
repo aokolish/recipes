@@ -20,19 +20,17 @@ header {
         display: inline;
 
         a {
-          padding: 9px 14px 7px;
+          padding: 9px 17px 7px 14px;
           color: $dark_gray;
           text-decoration: none;
           font-size: .85em;
-          background: #8F8F8F;
-          //@include linear-gradient(225deg,  transparent 8px, #8F8F8F 8px);
-          box-shadow: black -2px 5px 7px -2px;
+          @include linear-gradient(225deg,  transparent 7px, #8F8F8F 7px);
+          @include box-shadow(black -2px 8px 7px -2px);
         }
       }
       li.selected a {
-          background: $light_gray;
-          box-shadow: black 0 2px 7px 0px;
-          //@include linear-gradient(225deg,  transparent 8px, $light_gray 8px);
+          @include box-shadow(black 0px 11px 6px 1px);
+          @include linear-gradient(225deg,  transparent 7px, $light_gray 7px);
           position: relative;
           z-index: 5;
           padding-bottom: 9px;
