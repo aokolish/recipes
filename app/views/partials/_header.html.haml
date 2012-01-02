@@ -1,7 +1,4 @@
-%nav
-  = render_navigation
-
-#other-stuff
+#login-search
   - if current_user
     %p(class="logged-in")
       Logged in as  #{current_user.email} | #{link_to "Log out", logout_path}
@@ -13,3 +10,7 @@
   = form_tag search_recipes_path, :method => 'get' do
     = text_field_tag :search, nil, 'required' => 'true', 'placeholder' => 'Search Recipes'
     = submit_tag "S", :name => nil, :id => 'search_submit'
+
+%nav
+  = render_navigation
+
