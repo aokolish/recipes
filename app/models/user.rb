@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :favorites
+  has_many :recipes, :through => :favorites
+
   attr_accessible :email, :password, :password_confirmation
   attr_accessor :password
   before_save :encrypt_password
@@ -6,7 +9,7 @@ class User < ActiveRecord::Base
   validates :password, :presence => true, :confirmation => true, :length => { :minimum => 4 }
   validates :email, :presence => true, :uniqueness => true, 
             :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'is an invalid format' }
-  
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
@@ -15,7 +18,7 @@ class User < ActiveRecord::Base
       nil
     end
   end
-  
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
