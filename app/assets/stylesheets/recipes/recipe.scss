@@ -13,7 +13,6 @@
     }
 
     .actions {
-      font-family: 'Iconic';
       margin-bottom: 20px;
       overflow: hidden;
 
@@ -23,8 +22,10 @@
         right: 20px;
       }
 
+      input[type=submit],
       a {
         @include button(darken($light_gray, 10%));
+        font-family: 'Iconic';
         color: $med_gray;
         text-decoration: none;
         display: block;
@@ -76,6 +77,78 @@
 .recipes-index,
 .recipes-search {
   @include recipe;
+  .recipe {
+    clear: both;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 15px 10px 0;
+    @include transition(all 5.5s ease-out 2s);
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      padding-left: 8px;
+
+      //this fanciness does not make sense on a mobile device
+      &:hover {
+        background: #CCE1FF;
+        @include transition(all 5.5s ease-out 2s);
+
+        &:after {
+          content: '2';
+          font-family: 'Signify';
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px #799ED2;
+          font-size: 1.5em;
+          position: absolute;
+          top: 30%;
+          right: 15px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+    a.underlay {
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0.1;
+      position: absolute;
+      z-index: 1;
+    }
+    img {
+      float: left;
+      //width: 25%;
+      max-width: 80%;
+      @media only screen and (min-width: 768px) {
+        max-width: 100%;
+      }
+    }
+    a.title {
+      display: block;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: $dark_gray;
+      margin: -1px 0 0 0;
+      @media only screen and (min-width: 768px) {
+        margin: 10px 0 0 0;
+        font-size: 1.2em;
+      }
+    }
+    a.title,
+    p.info {
+      float: left;
+      padding-left: 5px;
+      width: 80%;
+    }
+    p.info {
+      margin-top: 5px;
+
+      span.author {
+        margin: 2px 0;
+      }
+    }
+  }
 }
 
 .recipes-search {
