@@ -1,0 +1,7 @@
+%h1 Favorites
+
+%ul(id="recipes")
+  = render :partial => 'partials/recipe', :collection => @recipes
+
+-# if the user has no favorites, show some sort of instructional message that tells 
+-# them how to proceed (yellow background?)
