@@ -6,7 +6,7 @@ but I knew there had to be a better way; this is that better way.
 
 ## Planned Features
 
-* good experience on a mobile device
+* good experience on multiple devices (responsive design)
 * good search for recipes
 * taggable recipes
 * shopping list or the ability to send data to another shopping app
