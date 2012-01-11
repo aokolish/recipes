@@ -1,3 +1,6 @@
 .favorites-index {
+  #recipes {
+    padding-left: 0;
+  }
   @include recipe;
 }

@@ -2,6 +2,7 @@
   - unless @recipes.empty?
     %h1 Recipes
 
-    = render :partial => 'partials/recipe', :collection => @recipes
+    %ul
+      = render :partial => 'partials/recipe', :collection => @recipes
 
     = will_paginate
