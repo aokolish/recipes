@@ -19,7 +19,9 @@ group :development, :test do
   gem "nifty-generators"
   gem "factory_girl_rails"
   gem "capybara"
+  gem "guard", '0.8.8'
   gem "guard-rspec"
+  gem "rb-fsevent"
   gem "rspec-rails"
   gem "fakeweb"
   gem 'localtunnel'
