@@ -28,7 +28,7 @@ header {
         display: inline;
 
         a {
-          padding: 9px 17px 7px 14px;
+          padding: 11px 19px 7px 16px;
           color: $dark_gray;
           text-decoration: none;
           font-size: .85em;
@@ -49,7 +49,7 @@ header {
   #login-search {
     float: left;
     width: 355px;
-    margin-top: 16px;
+    margin-top: 20px;
 
     @media only screen and (min-width: 768px) {
       float: right;
