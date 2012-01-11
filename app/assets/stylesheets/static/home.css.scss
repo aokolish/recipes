@@ -16,24 +16,39 @@
 
     #summary {
       float: left;
-      margin-right: 490px;
+
+      @media only screen and (min-width: 768px) {
+        margin-right: 320px;
+      }
+
+      @media only screen and (min-width: 992px) {
+        margin-right: 490px;
+      }
     }
 
     #quote {
-      float: left;
+      float: none;
       width: 320px;
-      margin: 50px 0 0 -420px;
+      margin: 50px 0 0 0;
+
+      @media only screen and (min-width: 768px) {
+        float: left;
+        margin-left: -320px;
+      }
+
+      @media only screen and (min-width: 992px) {
+        margin-left: -420px;
+      }
 
       blockquote {
-        font-size: 18px;
+        font-size: 1.15em;
+        margin-left: 20px;
       }
 
       .author {
         display: block;
         float: right;
-        position: relative;
-        left: 42px;
-        top: -12px;
+        margin-right: -25px;
         color: gray;
         font-style: italic;
       }
@@ -53,14 +68,20 @@
 
         .step {
           float: left;
-          width: 200px;
-          padding-right: 50px;
+          width: 40%;
+          padding-right: 10%;
+
+          @media only screen and (min-width: 590px) {
+            width: 20%;
+            padding-right: 5%;
+          }
 
           h3 {
-            margin-bottom: 0;
+            margin-bottom: 5px;
           }
           > p {
             margin-top: 3px;
+            max-width: 190px;
           }
         }
       }
