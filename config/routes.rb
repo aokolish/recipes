@@ -17,5 +17,5 @@ Recipes::Application.routes.draw do
 
   resources :sessions
 
-  root :to => "recipes#index"
+  root :to => "static#home"
 end
