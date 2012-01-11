@@ -1,0 +1,68 @@
+.static-home {
+  #content {
+    margin-right: 0;
+
+    > h1 {
+      text-align: center;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    #gallery {
+      text-align: center;
+    }
+
+    #summary {
+      float: left;
+      margin-right: 490px;
+    }
+
+    #quote {
+      float: left;
+      width: 320px;
+      margin: 50px 0 0 -420px;
+
+      blockquote {
+        font-size: 18px;
+      }
+
+      .author {
+        display: block;
+        float: right;
+        position: relative;
+        left: 42px;
+        top: -12px;
+        color: gray;
+        font-style: italic;
+      }
+    }
+
+    #how-it-works {
+      clear: both;
+
+      h2 {
+        margin: 0;
+      }
+      #steps {
+        margin: 0;
+        list-style-type: none;
+        padding-left: 0;
+        overflow: hidden;
+
+        .step {
+          float: left;
+          width: 250px;
+
+          h3 {
+            margin-bottom: 0;
+          }
+          > p {
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
