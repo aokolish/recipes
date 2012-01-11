@@ -86,6 +86,7 @@ header {
       }
 
       #search {
+        color: gray;
         height: 10px;
         width: 240px;
         padding: 8px 15px;
@@ -94,17 +95,14 @@ header {
         border: none;
         font-size: 95%;
         -webkit-transition: all .25s ease-out;
-      }
-      #search:focus {
-        outline: none;
-        background-color: $light_gray;
-        -webkit-transition: all .25s ease-out;
-        @media only screen and (min-width: 768px) {
-          width: 300px;
-        }
-
-        #search_submit {
+        &:focus {
           color: black;
+          outline: none;
+          background-color: $light_gray;
+          -webkit-transition: all .25s ease-out;
+          @media only screen and (min-width: 768px) {
+            width: 300px;
+          }
         }
       }
 
