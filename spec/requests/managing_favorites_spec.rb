@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Favorites" do
-  let(:user) { FactoryGirl.build(:user) }
-  let(:recipe) { FactoryGirl.build(:recipe) }
+  let(:user) { FactoryGirl.create(:user) }
+  let(:recipe) { FactoryGirl.create(:recipe) }
 
   before(:all) do
     user.password = 'aoeu'
@@ -39,7 +39,7 @@ describe "Favorites" do
   describe "removing a favorite" do
     it "can be done on the favorites page" do
       visit user_favorites_path(user)
-      click_button 'Remove'
+      click_button 't'
 
       page.should have_content('Recipe has been removed from your favorites')
       page.find('#flash_notice').should have_link('Recipe', :href => recipe_path(recipe))
