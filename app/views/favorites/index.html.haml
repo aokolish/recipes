@@ -3,5 +3,9 @@
 %ul(id="recipes")
   = render :partial => 'partials/recipe', :collection => @recipes
 
--# if the user has no favorites, show some sort of instructional message that tells 
--# them how to proceed (yellow background?)
+- if current_user.favorites.empty?
+  .flash_info
+    %p
+      Your recipe box is where you can save all of the recipes that you are interested in.
+      You can add any other recipes to your recipe box by clicking the (+) icon next to each
+      recipe's title. If you write a recipe, it will automatically be added to your recipe box.
