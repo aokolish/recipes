@@ -11,7 +11,7 @@ describe "login/logout" do
   
   it "redirects you when you log in" do
     visit root_path
-    click_link "log in"
+    click_link "Log in"
     
     current_path.should eq(login_path)
     fill_in "email", :with => user.email
@@ -33,7 +33,7 @@ describe "login/logout" do
   
   def login
     visit root_path
-    click_link "log in"
+    click_link "Log in"
     
     fill_in "email", :with => user.email
     fill_in "password", :with => user.password
