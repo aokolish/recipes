@@ -24,6 +24,11 @@ class Recipe < ActiveRecord::Base
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end
 
+  def favorite_for?(user)
+    favorites.exists?(:user_id => user.id)
+  end
+
+
   # storing total_time as an integer. customer getter/setter:
   def total_time
     # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
