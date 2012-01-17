@@ -17,11 +17,11 @@ gem 'bourbon'
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
   gem "nifty-generators"
-  gem "factory_girl_rails"
   gem "capybara"
   gem "capybara-webkit"
   gem "guard", '0.8.8'
   gem "guard-rspec"
+  gem 'factory_girl_rails'
   gem "rb-fsevent"
   gem "rspec-rails"
   gem "fakeweb"
@@ -30,7 +30,9 @@ group :development, :test do
   gem 'launchy'
   gem 'growl_notify'
   gem 'sqlite3'
+  gem 'database_cleaner'
 end
+
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"

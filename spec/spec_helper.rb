@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'database_cleaner'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
@@ -23,9 +24,32 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   config.filter_run_excluding :broken => true
+
+  Capybara.javascript_driver = :webkit
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with :truncation
+  end
+
+  config.before(:each) do
+    if example.metadata[:js]
+      #config.use_transactional_fixtures = false
+      DatabaseCleaner.strategy = :truncation
+    else
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.start
+    end
+  end
+
+  config.after(:each) do
+    Capybara.use_default_driver if example.metadata[:js]
+    DatabaseCleaner.clean
+    #config.use_transactional_fixtures = true
+  end
 
   # cache external pages for use in various tests
   response = `curl -is http://www.foodnetwork.com/recipes/strawberries-and-cream-tart-recipe/index.html`
