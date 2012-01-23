@@ -19,8 +19,6 @@ describe "Favorites" do
       click_button "favorite_recipe"
       visit recipe_path(recipe)
 
-      page.find('.actions .disabled_favorite').trigger(:pyfg)
-      page.find('.actions .disabled_favorite').trigger(:aoeu)
       page.find('.actions .disabled_favorite').trigger(:mouseover)
       page.should have_content("This recipe is already in your favorites")
     end
