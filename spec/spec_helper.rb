@@ -31,24 +31,15 @@ RSpec.configure do |config|
   Capybara.javascript_driver = :webkit
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with :truncation
+    DatabaseCleaner.strategy = :truncation
   end
 
   config.before(:each) do
-    if example.metadata[:js]
-      #config.use_transactional_fixtures = false
-      DatabaseCleaner.strategy = :truncation
-    else
-      DatabaseCleaner.strategy = :transaction
-      DatabaseCleaner.start
-    end
+    DatabaseCleaner.start
   end
 
   config.after(:each) do
-    Capybara.use_default_driver if example.metadata[:js]
     DatabaseCleaner.clean
-    #config.use_transactional_fixtures = true
   end
 
   # cache external pages for use in various tests
