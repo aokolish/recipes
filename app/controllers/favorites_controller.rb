@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
-    redirect_to user_favorites_path(current_user), :notice => 'Recipe was deleted'
+    redirect_to user_favorites_path(current_user), :notice => 'Recipe has been removed from your favorites'
   end
 
 end
