@@ -6,21 +6,22 @@ describe "Favorites" do
 
   describe "adding a favorite" do
     it "is done via a button on the recipe details page" do
-      login
+      login(user)
       visit recipe_path(recipe)
       click_button "favorite_recipe"
 
       page.should have_content("Favorite was added")
     end
 
-    it "the button is disabled if you have already favorited a recipe" do
-      login
+    it "the button is disabled if you have already favorited a recipe", :js => true do
+      login(user)
       visit recipe_path(recipe)
       click_button "favorite_recipe"
       visit recipe_path(recipe)
 
-      favorite_button = page.find('.actions .disabled_favorite')
-      favorite_button.trigger(:hover)
+      page.find('.actions .disabled_favorite').trigger(:pyfg)
+      page.find('.actions .disabled_favorite').trigger(:aoeu)
+      page.find('.actions .disabled_favorite').trigger(:mouseover)
       page.should have_content("This recipe is already in your favorites")
     end
 
@@ -32,7 +33,7 @@ describe "Favorites" do
 
   describe "removing a favorite" do
     it "can be done on the favorites page" do
-      login
+      login(user)
       visit recipe_path(recipe)
       click_button "favorite_recipe"
 
@@ -45,7 +46,7 @@ describe "Favorites" do
     end
   end
 
-  def login
+  def login(user)
     visit login_path
     fill_in "email", :with => user.email
     fill_in "password", :with => user.password
