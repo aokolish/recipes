@@ -13,16 +13,6 @@ describe "Favorites" do
       page.should have_content("Favorite was added")
     end
 
-    it "the button is disabled if you have already favorited a recipe", :js => true do
-      login(user)
-      visit recipe_path(recipe)
-      click_button "favorite_recipe"
-      visit recipe_path(recipe)
-
-      page.find('.actions .disabled_favorite').trigger(:mouseover)
-      page.should have_content("This recipe is already in your favorites")
-    end
-
     it "cannot be done when you are logged out" do
       visit recipe_path(recipe)
       page.should_not have_button('favorite_recipe')
@@ -35,12 +25,25 @@ describe "Favorites" do
       visit recipe_path(recipe)
       click_button "favorite_recipe"
 
-      click_link 'Remove this favorite'
-
+      click_link 'Remove this from your favorites'
       page.should have_content('Recipe has been removed from your favorites')
       #page.find('#flash_notice').should have_link('Recipe', :href => recipe_path(recipe))
       # this is kinda like an easy undo. if they accidentally remove something,
       # they can use this link to get back to the recipe and favorite it again
+    end
+
+    it "you can remove them from the recipe page", :js => true do
+      login(user)
+      visit recipe_path(recipe)
+      click_button "favorite_recipe"
+
+      visit recipe_path(recipe)
+      remove_link = page.find('.actions .remove_favorite')
+      remove_link.trigger(:mouseover)
+      page.should have_content("Remove this from your favorites")
+
+      remove_link.click
+      page.should have_content('Recipe has been removed from your favorites')
     end
   end
 

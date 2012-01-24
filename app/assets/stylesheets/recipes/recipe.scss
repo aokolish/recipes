@@ -42,9 +42,8 @@
           font-size: 18px;
         }
       }
-      .disabled_favorite {
-        @include button(#004D00);
-        opacity: .4;
+      .remove_favorite {
+        @include button(#C00);
         display: block;
         font-size: 26px;
         line-height: 30px;
@@ -55,7 +54,6 @@
 
         @media only screen and (min-width: 768px) {
           float: none;
-          margin-bottom: 5px;
           padding: 0 7px 0;
           font-size: 18px;
         }

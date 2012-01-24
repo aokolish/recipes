@@ -11,12 +11,12 @@
   - if current_user
     .actions
       - if @recipe.favorite_for?(current_user)
-        %span(class="disabled_favorite" title="This recipe is already in your favorites") h
+        = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, @recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
       -else
         = form_for [current_user, @favorite] do |f|
           = hidden_field_tag "favorite[recipe_id]", @recipe.id
           = hidden_field_tag "favorite[user_id]", current_user.id
-          = f.submit 'h', :id => 'favorite_recipe', :title => 'Favorite this recipe'
+          = f.submit 's', :id => 'favorite_recipe', :title => 'Favorite this recipe'
       = link_to 'p', edit_recipe_path(@recipe), :class => 'edit', :title => 'Edit this recipe'
       = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this recipe'
 

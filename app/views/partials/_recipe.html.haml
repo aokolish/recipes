@@ -5,4 +5,4 @@
     %span(class="author") #{truncate(recipe.author, :length => 40)} -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
     - if params[:controller] == "favorites"
-      = link_to 't', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Remove this favorite'
+      = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'

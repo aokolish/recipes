@@ -4,7 +4,7 @@
 
     @include recipe;
 
-    a.delete {
+    a.remove_favorite {
       position: absolute;
       right: 37px;
       top: 39%;
@@ -14,7 +14,7 @@
       font-size: 1.1em;
       opacity: .2;
     }
-    .recipe:hover a.delete {
+    .recipe:hover a.remove_favorite {
       opacity: 1;
     }
   }
