@@ -8,8 +8,8 @@ describe "creating a user" do
     fill_in "user_password_confirmation", :with => "password"
     click_button "Create User"
 
-    current_path.should eq(root_path)
-    page.should have_content("Signed Up!")
+    current_path.should eq(recipes_path)
+    page.should have_content("Your account has been created!")
     page.should have_content("Logged in as awesome@example.com")
   end
 

@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     if current_user.nil?
+      session[:return_to_url] = request.url
       redirect_to login_url, :notice => "Please log in or <a href='#{url_for(new_user_path)}'>create an account</a>.".html_safe
     end
   end

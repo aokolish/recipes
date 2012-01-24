@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_url, :notice => "Signed Up!"
+      redirect_to recipes_url, :notice => "Your account has been created!"
     else
       render "new"
     end
