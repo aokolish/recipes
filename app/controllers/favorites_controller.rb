@@ -1,9 +1,6 @@
 class FavoritesController < ApplicationController
   def index
-    #@favorites = current_user.favorites
     @recipes = current_user.recipes
-    # if I order both of these by :recipe_id they would be in sync
-    # as I iterate over them, right?
   end
 
   def create
@@ -12,7 +9,7 @@ class FavoritesController < ApplicationController
     if @favorite.save
       redirect_to(user_favorites_path(current_user), :notice => 'Favorite was added')
     else
-      redirect_to('/', :notice => 'there was a problem')
+      redirect_to('/', :notice => 'Sorry, the recipe could not be added to your favorites')
     end
   end
 
