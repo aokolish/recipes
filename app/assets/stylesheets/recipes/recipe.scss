@@ -42,6 +42,24 @@
           font-size: 18px;
         }
       }
+      .disabled_favorite {
+        @include button(#004D00);
+        opacity: .4;
+        display: block;
+        font-size: 26px;
+        line-height: 30px;
+        padding: 5px 11px;
+        float: left;
+        margin-right: 15px;
+        font-family: 'Iconic';
+
+        @media only screen and (min-width: 768px) {
+          float: none;
+          margin-bottom: 5px;
+          padding: 0 7px 0;
+          font-size: 18px;
+        }
+      }
     }
   }
 
