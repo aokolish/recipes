@@ -199,6 +199,7 @@ a.button {
 }
 
 .tooltip {
+  max-width: 125px;
 	display:none;
 	background: black;
 	font-size:12px;
@@ -223,7 +224,7 @@ a.button {
   }
 
   &:before {
-  border-right-color: #FFF;
-  left: -10px;
+    border-right-color: #FFF;
+    left: -10px;
   }
 }
