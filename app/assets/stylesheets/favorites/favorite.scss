@@ -1,0 +1,28 @@
+.favorites-index {
+  #recipes {
+    padding-left: 0;
+
+    @include recipe;
+
+    a.remove_favorite {
+      position: absolute;
+      right: 37px;
+      top: 39%;
+      @include button(#C00);
+      padding: 4px 6px 2px;
+      font-family: 'Iconic';
+      font-size: 1.1em;
+      opacity: .2;
+    }
+    .recipe:hover a.remove_favorite {
+      opacity: 1;
+    }
+  }
+
+  .flash_info {
+    background: #FCFA83;
+    padding: 0 15px;
+    border: 1px solid darken(#FCFA83, 35%);
+    @include border-radius(7px);
+  }
+}

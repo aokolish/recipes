@@ -1,4 +1,7 @@
 class Recipe < ActiveRecord::Base
+  has_many :favorites
+  has_many :users, :through => :favorites
+
   validates :title, :author, :directions, :ingredients, :presence => true
   validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  
   validate :ensure_total_time_is_a_time
@@ -20,6 +23,11 @@ class Recipe < ActiveRecord::Base
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end
+
+  def favorite_for?(user)
+    favorites.exists?(:user_id => user.id)
+  end
+
 
   # storing total_time as an integer. customer getter/setter:
   def total_time

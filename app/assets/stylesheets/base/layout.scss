@@ -107,6 +107,18 @@ footer {
   border: solid 1px #C66;
 }
 
+a.button {
+  @include button($med_gray);
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+
+  &:focus {
+    @include box-shadow(0 0 6px #006AFF);
+    outline: none;
+  }
+}
+
 //form stuff
 #container form {
   .field {
@@ -126,8 +138,7 @@ footer {
       @include box-shadow(0 0 6px #006AFF);
     }
   }
-  input[type=submit],
-  a.button {
+  input[type=submit] {
     @include button($med_gray);
     margin-bottom: 10px;
     text-decoration: none;
@@ -188,6 +199,7 @@ footer {
 }
 
 .tooltip {
+  max-width: 125px;
 	display:none;
 	background: black;
 	font-size:12px;
@@ -212,7 +224,7 @@ footer {
   }
 
   &:before {
-  border-right-color: #FFF;
-  left: -10px;
+    border-right-color: #FFF;
+    left: -10px;
   }
 }

@@ -51,8 +51,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     p.item :home, 'Home', '/'
     p.item :recipes, 'Recipes', recipes_path, :highlights_on => /\/recipes(\?.+|\/\d+|\/\d+\/edit|\/|\/new|\/search\?.+)?\/?$/   # http://rubular.com/r/b04hPoKREr
+    p.item :favorites, 'Favorites', user_favorites_path(current_user) unless current_user.nil?
     p.item :import, 'Import', import_recipes_path
-
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
     # thus you can use all the methods and vars you have available in the views.

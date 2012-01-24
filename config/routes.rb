@@ -1,5 +1,4 @@
 Recipes::Application.routes.draw do
-  get "static/home"
 
   get "login" => "sessions#new"
   get "logout" => "sessions#destroy"
@@ -12,7 +11,10 @@ Recipes::Application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users do
+    resources :favorites
+  end
+
   resources :sessions
 
   root :to => "static#home"

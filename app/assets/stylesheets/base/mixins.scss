@@ -1,0 +1,121 @@
+@mixin fancy_left_border {
+  border-left: 1px solid #B3B3B3;
+  box-shadow: inset #FFF 1px 0px 0px;
+}
+
+@mixin fancy_right_border {
+  border-right: 1px solid #B3B3B3;
+  box-shadow: #FFF 1px 0px 0px;
+}
+
+@mixin fancy_bottom_border {
+  border-bottom: 1px solid #B3B3B3;
+  box-shadow: #FFF 0px 1px 0px;
+}
+
+@mixin disabled_button($base-color: #686868) {
+  opacity: .4;
+  $stop-gradient: adjust-color($base-color, $saturation: 9%, $lightness: -11%);
+  $border: adjust-color($base-color, $saturation: 9%, $lightness: -14%);
+  $color: hsl(0, 0, 100%);
+  $inset-shadow: adjust-color($base-color, $saturation: -8%, $lightness: 15%);
+  $text-shadow: adjust-color($base-color, $saturation: 15%, $lightness: -18%);
+
+  @if lightness($base-color) > 70% {
+    $color: hsl(0, 0, 20%);
+    $text-shadow: adjust-color($base-color, $saturation: 10%, $lightness: 4%);
+  }
+
+  border: 1px solid $border;
+  @include border-radius (3px);
+  @include box-shadow (inset 0 1px 0 0 $inset-shadow);
+  color: $color;
+  display: inline;
+  font-size: 11px;
+  font-weight: bold;
+  @include linear-gradient ($base-color, $stop-gradient);
+  padding: 6px 18px 7px;
+  text-shadow: 0 1px 0 $text-shadow;
+  -webkit-background-clip: padding-box;
+}
+
+@mixin left_column {
+  overflow: visible;
+  margin-right: 0;
+
+  @media only screen and (min-width: 768px) {
+    margin-right: $sidebar_med_width + 100;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-right: $sidebar_full_width + 100;
+  }
+
+  > div:first-child {
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+// maybe, this belongs in partials/recipe.scss
+@mixin recipe {
+  .recipe {
+    clear: both;
+    position: relative;  //needed for :after content
+    @include transition(all 5.5s ease-out 2s);
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      padding-left: 8px;
+
+      //this fanciness does not make sense on a mobile device
+      &:hover {
+        background: #CCE1FF;
+        @include transition(all 5.5s ease-out 2s);
+
+        &:after {
+          content: '2';
+          font-family: 'Signify';
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px #799ED2;
+          font-size: 1.5em;
+          position: absolute;
+          top: 30%;
+          right: 15px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+    a {
+      font-size: 1em;
+      display: block;
+      padding: 10px 15px 10px 0;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    img {
+      float: left;
+      margin-right: 10px;
+      max-width: 80%;
+      @media only screen and (min-width: 768px) {
+        margin-right: 15px;
+        max-width: 100%;
+      }
+    }
+    .title {
+      display: block;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: $dark_gray;
+      margin-top: 0;
+      margin-bottom: 5px;
+      @media only screen and (min-width: 768px) {
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    }
+  }
+}

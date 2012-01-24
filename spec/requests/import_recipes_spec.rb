@@ -22,7 +22,7 @@ describe "ImportRecipes" do
     click_button "Submit"
     page.should have_content("Recipe was successfully created")
 
-    visit root_path
+    visit recipes_path
     page.should have_content("Strawberries-and-Cream Tart")
   end
 

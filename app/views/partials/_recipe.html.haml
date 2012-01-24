@@ -1,6 +1,8 @@
 %li(class="recipe")
   %a(href="#{recipe_path(recipe)}")
     %img(src="http://placekitten.com/g/80/80")
-    %span(class="title") #{truncate(recipe.title, :length => 45)}
+    %span(class="title") #{truncate(recipe.title, :length => 44)}
     %span(class="author") #{truncate(recipe.author, :length => 40)} -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
+    - if params[:controller] == "favorites"
+      = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
