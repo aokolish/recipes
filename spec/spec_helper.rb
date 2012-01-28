@@ -17,7 +17,6 @@ Spork.prefork do
     # stop on the first failure
     config.fail_fast = true
     config.use_transactional_fixtures = false
-    config.filter_run_excluding :broken => true
 
     Capybara.javascript_driver = :webkit
 
@@ -45,7 +44,7 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-
+  FactoryGirl.reload
 end
 
 # --- Instructions ---
