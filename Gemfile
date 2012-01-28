@@ -27,8 +27,8 @@ group :test do
   gem "guard", '0.8.8'
   gem "guard-rspec"
   gem 'launchy'
-  gem 'growl_notify'
   gem 'database_cleaner'
+  gem 'ruby_gntp'
   gem "fakeweb"
   gem "rspec-rails"
   gem 'factory_girl_rails'
