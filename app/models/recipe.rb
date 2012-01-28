@@ -1,6 +1,7 @@
 class Recipe < ActiveRecord::Base
   has_many :favorites
   has_many :users, :through => :favorites
+  belongs_to :user
 
   validates :title, :author, :directions, :ingredients, :presence => true
   validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  

@@ -1,6 +1,7 @@
 = simple_form_for @recipe do |f|
   = f.error_messages
   .main-fields
+    = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
     = f.input :title, :autofocus => 'autofocus'
     = f.input :ingredients
     = f.input :directions
