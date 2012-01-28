@@ -17,22 +17,25 @@ gem 'bourbon'
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
   gem "nifty-generators"
+  gem 'localtunnel'
+  gem 'sqlite3'
+end
+
+group :test do
   gem "capybara"
   gem "capybara-webkit"
   gem "guard", '0.8.8'
   gem "guard-rspec"
-  gem 'factory_girl_rails'
-  gem "rb-fsevent"
-  gem "rspec-rails"
-  gem "fakeweb"
-  gem 'localtunnel'
-  gem 'indextank'
   gem 'launchy'
   gem 'growl_notify'
-  gem 'sqlite3'
   gem 'database_cleaner'
+  gem "fakeweb"
+  gem "rspec-rails"
+  gem 'factory_girl_rails'
+  gem "rb-fsevent"
+  gem "spork"
+  gem "guard-spork"
 end
-
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
