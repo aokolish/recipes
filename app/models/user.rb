@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :favorites
   has_many :recipes, :through => :favorites
+  has_many :authored_recipes, :class_name => 'Recipe'
 
   attr_accessible :email, :password, :password_confirmation
   attr_accessor :password
@@ -24,5 +25,9 @@ class User < ActiveRecord::Base
       self.password_salt = BCrypt::Engine.generate_salt
       self.password_hash = BCrypt::Engine.hash_secret(password,  password_salt)
     end
+  end
+
+  def author?(recipe)
+    Recipe.exists?(:id => recipe, :user_id => self.id)
   end
 end
