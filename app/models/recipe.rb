@@ -1,6 +1,7 @@
 class Recipe < ActiveRecord::Base
   has_many :favorites
   has_many :users, :through => :favorites
+  belongs_to :user
 
   validates :title, :author, :directions, :ingredients, :presence => true
   validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  
@@ -8,15 +9,12 @@ class Recipe < ActiveRecord::Base
   before_validation :cleanup_input
 
   def self.search(search, page=1)
-    begin
-      recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
+    search = search.downcase
+    recipes = Recipe.where('lower(title) like ? OR lower(ingredients) like ? OR lower(directions) like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
 
-      # remove delimiting pipes
-      recipes.each do |recipe|
-        recipe.replace_pipes
-      end
-    rescue ArgumentError
-      return []
+    # remove delimiting pipes
+    recipes.each do |recipe|
+      recipe.replace_pipes
     end
   end
 
@@ -50,27 +48,27 @@ class Recipe < ActiveRecord::Base
   end
 
   def directions_array
-    self.directions.split('|') 
+    self.directions.split('|')
   end
 
   def ingredients_array
-    self.ingredients.split('|') 
+    self.ingredients.split('|')
   end
-  
+
   def replace_pipes(sep = "\n\n", attrs = [:directions,:ingredients])
     # want to do this in some cases. for example, user is about to edit directions
     attrs.each do |attr|
       self[attr].gsub!(/\|/, sep) unless self[attr] =~ /\|/.nil?
-    end  
+    end
   end
-  
+
   private
-  
+
   def cleanup_input
     [:directions,:ingredients].each do |attr|
       unless self[attr].nil?
         # no harm in running this on attributes that are already pipe-delimited
-        str = self[attr]        
+        str = self[attr]
         # change new lines or breaks to pipes
         str.gsub!(/((\r\n)|\n|(<br>)|(<br \/>)|(<br\/>))+/i, '|')
         # remove back to back pipes
@@ -84,14 +82,14 @@ class Recipe < ActiveRecord::Base
         self[attr] = arr.join("|")
       end
     end
-   
+
     [:title,:author,:yield ].each do |attr|
       unless self[attr].nil?
         self[attr].strip!
       end
     end
   end
-  
+
   def ensure_total_time_is_a_time
     unless self[:total_time].nil?
       begin
@@ -101,5 +99,5 @@ class Recipe < ActiveRecord::Base
       end
     end
   end
-  
+
 end

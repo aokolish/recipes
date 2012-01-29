@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "Scraper" do
   let(:scraper) { Scraper.new }
-  
-  it "can scrape foodnetwork" do      
+
+  it "scrapes foodnetwork" do
     recipe = scraper.scrape("http://www.foodnetwork.com/example")
     recipe.valid?
     recipe.title.should eq("Strawberries-and-Cream Tart")
@@ -14,8 +14,8 @@ describe "Scraper" do
     recipe.ingredients.should include("2\ttablespoons vegetable oil\r|1\tlarge egg plus 1 egg yolk")
     recipe.directions.should include("Make the crust: Whisk the vegetable oil, egg yolk, milk and vinegar in a bowl. Pulse the flour, baking powder, sugar and salt in a food processor to combine; add the butter and pulse until the mixture looks like coarse meal. Add the milk mixture and pulse once or twice, just to moisten the flour.\r|Transfer the dough")
   end
-  
-  it "can scrape cookingchanneltv" do      
+
+  it "scrapes cookingchanneltv" do
     recipe = scraper.scrape("http://www.cookingchanneltv.com/example")
     recipe.valid?
     recipe.title.should eq("Monkey Tail Banana Cake")
@@ -26,5 +26,4 @@ describe "Scraper" do
     recipe.ingredients.should include("3/4 cup unsalted butter, at room temperature|1 1/2 cups packed light brown sugar|")
     recipe.directions.should include("For the cake: Preheat the oven to 350 degrees F. Grease 3 (9-inch) round cake pans with cooking spray. In large bowl, cream together the butter, light brown sugar, and granulated sugar until light and fluffy. Mix in the eggs, mashed bananas, sour cream, and vanilla until smooth.|In a separate bowl")
   end
-
 end
