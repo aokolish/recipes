@@ -101,6 +101,14 @@ describe Recipe do
       recipe.ingredients.should match /\n\n/
     end
 
+    it "puts the pipes back in after validations" do
+      recipe.replace_pipes
+      recipe.directions.should_not match /\|/
+      recipe.valid?
+
+      recipe.directions.should match /\|/
+    end
+
     it "replaces pipes with a specified separator" do
       recipe.replace_pipes('*')
       recipe.directions.should_not match /\|/
