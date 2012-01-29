@@ -1,4 +1,4 @@
-= simple_form_for @recipe do |f|
+= simple_form_for @recipe, :multipart => true do |f|
   = f.error_messages
   .main-fields
     = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
@@ -6,6 +6,8 @@
     = f.input :ingredients
     = f.input :directions
   .secondary-fields
+    = f.input :image, :as => :file
+    = f.input :image_cache, :as => 'hidden'
     = f.input :author
     = f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time }
     = f.input :yield
