@@ -2,6 +2,7 @@ Recipes::Application.routes.draw do
 
   get "login" => "sessions#new"
   get "logout" => "sessions#destroy"
+  get "favorites" => "favorites#index"
 
   resources :recipes do
     collection do

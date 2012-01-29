@@ -1,9 +1,10 @@
 %h1 Favorites
 
-%ul(id="recipes")
-  = render :partial => 'partials/recipe', :collection => @recipes
+- if current_user
+  %ul(id="recipes")
+    = render :partial => 'partials/recipe', :collection => @recipes
 
-- if current_user.favorites.empty?
+- if !current_user || current_user.favorites.empty?
   .flash_info
     %p
       Your recipe box is where you can save all of the recipes that you are interested in.

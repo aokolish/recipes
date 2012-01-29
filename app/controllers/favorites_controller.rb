@@ -1,6 +1,12 @@
 class FavoritesController < ApplicationController
+  skip_before_filter :authorize, :only => [:index]
+
   def index
-    @recipes = current_user.recipes
+    if current_user
+      @recipes = current_user.recipes
+    else
+      flash.notice = "Please <a href='#{url_for(login_path)}'>log in</a> or <a href='#{url_for(new_user_path)}'>create an account</a> to use this feature.".html_safe
+    end
   end
 
   def create
