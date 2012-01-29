@@ -54,9 +54,11 @@ class RecipesController < ApplicationController
   def create_from_import
     url = params[:source_url]
     @recipe = Recipe.from_import(url)
+    @recipe.user_id = current_user.id
 
     respond_to do |format|
       if @recipe.save
+        Favorite.create(:user_id => current_user.id, :recipe_id => @recipe.id)
         format.html { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
         format.mobile { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
       elsif @recipe.errors[:source_url] == ['has already been taken']
