@@ -56,18 +56,13 @@ class RecipesController < ApplicationController
     @recipe = Recipe.from_import(url)
     @recipe.user_id = current_user.id
 
-    respond_to do |format|
-      if @recipe.save
-        Favorite.create(:user_id => current_user.id, :recipe_id => @recipe.id)
-        format.html { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
-        format.mobile { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
-      elsif @recipe.errors[:source_url] == ['has already been taken']
-        format.html { redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.") }      
-        format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.") }
-      else
-        format.html { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
-        format.mobile { redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.") }
-      end
+    if @recipe.save
+      Favorite.create(:user_id => current_user.id, :recipe_id => @recipe.id)
+      redirect_to(@recipe, :notice => 'Recipe was successfully created.')
+    elsif @recipe.errors[:source_url] == ['has already been taken']
+      redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.")
+    else
+      redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.")
     end
   end
 
