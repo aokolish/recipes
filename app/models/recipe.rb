@@ -46,6 +46,14 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def directions_array
+    self.directions.split('|')
+  end
+
+  def ingredients_array
+    self.ingredients.split('|')
+  end
+
   def replace_pipes(sep = "\n\n", attrs = [:directions,:ingredients])
     # want to do this in some cases. for example, user is about to edit directions
     attrs.each do |attr|
