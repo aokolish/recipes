@@ -44,6 +44,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(params[:recipe])
 
     if @recipe.save
+      Favorite.create(:user_id => current_user.id, :recipe_id => @recipe.id)
       redirect_to(@recipe, :notice => 'Recipe was successfully created.')
     else
       render :action => "new"
