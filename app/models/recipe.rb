@@ -9,7 +9,8 @@ class Recipe < ActiveRecord::Base
   before_validation :cleanup_input
 
   def self.search(search, page=1)
-    recipes = Recipe.where('title like ? OR ingredients like ? OR directions like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
+    search = search.downcase
+    recipes = Recipe.where('lower(title) like ? OR lower(ingredients) like ? OR lower(directions) like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
 
     # remove delimiting pipes
     recipes.each do |recipe|

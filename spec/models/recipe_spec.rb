@@ -65,6 +65,13 @@ describe Recipe do
       Recipe.search('add salt').first.should eq(recipe)
       Recipe.search('pound spaghetti').first.should eq(recipe)
     end
+
+    it "returns case insensitive matches" do
+      recipe.save
+      Recipe.search('pasta').first.should eq(recipe)
+      Recipe.search('ADD SALT').first.should eq(recipe)
+      Recipe.search('POUND SPAGHETTI').first.should eq(recipe)
+    end
   end
 
   describe "#favorite_for?" do
