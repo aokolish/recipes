@@ -8,3 +8,4 @@ config/database.yml
 .vimrc.local
 .sass-cache/
 bin/
+public/uploads
