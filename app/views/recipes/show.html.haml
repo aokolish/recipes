@@ -37,4 +37,4 @@
     - unless @recipe.source_url.blank?
       %h3 Source url:
       %p
-        = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank', :title => @recipe.source_url
+        = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank'
