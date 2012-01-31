@@ -6,6 +6,7 @@
     = f.input :ingredients
     = f.input :directions
   .secondary-fields
+    = image_tag(@recipe.image_url(:small)) if @recipe.image?
     = f.input :image, :as => :file
     = f.input :image_cache, :as => 'hidden'
     = f.input :author
