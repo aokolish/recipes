@@ -23,7 +23,7 @@
 
 - content_for :sidebar do
   #recipe_info
-    %img(src="http://baconmockup.com/266/200")
+    = image_tag @recipe.image_url(:small) if @recipe.image?
 
     %h3(class="first") Author:
     %p #{@recipe.author}
