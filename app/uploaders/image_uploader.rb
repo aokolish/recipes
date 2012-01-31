@@ -18,18 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    case version_name
-      when :small
-        'http://baconmockup.com/266/200'
-      when :thumb
-        'http://placekitten.com/g/80/80'
-      else
-      'http://baconmockup.com/266/200'
-    end
-    #
-    # will probably end up using this kind of fallback but I need to come
-    # up with an image for it
-    #"/images/fallback/" + [version_name, "default.png"].compact.join('_')
+    "/images/fallback/" + [version_name, "default.jpg"].compact.join('_')
   end
 
   # Create different versions of your uploaded files:
