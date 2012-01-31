@@ -158,13 +158,14 @@ a.button {
 
   //error messages above the form
   .error_messages {
-    width: 400px;
-    border: 2px solid #CF0000;
+    width: 82%;
+    border: 2px solid #B30000;
     padding: 0px;
     padding-bottom: 12px;
     margin-bottom: 20px;
     background-color: #f0f0f0;
     font-size: 1em;
+    @include border-radius(5px);
   }
   .error_messages h2 {
     text-align: left;
@@ -172,14 +173,14 @@ a.button {
     padding: 5px 10px;
     font-size: 1em;
     margin: 0;
-    background-color: #c00;
+    background-color: #B30000;
     color: #fff;
   }
   .error_messages p {
     margin: 8px 10px;
   }
   .error_messages ul {
-    margin: 0;
+    margin-right: 2%;
   }
   .field label {
     display: block;
