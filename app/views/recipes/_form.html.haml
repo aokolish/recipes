@@ -12,7 +12,7 @@
     = f.input :author
     = f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time }
     = f.input :yield
-    - unless @recipe.new_record?
+    - unless @recipe.new_record? || @recipe.source_url.nil?
       .field
         = f.label :source_url
         = link_to @recipe.source_url, @recipe.source_url, :target => '_blank'
