@@ -15,6 +15,7 @@ gem 'simple-navigation'
 gem 'bourbon'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'fog'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
