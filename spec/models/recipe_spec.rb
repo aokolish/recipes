@@ -5,42 +5,6 @@ describe Recipe do
                                :ingredients => '1 pound spaghetti|water|salt',
                                :directions => 'boil generous amount of water|add salt|boil pasta') }
   describe "validations" do
-    it "requires a title" do
-      recipe.title = nil
-      recipe.should_not be_valid
-      recipe.errors[:title].should eq(["can't be blank"])
-    end
-
-    it "requires an author" do
-      recipe.author = nil
-      recipe.should_not be_valid
-      recipe.errors[:author].should eq(["can't be blank"])
-    end
-
-    it "requires directions" do
-      recipe.directions = nil
-      recipe.should_not be_valid
-      recipe.errors[:directions].should eq(["can't be blank"])
-    end
-
-    it "requires ingredients" do
-      recipe.ingredients = nil
-      recipe.should_not be_valid
-      recipe.errors[:ingredients].should eq(["can't be blank"])
-    end
-
-    it "requires source_url to be unique but allows nil" do
-      recipe.source_url = '/test'
-      recipe.save
-
-      new_recipe = Factory.build(:recipe, :source_url => '/test')
-      new_recipe.should_not be_valid
-      new_recipe.errors[:source_url].should eq(["has already been taken"])
-
-      new_recipe.source_url = nil
-      new_recipe.should be_valid
-    end
-
     it "requires total time to be a time" do
       recipe.total_time = 'a long time'
       recipe.should_not be_valid
