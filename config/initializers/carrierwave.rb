@@ -22,7 +22,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['S3_SECRET'],
     :region                 => 'us-east-1'
   }
-  config.fog_directory  = 'recipes1.heroku'
+  config.fog_directory  = 'recipes1-heroku'
 end
 
 if Rails.env.test?
