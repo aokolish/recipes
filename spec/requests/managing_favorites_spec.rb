@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 describe "Favorites" do
-  let(:user) { FactoryGirl.create(:user) }
   let(:recipe) { FactoryGirl.create(:recipe) }
 
   describe "adding a favorite" do
     context "when logged in" do
       it "creates a new favorite" do
-        login(user)
+        login
         visit recipe_path(recipe)
         click_button "favorite_recipe"
 
@@ -26,7 +25,7 @@ describe "Favorites" do
   describe "removing a favorite" do
     context "from the favorites page" do
       it "shows a message that it has been removed" do
-        login(user)
+        login
         visit recipe_path(recipe)
         click_button "favorite_recipe"
 
@@ -40,7 +39,7 @@ describe "Favorites" do
 
     context "from the recipe page" do
       it "shows a message that it has been removed", :js => true do
-        login(user)
+        login
         visit recipe_path(recipe)
         click_button "favorite_recipe"
 
@@ -53,13 +52,6 @@ describe "Favorites" do
         page.should have_content('Recipe has been removed from your favorites')
       end
     end
-  end
-
-  def login(user)
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
   end
 end
 

@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe "login/logout" do
-  let(:user) { Factory(:user) }
-
   it "requires you to log in for some pages" do
     visit new_recipe_path
     current_path.should eq(login_path)
@@ -10,7 +8,8 @@ describe "login/logout" do
   end
 
   it "redirects you to the default path when you log in" do
-    login
+    user = Factory(:user)
+    login(user)
     current_path.should eq(recipes_path)
     page.should have_content("Logged in!")
     page.should have_content("Logged in as #{user.email}")
@@ -29,14 +28,5 @@ describe "login/logout" do
 
     current_path.should eq(root_path)
     page.should have_content("Logged out!")
-  end
-
-  def login
-    visit root_path
-    click_link "Log in"
-
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
   end
 end

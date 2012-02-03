@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe "ImportRecipes" do
-  let(:user) { FactoryGirl.create(:user) }
-
   before(:each) do
-    login(user)
+    login
   end
 
   it "imports a recipe via scraping" do
@@ -35,12 +33,4 @@ describe "ImportRecipes" do
     click_button "Submit"
     page.should have_content("Sorry, there was a problem creating a recipe from")
   end
-
-  def login(user)
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
-  end
-
 end
