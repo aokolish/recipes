@@ -24,3 +24,10 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = 'recipes1.heroku'
 end
+
+if Rails.env.test?
+  CarrierWave.configure do |config|
+    # speed up the tests
+    config.enable_processing = false
+  end
+end
