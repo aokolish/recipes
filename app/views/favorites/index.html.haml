@@ -2,7 +2,7 @@
 
 - if current_user
   %ul(id="recipes")
-    = render :partial => 'partials/recipe', :collection => @recipes
+    = render :partial => 'partials/recipe', :collection => user_recipes
 
 - if !current_user || current_user.favorites.empty?
   .flash_info

@@ -1,4 +1,4 @@
-= simple_form_for @recipe, :multipart => true do |f|
+= simple_form_for recipe, :multipart => true do |f|
   .main-fields
     = f.error_messages
     = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
@@ -6,16 +6,16 @@
     = f.input :ingredients
     = f.input :directions
   .secondary-fields
-    = image_tag(@recipe.image_url(:small)) if @recipe.image?
+    = image_tag(recipe.image_url(:small)) if recipe.image?
     = f.input :image, :as => :file
     = f.input :image_cache, :as => 'hidden'
     = f.input :author
-    = f.input :total_time, :as => :string, :input_html => { :value => @recipe.total_time }
+    = f.input :total_time, :as => :string, :input_html => { :value => recipe.total_time }
     = f.input :yield
-    - unless @recipe.new_record? || @recipe.source_url.nil?
+    - unless recipe.new_record? || recipe.source_url.nil?
       .field
         = f.label :source_url
-        = link_to @recipe.source_url, @recipe.source_url, :target => '_blank'
+        = link_to recipe.source_url, recipe.source_url, :target => '_blank'
   .actions
     = f.button :submit, 'Submit'
-    = link_to 'Cancel', @recipe, :class => 'button'
+    = link_to 'Cancel', recipe, :class => 'button'

@@ -1,7 +1,7 @@
 #account
   %h1 Create Account
 
-  = simple_form_for(@user) do |f|
+  = simple_form_for(user) do |f|
     = f.error_messages
     = f.input :email, :autofocus => 'autofocus'
     = f.input :password

@@ -1,40 +1,40 @@
 #recipe
-  %h1 #{@recipe.title}
+  %h1 #{recipe.title}
 
   %ul(class="ingredients")
-    - @recipe.ingredients_array.each do |ingredient|
+    - recipe.ingredients_array.each do |ingredient|
       %li #{ingredient}
 
-  - @recipe.directions_array.each do |direction|
+  - recipe.directions_array.each do |direction|
     %p #{direction}
 
   - if current_user
     .actions
-      - if @recipe.favorite_for?(current_user)
-        = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, @recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
+      - if recipe.favorite_for?(current_user)
+        = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
       -else
-        = form_for [current_user, @favorite] do |f|
-          = hidden_field_tag "favorite[recipe_id]", @recipe.id
+        = form_for [current_user, favorite] do |f|
+          = hidden_field_tag "favorite[recipe_id]", recipe.id
           = hidden_field_tag "favorite[user_id]", current_user.id
           = f.submit 's', :id => 'favorite_recipe', :title => 'Favorite this recipe'
-      - if current_user.author?(@recipe)
-        = link_to 'p', edit_recipe_path(@recipe), :class => 'edit', :title => 'Edit this recipe'
-        = link_to 't', @recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this recipe'
+      - if current_user.author?(recipe)
+        = link_to 'p', edit_recipe_path(recipe), :class => 'edit', :title => 'Edit this recipe'
+        = link_to 't', recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this recipe'
 
 - content_for :sidebar do
   #recipe_info
-    = image_tag @recipe.image_url(:small) if @recipe.image?
+    = image_tag recipe.image_url(:small) if recipe.image?
 
     %h3(class="first") Author:
-    %p #{@recipe.author}
+    %p #{recipe.author}
 
     %h3 Total time:
-    %p #{@recipe.total_time}
+    %p #{recipe.total_time}
 
     %h3 Yield:
-    %p #{@recipe.yield}
+    %p #{recipe.yield}
 
-    - unless @recipe.source_url.blank?
+    - unless recipe.source_url.blank?
       %h3 Source url:
       %p
-        = link_to truncate(@recipe.source_url, :length => 40), @recipe.source_url, :target => '_blank'
+        = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
