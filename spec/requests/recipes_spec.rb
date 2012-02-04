@@ -4,7 +4,7 @@ describe "Recipes" do
   let(:recipe) { Factory.build(:recipe) }
 
   describe "GET /recipes" do
-    it "displays tasks" do
+    it "displays recipes" do
       Factory.create(:recipe, :title => "beer cheese soup")
       visit recipes_path
       page.should have_content("beer cheese soup")
@@ -16,7 +16,7 @@ describe "Recipes" do
   end
 
   describe "POST /recipe" do
-    it "creates task" do
+    it "creates a recipe" do
       login
 
       visit new_recipe_path
