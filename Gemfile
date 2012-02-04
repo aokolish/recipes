@@ -16,6 +16,7 @@ gem 'bourbon'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
+gem 'decent_exposure'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
