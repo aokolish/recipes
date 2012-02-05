@@ -1,8 +1,8 @@
 #recipes
-  - unless recipes.empty?
+  - unless paged_recipes.empty?
     %h1 Recipes
 
     %ul
-      = render :partial => 'partials/recipe', :collection => recipes
+      = render :partial => 'partials/recipe', :collection => paged_recipes
 
-    = will_paginate recipes
+    = will_paginate paged_recipes

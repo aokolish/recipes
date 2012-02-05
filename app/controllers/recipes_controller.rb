@@ -1,12 +1,12 @@
 class RecipesController < ApplicationController
   skip_before_filter :authorize, :only => [:index, :search, :show, :create_from_import]
-  expose(:recipes) { Recipe.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC' }
+  expose(:paged_recipes) { Recipe.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC' }
   expose(:recipe_results) { Recipe.search(params[:search], params[:page]) }
   expose(:recipe)
   expose(:favorite) { Favorite.new } # had to use new - it was trying to find by params[:id]
 
   def index
-    recipes.each do |recipe|
+    paged_recipes.each do |recipe|
       recipe.replace_pipes
     end
   end
