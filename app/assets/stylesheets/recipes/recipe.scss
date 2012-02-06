@@ -130,6 +130,18 @@
   }
 }
 
+.recipes-index {
+  #new-features .feature {
+      @include fancy_bottom_border;
+      &:last-child {
+        border-bottom: none;
+        box-shadow: none;
+      }
+    h2 {
+    }
+  }
+}
+
 //recipe#import
 .recipes-import {
   #import_form {

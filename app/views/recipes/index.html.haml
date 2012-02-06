@@ -6,3 +6,20 @@
       = render :partial => 'partials/recipe', :collection => paged_recipes
 
     = will_paginate paged_recipes
+
+- content_for :sidebar do
+  #new-features
+    %h2 New Features
+    .feature
+      %p
+        %strong Image Improvements:
+        Now, you can attach multiple images to each recipe and control the 
+        order in which they are shown.
+      %p
+        %i Added #{time_ago_in_words(Time.utc(2012,"feb",5,5,25))} ago
+    .feature
+      %p
+        %strong Images:
+        You can now upload an image for your recipes!
+      %p
+        %i Added #{time_ago_in_words(Time.utc(2012,"feb",3,4,25))} ago
