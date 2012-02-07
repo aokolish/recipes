@@ -74,13 +74,17 @@
       padding: 0 30px;
     }
 
+    > img {
+      margin-bottom: 12px;
+    }
+
     > h3 {
       margin: 0;
       font-size: 1em;
     }
 
     > h3.first {
-      margin-top: 12px;
+      margin-top: 0;
     }
 
     > p {
