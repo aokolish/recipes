@@ -21,4 +21,7 @@ $ ->
   , ->
       null
   )
+
+  $('#recipe_info .slides a').colorbox()
+
   $('.best_in_place').best_in_place()

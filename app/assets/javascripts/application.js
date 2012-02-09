@@ -12,4 +12,5 @@
 //= require tooltip
 //= require flexslider
 //= require hoverintent
+//= require colorbox
 //= require main
