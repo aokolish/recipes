@@ -1,6 +1,7 @@
 %li(class="recipe")
   %a(href="#{recipe_path(recipe)}")
-    = image_tag recipe.image_url(:thumb)
+    - recipe.pictures.each do |pic|
+      = image_tag pic.image_url(:thumb)
     %span(class="title") #{truncate(recipe.title, :length => 44)}
     %span(class="author") #{truncate(recipe.author, :length => 40)} -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
