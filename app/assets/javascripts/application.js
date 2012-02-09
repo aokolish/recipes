@@ -10,4 +10,6 @@
 //= require best_in_place
 //= require viewport_fix
 //= require tooltip
+//= require flexslider
+//= require hoverintent
 //= require main

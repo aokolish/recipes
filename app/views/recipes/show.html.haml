@@ -23,7 +23,20 @@
 
 - content_for :sidebar do
   #recipe_info
-    = image_tag recipe.image_url(:small) if recipe.image?
+    .flexslider
+      %ul(class="slides")
+        - recipe.pictures.each do |pic|
+          %li
+            %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
+              = image_tag pic.image_url(:small)
+      %p(class="click-for-large") Click for a larger image
+      %ul(class="custom-controls")
+        - recipe.pictures.each do |pic|
+          %li
+            %a(href="#")
+              = image_tag pic.image_url(:micro)
+    %p(class="add-photos")
+      = link_to 'Add Photos', recipe_pictures_path(recipe)
 
     %h3(class="first") Author:
     %p #{recipe.author}
@@ -38,3 +51,5 @@
       %h3 Source url:
       %p
         = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
+
+
