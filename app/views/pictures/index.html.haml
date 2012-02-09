@@ -24,7 +24,8 @@
   #manage-pictures
     %h2 Manage Pictures
 
-    - pictures.each do |picture|
-      .picture
-        = image_tag picture.image_url(:micro)
-        = link_to 'Delete', [imageable, picture], :confirm => 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'
+    %ul(id="thumbnails" data-update-url="#{sort_recipe_pictures_path}")
+      - pictures.each do |picture|
+        = content_tag_for :li, picture, :class => 'picture' do
+          = image_tag picture.image_url(:micro)
+          = link_to 'Delete', [imageable, picture], :confirm => 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'

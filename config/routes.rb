@@ -11,7 +11,9 @@ Recipes::Application.routes.draw do
       post 'create_from_import', :as => :create_from_import
     end
 
-    resources :pictures
+    resources :pictures do
+      collection { post :sort }
+    end
   end
 
   resources :users do

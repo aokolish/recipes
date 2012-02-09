@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'decent_exposure'
 gem 'best_in_place'
+gem 'acts_as_list'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'

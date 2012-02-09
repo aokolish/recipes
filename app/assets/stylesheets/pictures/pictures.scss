@@ -32,7 +32,10 @@
   #new-picture {
     @include fancy_bottom_border;
   }
-  #manage-pictures {
+  #thumbnails {
+    padding-left: 0;
+    list-style-type: none;
+
     .picture {
       padding-bottom: 5px;
       margin-bottom: 5px;

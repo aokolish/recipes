@@ -24,6 +24,13 @@ class PicturesController < ApplicationController
     redirect_to :back, :notice => "Removed image."
   end
 
+  def sort
+    params[:picture].each_with_index do |id, index|
+      Picture.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
+  end
+
 private
 
   def find_imageable

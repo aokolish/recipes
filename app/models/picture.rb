@@ -5,5 +5,7 @@ class Picture < ActiveRecord::Base
   validates :image, :presence => true
   mount_uploader :image, ImageUploader
 
+  acts_as_list
+
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120207025546) do
+ActiveRecord::Schema.define(:version => 20120209041502) do
 
   create_table "favorites", :force => true do |t|
     t.integer  "recipe_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120207025546) do
     t.string   "imageable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "recipes", :force => true do |t|
