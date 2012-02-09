@@ -1,0 +1,53 @@
+.pictures-index {
+  #content > div:first-child {
+    padding-right: 10%;
+    width: 90%;
+  }
+  .picture .best_in_place {
+    margin: 2px 0 10px;
+    display: block;
+  }
+  .picture form {
+    margin: 14px 0;
+    overflow: hidden;
+  }
+  .picture .placeholder {
+    margin: 2px 0 10px;
+    font-style: italic;
+    color: $med_gray;
+    font-size: 0.9em;
+
+    .edit-button {
+      @include button(darken($light_gray, 10%));
+      font-family: 'Iconic';
+      font-size: 1.1em;
+      line-height: 30px;
+      padding: 5px 11px;
+      margin-left: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #new-picture {
+    @include fancy_bottom_border;
+  }
+  #manage-pictures {
+    .picture {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      @include fancy_bottom_border;
+
+      .delete {
+        position: relative;
+        top: -20px;
+        font-size: 0.8em;
+        text-decoration: none;
+        margin-left: 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

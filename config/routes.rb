@@ -10,6 +10,8 @@ Recipes::Application.routes.draw do
       get 'search'
       post 'create_from_import', :as => :create_from_import
     end
+
+    resources :pictures
   end
 
   resources :users do
