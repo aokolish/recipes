@@ -17,6 +17,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
 gem 'decent_exposure'
+gem 'best_in_place'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'

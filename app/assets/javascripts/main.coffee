@@ -9,3 +9,4 @@ $ ->
      effect: 'fade',
      predelay: 250
    })
+  $('.best_in_place').best_in_place()
