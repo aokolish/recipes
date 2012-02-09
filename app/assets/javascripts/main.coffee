@@ -3,12 +3,16 @@ $ ->
   $(window).bind "resize", ->
     console.log $(window).outerWidth()
 
-   $('a[title], span[title], input[title]').tooltip({
-     position: 'center right',
-     offset: [0, 10],
-     effect: 'fade',
-     predelay: 250
-   })
+  if false
+  # this screws up my colorbox slideshow
+  # I should switch to using data-tooltip for this plugin vs. title
+    $('a[title], span[title], input[title]').tooltip({
+      position: 'center right',
+      offset: [0, 10],
+      effect: 'fade',
+      predelay: 250
+    })
+
   $('.flexslider').flexslider
     animation: 'slide',
     slideshow: false,
