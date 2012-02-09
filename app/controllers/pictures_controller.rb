@@ -8,11 +8,9 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = imageable.pictures.build(params[:picture])
-    if @picture.save
-      redirect_to :id => nil, :notice => "Successfully added image!"
-    else
-      redirect_to :back, :error => "There was a problem"
+    picture.save
+    respond_with(picture) do |format|
+      format.html { redirect_to :back, :notice => "Image added!" }
     end
   end
 
