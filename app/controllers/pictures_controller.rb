@@ -1,11 +1,8 @@
 class PicturesController < ApplicationController
   respond_to :html, :json
   expose(:imageable) { find_imageable }
-  expose(:pictures) { imageable.pictures }
+  expose(:pictures) { imageable.pictures.order("position") }
   expose(:picture)
-
-  def index
-  end
 
   def create
     picture.save
