@@ -28,7 +28,7 @@ class PicturesController < ApplicationController
     params[:picture].each_with_index do |id, index|
       Picture.update_all({position: index+1}, {id: id})
     end
-    render nothing: true
+    render :index, :layout => false
   end
 
 private

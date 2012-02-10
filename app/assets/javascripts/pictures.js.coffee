@@ -5,4 +5,7 @@ jQuery ->
   $('#thumbnails').sortable
     axis: 'y'
     update: ->
-      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+      $.post($(this).data('update-url'), $(this).sortable('serialize'), (data) ->
+        $('#main-content').replaceWith(data)
+        $('.best_in_place').best_in_place()
+      )
