@@ -1,7 +1,7 @@
 #main-content
 
   - if imageable.class.name == "Recipe"
-    = link_to "Back to: #{truncate(imageable.title, :length => 60)}", imageable
+    = link_to "#{truncate(imageable.title, :length => 60)}", imageable
 
   %h1 Pictures
 
