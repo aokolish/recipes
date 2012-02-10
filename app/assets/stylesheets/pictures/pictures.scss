@@ -2,38 +2,37 @@
   #main-content {
     padding-right: 10%;
     width: 90%;
-  }
 
-  .picture {
-    .best_in_place {
-      margin: 2px 0 10px;
-      height: 28px;
-      display: block;
-      float: left;
-      cursor: pointer;
-    }
-    form {
-      margin: 14px 0;
-      overflow: hidden;
-    }
-    .placeholder {
-      margin: 2px 0 10px;
-      font-style: italic;
-      color: $med_gray;
-      font-size: 0.9em;
-      &:hover {
+    .picture {
+      .best_in_place {
+        margin: 2px 0 10px;
+        height: 28px;
+        display: block;
         cursor: pointer;
       }
-      .edit-button {
-        @include button(darken($light_gray, 10%));
-        font-family: 'Iconic';
-        font-size: 1.1em;
-        line-height: 30px;
-        padding: 5px 11px;
-        margin-left: 10px;
+      form {
+        margin: 14px 0;
+        overflow: hidden;
       }
-    }
+      .placeholder {
+        margin: 2px 0 10px;
+        font-style: italic;
+        color: $med_gray;
+        font-size: 0.9em;
+        &:hover {
+          cursor: pointer;
+        }
+        .edit-button {
+          @include button(darken($light_gray, 10%));
+          font-family: 'Iconic';
+          font-size: 1.1em;
+          line-height: 30px;
+          padding: 5px 11px;
+          margin-left: 10px;
+        }
+      }
 
+    }
   }
   #new-picture {
     @include fancy_bottom_border;
