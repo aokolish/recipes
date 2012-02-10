@@ -25,13 +25,13 @@
   #recipe_info
     .flexslider
       %ul(class="slides")
-        - recipe.pictures.each do |pic|
+        - recipe.pictures.top_five.each do |pic|
           %li
             %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
               = image_tag pic.image_url(:small)
       %p(class="click-for-large") Click for a larger image
       %ul(class="custom-controls")
-        - recipe.pictures.each do |pic|
+        - recipe.pictures.top_five.each do |pic|
           %li
             %a(href="#")
               = image_tag pic.image_url(:micro)
