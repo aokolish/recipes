@@ -5,6 +5,9 @@ class Picture < ActiveRecord::Base
   validates :image, :presence => true
   mount_uploader :image, ImageUploader
 
+  default_scope order("position")
+  scope :top_five, limit(5)
+
   acts_as_list
 
 end
