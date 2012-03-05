@@ -12,3 +12,12 @@ but I knew there had to be a better way; this is that better way.
 * shopping list or the ability to send data to another shopping app
 * ratings and reviews
 * follow favorite contributors
+
+## Getting Set Up
+
+In addition to using bundler to get the dependancies for this app, you
+need image magick. If you have homebrew you can get it by running:
+
+```
+brew install imagemagick --disable-openmp
+```
