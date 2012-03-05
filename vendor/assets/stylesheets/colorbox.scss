@@ -28,7 +28,7 @@
     #cboxMiddleRight{width:21px; background:image_url('controls.png') right top repeat-y;}
     #cboxTopCenter{height:21px; background:image_url('border.png') 0 0 repeat-x;}
     #cboxBottomCenter{height:21px; background:image_url('border.png') 0 -29px repeat-x;}
-    #cboxContent{background:#fff; overflow:hidden;}
+    #cboxContent{background:#fff; overflow:hidden;font-size:.9em;}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{margin-bottom:28px;}
