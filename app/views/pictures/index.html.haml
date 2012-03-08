@@ -1,6 +1,7 @@
 #main-content
 
   - if imageable.class.name == "Recipe"
+    &lt;back to
     = link_to "#{truncate(imageable.title, :length => 60)}", imageable
 
   %h1 Pictures
@@ -21,11 +22,12 @@
       .actions
         = f.button :submit, 'Submit'
 
-  #manage-pictures
-    %h2 Manage Pictures
+  - unless pictures.empty?
+    #manage-pictures
+      %h2 Manage Pictures
 
-    %ul(id="thumbnails" data-update-url="#{sort_recipe_pictures_path}")
-      - pictures.each do |picture|
-        = content_tag_for :li, picture, :class => 'picture' do
-          = image_tag picture.image_url(:micro)
-          = link_to 'Delete', [imageable, picture], :confirm => 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'
+      %ul(id="thumbnails" data-update-url="#{sort_recipe_pictures_path}")
+        - pictures.each do |picture|
+          = content_tag_for :li, picture, :class => 'picture' do
+            = image_tag picture.image_url(:micro)
+            = link_to 'Delete', [imageable, picture], :confirm => 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'
