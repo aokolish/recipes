@@ -74,6 +74,23 @@
       padding: 0 30px;
     }
 
+    .add-first-image {
+      @media only screen and (min-width: 768px) {
+        display: block;
+        text-align: center;
+        padding: 40% 0;
+        border: dotted;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.3em;
+        margin-bottom: 10%;
+
+        &:hover {
+          background: hsla(180, 80%, 92%, 0.7);
+        }
+      }
+    }
+
     .flexslider {
       text-align: center;
     }

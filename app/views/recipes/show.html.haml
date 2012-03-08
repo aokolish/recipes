@@ -23,20 +23,23 @@
 
 - content_for :sidebar do
   #recipe_info
-    .flexslider
-      %ul(class="slides")
-        - recipe.pictures.top_five.each do |pic|
-          %li
-            %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
-              = image_tag pic.image_url(:small)
-      %p(class="click-for-large") Click for a larger image
-      %ul(class="custom-controls")
-        - recipe.pictures.top_five.each do |pic|
-          %li
-            %a(href="#")
-              = image_tag pic.image_url(:micro)
-    %p(class="add-photos")
-      = link_to 'Add Photos', recipe_pictures_path(recipe)
+    - if recipe.pictures.empty?
+      = link_to 'Add A Photo', recipe_pictures_path(recipe), :class => 'add-first-image'
+    - else
+      .flexslider
+        %ul(class="slides")
+          - recipe.pictures.top_five.each do |pic|
+            %li
+              %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
+                = image_tag pic.image_url(:small)
+        %p(class="click-for-large") Click for a larger image
+        %ul(class="custom-controls")
+          - recipe.pictures.top_five.each do |pic|
+            %li
+              %a(href="#")
+                = image_tag pic.image_url(:micro)
+      %p(class="add-photos")
+        = link_to 'Add Photos', recipe_pictures_path(recipe)
 
     %h3(class="first") Author:
     %p #{recipe.author}
