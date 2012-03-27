@@ -15,6 +15,8 @@ end
 CarrierWave.configure do |config|
   # keys are stored as heroku config vars
   # see https://aws-portal.amazon.com/gp/aws/securityCredentials for credentials
+  # s3 management console:
+  # https://console.aws.amazon.com/s3/home?#
   # http://devcenter.heroku.com/articles/config-vars
   config.fog_credentials = {
     :provider               => 'AWS',
@@ -23,7 +25,7 @@ CarrierWave.configure do |config|
     :region                 => 'us-east-1'
   }
   # fog_directory == the name of the bucket
-  config.fog_directory  = 'recipes1-heroku'
+  config.fog_directory  = ENV['S3_BUCKET']
 end
 
 if Rails.env.test?
