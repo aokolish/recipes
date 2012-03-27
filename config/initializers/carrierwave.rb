@@ -22,6 +22,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['S3_SECRET'],
     :region                 => 'us-east-1'
   }
+  # fog_directory == the name of the bucket
   config.fog_directory  = 'recipes1-heroku'
 end
 
