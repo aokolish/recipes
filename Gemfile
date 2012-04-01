@@ -9,7 +9,6 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'escape_utils'
-gem 'newrelic_rpm'
 gem 'haml'
 gem 'simple-navigation'
 gem 'bourbon'
@@ -25,6 +24,8 @@ group :development, :test do
   gem "nifty-generators"
   gem 'localtunnel'
   gem 'sqlite3'
+  gem 'factory_girl_rails'
+  gem 'pry'
 end
 
 group :test do
@@ -37,7 +38,6 @@ group :test do
   gem 'ruby_gntp'
   gem "fakeweb"
   gem "rspec-rails"
-  gem 'factory_girl_rails'
   gem "rb-fsevent"
   gem "spork"
   gem "guard-spork"
@@ -51,4 +51,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'newrelic_rpm'
 end
