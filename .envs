@@ -1,0 +1,9 @@
+# this file contains all the environment variables
+# that this app depends upon
+
+# s3 environment variables
+ENV['S3_KEY']
+ENV['S3_SECRET']
+
+# name of the s3 bucket to use (prod/staging are different)
+ENV['S3_BUCKET']
