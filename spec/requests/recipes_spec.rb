@@ -5,7 +5,7 @@ describe "Recipes" do
 
   describe "GET /recipes" do
     it "displays recipes" do
-      Factory.create(:recipe, :title => "beer cheese soup")
+      FactoryGirl.create(:recipe, :title => "beer cheese soup")
       visit recipes_path
       page.should have_content("beer cheese soup")
     end

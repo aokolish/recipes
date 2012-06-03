@@ -8,7 +8,7 @@ describe "login/logout" do
   end
 
   it "redirects you to the default path when you log in" do
-    user = Factory(:user)
+    user = FactoryGirl.create(:user)
     login(user)
     current_path.should eq(recipes_path)
     page.should have_content("Logged in!")

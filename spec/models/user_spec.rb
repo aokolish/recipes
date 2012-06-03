@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  let(:user) { Factory(:user) }
+  let(:user) { FactoryGirl.create(:user) }
 
   describe ".authenticate" do
     it "returns a user with matching email and password" do
@@ -15,19 +15,19 @@ describe User do
 
   describe "#author?" do
     it "returns true if the user is the author" do
-      recipe = Factory.create(:recipe, :user_id => user.id)
+      recipe = FactoryGirl.create(:recipe, :user_id => user.id)
       user.author?(recipe).should eq(true)
     end
 
     it "returns false if the user is not the author" do
-      recipe = Factory.create(:recipe)
+      recipe = FactoryGirl.create(:recipe)
       user.author?(recipe).should eq(false)
     end
   end
 
   describe "#authored_recipes" do
     it "returns recipes that the user has authored" do
-      recipe = Factory.create(:recipe, :user_id => user.id)
+      recipe = FactoryGirl.create(:recipe, :user_id => user.id)
       user.authored_recipes.first.class.should eq(Recipe)
       user.authored_recipes.first.user_id.should eq(user.id)
     end

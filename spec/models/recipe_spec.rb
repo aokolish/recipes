@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Recipe do
-  let(:recipe) { Factory.build(:recipe, :title => 'Pasta',
+  let(:recipe) { FactoryGirl.build(:recipe, :title => 'Pasta',
                                :ingredients => '1 pound spaghetti|water|salt',
                                :directions => 'boil generous amount of water|add salt|boil pasta') }
   describe "validations" do
@@ -40,13 +40,13 @@ describe Recipe do
 
   describe "#favorite_for?" do
     it "returns true if the recipe is in the user's favorites" do
-      fav = Factory(:favorite)
+      fav = FactoryGirl.create(:favorite)
       user = fav.user
       fav.recipe.favorite_for?(user).should eq(true)
     end
 
     it "returns false if the recipe is not in the user's favorites" do
-      recipe.favorite_for?(Factory.build(:user)).should eq(false)
+      recipe.favorite_for?(FactoryGirl.build(:user)).should eq(false)
     end
   end
 
