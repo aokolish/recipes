@@ -25,6 +25,7 @@ $ ->
       null
   )
 
-  $('#recipe_info .slides a').colorbox()
+  $('#recipe_info .slides li:not(.clone) a').colorbox()
 
+  # inline editing js plugin
   $('.best_in_place').best_in_place()
