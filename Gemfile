@@ -44,6 +44,7 @@ group :test do
   gem "rb-fsevent"
   gem "spork"
   gem "guard-spork"
+  gem "turnip"
 end
 
 group :assets do
