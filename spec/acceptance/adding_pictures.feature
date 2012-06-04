@@ -1,4 +1,7 @@
 Feature: Adding Pictures of Recipes
+  In order to show off what I cook
+  As a user
+  I want to upload pictures of recipes
 
   Scenario: Adding two pictures
     Given I am logged in
