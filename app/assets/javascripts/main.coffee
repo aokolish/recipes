@@ -3,15 +3,14 @@ $ ->
   $(window).bind "resize", ->
     console.log $(window).outerWidth()
 
-  if false
-  # this screws up my colorbox slideshow
-  # I should switch to using data-tooltip for this plugin vs. title
-    $('a[title], span[title], input[title]').tooltip({
-      position: 'center right',
-      offset: [0, 10],
-      effect: 'fade',
-      predelay: 250
-    })
+  # setup tooltips and filter out links that are a part of recipe page
+  # flexslider slideshow
+  $('a[title], span[title], input[title]').not('[rel="galler"]').tooltip({
+    position: 'center right',
+    offset: [0, 10],
+    effect: 'fade',
+    predelay: 250
+  })
 
   $('.flexslider').flexslider
     animation: 'slide',
