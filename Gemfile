@@ -46,6 +46,7 @@ group :test do
   gem "spork"
   gem "guard-spork"
   gem "turnip"
+  gem 'pg'
 end
 
 group :assets do
