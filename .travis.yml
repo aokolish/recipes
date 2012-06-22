@@ -6,3 +6,4 @@ script: bundle exec rspec spec
 
 before_script:
   - cp config/database_ci.yml config/database.yml
+  - psql -c 'create database recipes_test;' -U postgres
