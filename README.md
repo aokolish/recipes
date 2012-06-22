@@ -1,4 +1,4 @@
-# Recipes
+# Recipes [![Build Status](https://secure.travis-ci.org/ao140505/recipes.png?branch=master)](http://travis-ci.org/ao140505/recipes)
 
 The purpose of this app is for saving and sharing recipes. I used to keep all
  of my recipes in a binder that I alphabetized. That system worked for a while 
