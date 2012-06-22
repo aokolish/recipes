@@ -16,9 +16,9 @@ FactoryGirl.define do
     user
 
     factory :recipe_with_pictures do
-      #after(:create) do |recipe, evaluator|
-      #  #FactoryGirl.create_list(:picture, 2, :recipe => recipe)
-      #end
+      after(:create) do |recipe|
+        FactoryGirl.create_list(:picture, 2, :imageable => recipe)
+      end
     end
   end
 
@@ -29,7 +29,10 @@ FactoryGirl.define do
 
   factory :picture do
     sequence(:caption) { |n| "interesting caption #{n}" }
-    image { fixture_file_upload("spec/images/peppers-at-market.jpg", "image/jpeg") }
-    recipe
+    sequence(:position) { |n| "#{n}" }
+    imageable_type "Recipe"
+    sequence(:image) do |n|
+      File.open(File.join(Rails.root, 'spec', 'images', images[n-1]))
+    end
   end
 end

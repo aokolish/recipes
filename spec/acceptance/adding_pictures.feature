@@ -1,4 +1,4 @@
-Feature: Adding Pictures of Recipes
+Feature: Recipe Pictures
   In order to show off what I cook
   As a user
   I want to upload pictures of recipes
@@ -8,17 +8,9 @@ Feature: Adding Pictures of Recipes
     When I go to the pictures page
     And add two pictures with captions
     Then I should see the pictures and the captions
-    And I should see them on the recipe and the recipes page
+    And I should see them on the recipe page
+    And I should see the thumbnail on the recipes page
 
-
-  # Give I am logged in
-  # When I edit a repipe with two photos
-  # And I drag the thumbnails
-  # Then I can sort the photos
-
-  # things to test:
-    # adding a photo
-    # adding a second one
-    # viewing picture captions
-  # changing the order by dragging pictures
-  # inline editing of captions
+  # things I decided not to test:
+    # sorting photos
+    # inline editing of captions

@@ -29,12 +29,16 @@ step "I should see the pictures and the captions" do
   page.should have_content('another caption')
 end
 
-step "I should see them on the recipe and the recipes page" do
+step "I should see them on the recipe page" do
   visit recipe_path(@recipe)
+  page.should have_css('img[alt="Small_peppers-at-market"]')
+  page.should have_css('img[alt="Small_peppers2_1955"]')
+
+  page.should have_css('img[alt="Micro_peppers-at-market"]')
+  page.should have_css('img[alt="Micro_peppers2_1955"]')
 end
 
-#def attach_photo(photo, caption=nil)
-#  attach_file 'picture[image]', "#{Rails.root}/spec/images/#{photo}"
-#  caption && (fill_in 'picture[caption]', :with => caption)
-#  click_button "Submit"
-#end
+step "I should see the thumbnail on the recipes page" do
+  visit recipes_path
+  page.should have_css('img[alt="Thumb_peppers-at-market"]')
+end
