@@ -8,6 +8,14 @@
       = text_field_tag :search, params[:search], 'required' => 'true'
       = submit_tag "S", :name => nil, :id => 'search_submit'
 
+    #search-sort
+      %h2 Sort By:
+      %ul
+        %li
+          = sortable('best_match', 'Best Match')
+        %li
+          = sortable('created_at', 'Created At')
+
     %ul
       = render :partial => 'partials/recipe', :collection => recipe_results
 
