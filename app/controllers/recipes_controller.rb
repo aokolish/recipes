@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   skip_before_filter :authorize, :only => [:index, :search, :show, :create_from_import]
   expose(:paged_recipes) { Recipe.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC' }
-  expose(:recipe_results) { Recipe.search(params[:search], params[:sort], params[:direction], params[:page]) }
+  expose(:recipe_results) { Recipe.search(params[:search], sort_column, sort_direction, params[:page]) }
   expose(:recipe)
   expose(:favorite) { Favorite.new } # had to use new - it was trying to find by params[:id]
   helper_method :sort_column, :sort_direction
@@ -62,10 +62,12 @@ class RecipesController < ApplicationController
 
   private
 
+  # sanitize params and provide defaults to prevent sql injection
   def sort_column
-    Recipe.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    Recipe.column_names.include?(params[:sort]) ? params[:sort] : nil
   end
 
+  # sanitize params and provide defaults to prevent sql injection
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
