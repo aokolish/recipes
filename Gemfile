@@ -25,6 +25,7 @@ group :development, :test do
   gem 'localtunnel'
   gem 'sqlite3'
   gem 'factory_girl_rails'
+  gem 'thin'
 
   # debugging
   gem 'pry'
