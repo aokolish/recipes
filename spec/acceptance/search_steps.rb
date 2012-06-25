@@ -21,7 +21,7 @@ step 'the search results should be ordered by date created :direction' do |direc
 end
 
 step 'when I click it again' do
-  step "I click the 'Created At' sort button"
+  step "I click the 'Date Created' sort button"
 end
 
 step 'I should see the original search results' do

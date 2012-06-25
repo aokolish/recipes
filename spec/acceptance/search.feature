@@ -5,7 +5,7 @@ Feature: Recipe Pictures
 
   Scenario: Sorting Search Results
     Given three recipes come up in my search results
-    When I click the 'Created At' sort button
+    When I click the 'Date Created' sort button
     Then the search results should be ordered by date created descending
     And when I click it again
     Then the search results should be ordered by date created ascending
