@@ -9,9 +9,11 @@ class Recipe < ActiveRecord::Base
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
 
-  def self.search(search, page=1)
+  def self.search(search, sort=nil, direction='asc', page=1)
     search = search.downcase
-    recipes = Recipe.where('lower(title) like ? OR lower(ingredients) like ? OR lower(directions) like ?', "%#{search}%", "%#{search}%", "%#{search}%").paginate(:page => page, :per_page => 12)
+    recipes = Recipe.where('lower(title) like ? OR lower(ingredients) like ? OR lower(directions) like ?', "%#{search}%", "%#{search}%", "%#{search}%")
+                    .paginate(:page => page, :per_page => 12)
+    recipes = recipes.order(sort + ' ' + direction) if sort
 
     # remove delimiting pipes
     recipes.each do |recipe|
@@ -100,5 +102,4 @@ class Recipe < ActiveRecord::Base
       end
     end
   end
-
 end

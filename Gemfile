@@ -18,6 +18,8 @@ gem 'fog'
 gem 'decent_exposure'
 gem 'best_in_place'
 gem 'acts_as_list'
+gem 'unicorn'
+gem 'foreman'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
@@ -25,6 +27,7 @@ group :development, :test do
   gem 'localtunnel'
   gem 'sqlite3'
   gem 'factory_girl_rails'
+  gem 'thin'
 
   # debugging
   gem 'pry'
