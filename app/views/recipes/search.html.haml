@@ -16,7 +16,7 @@
         %li
           = sortable('created_at', 'Created At')
 
-    %ul
+    %ul#results
       = render :partial => 'partials/recipe', :collection => recipe_results
 
     = will_paginate recipe_results
