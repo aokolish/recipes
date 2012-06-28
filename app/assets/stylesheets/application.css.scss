@@ -10,18 +10,26 @@
 $dark_gray: #363636;
 $med_gray: #686868;
 $light_gray: #EEE;
+$baseFontSize: 16px;
+$baseFontFamily: Verdana, Helvetica, Arial;
+$gridColumnWidth: 30px;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "base/bootstrap_overrides"; //this is mine
 
 @import "bourbon";
 @import "base/mixins";
-
-@import "base/normalize";
+//
+//@import "base/normalize";
 @import "base/fonts";
-@import "base/typography";
+//@import "base/typography";
 @import "base/layout";
 @import "partials/header";
-
+//
 @import "static/home";
-@import "recipes/recipe";
-@import "users/user";
-@import "favorites/favorite";
-@import "pictures/pictures";
+@import "partials/recipe";
+//@import "recipes/recipe";
+//@import "users/user";
+//@import "favorites/favorite";
+//@import "pictures/pictures";

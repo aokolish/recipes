@@ -1,0 +1,4 @@
+q:before, q:after, blockquote:before, blockquote:after {
+  //get rid of indent before blockquotes
+  content: none;
+}
