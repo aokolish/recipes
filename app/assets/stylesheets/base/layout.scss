@@ -32,6 +32,7 @@ footer {
   margin-top: 25px;
   padding: 20px 0 20px 0;
   @include fancy-border(top);
+  clear: both;
 
   .links {
     margin-left: 0;

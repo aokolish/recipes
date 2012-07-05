@@ -19,5 +19,5 @@
     %ul#results
       = render :partial => 'partials/recipe', :collection => recipe_results
 
-    = will_paginate recipe_results
+    = will_paginate recipe_results, :previous_label => 'Prev', :next_label => 'Next'
 

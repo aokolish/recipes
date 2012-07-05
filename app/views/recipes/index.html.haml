@@ -1,15 +1,15 @@
-#recipes
+#recipes.span9
   - unless paged_recipes.empty?
     %h1 Recipes
 
-    %ul
+    %ul#recipes-list
       = render :partial => 'partials/recipe', :collection => paged_recipes
 
-    = will_paginate paged_recipes
+    = will_paginate paged_recipes, :previous_label => 'Prev', :next_label => 'Next'
 
 - content_for :sidebar do
   #new-features
-    %h2 New Features
+    %h2 What's New
     .feature
       %p
         %strong Image Improvements:
