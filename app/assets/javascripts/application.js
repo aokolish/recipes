@@ -9,6 +9,7 @@
 //= require jquery-ui
 //= require jquery.purr
 //= require best_in_place
+//= require bootstrap
 //= require viewport_fix
 //= require tooltip
 //= require flexslider
@@ -16,3 +17,5 @@
 //= require colorbox
 //= require main
 //= require_tree
+//
+//do I really need all of the boostrap stuff?

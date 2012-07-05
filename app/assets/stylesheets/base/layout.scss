@@ -1,7 +1,16 @@
+[data-icon]:before {
+  font-family: 'Signify Lite';
+  content: attr(data-icon);
+}
+
 body {
   background: $light_gray image-url("fabric.png") repeat;
   font-family: Verdana, Helvetica, Arial;
   padding-top: 50px;
+
+  @media (max-width: 980px) {
+    padding-top: 0;
+  }
 }
 .hero-unit {
   background: transparent;

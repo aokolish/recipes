@@ -3,8 +3,6 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require flexslider
- *= require colorbox
 */
 
 $dark_gray: #363636;
@@ -12,7 +10,6 @@ $med_gray: #686868;
 $light_gray: #EEE;
 $baseFontSize: 16px;
 $baseFontFamily: Verdana, Helvetica, Arial;
-$gridColumnWidth: 30px;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -20,13 +17,15 @@ $gridColumnWidth: 30px;
 
 @import "bourbon";
 @import "base/mixins";
-//
+@import "colorbox";
+@import "flexslider";
+
 //@import "base/normalize";
 @import "base/fonts";
 //@import "base/typography";
 @import "base/layout";
 @import "partials/header";
-//
+
 @import "static/home";
 @import "partials/recipe";
 //@import "recipes/recipe";

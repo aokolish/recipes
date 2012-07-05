@@ -16,6 +16,8 @@ $ ->
     animation: 'slide',
     slideshow: false,
     keyboardNav: false,
+    prevText: '‹',
+    nextText: '›',
     manualControls: '.custom-controls li',
 
   # flexslider will not change slides unless you click the nav

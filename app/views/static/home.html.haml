@@ -1,8 +1,14 @@
 .hero-unit
   %h1 The Best Place to Keep Your Recipes
 
-  %p(id='gallery')
-    = image_tag "http://placekitten.com/1050/350"
+  #gallery.flexslider
+    %ul.slides
+      %li
+        = image_tag "http://placekitten.com/1090/400"
+      %li
+        = image_tag "http://placekitten.com/1090/400"
+      %li
+        = image_tag "http://placekitten.com/1090/400"
 
 .row
   .span6
