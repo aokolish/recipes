@@ -49,7 +49,6 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
-    p.item :home, 'Home', '/'
     p.item :recipes, 'Recipes', recipes_path, :highlights_on => /\/recipes(\?.+|\/\d+|\/\d+\/edit|\/|\/new|\/search\?.+)?\/?$/   # http://rubular.com/r/b04hPoKREr
     p.item :favorites, 'Favorites', favorites_path
     p.item :import, 'Import', import_recipes_path
