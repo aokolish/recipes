@@ -3,9 +3,9 @@
 
   @if $side == top {
     @include box-shadow(inset white 0px 1px 0px);
-  } @else if $type == right {
+  } @else if $side == right {
     @include box-shadow(white 1px 0px 0px);
-  } @else if $type == bottom {
+  } @else if $side == bottom {
     @include box-shadow(white 0px 1px 0px);
   } @else {
     @include box-shadow(inset white 1px 0px 0px);
