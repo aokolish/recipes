@@ -31,3 +31,7 @@ $ ->
 
   # inline editing js plugin
   $('.best_in_place').best_in_place()
+
+  # make boostrap 'disabled' links and such actually disabled
+  $('a.disabled').click ->
+    false
