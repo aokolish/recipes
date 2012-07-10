@@ -12,4 +12,20 @@ module ApplicationHelper
       link_to title, search_params, {:class => css_class}
     end
   end
+
+  def twitterized_type(type)
+    case type
+      when :alert
+        "warning"
+      when :error
+        "error"
+      when :notice
+        "info"
+      when :success
+        "success"
+      else
+        type.to_s
+    end
+  end
+
 end
