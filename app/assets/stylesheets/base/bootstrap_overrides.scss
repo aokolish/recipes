@@ -12,5 +12,17 @@ q:before, q:after, blockquote:before, blockquote:after {
 }
 
 .navbar .nav > li > a {
-  padding-top: 6px;
+  line-height: 25px;
+}
+
+.navbar .nav > li > a.dropdown-toggle {
+  line-height: 19px;
+}
+
+.navbar-search {
+  top: 2px;
+}
+
+.btn-large [class^="icon-"] {
+  margin-top: 4px;
 }

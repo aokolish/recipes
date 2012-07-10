@@ -1,30 +1,35 @@
-#recipe
-  %h1 #{recipe.title}
+#recipe.span8
+  .row
+    .span7
+      %h1= recipe.title
 
-  %ul(class="ingredients")
-    - recipe.ingredients_array.each do |ingredient|
-      %li #{ingredient}
+      %ul.ingredients
+        - recipe.ingredients_array.each do |ingredient|
+          %li= ingredient
 
-  - recipe.directions_array.each do |direction|
-    %p #{direction}
+      - recipe.directions_array.each do |direction|
+        %p= direction
 
-  - if current_user
-    .actions
-      - if recipe.favorite_for?(current_user)
-        = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
-      -else
-        = form_for [current_user, favorite] do |f|
-          = hidden_field_tag "favorite[recipe_id]", recipe.id
-          = hidden_field_tag "favorite[user_id]", current_user.id
-          = f.submit 's', :id => 'favorite_recipe', :title => 'Favorite this recipe'
-      - if current_user.author?(recipe)
-        = link_to 'p', edit_recipe_path(recipe), :class => 'edit', :title => 'Edit this recipe'
-        = link_to 't', recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this recipe'
+    - if current_user
+      .actions.span1
+        - if recipe.favorite_for?(current_user)
+          -#= link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'btn remove_favorite', :title => 'Remove this from your favorites'
+          %a.remove_favorite.btn.disabled(href="#") s
+        -else
+          = form_for [current_user, favorite] do |f|
+            = hidden_field_tag "favorite[recipe_id]", recipe.id
+            = hidden_field_tag "favorite[user_id]", current_user.id
+            = f.submit 's', :id => 'favorite_recipe', :title => 'Favorite this recipe', :class => 'btn'
+        - if current_user.author?(recipe)
+          = link_to 'p', edit_recipe_path(recipe), :class => 'btn edit', :title => 'Edit this recipe'
+          = link_to 't', recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete', :title => 'Delete this recipe'
 
 - content_for :sidebar do
   #recipe_info
     - if recipe.pictures.empty?
-      = link_to 'Add A Photo', recipe_pictures_path(recipe), :class => 'add-first-image'
+      = link_to recipe_pictures_path(recipe), :class => 'btn btn-large' do
+        %i.icon-camera
+        Add A Photo
     - else
       .flexslider
         %ul(class="slides")
@@ -32,27 +37,27 @@
             %li
               %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
                 = image_tag pic.image_url(:small)
-        %p(class="click-for-large") Click for a larger image
-        %ul(class="custom-controls")
+        %p.click-for-large Click for a larger image
+        %ul.custom-controls
           - recipe.pictures.top_five.each do |pic|
             %li
               %a(href="#")
                 = image_tag pic.image_url(:micro)
-      %p(class="add-photos")
+      %p.add-photos
         = link_to 'Add Photos', recipe_pictures_path(recipe)
 
-    %h3(class="first") Author:
-    %p #{recipe.author}
+    %h3.first Author:
+    %p= recipe.author
 
     %h3 Total time:
-    %p #{recipe.total_time}
+    %p= recipe.total_time
 
     %h3 Yield:
-    %p #{recipe.yield}
+    %p= recipe.yield
 
     - unless recipe.source_url.blank?
       %h3 Source url:
-      %p
+      %p.source_url
         = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
 
 

@@ -1,148 +1,97 @@
-////recipe#show
-//.recipes-show {
-//
-//  #recipe {
-//    width: 100%;
-//    padding-right: 95px;
-//    float: left;
-//    position: relative;
-//
-//    ul.ingredients {
-//      padding-left: 0;
-//      list-style-type: none;
-//    }
-//
-//    .actions {
-//      margin-bottom: 20px;
-//      overflow: hidden;
-//
-//      @media only screen and (min-width: 768px) {
-//        position: absolute;
-//        top: 26px;
-//        right: 20px;
-//      }
-//
-//      input[type=submit],
-//      a {
-//        @include button(darken($light_gray, 10%));
-//        font-family: 'Iconic';
-//        color: $med_gray;
-//        text-decoration: none;
-//        display: block;
-//        font-size: 26px;
-//        line-height: 30px;
-//        padding: 5px 11px;
-//        float: left;
-//        margin-right: 15px;
-//
-//        @media only screen and (min-width: 768px) {
-//          float: none;
-//          margin-bottom: 5px;
-//          padding: 0 7px 0;
-//          font-size: 18px;
-//        }
-//      }
-//      .remove_favorite {
-//        @include button(#C00);
-//        display: block;
-//        font-size: 26px;
-//        line-height: 30px;
-//        padding: 5px 11px;
-//        float: left;
-//        margin-right: 15px;
-//        font-family: 'Iconic';
-//
-//        @media only screen and (min-width: 768px) {
-//          float: none;
-//          padding: 0 7px 0;
-//          font-size: 18px;
-//        }
-//      }
-//    }
-//  }
-//
-//  #recipe_info {
-//    font-size: .85em;
-//
-//    @media only screen and (min-width: 768px) {
-//      padding: 0 20px;
-//      border-left: 1px solid #B3B3B3;
-//      box-shadow: inset #FFF 1px 0px 0px;
-//    }
-//
-//    @media only screen and (min-width: 992px) {
-//      padding: 0 30px;
-//    }
-//
-//    .add-first-image {
-//      @media only screen and (min-width: 768px) {
-//        display: block;
-//        text-align: center;
-//        padding: 40% 0;
-//        border: dotted;
-//        border-radius: 10px;
-//        text-decoration: none;
-//        font-size: 1.3em;
-//        margin-bottom: 10%;
-//
-//        &:hover {
-//          background: hsla(180, 80%, 92%, 0.7);
-//        }
-//      }
-//    }
-//
-//    .flexslider {
-//      text-align: center;
-//    }
-//    .flexslider .click-for-large {
-//      color: $med_gray;
-//      font-size: .9em;
-//      margin: .4em 0;
-//    }
-//    .flex-direction-nav li .next,
-//    .flex-direction-nav li .prev {
-//      // not using these controls here
-//      display: none;
-//    }
-//    .flexslider .custom-controls {
-//      list-style-type: none;
-//      padding-left: 0;
-//      margin: 0.3em 0 .5em;
-//
-//      li {
-//        display: inline-block;
-//        padding: 1px;
-//        border: 1px solid transparent;
-//        margin-right: -5px;
-//        &.active {
-//          border-color: $med_gray;
-//        }
-//
-//        a img {
-//          display: block;
-//          width: 38px;
-//        }
-//      }
-//    }
-//
-//    .add-photos {
-//      text-align: center;
-//    }
-//
-//    > h3 {
-//      margin: 0;
-//      font-size: 1em;
-//    }
-//
-//    > h3.first {
-//      margin-top: 0;
-//    }
-//
-//    > p {
-//      margin: 0 0 10px;
-//    }
-//  }
-//}
+//recipe#show
+.recipes-show {
+    ul.ingredients {
+      margin-left: 0;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    .actions {
+      .btn {
+        padding: 8px;
+        font-family: 'Iconic';
+        margin-bottom: 3px;
+      }
+      input[type=submit],
+      a {
+        font-size: 26px;
+      }
+      #new_favorite {
+        margin-bottom: 0;
+        display: inline-block;
+      }
+      .remove_favorite {
+        font-family: 'Iconic';
+      }
+    }
+  }
+
+  #recipe_info {
+    font-size: .85em;
+
+    @media #{$portrait_tabs_and_above} {
+      padding: 0 20px;
+      @include fancy_border(left);
+    }
+    @media #{$smartphones_to_tabs} {
+      padding: 0;
+    }
+
+    .flexslider {
+      text-align: center;
+    }
+    .flexslider .click-for-large {
+      color: $med_gray;
+      font-size: .9em;
+      margin: .4em 0;
+    }
+    .flex-direction-nav li .next,
+    .flex-direction-nav li .prev {
+      // not using these controls here
+      display: none;
+    }
+    .flexslider .custom-controls {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0.3em 0 .5em;
+
+      li {
+        display: inline-block;
+        padding: 1px;
+        border: 1px solid transparent;
+        margin-right: -5px;
+        &.active {
+          border-color: $med_gray;
+        }
+
+        a img {
+          display: block;
+          width: 38px;
+        }
+      }
+    }
+
+    .add-photos {
+      text-align: center;
+    }
+
+    > h3 {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    > h3.first {
+      margin-top: 0;
+    }
+
+    > p {
+      margin: 0 0 10px;
+    }
+
+    .source_url {
+      word-wrap: break-word;
+    }
+}
 
 //search and index page share some styles
 .recipes-index,
