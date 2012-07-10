@@ -1,13 +1,14 @@
-%h1 Log In
+.span12
+  %h1 Log In
 
-= form_tag sessions_path do
-  %p
-    = label_tag :email
-    %br
-    = text_field_tag :email, params[:email], :autofocus => true
-  %p
-    = label_tag :password
-    %br
-    = password_field_tag :password
-  %p(class="button")
-    = submit_tag "Log in"
+  = form_tag sessions_path do
+    %p
+      = label_tag :email
+      %br
+      = text_field_tag :email, params[:email], :autofocus => true
+    %p
+      = label_tag :password
+      %br
+      = password_field_tag :password
+    %p(class="button")
+      = submit_tag "Log in"
