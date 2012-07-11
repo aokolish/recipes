@@ -1,12 +1,13 @@
-%h1 Favorites
+.span8
+  %h1 Favorites
 
-- if current_user
-  %ul(id="recipes")
-    = render :partial => 'partials/recipe', :collection => user_recipes
+  - if current_user
+    %ul(id="recipes")
+      = render :partial => 'partials/recipe', :collection => user_recipes
 
-- if !current_user || current_user.favorites.empty?
-  .flash_info
-    %p
-      Your recipe box is where you can save all of the recipes that you are interested in.
-      You can add any other recipes to your recipe box by clicking the (+) icon next to each
-      recipe's title. If you write a recipe, it will automatically be added to your recipe box.
+  - if !current_user || current_user.favorites.empty?
+    .alert
+      %p
+        Your recipe box is where you can save all of the recipes that you are interested in.
+        You can add any other recipes to your recipe box by clicking the (+) icon next to each
+        recipe's title. If you write a recipe, it will automatically be added to your recipe box.
