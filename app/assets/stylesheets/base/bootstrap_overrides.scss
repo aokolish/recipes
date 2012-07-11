@@ -26,3 +26,8 @@ q:before, q:after, blockquote:before, blockquote:after {
 .btn-large [class^="icon-"] {
   margin-top: 4px;
 }
+
+.alert {
+  // make yellow flash text darker
+  color: darken(#C09853, 10%);
+}
