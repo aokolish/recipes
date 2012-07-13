@@ -1,23 +1,20 @@
-= simple_form_for recipe, :multipart => true do |f|
+= simple_form_for recipe do |f|
   .row
     .span7
       = f.error_messages
-      = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
-      = f.input :title, :autofocus => 'autofocus'
-      = f.input :ingredients
-      = f.input :directions
+      = f.input :user_id, as: 'hidden', input_html: { value: current_user.id }
+      = f.input :title, autofocus: true, input_html: { class: 'span5' }
+      = f.input :ingredients, input_html: { class: 'span5', rows: 15 }
+      = f.input :directions, input_html: { class: 'span5', rows: 15 }
     .span5
-      -#= image_tag(recipe.image_url(:small)) if recipe.image?
-      -#= f.input :image, :as => :file
-      -#= f.input :image_cache, :as => 'hidden'
-      = f.input :author
-      = f.input :total_time, :as => :string, :input_html => { :value => recipe.total_time }
-      = f.input :yield
+      = f.input :author, input_html: { class: 'span4' }
+      = f.input :total_time, as: :string, input_html: { value: recipe.total_time, class: 'span4' }
+      = f.input :yield, input_html: { class: 'span4' }
       - unless recipe.new_record? || recipe.source_url.nil?
         .field
           = f.label :source_url
-          = link_to recipe.source_url, recipe.source_url, :target => '_blank'
+          = link_to recipe.source_url, recipe.source_url, target: '_blank'
   .row
     .span12
       = f.button :submit, 'Submit'
-      = link_to 'Cancel', recipe, :class => 'button'
+      = link_to 'Cancel', recipe, class: 'btn'
