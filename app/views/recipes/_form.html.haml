@@ -1,21 +1,23 @@
 = simple_form_for recipe, :multipart => true do |f|
-  .main-fields
-    = f.error_messages
-    = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
-    = f.input :title, :autofocus => 'autofocus'
-    = f.input :ingredients
-    = f.input :directions
-  .secondary-fields
-    -#= image_tag(recipe.image_url(:small)) if recipe.image?
-    -#= f.input :image, :as => :file
-    -#= f.input :image_cache, :as => 'hidden'
-    = f.input :author
-    = f.input :total_time, :as => :string, :input_html => { :value => recipe.total_time }
-    = f.input :yield
-    - unless recipe.new_record? || recipe.source_url.nil?
-      .field
-        = f.label :source_url
-        = link_to recipe.source_url, recipe.source_url, :target => '_blank'
-  .actions
-    = f.button :submit, 'Submit'
-    = link_to 'Cancel', recipe, :class => 'button'
+  .row
+    .span7
+      = f.error_messages
+      = f.input :user_id, :as => 'hidden', :input_html => { :value => current_user.id }
+      = f.input :title, :autofocus => 'autofocus'
+      = f.input :ingredients
+      = f.input :directions
+    .span5
+      -#= image_tag(recipe.image_url(:small)) if recipe.image?
+      -#= f.input :image, :as => :file
+      -#= f.input :image_cache, :as => 'hidden'
+      = f.input :author
+      = f.input :total_time, :as => :string, :input_html => { :value => recipe.total_time }
+      = f.input :yield
+      - unless recipe.new_record? || recipe.source_url.nil?
+        .field
+          = f.label :source_url
+          = link_to recipe.source_url, recipe.source_url, :target => '_blank'
+  .row
+    .span12
+      = f.button :submit, 'Submit'
+      = link_to 'Cancel', recipe, :class => 'button'
