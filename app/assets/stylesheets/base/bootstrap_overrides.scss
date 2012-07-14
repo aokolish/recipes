@@ -31,3 +31,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   // make yellow flash text darker
   color: darken(#C09853, 10%);
 }
+
+form {
+  margin: 18px 0;
+}

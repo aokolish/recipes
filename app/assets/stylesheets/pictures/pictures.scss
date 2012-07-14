@@ -1,7 +1,5 @@
 .pictures-index {
   #main-content {
-    padding-right: 10%;
-    width: 90%;
 
     .picture {
       .best_in_place {
@@ -9,10 +7,6 @@
         height: 28px;
         display: block;
         cursor: pointer;
-      }
-      form {
-        margin: 14px 0;
-        overflow: hidden;
       }
       .placeholder {
         margin: 2px 0 10px;
@@ -34,17 +28,23 @@
 
     }
   }
+  #sidebar {
+    @include column_padding(left);
+    @media #{$portrait_tabs_and_above} {
+      @include fancy_border(left);
+    }
+  }
   #new-picture {
-    @include fancy_bottom_border;
+    @include fancy_border(bottom);
   }
   #thumbnails {
-    padding-left: 0;
     list-style-type: none;
+    margin-left: 0;
 
     .picture {
       padding-bottom: 5px;
       margin-bottom: 5px;
-      @include fancy_bottom_border;
+      @include fancy_border(bottom);
       background: image-url('grips.png') 65% 40% no-repeat;
       &:hover {
         cursor: move;
@@ -54,16 +54,9 @@
       background: red;
       opacity: .4;
     }
-
       .delete {
-        position: relative;
-        top: -20px;
         font-size: 0.8em;
-        text-decoration: none;
         margin-left: 10px;
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }

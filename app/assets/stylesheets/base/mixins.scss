@@ -11,3 +11,20 @@
     @include box-shadow(inset white 1px 0px 0px);
   }
 }
+
+//padding left or right for bootstrap columns
+//a bit more confusing that you might think
+//key is the box-sizing - changes the box model
+//only applies padding to portrait tablets and larger screens
+$column_padding: 20px;
+$large_column_padding: 30px;
+
+@mixin column_padding($side) {
+  @media #{$portrait_tabs_and_above} {
+    @include box-sizing(border-box);
+    padding-#{$side}: $column_padding;
+  }
+  @media #{$large_display} {
+    padding-#{$side}: $large_column_padding;
+  }
+}

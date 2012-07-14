@@ -1,26 +1,32 @@
-#main-content
+.span8#main-content
 
   - if imageable.class.name == "Recipe"
-    &lt;back to
-    = link_to "#{truncate(imageable.title, :length => 60)}", imageable
+    %ul.breadcrumb
+      %li
+        = link_to "Recipes", recipes_path
+        %span.divider /
+      %li
+        = link_to "#{truncate(imageable.title, :length => 30)}", imageable
+        %span.divider /
+      %li.active
+        pictures
 
   %h1 Pictures
 
   - pictures.each do |picture|
     .picture
       = image_tag picture.image_url(:large)
-      = best_in_place picture, :caption, :path => recipe_picture_path(imageable, picture), :nil => edit_caption
+      = best_in_place picture, :caption, path: recipe_picture_path(imageable, picture), :nil => edit_caption
 
 - content_for :sidebar do
   #new-picture
     %h2 New Picture
 
-    = simple_form_for [imageable, Picture.new], :multipart => true do |f|
-      = f.input :image, :as => :file
-      = f.input :image_cache, :as => 'hidden'
+    = simple_form_for [imageable, Picture.new], multipart: true do |f|
+      = f.input :image, as: :file, label: false
+      = f.input :image_cache, as: 'hidden'
       = f.input :caption
-      .actions
-        = f.button :submit, 'Submit'
+      = f.button :submit, 'Submit'
 
   - unless pictures.empty?
     #manage-pictures
@@ -28,6 +34,6 @@
 
       %ul(id="thumbnails" data-update-url="#{sort_recipe_pictures_path}")
         - pictures.each do |picture|
-          = content_tag_for :li, picture, :class => 'picture' do
+          = content_tag_for :li, picture, class: 'picture' do
             = image_tag picture.image_url(:micro)
-            = link_to 'Delete', [imageable, picture], :confirm => 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'
+            = link_to 'Delete', [imageable, picture], confirm: 'Are you sure you want to delete this photo?', :method => :delete, :class => 'delete'
