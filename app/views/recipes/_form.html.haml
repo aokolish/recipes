@@ -3,8 +3,8 @@
     .span7.primary-fields
       = f.input :user_id, as: 'hidden', input_html: { value: current_user.id }
       = f.input :title, autofocus: true, input_html: { class: 'span5' }
-      = f.input :ingredients, input_html: { class: 'span5', rows: 15 }
-      = f.input :directions, input_html: { class: 'span5', rows: 15 }
+      = f.input :ingredients, input_html: { class: 'span5', rows: 10 }
+      = f.input :directions, input_html: { class: 'span5', rows: 10 }
     .span5.secondary-fields
       = f.input :author, input_html: { class: 'span3' }
       = f.input :total_time, as: :string, input_html: { value: recipe.total_time, class: 'span3' }
