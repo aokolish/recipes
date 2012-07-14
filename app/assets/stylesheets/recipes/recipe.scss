@@ -157,3 +157,21 @@
     }
   }
 }
+
+.recipes-new,
+.recipes-create {
+  .secondary-fields {
+    @media #{$portrait_tabs_and_above} {
+      @include fancy_border(left);
+      padding-left: 20px;
+      //width: $gridColumnWidthLarge * 5;
+      width: ($gridColumnWidth * 5) + ($gridGutterWidth * 4) - 21;
+    }
+    @media #{$portrait_tabs} {
+      width: ($gridColumnWidth * 3) + ($gridGutterWidth * 4) + 9;
+    }
+    @media #{$large_display} {
+      width: ($gridColumnWidthLarge * 5) + ($gridGutterWidthLarge * 4) - 21;
+    }
+  }
+}
