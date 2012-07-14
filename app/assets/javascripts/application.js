@@ -11,7 +11,6 @@
 //= require best_in_place
 //= require bootstrap
 //= require viewport_fix
-//= require tooltip
 //= require flexslider
 //= require hoverintent
 //= require colorbox

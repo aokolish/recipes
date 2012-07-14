@@ -5,11 +5,8 @@ $ ->
 
   # setup tooltips and filter out links that are a part of recipe page
   # flexslider slideshow
-  $('a[title], span[title], input[title]').not('[rel="galler"]').tooltip({
-    position: 'center right',
-    offset: [0, 10],
-    effect: 'fade',
-    predelay: 250
+  $('.tooltipped').tooltip({
+    placement: 'right'
   })
 
   $('.flexslider').flexslider
