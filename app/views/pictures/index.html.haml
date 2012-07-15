@@ -20,7 +20,7 @@
 
 - content_for :sidebar do
   #new-picture
-    %h2 New Picture
+    %h2 Add A Photo
 
     = simple_form_for [imageable, Picture.new], multipart: true do |f|
       = f.input :image, as: :file, label: false
@@ -31,6 +31,8 @@
   - unless pictures.empty?
     #manage-pictures
       %h2 Manage Pictures
+      %p
+        %small (drag to reorder)
 
       %ul(id="thumbnails" data-update-url="#{sort_recipe_pictures_path}")
         - pictures.each do |picture|

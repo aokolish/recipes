@@ -1,6 +1,5 @@
 .pictures-index {
   #main-content {
-
     .picture {
       .best_in_place {
         margin: 2px 0 10px;
@@ -9,7 +8,7 @@
         cursor: pointer;
       }
       .placeholder {
-        margin: 2px 0 10px;
+        margin: 4px 0 10px;
         font-style: italic;
         color: $med_gray;
         font-size: 0.9em;
@@ -17,43 +16,41 @@
           cursor: pointer;
         }
         .edit-button {
-          @include button(darken($light_gray, 10%));
+          @extend .btn;
+          @extend .btn-success;
           font-family: 'Iconic';
-          font-size: 1.1em;
-          line-height: 30px;
-          padding: 5px 11px;
           margin-left: 10px;
         }
       }
-
     }
   }
+
   #sidebar {
     @include column_padding(left);
     @media #{$portrait_tabs_and_above} {
       @include fancy_border(left);
     }
-  }
-  #new-picture {
-    @include fancy_border(bottom);
-  }
-  #thumbnails {
-    list-style-type: none;
-    margin-left: 0;
-
-    .picture {
-      padding-bottom: 5px;
-      margin-bottom: 5px;
+    #new-picture {
       @include fancy_border(bottom);
-      background: image-url('grips.png') 65% 40% no-repeat;
-      &:hover {
-        cursor: move;
-      }
-
-    .ui-sortable-helper {
-      background: red;
-      opacity: .4;
     }
+    #thumbnails {
+      list-style-type: none;
+      margin-left: 0;
+
+      .picture {
+        padding: 7px;
+        margin-bottom: 5px;
+        @include fancy_border(bottom);
+        background: image-url('grips.png') 65% 40% no-repeat;
+        &:hover {
+          cursor: move;
+        }
+      }
+      .ui-sortable-helper {
+        @include box-shadow($med_gray 1px 1px 7px);
+        background: lighten($light_gray, 10%) image-url('grips.png') 65% 40% no-repeat;
+        opacity: .8;
+      }
       .delete {
         font-size: 0.8em;
         margin-left: 10px;
