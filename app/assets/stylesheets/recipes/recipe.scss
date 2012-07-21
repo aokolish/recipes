@@ -102,6 +102,12 @@
   }
 }
 
+.recipes-index {
+  #sidebar {
+    @include bordered-column;
+  }
+}
+
 .recipes-search {
   #search_results > h1 {
     margin-bottom: 2px;
@@ -159,28 +165,15 @@
 }
 
 .recipes-new,
+.recipes-edit,
 .recipes-create {
   .secondary-fields {
-    @media #{$portrait_tabs_and_above} {
-      @include fancy_border(left);
-      padding-left: 20px;
-      //width: $gridColumnWidthLarge * 5;
-      width: ($gridColumnWidth * 5) + ($gridGutterWidth * 4) - 21;
-    }
-    @media #{$portrait_tabs} {
-      width: ($gridColumnWidth * 3) + ($gridGutterWidth * 4) + 9;
-    }
-    @media #{$large_display} {
-      width: ($gridColumnWidthLarge * 5) + ($gridGutterWidthLarge * 4) - 21;
-    }
+    @include bordered-column;
   }
 }
 
 .recipes-import {
   #sidebar {
-    @media #{$portrait_tabs_and_above} {
-      @include fancy_border(left);
-      @include column_padding(left);
-    }
+    @include bordered-column;
   }
 }

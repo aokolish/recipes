@@ -26,10 +26,7 @@
   }
 
   #sidebar {
-    @include column_padding(left);
-    @media #{$portrait_tabs_and_above} {
-      @include fancy_border(left);
-    }
+    @include bordered-column;
     #new-picture {
       @include fancy_border(bottom);
     }

@@ -28,3 +28,10 @@ $large_column_padding: 30px;
     padding-#{$side}: $large_column_padding;
   }
 }
+
+@mixin bordered-column {
+  @include column_padding(left);
+  @media #{$portrait_tabs_and_above} {
+    @include fancy_border(left);
+  }
+}
