@@ -175,3 +175,12 @@
     }
   }
 }
+
+.recipes-import {
+  #sidebar {
+    @media #{$portrait_tabs_and_above} {
+      @include fancy_border(left);
+      @include column_padding(left);
+    }
+  }
+}
