@@ -12,14 +12,20 @@
     %h2 What's New
     .feature
       %p
+        %strong New Look:
+        We re-styled the entire site. Hope you like it!
+      %p
+        = timestamp Time.utc(2012,"jul",20)
+    .feature
+      %p
         %strong Image Improvements:
         Now, you can attach multiple images to each recipe and control the 
         order in which they are shown.
       %p
-        %i Added #{time_ago_in_words Time.utc(2012,"jun",3)} ago
+        = timestamp Time.utc(2012,"jun",3)
     .feature
       %p
         %strong Images:
         You can now upload an image for your recipes!
       %p
-        %i Added #{time_ago_in_words Time.utc(2012,"feb",3)} ago
+        = timestamp Time.utc(2012,"feb",3)
