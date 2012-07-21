@@ -28,13 +28,12 @@ $inputBorderRadius: 4px;
 @import "flexslider";
 
 @import "base/fonts";
-//@import "base/typography";
 @import "base/layout";
+@import "base/forms";
 @import "partials/header";
 
 @import "static/home";
 @import "partials/recipe";
 @import "recipes/recipe";
-//@import "users/user";
 @import "favorites/favorite";
 @import "pictures/pictures";
