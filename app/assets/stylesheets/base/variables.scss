@@ -1,0 +1,12 @@
+$dark_gray: #363636;
+$med_gray: #686868;
+$light_gray: #EEE;
+$baseFontSize: 16px;
+$baseFontFamily: Verdana, Helvetica, Arial;
+//I don't like typing media queries:
+$smartphones: '(max-width: 480px)';
+$smartphones_to_tabs: '(max-width: 767px)';
+$portrait_tabs: '(min-width: 768px) and (max-width: 979px)';
+$portrait_tabs_and_above: '(min-width: 768px)';
+$large_display: '(min-width: 1200px)';
+$inputBorderRadius: 4px;
