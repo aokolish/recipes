@@ -1,41 +1,28 @@
-//recipe#show
 .recipes-show {
-    ul.ingredients {
-      margin-left: 0;
-      padding-left: 0;
-      list-style-type: none;
+  .actions {
+    form {
+      margin-top: 0;
     }
-
-    .actions {
-      .btn {
-        padding: 8px;
-        font-family: 'Iconic';
-        margin-bottom: 3px;
-      }
-      input[type=submit],
-      a {
-        font-size: 26px;
-      }
-      #new_favorite {
-        margin-bottom: 0;
-        display: inline-block;
-      }
-      .remove_favorite {
-        font-family: 'Iconic';
-      }
+    .btn {
+      width: 19px;
+      margin-bottom: 3px;
+    }
+    button.btn {
+      width: 41px;
+    }
+    button,
+    a {
+      font-size: 26px;
+    }
+    #new_favorite {
+      margin-bottom: 0;
     }
   }
 
   #recipe_info {
     font-size: .85em;
 
-    @media #{$portrait_tabs_and_above} {
-      padding: 0 20px;
-      @include fancy_border(left);
-    }
-    @media #{$smartphones_to_tabs} {
-      padding: 0;
-    }
+    @include bordered-column;
 
     .flexslider {
       text-align: center;
@@ -70,27 +57,23 @@
         }
       }
     }
-
     .add-photos {
       text-align: center;
     }
-
     > h3 {
       margin: 0;
       font-size: 1em;
     }
-
     > h3.first {
       margin-top: 0;
     }
-
     > p {
       margin: 0 0 10px;
     }
-
     .source_url {
       word-wrap: break-word;
     }
+  }
 }
 
 //search and index page share some styles

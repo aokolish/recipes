@@ -3,7 +3,7 @@
     .span7
       %h1= recipe.title
 
-      %ul.ingredients
+      %ul.ingredients.unstyled
         - recipe.ingredients_array.each do |ingredient|
           %li= ingredient
 
@@ -13,16 +13,20 @@
     - if current_user
       .actions.span1
         - if recipe.favorite_for?(current_user)
-          -#= link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'btn remove_favorite', :title => 'Remove this from your favorites'
-          %a.remove_favorite.btn.disabled(href="#") s
+          %a.remove_favorite.btn.disabled(href="#")
+            %i.icon-bookmark
         -else
           = form_for [current_user, favorite] do |f|
             = hidden_field_tag "favorite[recipe_id]", recipe.id
             = hidden_field_tag "favorite[user_id]", current_user.id
-            = f.submit 's', :id => 'favorite_recipe', :title => 'Favorite this recipe', :class => 'btn tooltipped'
+            -# the following is ugly
+            = button_tag '', :title => 'Favorite this recipe', :class => 'btn tooltipped' do
+              %i.icon-bookmark-empty
         - if current_user.author?(recipe)
-          = link_to 'p', edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit this recipe'
-          = link_to 't', recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete this recipe'
+          = link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit this recipe' do
+            %i.icon-pencil
+          = link_to recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete this recipe' do
+            %i.icon-trash
 
 - content_for :sidebar do
   #recipe_info
