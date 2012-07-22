@@ -7,22 +7,21 @@
     margin-bottom: 20px;
     padding-left: 8px;
 
+    .icon-chevron-right {
+      display: none;
+    }
     //this fanciness does not make sense on a mobile device
     &:hover {
       background: #CCE1FF;
       @include transition(all 5.5s ease-out 2s);
 
-      &:after {
-        content: '2';
-        font-family: 'Signify';
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px #799ED2;
+      .icon-chevron-right {
+        color: darken(#CCE1FF,20%);
         font-size: 1.5em;
         position: absolute;
-        top: 30%;
+        top: 39%;
         right: 15px;
-        height: 15px;
-        width: 15px;
+        display: block;
       }
     }
   }

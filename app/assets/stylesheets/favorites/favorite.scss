@@ -5,11 +5,10 @@
 
     a.remove_favorite {
       position: absolute;
-      right: 37px;
-      top: 26%;
-      font-family: 'Iconic';
+      right: 50px;
+      top: 30%;
       font-size: 1.3em;
-      padding: 8px;
+      padding: 6px;
       display: none;
     }
     .recipe:hover a.remove_favorite {
