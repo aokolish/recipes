@@ -1,0 +1,4 @@
+= form_tag create_from_import_recipes_path, method: :post, id: 'import_form', class: 'form-inline' do
+  = label_tag :source_url, 'Url:'
+  = text_field_tag :source_url, params[:source_url], autofocus: true, required: true, class: 'span5'
+  = submit_tag "Submit", class: 'btn btn-primary'
