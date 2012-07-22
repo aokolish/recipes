@@ -173,6 +173,12 @@
 }
 
 .recipes-import {
+  #import_form input[type="submit"] {
+    @media #{$smartphones_to_tabs} {
+      margin-top: 10px;
+    }
+  }
+
   #sidebar {
     @include bordered-column;
   }
