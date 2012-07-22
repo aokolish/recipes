@@ -27,8 +27,15 @@
 
   #sidebar {
     @include bordered-column;
+
     #new-picture {
+      display: none;
       @include fancy_border(bottom);
+
+      html.fileinput & {
+        // only show if browser supports file inputs
+        display: block;
+      }
     }
     #thumbnails {
       list-style-type: none;

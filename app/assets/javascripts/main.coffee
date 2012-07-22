@@ -32,3 +32,9 @@ $ ->
   # make boostrap 'disabled' links and such actually disabled
   $('a.disabled').click ->
     false
+
+  # the only thing I use modernizr for so far
+  Modernizr.addTest 'fileinput', ->
+    elem = document.createElement('input')
+    elem.type = 'file'
+    return !elem.disabled

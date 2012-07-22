@@ -10,6 +10,7 @@
 //= require jquery.purr
 //= require best_in_place
 //= require bootstrap
+//= require modernizr
 //= require viewport_fix
 //= require flexslider
 //= require hoverintent
