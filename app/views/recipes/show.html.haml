@@ -20,18 +20,18 @@
             = hidden_field_tag "favorite[recipe_id]", recipe.id
             = hidden_field_tag "favorite[user_id]", current_user.id
             -# the following is ugly
-            = button_tag '', :title => 'Favorite this recipe', :class => 'btn tooltipped' do
+            = button_tag '', :title => 'Favorite recipe', :class => 'btn tooltipped' do
               %i.icon-bookmark-empty
         - if current_user.author?(recipe)
-          = link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit this recipe' do
+          = link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit recipe' do
             %i.icon-pencil
-          = link_to recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete this recipe' do
+          = link_to recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete recipe' do
             %i.icon-trash
 
 - content_for :sidebar do
   #recipe_info
     - if recipe.pictures.empty?
-      = link_to recipe_pictures_path(recipe), :class => 'btn btn-large' do
+      = link_to recipe_pictures_path(recipe), :class => 'add-photo btn btn-large' do
         %i.icon-camera.icon-large
         Add A Photo
     - else

@@ -1,7 +1,11 @@
 .recipes-show {
   .actions {
+    @media #{$smartphones_to_tabs} {
+      margin: 15px 0 10px;
+    }
     form {
       margin-top: 0;
+      display: inline-block; //fixes mobile
     }
     .btn {
       width: 19px;
@@ -21,9 +25,11 @@
 
   #recipe_info {
     font-size: .85em;
-
     @include bordered-column;
 
+    .add-photo {
+      margin-bottom: 15px;
+    }
     .flexslider {
       text-align: center;
     }
