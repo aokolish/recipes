@@ -7,7 +7,7 @@
       %ul(class="nav pull-right")
         %li(id="fat-menu" class="dropdown")
           %a(href="#" class="dropdown-toggle" data-toggle="dropdown")
-            %span(class="user-icon" data-icon="U")
+            %i.icon-user
             %b(class="caret")
           %ul(class="dropdown-menu")
             - if current_user
@@ -30,5 +30,5 @@
       #login-search
         = form_tag search_recipes_path, :method => 'get', :class => 'navbar-search pull-right' do
           = text_field_tag :search, nil, 'placeholder' => 'Search Recipes', :class => 'search-query'
-          = submit_tag "S", :name => nil, :id => 'search_submit'
+          %i.icon-search
 
