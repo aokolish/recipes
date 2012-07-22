@@ -7,7 +7,9 @@ class RecipesController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    render "static/home" if !current_user
+    if !current_user && request.fullpath == '/'
+      render "static/home" and return
+    end
 
     paged_recipes.each do |recipe|
       recipe.replace_pipes
