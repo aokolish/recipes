@@ -41,3 +41,9 @@ form {
   //needed due to base font-size being larger
   line-height: 20px;
 }
+
+//center navbar button vertically
+.navbar .btn-navbar {
+  position: relative;
+  top: 3px;
+}
