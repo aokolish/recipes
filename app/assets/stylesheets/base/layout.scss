@@ -17,10 +17,16 @@ body {
   text-align: center;
   margin-bottom: 0;
   padding: 10px 40px 40px;
+  @media #{$smartphones_to_tabs} {
+    padding: 0;
+  }
 
   h1 {
     font-size: $baseFontSize * 2.2;
     margin-bottom: 20px;
+    @media #{$smartphones_to_tabs} {
+      font-size: $baseFontSize * 1.7;
+    }
   }
 
   img {

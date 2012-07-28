@@ -108,6 +108,10 @@
     margin: 13px 0 10px 20px;
     font-size: .85em;
     color: lighten($med_gray, 10%);
+
+    @media #{$smartphones} {
+      margin-left: 0;
+    }
   }
 
   #search_recipes {
@@ -117,10 +121,9 @@
       width: 75%;
     }
 
-    input[type=submit] {
-      font-family: 'Signify';
+    button[type=submit] {
       font-size: 1em;
-      padding: 5px 18px 14px;
+      padding: 7px 15px 8px;
       position: relative;
       top: -5px;
     }
@@ -130,12 +133,16 @@
     margin-bottom: 15px;
 
     h2 {
-      float: left;
+      @media #{$more_than_smartphone} {
+        float: left;
+      }
     }
     .btn-group {
       float: left;
       margin-top: -2px;
-      margin-left: 8px;
+      @media #{$more_than_smartphone} {
+        margin-left: 8px;
+      }
 
       .asc::after,
       .desc::after {

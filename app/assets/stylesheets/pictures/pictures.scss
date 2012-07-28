@@ -15,10 +15,7 @@
         &:hover {
           cursor: pointer;
         }
-        .edit-button {
-          @extend .btn;
-          @extend .btn-success;
-          font-family: 'Iconic';
+        .add-caption {
           margin-left: 10px;
         }
       }

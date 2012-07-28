@@ -16,7 +16,9 @@
   - pictures.each do |picture|
     .picture
       = image_tag picture.image_url(:large)
-      = best_in_place picture, :caption, path: recipe_picture_path(imageable, picture), :nil => edit_caption
+      = best_in_place picture, :caption,
+        path: recipe_picture_path(imageable, picture),
+        :nil => edit_caption
 
 - content_for :sidebar do
   #new-picture
