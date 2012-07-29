@@ -110,11 +110,13 @@
     color: lighten($med_gray, 10%);
 
     @media #{$smartphones} {
-      margin-left: 0;
+      margin: 0 0 10px;
+      clear: left;
     }
   }
 
   #search_recipes {
+    margin-top: 0;
     font-size: 1.5em;
 
     input[type=text] {
