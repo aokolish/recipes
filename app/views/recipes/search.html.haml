@@ -6,8 +6,7 @@
 
     = form_tag search_recipes_path, :method => 'get', :id => 'search_recipes' do
       = text_field_tag :search, params[:search], 'required' => 'true', class: 'giant'
-      -#= submit_tag "S", :name => nil, :id => 'search_submit', class: 'btn btn-primary'
-      = button_tag '', :class => 'btn btn-primary' do
+      = button_tag '', class: 'btn btn-primary', id: 'search-submit' do
         %i.icon-search
 
     #search-sort

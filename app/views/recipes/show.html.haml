@@ -20,7 +20,7 @@
             = hidden_field_tag "favorite[recipe_id]", recipe.id
             = hidden_field_tag "favorite[user_id]", current_user.id
             -# the following is ugly
-            = button_tag '', :title => 'Favorite recipe', :class => 'btn tooltipped' do
+            = button_tag '', title: 'Favorite recipe', class: 'btn tooltipped', id: 'favorite-recipe' do
               %i.icon-bookmark-empty
         - if current_user.author?(recipe)
           = link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit recipe' do

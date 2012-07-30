@@ -35,6 +35,10 @@
       }
     }
 
+    #search-submit {
+      //just here for capybara - damnit
+      display: none;
+    }
     .icon-search {
       position: absolute;
       top: 5px;
