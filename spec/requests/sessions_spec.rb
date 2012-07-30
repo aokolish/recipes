@@ -12,7 +12,6 @@ describe "login/logout" do
     login(user)
     current_path.should eq(recipes_path)
     page.should have_content("Logged in!")
-    page.should have_content("Logged in as #{user.email}")
   end
 
   it "redirects you to the default path when you log in" do

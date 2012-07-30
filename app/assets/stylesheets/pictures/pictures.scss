@@ -1,8 +1,5 @@
 .pictures-index {
   #main-content {
-    padding-right: 10%;
-    width: 90%;
-
     .picture {
       .best_in_place {
         margin: 2px 0 10px;
@@ -10,60 +7,54 @@
         display: block;
         cursor: pointer;
       }
-      form {
-        margin: 14px 0;
-        overflow: hidden;
-      }
       .placeholder {
-        margin: 2px 0 10px;
+        margin: 4px 0 10px;
         font-style: italic;
         color: $med_gray;
         font-size: 0.9em;
         &:hover {
           cursor: pointer;
         }
-        .edit-button {
-          @include button(darken($light_gray, 10%));
-          font-family: 'Iconic';
-          font-size: 1.1em;
-          line-height: 30px;
-          padding: 5px 11px;
+        .add-caption {
           margin-left: 10px;
         }
       }
-
     }
   }
-  #new-picture {
-    @include fancy_bottom_border;
-  }
-  #thumbnails {
-    padding-left: 0;
-    list-style-type: none;
 
-    .picture {
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-      @include fancy_bottom_border;
-      background: image-url('grips.png') 65% 40% no-repeat;
-      &:hover {
-        cursor: move;
+  #sidebar {
+    @include bordered-column;
+
+    #new-picture {
+      display: none;
+      @include fancy_border(bottom);
+
+      html.fileinput & {
+        // only show if browser supports file inputs
+        display: block;
       }
-
-    .ui-sortable-helper {
-      background: red;
-      opacity: .4;
     }
+    #thumbnails {
+      list-style-type: none;
+      margin-left: 0;
 
-      .delete {
-        position: relative;
-        top: -20px;
-        font-size: 0.8em;
-        text-decoration: none;
-        margin-left: 10px;
+      .picture {
+        padding: 7px;
+        margin-bottom: 5px;
+        @include fancy_border(bottom);
+        background: image-url('grips.png') 65% 40% no-repeat;
         &:hover {
-          text-decoration: underline;
+          cursor: move;
         }
+      }
+      .ui-sortable-helper {
+        @include box-shadow($med_gray 1px 1px 7px);
+        background: lighten($light_gray, 10%) image-url('grips.png') 65% 40% no-repeat;
+        opacity: .8;
+      }
+      .delete {
+        font-size: 0.8em;
+        margin-left: 10px;
       }
     }
   }

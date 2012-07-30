@@ -6,3 +6,14 @@ en:
     messages:
       carrierwave_processing_error: 'Cannot resize image.'
       carrierwave_integrity_error: 'Not an image.'
+  activerecord:
+    models:
+      recipe:
+        zero: recipes
+        one: recipe
+        few: recipes
+        other: recipes
+
+  will_paginate:
+    page_entries_info:
+      multi_page_html: "Displaying %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b>"

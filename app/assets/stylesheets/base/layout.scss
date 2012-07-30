@@ -1,233 +1,51 @@
-$sidebar_full_width: 270px;
-$sidebar_med_width: 185px;
+[data-icon]:before {
+  font-family: 'Signify Lite';
+  content: attr(data-icon);
+}
 
-//global styles
 body {
-
-  background: $med_gray image-url("fabric.png") repeat;
+  background: white image-url("fabric.png") repeat;
   font-family: Verdana, Helvetica, Arial;
-  font-size: .85em;
-  -webkit-text-size-adjust: none;
-  max-width: 1080px;
-  margin: 0 auto;
-}
+  padding-top: 70px;
 
-@media only screen and (min-width: 992px) {
-  body { font-size: 1em; }
-}
-
-p {
-  font-size: 1em;
-}
-
-a {
-  color: $dark_gray;
-  font-size: .85em;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1 {
-  font-size: 1.5em;
-  margin-bottom: 5px;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 2em;
-    margin-bottom: .67em;
+  @media (max-width: 980px) {
+    padding-top: 0;
   }
 }
-
-h1, h2 {
-  color: $dark_gray;
-}
-
-#container {
-  background: $light_gray;
-  padding: 0px 13px 18px;
-  box-shadow: #363636 0px 10px 55px;
-  clear: both;
-  overflow: hidden;
-
-  @media only screen and (min-width: 992px) {
-    padding: 20px 40px;
-  }
-}
-
-#content {
-  @include left_column;
-}
-
-#sidebar {
-  float: none;
-  clear: both;
-  padding: 0;
-  margin: 0;
-
-  @media only screen and (min-width: 768px) {
-    float: left;
-    clear: none;
-    width: $sidebar_med_width;
-    margin: 25px -100% 0 0;
-    padding-left: 25px;
+.hero-unit {
+  background: transparent;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px 40px 40px;
+  @media #{$smartphones_to_tabs} {
+    padding: 0;
   }
 
-  @media only screen and (min-width: 992px) {
-    width: $sidebar_full_width;
-  }
-}
-
-//footer styles
-footer {
-  margin-top: 50px;
-  border-top: 1px solid #B3B3B3;
-  box-shadow: inset #FFF 0px 1px 0px;
-  padding-top: 15px;
-  clear: both;
-
-  a {
-    padding-right: 15px;
-    color: $dark_gray;
-  }
-}
-
-//flash stuff
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
-
-#content #flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
-  margin-bottom: 10px;
-}
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
-}
-
-a.button {
-  @include button($med_gray);
-  margin-bottom: 10px;
-  text-decoration: none;
-  font-family: sans-serif;
-
-  &:focus {
-    @include box-shadow(0 0 6px #006AFF);
-    outline: none;
-  }
-}
-
-//form stuff
-#container form {
-  .field {
-    margin-bottom: 10px;
-  }
-
-  input,
-  textarea {
-    @include border-radius(4px);
-    @include box-shadow(inset 0 1px 0 #999);
-    margin-top: 2px;
-    padding: 6px;
-    border: 1px solid #BBB;
-    outline: none;
-
-    &:focus {
-      @include box-shadow(0 0 6px #006AFF);
-    }
-  }
-  input[type=submit] {
-    @include button($med_gray);
-    margin-bottom: 10px;
-    text-decoration: none;
-    font-family: sans-serif;
-
-    &:focus {
-      @include box-shadow(0 0 6px #006AFF);
-      outline: none;
-    }
-  }
-  .field_with_errors input {
-    @include box-shadow(0 0 4px #C00);
-    border: 1px solid darken(#C00, 10%);
-    outline: none;
-  }
-
-  //error messages above the form
-  .error_messages {
-    width: 82%;
-    border: 2px solid #B30000;
-    padding: 0px;
-    padding-bottom: 12px;
+  h1 {
+    font-size: $baseFontSize * 2.2;
     margin-bottom: 20px;
-    background-color: #f0f0f0;
-    font-size: 1em;
-    @include border-radius(5px);
+    @media #{$smartphones_to_tabs} {
+      font-size: $baseFontSize * 1.7;
+    }
   }
-  .error_messages h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 10px;
-    font-size: 1em;
-    margin: 0;
-    background-color: #B30000;
-    color: #fff;
-  }
-  .error_messages p {
-    margin: 8px 10px;
-  }
-  .error_messages ul {
-    margin-right: 2%;
-  }
-  .field label {
-    display: block;
+
+  img {
+    border-radius: 10px;
   }
 }
 
+footer {
+  margin-top: 25px;
+  padding: 20px 0 20px 0;
+  @include fancy-border(top);
+  clear: both;
 
-//pagination styles
-.pagination {
-  a {
-    @include button;
-    text-decoration: none;
-  }
-  // make the current page look like a disabled button
-  .current {
-    @include disabled_button;
-  }
-}
+  .links {
+    margin-left: 0;
 
-.tooltip {
-  max-width: 125px;
-	display:none;
-	background: black;
-	font-size:12px;
-	padding:15px;
-	color:#fff;	
-  border: 2px solid white;
-  @include border-radius(5px);
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 1000;
-    top: 35%;
-    left: -8px;
-    height: 1px;
-    margin-left: -8px;
-    border-top: 8px solid transparent;
-    border-left: 8px solid transparent;
-    border-right: 8px solid #000;
-    border-bottom: 8px solid transparent;
-  }
-
-  &:before {
-    border-right-color: #FFF;
-    left: -10px;
+    li {
+      display: inline-block;
+      padding-right: 20px;
+    }
   }
 }

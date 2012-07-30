@@ -1,16 +1,35 @@
-#login-search
-  - if current_user
-    %p(class="logged-in")
-      Logged in as  #{current_user.email} | #{link_to "Log out", logout_path}
-  - else
-    %p(class="logged-out")
-      = link_to "Sign up", new_user_path
-      = link_to "Log in", login_path
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      .nav-collapse.collapse
+        = render_navigation
 
-  = form_tag search_recipes_path, :method => 'get' do
-    = text_field_tag :search, nil, 'placeholder' => 'Search Recipes'
-    = submit_tag "S", :name => nil, :id => 'search_submit'
+      %ul(class="nav pull-right")
+        %li(id="fat-menu" class="dropdown")
+          %a(href="#" class="dropdown-toggle" data-toggle="dropdown")
+            %i.icon-user
+            %b(class="caret")
+          %ul(class="dropdown-menu" id="users-dropdown")
+            - if current_user
+              %li
+                %p= current_user.email
+              %li.divider
+              %li
+                = link_to "Log out", logout_path
+            - else
+              %li
+                = link_to "Sign up", new_user_path
+              %li.divider
+              %li
+                = link_to "Log in", login_path
 
-%nav
-  = render_navigation
+      %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      #login-search
+        = form_tag search_recipes_path, :method => 'get', :class => 'navbar-search pull-right' do
+          = text_field_tag :search, nil, 'placeholder' => 'Search Recipes', :class => 'search-query'
+          = submit_tag "Search", type: :submit, id: 'search-submit'
+          %i.icon-search
 

@@ -20,6 +20,7 @@ gem 'best_in_place'
 gem 'acts_as_list'
 gem 'unicorn'
 gem 'foreman'
+gem 'bootstrap-sass', '~> 2.0.3'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
@@ -53,7 +54,8 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.2.3"
+  gem 'sass-rails', "  ~> 3.2.5"
+  gem "sass", :github => "nex3/sass", :branch => 'master'
   gem 'coffee-rails', "~> 3.2.1"
   gem 'uglifier', '>= 1.0.3'
 end

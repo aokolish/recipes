@@ -1,23 +1,22 @@
-#search_results
+#search_results.span8
   - unless recipe_results.empty?
-    %h1 Search Results
+    %h1.left Search Results
 
-    %p(class="summary") #{page_entries_info recipe_results}
+    %p.summary= page_entries_info recipe_results
 
     = form_tag search_recipes_path, :method => 'get', :id => 'search_recipes' do
-      = text_field_tag :search, params[:search], 'required' => 'true'
-      = submit_tag "S", :name => nil, :id => 'search_submit'
+      = text_field_tag :search, params[:search], 'required' => 'true', class: 'giant'
+      = button_tag '', class: 'btn btn-primary', id: 'search-submit' do
+        %i.icon-search
 
     #search-sort
       %h2 Sort By:
-      %ul
-        %li
-          = sortable('best_match')
-        %li
-          = sortable('created_at', 'Date Created')
+      .btn-group
+        = sortable('best_match')
+        = sortable('created_at', 'Date Created')
 
     %ul#results
       = render :partial => 'partials/recipe', :collection => recipe_results
 
-    = will_paginate recipe_results
+    = will_paginate recipe_results, :previous_label => 'Prev', :next_label => 'Next'
 

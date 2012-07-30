@@ -1,0 +1,70 @@
+q:before, q:after, blockquote:before, blockquote:after {
+  //get rid of indent before blockquotes
+  content: none;
+}
+
+//to put text in a dropdown that looks decent
+.dropdown-menu p {
+  padding: 3px 15px;
+  clear: both;
+  line-height: 18px;
+  color: lightent($med_gray, 10%);
+}
+
+.navbar .nav > li > a {
+  line-height: 25px;
+}
+
+.navbar .nav > li > a.dropdown-toggle {
+  line-height: 19px;
+}
+
+.navbar-search {
+  top: 2px;
+}
+
+.btn-large [class^="icon-"] {
+  margin-top: 3px;
+}
+
+.alert {
+  // make yellow flash text darker
+  color: darken(#C09853, 10%);
+}
+
+form {
+  @media #{$smartphones} {
+    margin: 0;
+  }
+  margin: 18px 0;
+}
+
+.btn {
+  //center button text
+  //needed due to base font-size being larger
+  line-height: 20px;
+}
+
+//center navbar button vertically
+.navbar .btn-navbar {
+  position: relative;
+  top: 3px;
+}
+
+input:focus:required:invalid, textarea:focus:required:invalid, select:focus:required:invalid {
+  color: #555;
+  border-color: $inputBorder;
+  &:focus {
+    border-color: rgba(82,168,236,.8);
+    @include box-shadow(#{inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)});
+  }
+}
+
+.pagination li {
+  @media #{$smartphones} {
+    display: none;
+    &[class] {
+      display: inline;
+    }
+  }
+}

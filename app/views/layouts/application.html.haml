@@ -4,23 +4,34 @@
     = render(:partial => 'partials/head')
 
   %body(class="#{params[:controller]}-#{params[:action]}")
-    %header
-      = render(:partial => 'partials/header')
+    = render(:partial => 'partials/header')
+    .container
 
-    #container
-      #content
-        - flash.each do |name, msg|
-          = content_tag :div, msg, :id => "flash_#{name}"
-        = content_tag :h1, yield(:title) if show_title?
+      #container
+        - flash.each do |type, message|
+          %div.alert.fade.in{ "data-dismiss" => "alert", :class => twitterized_type(type) }
+            %a.close{:href => "#"} ×
+            = message
 
-        = yield
+        .row
+          = yield
 
-        - if content_for?(:sidebar)
-          %aside(id="sidebar")
-            = yield(:sidebar)
+          - if content_for?(:sidebar)
+            %aside#sidebar.span4
+              = yield(:sidebar)
+          - else
+            -# default sidebar content
+            %aside#sidebar.span4
+              -# TODO: come up with default content for this
+              -# maybe, big button for adding recipes
+              -# maybe, what's new on the site?
+              -# import with tooltip?
 
-      %footer
-        = link_to 'Home', "/"
-        = link_to 'New Recipe', new_recipe_path
-        = link_to 'Import', import_recipes_path
-        = javascript_include_tag "application"
+
+        %footer
+          %ul.links
+            %li
+              = link_to 'New Recipe', new_recipe_path
+            %li
+              = link_to 'Import', import_recipes_path
+          = javascript_include_tag "application"

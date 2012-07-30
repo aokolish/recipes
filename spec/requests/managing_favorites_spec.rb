@@ -8,7 +8,7 @@ describe "Favorites" do
       it "creates a new favorite" do
         login
         visit recipe_path(recipe)
-        click_button "favorite_recipe"
+        click_button "favorite-recipe"
 
         page.should have_content("Favorite was added")
       end
@@ -17,7 +17,7 @@ describe "Favorites" do
     context "when logged out" do
       it "hides the favorite button" do
         visit recipe_path(recipe)
-        page.should_not have_button('favorite_recipe')
+        page.should_not have_button('favorite-recipe')
       end
     end
   end
@@ -27,29 +27,13 @@ describe "Favorites" do
       it "shows a message that it has been removed" do
         login
         visit recipe_path(recipe)
-        click_button "favorite_recipe"
+        click_button "favorite-recipe"
 
         click_link 'Remove this from your favorites'
         page.should have_content('Recipe has been removed from your favorites')
         #page.find('#flash_notice').should have_link('Recipe', :href => recipe_path(recipe))
         # this is kinda like an easy undo. if they accidentally remove something,
         # they can use this link to get back to the recipe and favorite it again
-      end
-    end
-
-    context "from the recipe page" do
-      it "shows a message that it has been removed", :js => true do
-        login
-        visit recipe_path(recipe)
-        click_button "favorite_recipe"
-
-        visit recipe_path(recipe)
-        remove_link = page.find('.actions .remove_favorite')
-        remove_link.trigger(:mouseover)
-        page.should have_content("Remove this from your favorites")
-
-        remove_link.click
-        page.should have_content('Recipe has been removed from your favorites')
       end
     end
   end

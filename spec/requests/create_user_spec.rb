@@ -11,7 +11,7 @@ describe "creating a user" do
 
       current_path.should eq(recipes_path)
       page.should have_content("Your account has been created!")
-      page.should have_content("Logged in as awesome@example.com")
+      page.find('#users-dropdown').should have_content("awesome@example.com")
     end
   end
 
@@ -24,8 +24,8 @@ describe "creating a user" do
       click_button "Create User"
 
       current_path.should eq(users_path)
-      page.should have_content("Password doesn't match confirmation")
-      page.should have_content("Email is an invalid format")
+      page.should have_content("doesn't match confirmation")
+      page.should have_content("is an invalid format")
     end
   end
 end

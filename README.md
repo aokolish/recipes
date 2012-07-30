@@ -21,3 +21,11 @@ need image magick. If you have homebrew you can get it by running:
 ```
 brew install imagemagick --disable-openmp
 ```
+
+## Bootstrap
+
+Confused about what bootstrap is doing? Check out the source code:
+
+```
+cd `bundle show bootstrap-sass`
+```

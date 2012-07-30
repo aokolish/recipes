@@ -1,9 +1,8 @@
-#account
+#account.span12
   %h1 Create Account
 
   = simple_form_for(user) do |f|
-    = f.error_messages
-    = f.input :email, :autofocus => 'autofocus'
+    = f.input :email, autofocus: true
     = f.input :password
     = f.input :password_confirmation
     = f.button :submit

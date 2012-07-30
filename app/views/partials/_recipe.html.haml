@@ -1,8 +1,16 @@
 %li(class="recipe")
-  %a(href="#{recipe_path(recipe)}")
+  -# this should not be a tooltip
+  -# or, it could be a bootstrap tootip - not sure (vs a 'popover')
+  %a(href="#{recipe_path(recipe)}" title="#{recipe.title}")
     = image_tag recipe.pictures.first.nil? ? Picture.new.image_url(:thumb) : recipe.pictures.first.image_url(:thumb)
     %span(class="title") #{truncate(recipe.title, :length => 44)}
-    %span(class="author") #{truncate(recipe.author, :length => 40)} -
+    %span(class="author") #{truncate(recipe.author, :length => 40)}
+    %span.dash -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
     - if params[:controller] == "favorites"
-      = link_to 's', [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], :confirm => 'Are you sure?', :method => :delete, :class => 'remove_favorite', :title => 'Remove this from your favorites'
+      = link_to [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], 
+                :confirm => 'Are you sure?', :method => :delete, 
+                :class => 'btn btn-warning remove_favorite tooltipped', 
+                :title => 'Remove this from your favorites' do
+        %i.icon-bookmark-empty
+    %i.icon-chevron-right
