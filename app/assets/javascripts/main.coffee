@@ -24,7 +24,8 @@ $ ->
       null
   )
 
-  $('#recipe_info .slides li:not(.clone) a').colorbox()
+  $('#recipe_info .slides li:not(.clone) a').colorbox
+    maxWidth: '100%'
 
   # inline editing js plugin
   $('.best_in_place').best_in_place()
