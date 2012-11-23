@@ -9,7 +9,7 @@
 
       #container
         - flash.each do |type, message|
-          %div.alert.fade.in{ "data-dismiss" => "alert", :class => twitterized_type(type) }
+          %div.flash.alert.fade.in{ "data-dismiss" => "alert", :class => twitterized_type(type) }
             %a.close{:href => "#"} ×
             = message
 
