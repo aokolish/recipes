@@ -2,8 +2,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'uri'
 
-class Scraper 
-  
+class Scraper
+
   def scrape(url)
     @url = url
     # protocol must be present in order for me to grab the host
@@ -11,7 +11,7 @@ class Scraper
       url = 'http://' + @url
     end
     host = URI.parse(@url).host
-    
+
     case host
       when "www.foodnetwork.com"
         @recipe = from_food_network
@@ -27,20 +27,20 @@ class Scraper
   end
 
   private
-  
+
   def from_food_network
     doc = Nokogiri::HTML(open(@url))
-    
-    author = doc.css('p.author a').inner_text
-    
+
+    author = doc.css('a[title*="Recipe courtesy"]').inner_text
+
     if author =~ /,([^,]+),/
       # there is some other stuff around the author's name
       author = author.match(/,([^,]+),/)[1]
       author.strip!
     end
-    
-    title = doc.at_css(".fn").text 
-    
+
+    title = doc.at_css('h1[itemprop="name"]').text
+
     if doc.at_css("#recipe-meta .rm-block-wrap >div:nth-child(2) > dl:first-child dd")
       yields = doc.at_css("#recipe-meta .rm-block-wrap >div:nth-child(2) > dl:first-child dd").text
     elsif doc.at_css("#recipe-meta :nth-child(3) .clrfix")
@@ -52,24 +52,24 @@ class Scraper
     if doc.at_css(".rcp-info :nth-child(1) p")
       time = doc.at_css(".rcp-info :nth-child(1) p").text
     else
-      time = doc.at_css("dd.duration").text
+      time = doc.at_css("dd.fn_duration").text
     end
     ingredients = ''
-    doc.css("li.ingredient").each do |ingredient|
+    doc.css('li[itemprop="ingredients"]').each do |ingredient|
       ingredients += "#{ingredient.text}|"
     end
     directions = ''
-    doc.css('div.instructions > p').each do |direction|
+    doc.css('div[itemprop="recipeInstructions"] > p').each do |direction|
       directions += direction.text + '|'
     end
-    
+
     @recipe = Recipe.new( :title => title, :author => author, :source_url => @url, :total_time => time, 
                           :yield => yields, :ingredients => ingredients, :directions => directions)  
   end
-  
+
   def from_cooking_channel_tv
     doc = Nokogiri::HTML(open(@url))    
-    
+
     if doc.at_css(".r-attribution .rByline > a")
       author = doc.at_css(".r-attribution .rByline > a").text
     else 
@@ -77,7 +77,7 @@ class Scraper
       doc.css(".r-attribution .rByline *").remove
       author = doc.at_css(".r-attribution .rByline").text
     end
-    
+
     title = doc.at_css(".fn").text 
     yields = doc.at_css(".yield").text
     time = doc.at_css(".rspec-value-big").text
@@ -88,7 +88,7 @@ class Scraper
     directions = ''
     doc.css(".instructions").each do |direction|
       direction = replace_breaks_with_pipes(direction)
-      
+
       if direction.at_css('p')
         # there are p tags in here
         # add a pipe before each p tag
@@ -96,14 +96,14 @@ class Scraper
           p.before("|")
         end
       end
-      
+
       directions += direction.content + '|'
     end
-    
+
     @recipe = Recipe.new( :title => title, :author => author, :source_url => @url, :total_time => time, 
                           :yield => yields, :ingredients => ingredients, :directions => directions)
   end
-  
+
   def replace_breaks_with_pipes(node)
     # searches a node for br tags and replaces with pipes
     node.search('br').each{ |br| br.replace("|") }
