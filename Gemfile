@@ -20,7 +20,7 @@ gem 'best_in_place'
 gem 'acts_as_list'
 gem 'unicorn'
 gem 'foreman'
-gem 'bootstrap-sass', '~> 2.0.3'
+gem 'bootstrap-sass', '~> 2.1.0'
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'

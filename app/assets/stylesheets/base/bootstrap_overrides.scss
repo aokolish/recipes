@@ -68,3 +68,10 @@ input:focus:required:invalid, textarea:focus:required:invalid, select:focus:requ
     }
   }
 }
+
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: none;
+  width: auto;
+  height: auto;
+}
