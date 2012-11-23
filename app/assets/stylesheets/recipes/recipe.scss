@@ -1,4 +1,10 @@
 .recipes-show {
+  .title {
+    margin-bottom: 20px;
+  }
+  .ingredients {
+    margin-bottom: 25px;
+  }
   .actions {
     @media #{$smartphones_to_tabs} {
       margin: 15px 0 10px;
