@@ -34,6 +34,9 @@ $ ->
   $('a.disabled').click ->
     false
 
+  # flash messages go away after a bit
+  $('#container .flash').delay(4000).slideUp(500)
+
   # the only thing I use modernizr for so far
   Modernizr.addTest 'fileinput', ->
     elem = document.createElement('input')
