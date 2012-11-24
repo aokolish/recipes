@@ -6,6 +6,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.15em;
     @include transition(all .25s ease-out);
     @media #{$smartphones} {
       font-size: 1.5em;
