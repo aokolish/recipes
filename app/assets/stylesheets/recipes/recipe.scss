@@ -1,6 +1,29 @@
 .recipes-show {
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1.85em;
+    line-height: 1.15em;
+    position: relative;
+    @media #{$smartphones} {
+      font-size: 1.5em;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &.full {
+      white-space: normal;
+    }
+    i {
+      display: none; // only show via js if parent has overflown
+      position: absolute;
+      top: 13px;
+      right: 0;
+      font-size: .75em;
+      @media #{$smartphones} {
+        top: 6px;
+      }
+    }
   }
   .ingredients {
     margin-bottom: 25px;
@@ -18,7 +41,7 @@
       margin-bottom: 3px;
     }
     button.btn {
-      width: 41px;
+      width: 49px;
     }
     button,
     a {

@@ -1,7 +1,9 @@
 #recipe.span8
   .row
     .span7
-      %h1.title= recipe.title
+      %h1.title
+        =recipe.title
+        %i.icon-chevron-right
 
       %ul.ingredients.unstyled
         - recipe.ingredients_array.each do |ingredient|

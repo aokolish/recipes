@@ -37,6 +37,16 @@ $ ->
   # flash messages go away after a bit
   $('#container .flash').delay(4000).slideUp(500)
 
+  # controls whether or not to show the recipe title chevron
+  title = $('.recipes-show .title')
+  if title.length and (title[0].scrollWidth >  title.width())
+    title.find('i').show()
+
+  $('.recipes-show .title').click ->
+    $(this).toggleClass('full')
+      .find('i').toggleClass('icon-chevron-down')
+
+
   # the only thing I use modernizr for so far
   Modernizr.addTest 'fileinput', ->
     elem = document.createElement('input')
