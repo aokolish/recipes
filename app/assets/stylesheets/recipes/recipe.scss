@@ -1,16 +1,15 @@
 .recipes-show {
   .title {
-    cursor: pointer;
     margin-bottom: 15px;
     font-size: 1.85em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     line-height: 1.15em;
     position: relative;
-    @include transition(all .25s ease-out);
     @media #{$smartphones} {
       font-size: 1.5em;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &.full {
       white-space: normal;
