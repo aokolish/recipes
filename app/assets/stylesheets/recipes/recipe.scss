@@ -1,6 +1,18 @@
 .recipes-show {
   .title {
-    margin-bottom: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 1.85em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include transition(all .25s ease-out);
+    @media #{$smartphones} {
+      font-size: 1.5em;
+    }
+    &.full {
+      white-space: normal;
+    }
   }
   .ingredients {
     margin-bottom: 25px;

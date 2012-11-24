@@ -37,6 +37,9 @@ $ ->
   # flash messages go away after a bit
   $('#container .flash').delay(4000).slideUp(500)
 
+  $('.recipes-show .title').click ->
+    $(this).toggleClass('full')
+
   # the only thing I use modernizr for so far
   Modernizr.addTest 'fileinput', ->
     elem = document.createElement('input')
