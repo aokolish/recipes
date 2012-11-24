@@ -4,7 +4,7 @@
     @include border-radius(0px);
 
     li a {
-      padding: 11px 10px 9px;
+      padding: 13px 8px 7px;
 
       .icon-user {
         font-size: 1.5em;
@@ -18,7 +18,7 @@
     #search {
       -webkit-transition: all .25s ease-out;
       @media (max-width: 480px) {
-        width: 170px;
+        width: 150px;
       }
 
       &:focus {
