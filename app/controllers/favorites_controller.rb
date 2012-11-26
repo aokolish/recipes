@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   skip_before_filter :authorize, :only => [:index]
   expose(:favorite)
-  expose(:user_recipes) { current_user.recipes }
+  expose(:user_recipes) { current_user.recipes.includes(:pictures) }
 
   def index
     if !current_user
