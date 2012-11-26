@@ -7,18 +7,23 @@ describe "login/logout" do
     page.should have_content("Please log in or create an account.")
   end
 
-  it "redirects you to the default path when you log in" do
-    user = FactoryGirl.create(:user)
-    login(user)
-    current_path.should eq(recipes_path)
-    page.should have_content("Logged in!")
+  context "the last page did not require authentication" do
+    it "redirects you to the default path when you log in" do
+      recipe = FactoryGirl.create(:recipe)
+      visit recipe_path(recipe)
+      login
+      current_path.should eq(recipe_path(recipe))
+      page.should have_content("Logged in!")
+    end
   end
 
-  it "redirects you to the default path when you log in" do
-    visit new_recipe_path
-    login
+  context "the last page did require authentication" do
+    it "redirects you to the default path when you log in" do
+      visit new_recipe_path
+      login
 
-    current_path.should eq(new_recipe_path)
+      current_path.should eq(new_recipe_path)
+    end
   end
 
   it "allows you to log out" do
