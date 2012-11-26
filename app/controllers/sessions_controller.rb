@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email].downcase, params[:password])
     if user
       session[:user_id] = user.id
-      redirect_back_or_to recipes_url, :notice => "Logged in!"
-      session[:return_to_url] = nil
+      redirect_to destination, :notice => "Logged in!"
+      session[:return_to] = nil
     else
       flash.now.alert = "Invalid email or password"
       render "new"
@@ -23,8 +23,8 @@ class SessionsController < ApplicationController
 
 private
 
-  def redirect_back_or_to(url, flash_hash = {})
-    redirect_to(session[:return_to_url] || url, :flash => flash_hash)
+  def destination
+    session[:return_to] || :root
   end
 
 end

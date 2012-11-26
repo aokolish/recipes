@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :return_to
   before_filter :authorize
   helper_method :current_user
 
@@ -9,9 +10,14 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def return_to
+    unless controller_name == "sessions"
+      session[:return_to] = request.url
+    end
+  end
+
   def authorize
     if current_user.nil?
-      session[:return_to_url] = request.url
       redirect_to login_url, :notice => "Please log in or <a href='#{url_for(new_user_path)}'>create an account</a>.".html_safe
     end
   end
