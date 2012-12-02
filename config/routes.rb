@@ -22,5 +22,8 @@ Recipes::Application.routes.draw do
 
   resources :sessions
 
+  match "/404", :to => "errors#not_found"
+  match "/500", :to => "errors#error"
+
   root :to => "recipes#index"
 end
