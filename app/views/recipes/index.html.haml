@@ -8,24 +8,28 @@
     = will_paginate paged_recipes, :previous_label => 'Prev', :next_label => 'Next'
 
 - content_for :sidebar do
+  #add-recipe
+    %h3 Add a recipe:
+    %p
+      = link_to 'New Recipe', new_recipe_path, class: 'btn btn-large btn-primary'
+
   #new-features
-    %h2 What's New
+    %h3 What's New
+    .feature
+      %p
+        %strong Error Pages:
+        New, custom error pages.
+      %p
+        = timestamp Time.utc(2012,"dec",1)
+    .feature
+      %p
+        %strong Performance:
+        A few performance tweeks to make the site faster.
+      %p
+        = timestamp Time.utc(2012,"nov",25)
     .feature
       %p
         %strong New Look:
         We re-styled the entire site. Hope you like it!
       %p
         = timestamp Time.utc(2012,"jul",20)
-    .feature
-      %p
-        %strong Image Improvements:
-        Now, you can attach multiple images to each recipe and control the 
-        order in which they are shown.
-      %p
-        = timestamp Time.utc(2012,"jun",3)
-    .feature
-      %p
-        %strong Images:
-        You can now upload an image for your recipes!
-      %p
-        = timestamp Time.utc(2012,"feb",3)
