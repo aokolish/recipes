@@ -1,0 +1,10 @@
+- if content_for?(:sidebar)
+  %aside#sidebar.span4
+    = yield(:sidebar)
+- else
+  -# default sidebar content
+  %aside#sidebar.span4
+    -# TODO: come up with default content for this
+    -# maybe, big button for adding recipes
+    -# maybe, what's new on the site?
+    -# import with tooltip?

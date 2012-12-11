@@ -1,21 +1,9 @@
 .span12
-  .hero-unit
-    %h1 The Best Place to Keep Your Recipes
-
-    #gallery.flexslider
-      %ul.slides
-        %li
-          = image_tag "http://placekitten.com/1090/400"
-        %li
-          = image_tag "http://placekitten.com/1090/400"
-        %li
-          = image_tag "http://placekitten.com/1090/400"
-
   .row
     .span6
-      %h2 Simple, Fast, Free - Pick Three
+      %h2 Recipes - Simple, Fast, Free
       %p
-        I decided to write Open Recipes when I got sick of trying to organize a pile of
+        I decided to write this site when I got sick of trying to organize a pile of
         printed recipes that I had been collecting over the years. It was taking me
         too long to find what I was looking for. And often times, I wanted to find a recipe
         by something other than its title which meant the alphabetizing didn't help; I needed search.
@@ -29,9 +17,8 @@
 
       %p
         %strong Please Note:
-        this site is under active development. I'll try not to break anything as 
-        I add features, but it could happen. So, please chill out if something isn't
-        working as expected. If you find something and think I won't notice it, open up an
+        this site is very much a work in progress. I'll try not to break anything as 
+        I add features, but it could happen. If something is not working as expected, open up an
         %a(href="https://github.com/ao140505/recipes/issues?sort=updated&direction=desc&state=open" target="_blank") issue
         \.
 
@@ -41,22 +28,22 @@
         and let me know what you think.
         %span(class='author') - Alex Okolish
 
+  %hr
   .row#steps
-    .span11
-      %h2 How it Works
+    %h2.how-it-works How it Works
     .step.span3
       %h3 1. Sign Up
-      = image_tag 'http://placekitten.com/270/222'
+      = image_tag 'homepage/signup_small.jpg'
       %p Creating an account is easy and free.
     .step.span3
       %h3 2. Browse
-      = image_tag 'http://placekitten.com/270/222'
+      = image_tag 'homepage/browse_small.jpg'
       %p Check out what other people are cooking.
     .step.span3
       %h3 3. Save
-      = image_tag 'http://placekitten.com/270/222'
-      %p Save the best recipes to your recipe box.
+      = image_tag 'homepage/favorite_small.jpg'
+      %p Save the best recipes.
     .step.span3
       %h3 4. Contribute
-      = image_tag 'http://placekitten.com/270/222'
-      %p Add your own recipes to the site.
+      = image_tag 'homepage/new_recipe_small.jpg'
+      %p Add recipes to the site.

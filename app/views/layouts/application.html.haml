@@ -1,37 +1,17 @@
 !!! 5
 %html
   %head
-    = render(:partial => 'partials/head')
+    = render partial: 'partials/head'
 
-  %body(class="#{params[:controller]}-#{params[:action]}")
-    = render(:partial => 'partials/header')
+  %body(class="#{body_class}")
+    = render partial: 'partials/header'
     .container
-
+      -# NOTE: from the department of redundancy department
       #container
-        - flash.each do |type, message|
-          %div.flash.alert.fade.in{ "data-dismiss" => "alert", :class => twitterized_type(type) }
-            %a.close{:href => "#"} ×
-            = message
+        = render partial: 'partials/flash', locals: { flash: flash }
 
         .row
           = yield
+          = render partial: 'partials/sidebar'
 
-          - if content_for?(:sidebar)
-            %aside#sidebar.span4
-              = yield(:sidebar)
-          - else
-            -# default sidebar content
-            %aside#sidebar.span4
-              -# TODO: come up with default content for this
-              -# maybe, big button for adding recipes
-              -# maybe, what's new on the site?
-              -# import with tooltip?
-
-
-        %footer
-          %ul.links
-            %li
-              = link_to 'New Recipe', new_recipe_path
-            %li
-              = link_to 'Import', import_recipes_path
-          = javascript_include_tag "application"
+        = render partial: 'partials/footer'
