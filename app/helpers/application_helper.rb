@@ -29,4 +29,7 @@ module ApplicationHelper
     end
   end
 
+  def body_class
+    "#{params[:controller]}-#{params[:action]}"
+  end
 end
