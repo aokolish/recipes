@@ -31,8 +31,8 @@ Recipes::Application.configure do
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
 
-  # Enable serving of images, stylesheets, and javascripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
+  # Enable serving of images, stylesheets, and javascripts from an asset server (cloudfront in this case)
+  config.action_controller.asset_host = ENV['CLOUDFRONT_HOST']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
@@ -50,8 +50,8 @@ Recipes::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # compile assets at runtime
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
