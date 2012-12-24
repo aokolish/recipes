@@ -32,7 +32,7 @@ Recipes::Application.configure do
   config.serve_static_assets = false
 
   # Enable serving of images, stylesheets, and javascripts from an asset server (cloudfront in this case)
-  config.action_controller.asset_host = "http://d1vzajhubr70k.cloudfront.net"
+  config.action_controller.asset_host = ENV['CLOUDFRONT_HOST']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
