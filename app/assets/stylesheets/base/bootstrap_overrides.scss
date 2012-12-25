@@ -60,7 +60,7 @@ input:focus:required:invalid, textarea:focus:required:invalid, select:focus:requ
   }
 }
 
-.pagination li {
+.pagination ul > li {
   @media #{$smartphones} {
     display: none;
     &[class] {
