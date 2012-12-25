@@ -38,16 +38,21 @@ class RecipesController < ApplicationController
 
   def create_from_import
     url = params[:source_url]
-    recipe = Recipe.from_import(url)
     recipe.user_id = current_user.id
+
+    begin
+      recipe = Recipe.from_import(url)
+    rescue NoMethodError
+      failed_import("Sorry, an error occured during that import.") and return
+    end
 
     if recipe.save
       Favorite.create(:user_id => current_user.id, :recipe_id => recipe.id)
       redirect_to(recipe, :notice => 'Recipe was successfully created.')
     elsif recipe.errors[:source_url] == ['has already been taken']
-      redirect_to(import_recipes_url, :notice => "Sorry, that recipe has already been imported.")
+      failed_import("Sorry, that recipe has already been imported.")
     else
-      redirect_to(import_recipes_url, :notice => "Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.")
+      failed_import("Sorry, there was a problem creating a recipe from #{url}. That site may not be supported at this time.")
     end
   end
 
@@ -74,5 +79,9 @@ class RecipesController < ApplicationController
   # sanitize params and provide defaults to prevent sql injection
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def failed_import(message)
+    redirect_to(import_recipes_url, :notice => message)
   end
 end
