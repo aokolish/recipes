@@ -27,5 +27,5 @@ brew install imagemagick --disable-openmp
 Confused about what bootstrap is doing? Check out the source code:
 
 ```
-cd `bundle show bootstrap-sass`
+bundle open bootstrap-sass
 ```
