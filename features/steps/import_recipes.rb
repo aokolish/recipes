@@ -2,6 +2,10 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
   attr_accessor :user
 
   def import_recipe(url)
+    if page.current_path != import_recipes_path
+      visit import_recipes_path
+    end
+
     fill_in "source_url", :with => url
     click_button "Submit"
   end
@@ -12,7 +16,6 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
 
   step 'a recipe should be created' do
     page.should have_content("Recipe was successfully created")
-    save_and_open_page
   end
 
   step 'I import the same recipe twice' do

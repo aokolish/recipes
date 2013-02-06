@@ -9,6 +9,7 @@ require 'rspec/expectations'
 require 'spinach/capybara'
 require 'database_cleaner'
 require 'fakeweb'
+require 'pry'
 
 support_files = Dir.glob(Rails.root.join("features/support/**/*.rb"))
 common_steps = Dir.glob(Rails.root.join("features/steps/common_steps/**/*.rb"))
