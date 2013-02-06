@@ -18,7 +18,6 @@ gem 'fog'
 gem 'decent_exposure'
 gem 'best_in_place'
 gem 'acts_as_list'
-gem 'unicorn'
 gem 'foreman'
 gem 'bootstrap-sass', '~> 2.1.0'
 
@@ -61,4 +60,5 @@ end
 group :production do
   gem 'pg'
   gem 'newrelic_rpm'
+  gem 'unicorn'
 end
