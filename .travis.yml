@@ -2,7 +2,6 @@ language: ruby
 bundler_args: --without development production
 rvm:
   - 1.9.3
-script: bundle exec rspec spec --format documentation && bundle exec spinach
 
 before_script:
   - "export DISPLAY=:99.0"
