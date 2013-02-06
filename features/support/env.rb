@@ -3,13 +3,18 @@ require 'rack/test'
 require 'factory_girl'
 require 'spinach-rails'
 require './config/environment'
-require './spec/factories'
 require 'rspec/core'
 require 'rspec/expectations'
 require 'spinach/capybara'
 require 'database_cleaner'
 require 'fakeweb'
 require 'pry'
+
+begin
+  require './spec/factories'
+rescue FactoryGirl::DuplicateDefinitionError
+  puts "factories already loaded"
+end
 
 support_files = Dir.glob(Rails.root.join("features/support/**/*.rb"))
 common_steps = Dir.glob(Rails.root.join("features/steps/common_steps/**/*.rb"))
