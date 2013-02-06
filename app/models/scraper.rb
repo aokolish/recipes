@@ -83,7 +83,7 @@ class Scraper
     time = doc.at_css(".rspec-value-big").text
     ingredients = ''
     doc.css("li.ingredient").each do |ingredient|
-      ingredients += "#{ingredient.text}|"
+      ingredients += "#{ingredient.text.gsub(/\n/, '')}|"
     end
     directions = ''
     doc.css(".instructions").each do |direction|

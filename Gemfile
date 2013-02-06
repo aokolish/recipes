@@ -47,7 +47,7 @@ group :test do
   gem "rb-fsevent"
   gem "spork"
   gem "guard-spork"
-  gem "turnip"
+  gem "spinach-rails"
   gem 'pg'
 end
 
