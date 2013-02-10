@@ -45,7 +45,7 @@ class Spinach::Features::Favorites < Spinach::FeatureSteps
   end
 
   step 'I click the remove favorite link' do
-    click_link 'Remove this from your favorites'
+    find('.remove_favorite').click
   end
 
   step 'it should say that the favorite was removed' do
