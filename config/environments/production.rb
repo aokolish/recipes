@@ -51,7 +51,7 @@ Recipes::Application.configure do
   config.assets.compress = true
 
   # compile assets at runtime
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
