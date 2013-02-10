@@ -3,6 +3,7 @@ Feature: Recipe Pictures
   As a user
   I want to upload pictures of recipes
 
+  @javascript
   Scenario: Adding two pictures
     Given I am logged in
     When I go to the pictures page

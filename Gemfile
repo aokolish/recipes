@@ -35,7 +35,7 @@ end
 
 group :test do
   gem "capybara"
-  gem "capybara-webkit"
+  gem "poltergeist"
   gem "guard", '0.8.8'
   gem "guard-rspec"
   gem 'launchy'

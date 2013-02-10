@@ -3,11 +3,13 @@ Feature: Searching Recipes
   As a user
   I want to search and sort them
 
+  @javascript
   Scenario: Normal Searching
     Given a recipe exists
     When I search for it by title
     Then it should come up in the results
 
+  @javascript
   Scenario: Sorting Search Results
     Given three recipes come up in my search results
     When I click the 'Date Created' sort button
@@ -17,6 +19,7 @@ Feature: Searching Recipes
     When I click the 'Best Match' sort button
     Then I should see the original search results
 
+  @javascript
   Scenario: No Results
     When I search and get no results
     Then there should be a message telling me nothing was found

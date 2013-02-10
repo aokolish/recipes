@@ -3,6 +3,7 @@ Feature: Creating a Recipe
   As a user
   I can add a recipe to the site
 
+  @javascript
   Scenario: Adding Recipe
     Given I am logged in
     When I submit a valid recipe

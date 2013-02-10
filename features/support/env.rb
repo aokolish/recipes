@@ -5,7 +5,7 @@ require 'spinach-rails'
 require './config/environment'
 require 'rspec/core'
 require 'rspec/expectations'
-require 'spinach/capybara'
+require 'capybara/poltergeist'
 require 'database_cleaner'
 require 'fakeweb'
 require 'pry'
@@ -23,7 +23,7 @@ common_steps = Dir.glob(Rails.root.join("features/steps/common_steps/**/*.rb"))
   require f
 end
 
-Capybara.javascript_driver = :webkit
+Capybara.javascript_driver = :poltergeist
 
 DatabaseCleaner.strategy = :truncation
 
