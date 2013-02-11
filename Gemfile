@@ -20,6 +20,7 @@ gem 'best_in_place'
 gem 'acts_as_list'
 gem 'foreman'
 gem 'bootstrap-sass', '~> 2.1.0'
+gem "rspec-rails" # => cannot be in test group because it breaks rake on heroku
 
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
@@ -42,7 +43,6 @@ group :test do
   gem 'database_cleaner'
   gem 'ruby_gntp'
   gem "fakeweb"
-  gem "rspec-rails"
   gem "rb-fsevent"
   gem "spork"
   gem "guard-spork"
