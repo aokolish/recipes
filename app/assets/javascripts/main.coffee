@@ -1,4 +1,10 @@
 $ ->
+  # colobox settings:
+  $.colorbox.settings.close = "<a href='#' class=\"btn btn-small\">x</a>"
+  $.colorbox.settings.previous = "<a href='#' class=\"btn\"><i class=\"icon-arrow-left\"></i></a>"
+  $.colorbox.settings.next = "<a href='#' class=\"btn\"><i class=\"icon-arrow-right\"></i></a>"
+  $.colorbox.settings.opacity = 0.8
+
   # this is for debugging purposes
   $(window).bind "resize", ->
     console.log $(window).outerWidth()
