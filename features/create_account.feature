@@ -10,7 +10,7 @@ Feature: Create Account
   Scenario: Creating Account - successful
     When I fill in the form with valid input
     Then I should be on the recipes page
-    And I should see a message saying my account has been created
+    And I should see that my account has been created
     And I should be logged in
 
   @javascript
