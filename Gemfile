@@ -44,8 +44,6 @@ group :test do
   gem 'ruby_gntp'
   gem "fakeweb"
   gem "rb-fsevent"
-  gem "spork"
-  gem "guard-spork"
   gem "spinach-rails"
   gem 'pg'
 end
