@@ -12,6 +12,24 @@
       - recipe.directions_array.each do |direction|
         %p= direction
 
+      #review-section
+        %h2 Reviews
+        %h4 Average Review
+        %p
+          = render partial: 'partials/rating', locals: { rating: recipe.rating }
+          = link_to "(#{recipe.review_count} reviews)", recipe_reviews_path(recipe)
+        #reviews
+          - recipe.recent_reviews.each do |rev|
+            = render rev
+
+        - if current_user
+          -if !current_user.has_reviewed?(recipe)
+            #review_form
+              =render partial: "reviews/form", locals: { recipe: recipe, remote: true }
+        - else
+          %p
+            = link_to 'log in to review this!', login_path
+
     - if current_user
       .actions.span1
         - if recipe.favorite_for?(current_user)
@@ -65,5 +83,8 @@
       %h3 Source url:
       %p.source_url
         = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
+
+    %p
+      = link_to 'Write a Review >', '#new_review ', id: 'write-review'
 
 

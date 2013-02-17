@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
   has_many :favorites
+  has_many :reviews
   has_many :users, :through => :favorites
   has_many :pictures, :as => :imageable
   belongs_to :user
@@ -29,6 +30,17 @@ class Recipe < ActiveRecord::Base
     favorites.exists?(:user_id => user.id)
   end
 
+  def review_count
+    reviews.count
+  end
+
+  def recent_reviews(limit=3)
+    reviews.order("created_at DESC").limit(limit)
+  end
+
+  def rating
+    Review.avg_rating_for(self)
+  end
 
   # storing total_time as an integer. customer getter/setter:
   def total_time

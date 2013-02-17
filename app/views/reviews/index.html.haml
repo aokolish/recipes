@@ -1,0 +1,14 @@
+%ul.breadcrumb.span8
+  %li
+    = link_to "Recipes", recipes_path
+    %span.divider /
+  %li
+    = link_to "#{truncate(recipe.title, :length => 30)}", recipe
+    %span.divider /
+  %li.active
+    reviews
+
+-# NOTE: query shouldn't be here and should have paginition
+#reviews.span8
+  - recipe.reviews.each do |review|
+    = render review

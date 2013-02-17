@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :favorites
+  has_many :reviews
   has_many :recipes, :through => :favorites
   has_many :authored_recipes, :class_name => 'Recipe'
 
@@ -29,5 +30,9 @@ class User < ActiveRecord::Base
 
   def author?(recipe)
     Recipe.exists?(:id => recipe, :user_id => self.id)
+  end
+
+  def has_reviewed?(recipe)
+    Review.where(recipe_id: recipe.id, user_id: self.id).count > 0
   end
 end

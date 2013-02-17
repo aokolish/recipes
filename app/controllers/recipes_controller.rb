@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
   expose(:paged_recipes) { Recipe.includes(:pictures).paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC' }
   expose(:recipe_results) { Recipe.includes(:pictures).search(params[:search], sort_column, sort_direction, params[:page]) }
   expose(:recipe)
+  expose(:review) { Review.new }
   expose(:favorite) { Favorite.new } # had to use new - it was trying to find by params[:id]
   helper_method :sort_column, :sort_direction
 

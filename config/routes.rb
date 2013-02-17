@@ -10,6 +10,7 @@ Recipes::Application.routes.draw do
       get 'search'
       post 'create_from_import', :as => :create_from_import
     end
+    resources :reviews
 
     resources :pictures do
       collection { post :sort }
@@ -20,6 +21,7 @@ Recipes::Application.routes.draw do
     resources :favorites
   end
 
+  resources :reviews
   resources :sessions
 
   match "/404", :to => "errors#not_found"

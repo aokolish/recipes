@@ -1,0 +1,11 @@
+<% if review.valid? %>
+  $("#reviews").append("<%= j render partial: 'reviews/review', locals: { review: review } %>")
+    .find(".well").last().hide().slideDown();
+  setTimeout(function() {
+    $('#review_form').slideUp(500);
+      //.html("<div class=\"alert fade flash in info\"> <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>Review saved!</div>")
+      //.show(500);
+  }, 700);
+<% else %>
+  $('#review_form').html("<%= j render 'reviews/form', locals: { recipe: recipe } %>");
+<% end %>

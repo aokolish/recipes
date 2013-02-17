@@ -26,3 +26,10 @@
 @import "recipes/recipe";
 @import "favorites/favorite";
 @import "pictures/pictures";
+
+.rating {
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+  color: #f70;
+}
