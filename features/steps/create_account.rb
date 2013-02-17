@@ -10,7 +10,7 @@ class Spinach::Features::CreateAccount < Spinach::FeatureSteps
     current_path.should eq(recipes_path)
   end
 
-  step 'I should see a message saying my account has been created' do
+  step 'I should see that my account has been created' do
     page.should have_content("Your account has been created!")
   end
 

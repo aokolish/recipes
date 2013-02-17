@@ -15,7 +15,7 @@ Feature: Import Recipes
   @javascript
   Scenario: Importing - existing recipe
     When I import the same recipe twice
-    Then I should see a message saying the recipe has already been imported
+    Then I should see that it has already been imported
 
   @javascript
   Scenario: Importing - unsupported site

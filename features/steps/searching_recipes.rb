@@ -33,11 +33,11 @@ class SearchingRecipes < Spinach::FeatureSteps
     click_link('Best Match')
   end
 
-  Then 'the search results should be ordered by date created descending' do
+  Then 'the results should be ordered by date (desc)' do
     page.find('#results li:first-child').should have_content('recipe no 0')
   end
 
-  Then 'the search results should be ordered by date created ascending' do
+  Then 'the results should be ordered by date ascending' do
     page.find('#results li:first-child').should have_content('recipe no 2')
   end
 
@@ -54,7 +54,7 @@ class SearchingRecipes < Spinach::FeatureSteps
     visit search_recipes_path(:search => 'aoeuaoeu')
   end
 
-  Then 'there should be a message telling me nothing was found' do
+  Then 'I should see that nothing was found' do
     page.should have_content(
       "Sorry, you searched for 'aoeuaoeu' and no results were found.")
   end

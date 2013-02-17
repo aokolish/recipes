@@ -23,7 +23,7 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
     import_recipe "http://www.foodnetwork.com/example"
   end
 
-  step 'I should see a message saying the recipe has already been imported' do
+  step 'I should see that it has already been imported' do
     page.should have_content("Sorry, that recipe has already been imported")
   end
 
