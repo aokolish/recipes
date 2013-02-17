@@ -23,7 +23,6 @@ gem 'bootstrap-sass', '~> 2.1.0'
 gem "rspec-rails" # => cannot be in test group because it breaks rake on heroku
 
 group :development, :test do
-  gem 'awesome_print', :require => 'ap'
   gem "nifty-generators"
   gem 'localtunnel'
   gem 'sqlite3'
