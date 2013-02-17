@@ -37,8 +37,6 @@ end
 group :test do
   gem "capybara"
   gem "poltergeist"
-  gem "guard", '0.8.8'
-  gem "guard-rspec"
   gem 'launchy'
   gem 'database_cleaner'
   gem 'ruby_gntp'
