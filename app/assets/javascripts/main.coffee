@@ -4,6 +4,7 @@ $ ->
   $.colorbox.settings.previous = "<a href='#' class=\"btn\"><i class=\"icon-arrow-left\"></i></a>"
   $.colorbox.settings.next = "<a href='#' class=\"btn\"><i class=\"icon-arrow-right\"></i></a>"
   $.colorbox.settings.opacity = 0.8
+  $.colorbox.settings.speed = 200
 
   # this is for debugging purposes
   $(window).bind "resize", ->
