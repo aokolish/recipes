@@ -43,21 +43,18 @@ class Recipe < ActiveRecord::Base
   end
 
   # storing total_time as an integer. customer getter/setter:
+  # TODO: convert this to a damn string and get rid of this gem!
   def total_time
     # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
     unless self[:total_time].nil?
-      begin
-        ChronicDuration.output self[:total_time]
-      rescue
-        self[:total_time] = self.total_time_before_type_cast
-      end
+      ChronicDuration.output self[:total_time]
     end
   end
 
   def total_time=(text)
     begin
       self[:total_time] = ChronicDuration.parse text
-    rescue
+    rescue NoMethodError, ChronicDuration::DurationParseError => e
       self[:total_time] = text
     end
   end
