@@ -1,5 +1,6 @@
-require 'simplecov'
-SimpleCov.start
+#not sure if I want to use simple cov w/these tests
+#require 'simplecov'
+#SimpleCov.start
 ENV['RAILS_ENV'] ||= 'spinach'
 require 'rack/test'
 require 'factory_girl'
