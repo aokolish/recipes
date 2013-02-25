@@ -6,10 +6,6 @@ $ ->
   $.colorbox.settings.opacity = 0.8
   $.colorbox.settings.speed = 200
 
-  # this is for debugging purposes
-  $(window).bind "resize", ->
-    console.log $(window).outerWidth()
-
   # setup tooltips and filter out links that are a part of recipe page
   # flexslider slideshow
   $('.tooltipped').tooltip({
