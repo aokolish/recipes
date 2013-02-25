@@ -25,6 +25,24 @@ describe User do
     end
   end
 
+  describe "#has_reviewed?" do
+    context "when the user has reviewed the recipe" do
+      before { Review.stub_chain(:where, count: 1) }
+
+      it "returns true" do
+        subject.has_reviewed?(double :recipe, id: 2).should be_true
+      end
+    end
+
+    context "when the user has not reviewed the recipe" do
+      before { Review.stub_chain(:where, count: 0) }
+
+      it "returns false" do
+        subject.has_reviewed?(double :recipe, id: 2).should be_false
+      end
+    end
+  end
+
   describe "#authored_recipes" do
     it "returns recipes that the user has authored" do
       recipe = FactoryGirl.create(:recipe, :user_id => user.id)

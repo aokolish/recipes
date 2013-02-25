@@ -8,4 +8,5 @@ config/database.yml
 .vimrc.local
 .sass-cache/
 bin/
+coverage/
 public/uploads

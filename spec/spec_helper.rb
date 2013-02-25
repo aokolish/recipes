@@ -1,4 +1,13 @@
 require 'rubygems'
+require 'simplecov'
+
+def zeus_running?
+  File.exists? '.zeus.sock'
+end
+
+if !zeus_running?
+  SimpleCov.start
+end
 
 require 'database_cleaner'
 

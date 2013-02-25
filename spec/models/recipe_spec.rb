@@ -18,6 +18,20 @@ describe Recipe do
     end
   end
 
+  describe "#ingredients" do
+    it "splits the ingredients on pipes" do
+      subject.ingredients = "this|is|a|test"
+      subject.ingredients_array.should eq(["this", "is", "a", "test"])
+    end
+  end
+
+  describe "#directions_array" do
+    it "splits the directions on pipes" do
+      subject.directions = "this|is|a|test"
+      subject.directions_array.should eq(["this", "is", "a", "test"])
+    end
+  end
+
   describe ".search" do
     it "returns an empty array if nothing is found" do
       Recipe.search('aoeu').should eq([])
@@ -47,6 +61,39 @@ describe Recipe do
 
     it "returns false if the recipe is not in the user's favorites" do
       recipe.favorite_for?(FactoryGirl.build(:user)).should eq(false)
+    end
+  end
+
+  describe "#review_count" do
+    it "gets the count of the reviews" do
+      reviews = double(:reviews, count: 12)
+      subject.stub(:reviews => reviews)
+      subject.review_count.should eq 12
+    end
+  end
+
+  describe "#rating" do
+    it "returns the average rating" do
+      Review.should_receive(:avg_rating_for).with(subject)
+      subject.rating
+    end
+  end
+
+  describe ".from_import" do
+    it "returns a recipe from scraping a site" do
+      recipe = double :recipe
+      Scraper.stub_chain(:new, scrape: recipe)
+      Recipe.from_import('some url').should eq recipe
+    end
+  end
+
+  describe "#recent_reviews" do
+    it "returns reviews" do
+      reviews = double(:reviews, count: 12)
+      subject.stub(:reviews => reviews)
+      reviews.should_receive(:order).with('created_at DESC').and_return(
+        double :reviews, limit: true)
+      subject.recent_reviews
     end
   end
 

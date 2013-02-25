@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 ENV['RAILS_ENV'] ||= 'spinach'
 require 'rack/test'
 require 'factory_girl'
