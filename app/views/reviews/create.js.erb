@@ -5,5 +5,6 @@
     $('#review_form').slideUp(500);
   }, 700);
 <% else %>
-  $('#review_form').html("<%= j render 'reviews/form', locals: { recipe: recipe } %>");
+    $('#review_form #new_review').html("<%= j render partial: 'reviews/form', locals:
+                           { recipe: recipe, remote: true } %>");
 <% end %>

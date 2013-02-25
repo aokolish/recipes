@@ -1,4 +1,6 @@
 = simple_form_for [recipe, review], remote: remote do |f|
+  - if review.errors[:recipe_id].any? && review.errors[:recipe_id][0].match(/already been taken/)
+    .alert.alert-error Sorry, you can only review each recipe once
   = f.input :user_id, as: 'hidden', input_html: { value: current_user.id }
   = f.input :recipe_id, as: 'hidden', input_html: { value: recipe.id }
   = f.input :rating, label: false, collection: 1..5, as: :radio_buttons
