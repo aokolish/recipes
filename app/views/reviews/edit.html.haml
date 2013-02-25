@@ -1,3 +1,4 @@
 #review_form.span8
-  %h2 Edit Review
-  =render partial: "reviews/form", locals: { recipe: recipe, remote: false }
+  .well.add-review
+    %h3 Edit Review
+    =render partial: "reviews/form", locals: { recipe: recipe, remote: false }

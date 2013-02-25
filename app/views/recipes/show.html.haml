@@ -25,7 +25,9 @@
         - if current_user
           -if !current_user.has_reviewed?(recipe)
             #review_form
-              =render partial: "reviews/form", locals: { recipe: recipe, remote: true }
+              .well.add-review
+                %h3 Write a Review
+                =render partial: "reviews/form", locals: { recipe: recipe, remote: true }
         - else
           %p
             = link_to 'log in to review this!', login_path
