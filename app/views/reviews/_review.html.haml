@@ -4,7 +4,9 @@
     = render partial: 'partials/rating', locals: { rating: review.rating }
   %p= review.body
   %p
-    by #{review.user.email}
+    by
+    -# TODO: replace with username later
+    %i anonynmous
     %span |
     %span #{time_ago_in_words(review.created_at)} ago
   - if current_user && review.user == current_user

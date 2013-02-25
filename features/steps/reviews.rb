@@ -1,29 +1,38 @@
 class Spinach::Features::Reviews < Spinach::FeatureSteps
   attr_accessor :user, :recipe
-
-  step 'I am logged in' do
-    self.user = FactoryGirl.create(:user)
-
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
-  end
+  include CommonSteps::Login
 
   step 'a recipe exists' do
     self.recipe = FactoryGirl.create(:recipe)
   end
 
   step 'I visit the recipe' do
-    pending 'step not implemented'
+    visit recipe_path(recipe)
   end
 
   step 'submit a review' do
-    pending 'step not implemented'
+    within '#new_review' do
+      choose '5'
+      fill_in('review_title', :with => 'awesome recipe')
+      fill_in('review_body', :with => 'this is the best recipe ever!')
+
+      click_button "Create Review"
+    end
+  end
+
+  step 'the rating shows up on the recipe index page' do
+    visit recipes_path
+    within '.recipe' do
+      page.should have_css '.rating'
+      page.should have_css '.rating .icon-star'
+    end
   end
 
   step 'my review should show up on the recipe page' do
-    pending 'step not implemented'
+    within '#reviews .well' do
+      page.should have_content("awesome recipe")
+      page.should have_content("this is the best recipe ever!")
+    end
   end
 
   step 'I have reviewed recipes before' do

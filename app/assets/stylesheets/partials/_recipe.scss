@@ -47,23 +47,25 @@
     font-weight: bold;
     text-decoration: none;
     color: $dark_gray;
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 5px;
+    max-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     @media only screen and (min-width: 768px) {
-      margin-top: 10px;
+      margin-top: 5px;
       font-size: 1.1em;
     }
-    @media #{$smartphones} {
+    @media #{$large_display} {
       max-height: 36px;
-      overflow: hidden;
     }
   }
   @media #{$smartphones} {
     .dash {
       display: none;
     }
-    .author,
-    .time-since-created {
+    .author {
       display: block;
       margin-left: 80px;
       overflow: hidden;
@@ -71,5 +73,11 @@
       text-overflow: ellipsis;
       width: 65%;
     }
+    .time-since-created {
+      display: none;
+    }
+  }
+  .rating {
+    left: -4px;
   }
 }

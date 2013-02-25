@@ -10,6 +10,7 @@ Feature: Reviews
     When I visit the recipe
     And submit a review
     Then my review should show up on the recipe page
+    And the rating shows up on the recipe index page
 
   @javascript
   Scenario: Listing Reviews

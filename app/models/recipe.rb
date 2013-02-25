@@ -22,6 +22,10 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def has_rating?
+    rating > 0
+  end
+
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end

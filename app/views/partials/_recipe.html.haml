@@ -8,7 +8,10 @@
     %span.dash -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
     %p
-      = render partial: 'partials/rating', locals: { rating: recipe.rating }
+      - if recipe.has_rating?
+        = render partial: 'partials/rating', locals: { rating: recipe.rating }
+      - else
+        %i no reviews yet
     - if params[:controller] == "favorites"
       = link_to [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], 
                 :confirm => 'Are you sure?', :method => :delete, 

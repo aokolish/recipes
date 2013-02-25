@@ -64,6 +64,17 @@ describe Recipe do
     end
   end
 
+  describe "#has_rating?" do
+    it 'returns true if there are ratings' do
+      subject.stub(rating: 3)
+      subject.has_rating?.should be_true
+    end
+    it 'returns false if there are ratings' do
+      subject.stub(rating: 0)
+      subject.has_rating?.should be_false
+    end
+  end
+
   describe "#review_count" do
     it "gets the count of the reviews" do
       reviews = double(:reviews, count: 12)
