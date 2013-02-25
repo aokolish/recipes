@@ -11,9 +11,3 @@ Feature: Reviews
     And submit a review
     Then my review should show up on the recipe page
     And the rating shows up on the recipe index page
-
-  @javascript
-  Scenario: Listing Reviews
-    Given I have reviewed recipes before
-    When I go to my user page
-    Then I see the reviews listed there

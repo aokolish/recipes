@@ -34,16 +34,4 @@ class Spinach::Features::Reviews < Spinach::FeatureSteps
       page.should have_content("this is the best recipe ever!")
     end
   end
-
-  step 'I have reviewed recipes before' do
-    pending 'step not implemented'
-  end
-
-  step 'I go to my user page' do
-    pending 'step not implemented'
-  end
-
-  step 'I see the reviews listed there' do
-    pending 'step not implemented'
-  end
 end
