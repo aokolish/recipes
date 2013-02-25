@@ -1,14 +1,6 @@
 class Spinach::Features::CreatingARecipe < Spinach::FeatureSteps
   attr_accessor :user
-
-  step 'I am logged in' do
-    self.user = FactoryGirl.create(:user)
-
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
-  end
+  include CommonSteps::Login
 
   step 'I submit a valid recipe' do
     visit new_recipe_path
