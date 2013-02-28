@@ -1,5 +1,6 @@
 class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
   attr_accessor :user
+  include CommonSteps::Login
 
   def import_recipe(url)
     if page.current_path != import_recipes_path
@@ -37,14 +38,5 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
 
   step 'I am on the import page' do
     visit import_recipes_path
-  end
-
-  step 'I am logged in' do
-    self.user = FactoryGirl.create(:user)
-
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
   end
 end

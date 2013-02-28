@@ -4,7 +4,6 @@ gem 'rails', '~> 3.2.0'
 gem 'nokogiri'
 gem 'chronic_duration'
 gem 'jquery-rails'
-gem 'ruby-units'
 gem 'will_paginate'
 gem 'simple_form'
 gem 'bcrypt-ruby', :require => 'bcrypt'
@@ -34,6 +33,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'simplecov', :require => false
   gem "capybara"
   gem "poltergeist"
   gem 'launchy'

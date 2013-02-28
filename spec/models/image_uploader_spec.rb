@@ -17,6 +17,20 @@ describe ImageUploader do
     @uploader.remove!
   end
 
+  describe "#default_url" do
+    it "is returns a generic one" do
+      @uploader.default_url.should eq "/images/fallback/default.jpg"
+    end
+
+    context "when a specific size is requested" do
+      before { @uploader.stub(:version_name => 'thumb') }
+
+      it "returns a default for that size" do
+        @uploader.default_url.should eq "/images/fallback/thumb_default.jpg"
+      end
+    end
+  end
+
   context 'the thumb version' do
     it "should scale down a portrait image to be exactly 80 by 80 pixels" do
       @uploader.thumb.should have_dimensions(80, 80)

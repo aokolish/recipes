@@ -9,6 +9,5 @@ class Picture < ActiveRecord::Base
   scope :top_five, limit(5)
 
   acts_as_list
-
 end
 

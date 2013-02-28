@@ -1,0 +1,14 @@
+.well
+  %h4
+    = review.title
+    = render partial: 'partials/rating', locals: { rating: review.rating }
+  %p= review.body
+  %p
+    by
+    -# TODO: replace with username later
+    %i anonynmous
+    %span |
+    %span #{time_ago_in_words(review.created_at)} ago
+  - if current_user && review.user == current_user
+    = link_to edit_recipe_review_path(review.recipe, review), class: 'btn edit-review btn-small' do
+      %i.icon-pencil

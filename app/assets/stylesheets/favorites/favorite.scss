@@ -10,6 +10,9 @@
       font-size: 1.3em;
       padding: 6px;
       display: block;
+      @media #{$smartphones} {
+        right: 0;
+      }
     }
   }
 }

@@ -1,0 +1,10 @@
+<% if review.valid? %>
+  $("#reviews").append("<%= j render partial: 'reviews/review', locals: { review: review } %>")
+    .find(".well").last().hide().slideDown();
+  setTimeout(function() {
+    $('#review_form').slideUp(500);
+  }, 700);
+<% else %>
+    $('#review_form #new_review').html("<%= j render partial: 'reviews/form', locals:
+                           { recipe: recipe, remote: true } %>");
+<% end %>

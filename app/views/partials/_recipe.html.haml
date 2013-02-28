@@ -4,9 +4,14 @@
   %a(href="#{recipe_path(recipe)}" title="#{recipe.title}")
     = image_tag recipe.pictures.first.nil? ? Picture.new.image_url(:thumb) : recipe.pictures.first.image_url(:thumb)
     %span(class="title") #{truncate(recipe.title, :length => 44)}
-    %span(class="author") #{truncate(recipe.author, :length => 40)}
+    %span(class="author") #{truncate(recipe.author, :length => 15)}
     %span.dash -
     %span(class="time-since-created") #{time_ago_in_words(recipe.created_at)} ago
+    %p
+      - if recipe.has_rating?
+        = render partial: 'partials/rating', locals: { rating: recipe.rating }
+      - else
+        %i no reviews yet
     - if params[:controller] == "favorites"
       = link_to [current_user, Favorite.find_by_user_id_and_recipe_id(current_user, recipe)], 
                 :confirm => 'Are you sure?', :method => :delete, 

@@ -1,17 +1,9 @@
 class Spinach::Features::Favorites < Spinach::FeatureSteps
   attr_accessor :user, :recipe
+  include CommonSteps::Login
 
   before do
     self.recipe = FactoryGirl.create(:recipe)
-  end
-
-  step 'I am logged in' do
-    self.user = FactoryGirl.create(:user)
-
-    visit login_path
-    fill_in "email", :with => user.email
-    fill_in "password", :with => user.password
-    click_button "Log in"
   end
 
   step 'I favorite a recipe on the recipe page' do

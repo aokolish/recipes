@@ -31,7 +31,7 @@
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{margin-bottom:28px;}
-        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxTitle{position:absolute; bottom:0; left:0; text-align:center; width:100%; color:#949494;}
         #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
         #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
         #cboxPrevious{position:absolute; bottom:0; left:0; width:25px; height:25px; text-indent:-9999px;}
@@ -84,7 +84,7 @@
 }
 
 #cboxOverlay {
-  background: black;
+  background: black url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQALy8vL/GWF8EOfhw4eMYAEYB8RmROaABABytw1hEM4QxAAAAABJRU5ErkJggg==);
 }
 
 /*

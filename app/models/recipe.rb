@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
   has_many :favorites
+  has_many :reviews
   has_many :users, :through => :favorites
   has_many :pictures, :as => :imageable
   belongs_to :user
@@ -21,6 +22,10 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def has_rating?
+    rating > 0
+  end
+
   def self.from_import(url)
     @recipe = Scraper.new.scrape(url)   # see models/scraper.rb for scraping code
   end
@@ -29,23 +34,31 @@ class Recipe < ActiveRecord::Base
     favorites.exists?(:user_id => user.id)
   end
 
+  def review_count
+    reviews.count
+  end
+
+  def recent_reviews(limit=3)
+    reviews.order("created_at DESC").limit(limit)
+  end
+
+  def rating
+    Review.avg_rating_for(self)
+  end
 
   # storing total_time as an integer. customer getter/setter:
+  # TODO: convert this to a damn string and get rid of this gem!
   def total_time
     # output total_time in a format that is easy to read e.g. 1800 becomes '30 minutes'
     unless self[:total_time].nil?
-      begin
-        ChronicDuration.output self[:total_time]
-      rescue
-        self[:total_time] = self.total_time_before_type_cast
-      end
+      ChronicDuration.output self[:total_time]
     end
   end
 
   def total_time=(text)
     begin
       self[:total_time] = ChronicDuration.parse text
-    rescue
+    rescue NoMethodError, ChronicDuration::DurationParseError => e
       self[:total_time] = text
     end
   end

@@ -30,6 +30,9 @@ q:before, q:after, blockquote:before, blockquote:after {
 .alert {
   // make yellow flash text darker
   color: darken(#C09853, 10%);
+  &.alert-error {
+    color: #b94a48;
+  }
 }
 
 form {

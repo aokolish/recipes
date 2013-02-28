@@ -1,3 +1,7 @@
+# this has something to do with error_messages_for having been removed
+# from rails into this gem https://github.com/joelmoss/dynamic_form
+# I couldn't get it to work though. So, leaving this for now. And it's a
+# pain to test so excluding :trollface:
 module ErrorMessagesHelper
   # Render error messages for the given objects. The :message and :header_message options are allowed.
   def error_messages_for(*objects)

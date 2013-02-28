@@ -1,3 +1,48 @@
+.rating {
+  position: relative;
+  top: 3px;
+  color: #f70;
+  .well & {
+    margin-left: 5px;
+  }
+}
+
+.radio_buttons {
+  margin-bottom: 15px;
+  padding-left: 2px;
+  overflow: hidden;
+
+  .radio {
+    float: left;
+    margin-right: 15px;
+    padding-top: 0 !important;
+  }
+}
+
+.add-review h3 {
+  margin: 0;
+}
+
+#reviews .well {
+  background: white;
+  position: relative;
+}
+
+#review-section {
+  margin-top: 25px;
+  @include fancy_border(top);
+}
+
+.edit-review {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+
+  [class^="icon-"] {
+    line-height: normal;
+  }
+}
+
 .recipes-show {
   .title {
     margin-bottom: 15px;
