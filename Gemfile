@@ -34,6 +34,7 @@ end
 
 group :test do
   gem 'simplecov', :require => false
+  #gem 'simplecov', :require => false , :path => '~/code/gems/simplecov/'
   gem "capybara"
   gem "poltergeist"
   gem 'launchy'
