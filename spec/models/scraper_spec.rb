@@ -23,7 +23,7 @@ describe "Scraper" do
     recipe.source_url.should eq("http://www.cookingchanneltv.com/example")
     recipe.total_time.should eq("2 hrs 8 mins")
     recipe.yield.should eq("12 servings")
-    recipe.ingredients.should include("3/4 cup unsalted butter, at room temperature|1 1/2 cups packed light brown sugar|")
+    recipe.ingredients.should include("3/4 cup  unsalted butter, at room temperature|1 1/2 cups packed light  brown sugar|")
     recipe.directions.should include("For the cake: Preheat the oven to 350 degrees F. Grease 3 (9-inch) round cake pans with cooking spray. In large bowl, cream together the butter, light brown sugar, and granulated sugar until light and fluffy. Mix in the eggs, mashed bananas, sour cream, and vanilla until smooth.|In a separate bowl")
   end
 end
