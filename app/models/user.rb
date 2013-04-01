@@ -42,6 +42,6 @@ class User < ActiveRecord::Base
 
   # belongs in presenter?
   def join_date
-    created_at.to_date.to_formatted_s(:long)
+    created_at.try(:strftime, "%-B %-d, %Y")
   end
 end
