@@ -4,10 +4,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::RMagick
 
-  # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
-  # include Sprockets::Helpers::RailsHelper
-  # include Sprockets::Helpers::IsolatedHelper
-
   # :nocov:
   if Rails.env.production?
     storage :fog
@@ -27,7 +23,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
      "/images/fallback/" + ["avatar", version_name, "default.jpg"].compact.join('_')
    end
 
-   # TODO: think about these sizes more
    version :micro do
      process :resize_to_fill => [50, 50]
      process :quality => 80
