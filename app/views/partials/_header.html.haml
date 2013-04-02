@@ -20,7 +20,7 @@
             = link_to user_path(current_user), class: 'avatar-link' do
               = image_tag current_user.avatar.micro
               = current_user.email
-            = link_to '#', data: {placement: 'bottom'}, title: 'settings', class: 'tooltipped btn btn-small' do
+            = link_to profile_settings_path, data: {placement: 'bottom'}, title: 'settings', class: 'tooltipped btn btn-small' do
               %i.icon-cog
             = link_to logout_path, data: {placement: 'bottom'}, title: 'sign out', class: 'tooltipped btn btn-small' do
               %i.icon-signout

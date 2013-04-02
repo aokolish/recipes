@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   validates :username, presence: true, uniqueness: true
-  validates :password, presence: true, confirmation: true, length: { :minimum => 4 }
+  validates :password, presence: true, confirmation: true, length: { :minimum => 4 }, on: :create
   validates :email, presence: true, uniqueness: true,
             format: { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, message: 'is an invalid format' }
 

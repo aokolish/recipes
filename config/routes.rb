@@ -24,6 +24,11 @@ Recipes::Application.routes.draw do
   resources :reviews
   resources :sessions
 
+  controller :settings do
+    get "/settings/profile" => :profile, as: :profile_settings
+    put "/settings/profile" => :update, as: :update_profile_settings
+  end
+
   match "/404", :to => "errors#not_found"
   match "/500", :to => "errors#error"
 
