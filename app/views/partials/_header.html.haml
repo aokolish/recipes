@@ -1,27 +1,30 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
+%header.navbar.navbar-inverse
   .navbar-inner
     .container
-      .nav-collapse.collapse
-        = render_navigation
-
-      #login-search
-        = form_tag search_recipes_path, :method => 'get', :class => 'navbar-search' do
-          = text_field_tag :search, nil, 'placeholder' => 'Search Recipes', :class => 'search-query'
-          = submit_tag "Search", type: :submit, id: 'search-submit'
-          %i.icon-search
-
-      .pull-right
-        - if current_user
-          = link_to user_path(current_user), class: 'avatar-link' do
-            = image_tag current_user.avatar.micro
-            = current_user.email
-          = link_to logout_path, data: {placement: 'bottom'}, title: 'sign out', class: 'tooltipped btn btn-small' do
-            %i.icon-signout
-        - else
-          = link_to "Sign up", new_user_path, class: 'btn btn-primary'
-          = link_to "Log in", login_path, class: 'btn'
-
       %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
+      .nav-collapse.collapse
+        = render_navigation
+
+        #login-search
+          = form_tag search_recipes_path, :method => 'get', :class => 'navbar-search' do
+            .fields-wrap
+              = text_field_tag :search, nil, 'placeholder' => 'Search Recipes', :class => 'search-query'
+              = submit_tag "Search", type: :submit, id: 'search-submit'
+              %i.icon-search
+
+        .user-links
+          - if current_user
+            = link_to user_path(current_user), class: 'avatar-link' do
+              = image_tag current_user.avatar.micro
+              = current_user.email
+            = link_to '#', data: {placement: 'bottom'}, title: 'settings', class: 'tooltipped btn btn-small' do
+              %i.icon-cog
+            = link_to logout_path, data: {placement: 'bottom'}, title: 'sign out', class: 'tooltipped btn btn-small' do
+              %i.icon-signout
+          - else
+            = link_to "Sign up", new_user_path, class: 'btn btn-primary'
+            = link_to "Log in", login_path, class: 'btn'
+

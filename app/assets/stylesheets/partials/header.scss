@@ -1,13 +1,30 @@
 //header styles
 .navbar {
+  @media (max-width: 767px) {
+    margin: 0 -20px;
+  }
+  .btn-navbar {
+    // need this because there is no brand text
+    margin-bottom: 5px;
+  }
   .avatar-link {
-    line-height: 38px;
+    position: relative;
+    top: 4px;
+    color: #999;
+    font-size: .85em;
     &:hover {
       text-decoration: none;
+      color: white;
     }
 
     img {
-      max-width: 30px;
+      max-width: 25px;
+    }
+  }
+  .user-links {
+    float: right;
+    @media (max-width: $navbarCollapseWidth) {
+      float: left;
     }
   }
   .navbar-inner {
@@ -18,6 +35,11 @@
     }
   }
   #login-search {
+    // this exists just to position the search icon
+    .fields-wrap {
+      display: inline-block;
+      position: relative;
+    }
     #search {
       -webkit-transition: all .25s ease-out;
       @media (max-width: 480px) {
@@ -31,10 +53,7 @@
         border: 1px solid #151515;
         @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)});
         text-shadow: none;
-
-        @media only screen and (min-width: 768px) {
-          width: 275px;
-        }
+        width: 275px;
       }
     }
 

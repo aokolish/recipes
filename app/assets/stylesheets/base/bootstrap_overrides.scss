@@ -11,12 +11,12 @@ q:before, q:after, blockquote:before, blockquote:after {
   color: lightent($med_gray, 10%);
 }
 
-.navbar-search {
-  //top: 2px;
-}
-
 .btn-large [class^="icon-"] {
   margin-top: 3px;
+}
+
+.nav-collapse.collapse {
+  padding-bottom: 10px;
 }
 
 .alert {

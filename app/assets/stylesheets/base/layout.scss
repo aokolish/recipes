@@ -6,11 +6,6 @@
 body {
   background: white asset-data-url("fabric.png") repeat;
   font-family: Verdana, Helvetica, Arial;
-  padding-top: 70px;
-
-  @media (max-width: 980px) {
-    padding-top: 0;
-  }
 }
 .hero-unit {
   background: transparent;
