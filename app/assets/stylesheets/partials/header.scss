@@ -1,15 +1,18 @@
 //header styles
 .navbar {
+  .avatar-link {
+    line-height: 38px;
+    &:hover {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 30px;
+    }
+  }
   .navbar-inner {
     @include border-radius(0px);
 
-    li a {
-      padding: 13px 8px 7px;
-
-      .icon-user {
-        font-size: 1.5em;
-      }
-    }
     .nav.pull-right {
       margin-left: 0;
     }
@@ -45,8 +48,5 @@
       right: 11px;
       font-size: 115%;
     }
-  }
-  .user-icon {
-    font-size: $baseFontSize * 1.4;
   }
 }
