@@ -21,9 +21,13 @@ gem 'foreman'
 gem 'bootstrap-sass', '~> 2.3.0'
 gem "rspec-rails" # => cannot be in test group because it breaks rake on heroku
 
-group :development, :test do
-  gem "nifty-generators"
+group :development do
+  gem 'meta_request'
   gem 'localtunnel'
+  gem "nifty-generators"
+end
+
+group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'thin'
