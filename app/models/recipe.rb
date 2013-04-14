@@ -79,7 +79,7 @@ class Recipe < ActiveRecord::Base
   end
 
   def added_by_author?
-    user.username == author
+    user && user.username == author
   end
 
   private

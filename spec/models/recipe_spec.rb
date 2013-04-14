@@ -173,5 +173,11 @@ describe Recipe do
       recipe.stub(user: user, author: 'jane')
       recipe.added_by_author?.should be_false
     end
+
+    it "returns false if the recipe's user is nil" do
+      user = nil
+      recipe.stub(user: nil, author: 'jane')
+      recipe.added_by_author?.should be_false
+    end
   end
 end
