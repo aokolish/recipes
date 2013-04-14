@@ -53,7 +53,5 @@ module Recipes
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-
-    ChronicDuration.raise_exceptions = true
   end
 end
