@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:ao140505/simplecov.git
+  remote: https://github.com/ao140505/simplecov.git
   revision: 37d97bf339308a3f5fe7d29319bc40d38f35e545
   branch: ao-fix-nocov
   specs:
