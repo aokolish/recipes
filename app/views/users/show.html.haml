@@ -12,7 +12,7 @@
     Favorites: #{user.favorites.count}
 
 .span9
-  %h3 Recipes:
+  %h3 Your Recipes:
   %ul#recipes-list
     -if @recipes.present?
       = render :partial => 'partials/recipe', :collection => @recipes
