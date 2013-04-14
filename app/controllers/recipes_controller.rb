@@ -47,10 +47,10 @@ class RecipesController < ApplicationController
 
   def create_from_import
     url = params[:source_url]
-    recipe.user_id = current_user.id
 
     begin
       recipe = Recipe.from_import(url)
+      recipe.user_id = current_user.id
     rescue NoMethodError
       failed_import("Sorry, an error occured during that import.") and return
     end
