@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 describe Recipe do
-  let(:recipe) { FactoryGirl.build(:recipe, :title => 'Pasta',
+  let(:recipe) { Recipe.new(:title => 'Pasta',
                                :ingredients => '1 pound spaghetti|water|salt',
                                :directions => 'boil generous amount of water|add salt|boil pasta') }
   describe "validations" do
+    let(:recipe) { FactoryGirl.build(:recipe) }
     it "requires total time to be a time" do
       recipe.total_time = 'a long time'
       recipe.should_not be_valid
@@ -33,6 +34,9 @@ describe Recipe do
   end
 
   describe ".search" do
+    let(:recipe) { FactoryGirl.build(:recipe, :title => 'Pasta',
+                                 :ingredients => '1 pound spaghetti|water|salt',
+                                 :directions => 'boil generous amount of water|add salt|boil pasta') }
     it "returns an empty array if nothing is found" do
       Recipe.search('aoeu').should eq([])
     end
@@ -154,6 +158,20 @@ describe Recipe do
 
       recipe.ingredients.should match /\|/
       recipe.ingredients.should_not match /\*/
+    end
+  end
+
+  describe "#added_by_author?" do
+    it "returns true when the author is the user who created the recipe" do
+      user = stub(username: 'bill')
+      recipe.stub(user: user, author: 'bill')
+      recipe.added_by_author?.should be_true
+    end
+
+    it "returns false if the author is not the user who created the recipe" do
+      user = stub(username: 'bill')
+      recipe.stub(user: user, author: 'jane')
+      recipe.added_by_author?.should be_false
     end
   end
 end
