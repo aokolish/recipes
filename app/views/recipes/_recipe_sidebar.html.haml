@@ -1,0 +1,29 @@
+- author = recipe.author
+#recipe_info
+  - if recipe.pictures.empty?
+    = link_to recipe_pictures_path(recipe), :class => 'add-photo btn btn-large' do
+      %i.icon-camera.icon-large
+      Add A Photo
+  - else
+    = render partial: 'recipe_pictures_slider'
+
+  %h3.first Author:
+  - if recipe.added_by_author?
+    = link_to author, user_path(recipe.user)
+  - else
+    %p= author
+
+  %h3 Total time:
+  %p= recipe.total_time
+
+  %h3 Yield:
+  %p= recipe.yield
+
+  - unless recipe.source_url.blank?
+    %h3 Source:
+    %p.source_url
+      = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
+
+  - unless current_user && current_user.has_reviewed?(recipe)
+    %p
+      = link_to 'Write a Review >', '#new_review ', id: 'write-review'

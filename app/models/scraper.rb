@@ -31,13 +31,7 @@ class Scraper
   def from_food_network
     doc = Nokogiri::HTML(open(@url))
 
-    author = doc.css('a[title*="Recipe courtesy"]').inner_text
-
-    if author =~ /,([^,]+),/
-      # there is some other stuff around the author's name
-      author = author.match(/,([^,]+),/)[1]
-      author.strip!
-    end
+    author = doc.css('[itemprop=name][content]').attribute('content').to_s
 
     title = doc.at_css('h1[itemprop="name"]').text
 

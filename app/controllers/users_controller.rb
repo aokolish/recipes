@@ -15,4 +15,7 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @recipes = user.authored_recipes
+  end
 end

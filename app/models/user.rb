@@ -4,13 +4,17 @@ class User < ActiveRecord::Base
   has_many :recipes, :through => :favorites
   has_many :authored_recipes, :class_name => 'Recipe'
 
-  attr_accessible :email, :password, :password_confirmation
+  mount_uploader :avatar, AvatarUploader
+
+  attr_accessible :email, :password, :password_confirmation, :username,
+    :avatar, :avatar_cache
   attr_accessor :password
   before_save :encrypt_password
 
-  validates :password, :presence => true, :confirmation => true, :length => { :minimum => 4 }
-  validates :email, :presence => true, :uniqueness => true, 
-            :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'is an invalid format' }
+  validates :username, presence: true, uniqueness: true
+  validates :password, presence: true, confirmation: true, length: { :minimum => 4 }, on: :create
+  validates :email, presence: true, uniqueness: true,
+            format: { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, message: 'is an invalid format' }
 
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -34,5 +38,10 @@ class User < ActiveRecord::Base
 
   def has_reviewed?(recipe)
     Review.where(recipe_id: recipe.id, user_id: self.id).count > 0
+  end
+
+  # belongs in presenter?
+  def join_date
+    created_at.try(:strftime, "%-B %-d, %Y")
   end
 end

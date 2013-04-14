@@ -50,4 +50,12 @@ describe User do
       user.authored_recipes.first.user_id.should eq(user.id)
     end
   end
+
+  describe "#join_date" do
+    it "returns a formatted join date" do
+      user = User.new
+      user[:created_at] = Time.utc(2012,"nov",25)
+      user.join_date.should eq "November 25, 2012"
+    end
+  end
 end

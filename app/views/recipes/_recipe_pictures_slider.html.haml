@@ -1,0 +1,14 @@
+.flexslider
+  %ul(class="slides")
+    - recipe.pictures.top_five.each do |pic|
+      %li
+        %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
+          = image_tag pic.image_url(:small)
+  %p.click-for-large Click for a larger image
+  %ul.custom-controls
+    - recipe.pictures.top_five.each do |pic|
+      %li
+        %a(href="#")
+          = image_tag pic.image_url(:micro)
+%p.add-photos
+  = link_to 'Add Photos', recipe_pictures_path(recipe)

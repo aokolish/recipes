@@ -1,0 +1,19 @@
+#review-section
+  %h2 Reviews
+  %h4 Average Review
+  %p
+    = render partial: 'partials/rating', locals: { rating: recipe.rating }
+    = link_to "(#{recipe.review_count} reviews)", recipe_reviews_path(recipe)
+  #reviews
+    - recipe.recent_reviews.each do |review|
+      = render review
+
+  - if current_user
+    - if !current_user.has_reviewed?(recipe)
+      #review_form
+        .well.add-review
+          %h3 Write a Review
+          =render partial: "reviews/form", locals: { recipe: recipe, remote: true }
+  - else
+    %p
+      = link_to 'log in to review this!', login_path

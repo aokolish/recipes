@@ -11,20 +11,12 @@ q:before, q:after, blockquote:before, blockquote:after {
   color: lightent($med_gray, 10%);
 }
 
-.navbar .nav > li > a {
-  line-height: 25px;
-}
-
-.navbar .nav > li > a.dropdown-toggle {
-  line-height: 19px;
-}
-
-.navbar-search {
-  top: 2px;
-}
-
 .btn-large [class^="icon-"] {
   margin-top: 3px;
+}
+
+.nav-collapse.collapse {
+  padding-bottom: 10px;
 }
 
 .alert {
@@ -46,12 +38,6 @@ form {
   //center button text
   //needed due to base font-size being larger
   line-height: 20px;
-}
-
-//center navbar button vertically
-.navbar .btn-navbar {
-  position: relative;
-  top: 3px;
 }
 
 input:focus:required:invalid, textarea:focus:required:invalid, select:focus:required:invalid {

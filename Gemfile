@@ -18,22 +18,25 @@ gem 'decent_exposure'
 gem 'best_in_place'
 gem 'acts_as_list'
 gem 'foreman'
-gem 'bootstrap-sass', '~> 2.1.0'
+gem 'bootstrap-sass', '~> 2.3.0'
 gem "rspec-rails" # => cannot be in test group because it breaks rake on heroku
 
-group :development, :test do
-  gem "nifty-generators"
+group :development do
+  gem 'meta_request'
   gem 'localtunnel'
+  gem "nifty-generators"
+end
+
+group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'thin'
 
-  # debugging
   gem 'pry'
 end
 
 group :test do
-  gem 'simplecov', :require => false
+  gem 'simplecov', :git => 'https://github.com/ao140505/simplecov.git', :branch => 'ao-fix-nocov'
   #gem 'simplecov', :require => false , :path => '~/code/gems/simplecov/'
   gem "capybara"
   gem "poltergeist"
@@ -48,7 +51,7 @@ end
 
 group :assets do
   gem 'sass-rails', "  ~> 3.2.5"
-  gem "sass", :github => "nex3/sass", :branch => 'master'
+  gem "sass"
   gem 'coffee-rails', "~> 3.2.1"
   gem 'uglifier', '>= 1.0.3'
 end

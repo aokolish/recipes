@@ -1,6 +1,7 @@
 class Spinach::Features::CreateAccount < Spinach::FeatureSteps
   step 'I fill in the form with valid input' do
     fill_in "user_email", :with => "awesome@example.com"
+    fill_in "user_username", :with => "awesome"
     fill_in "user_password", :with => "password"
     fill_in "user_password_confirmation", :with => "password"
     click_button "Create User"
@@ -15,7 +16,7 @@ class Spinach::Features::CreateAccount < Spinach::FeatureSteps
   end
 
   step 'I should be logged in' do
-    page.find('#users-dropdown').should have_content("awesome@example.com")
+    page.find('.avatar-link').should have_content("awesome@example.com")
   end
 
   step 'I fill in the form with invalid input' do

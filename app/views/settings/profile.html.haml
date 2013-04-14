@@ -1,0 +1,11 @@
+.span3
+  %p= image_tag current_user.avatar.medium
+  %h3= current_user.username
+.span9
+  %h3 Your Settings
+  = simple_form_for(current_user, url: update_profile_settings_path) do |f|
+    = f.input :email, autofocus: true
+    = f.input :username
+    = f.input :avatar, as: :file, label: 'Choose a new picture'
+    = f.input :avatar_cache, as: 'hidden'
+    = f.button :submit, value: 'Update'

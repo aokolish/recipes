@@ -6,7 +6,7 @@ class Recipe < ActiveRecord::Base
   belongs_to :user
 
   validates :title, :author, :directions, :ingredients, :presence => true
-  validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice  
+  validates_uniqueness_of :source_url, :allow_nil => true   # do not import the same recipe twice
   validate :ensure_total_time_is_a_time
   before_validation :cleanup_input
 
@@ -76,6 +76,10 @@ class Recipe < ActiveRecord::Base
     attrs.each do |attr|
       self[attr].gsub!(/\|/, sep) unless self[attr] =~ /\|/.nil?
     end
+  end
+
+  def added_by_author?
+    user.username == author
   end
 
   private

@@ -1,7 +1,15 @@
 class RecipesController < ApplicationController
-  skip_before_filter :authorize, :only => [:index, :search, :show, :create_from_import]
-  expose(:paged_recipes) { Recipe.includes(:pictures).paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC' }
-  expose(:recipe_results) { Recipe.includes(:pictures).search(params[:search], sort_column, sort_direction, params[:page]) }
+  skip_before_filter :authorize, :only =>
+    [:index, :search, :show, :create_from_import]
+  expose(:paged_recipes) {
+    Recipe.includes(:pictures).paginate(
+      :page => params[:page], :per_page => 15, :order => 'created_at DESC'
+    )
+  }
+  expose(:recipe_results) {
+    Recipe.includes(:pictures).search(
+      params[:search], sort_column, sort_direction, params[:page])
+  }
   expose(:recipe)
   expose(:review) { Review.new }
   expose(:favorite) { Favorite.new } # had to use new - it was trying to find by params[:id]
@@ -39,10 +47,10 @@ class RecipesController < ApplicationController
 
   def create_from_import
     url = params[:source_url]
-    recipe.user_id = current_user.id
 
     begin
       recipe = Recipe.from_import(url)
+      recipe.user_id = current_user.id
     rescue NoMethodError
       failed_import("Sorry, an error occured during that import.") and return
     end

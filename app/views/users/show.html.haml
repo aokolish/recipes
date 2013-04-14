@@ -1,0 +1,20 @@
+.span3
+  %p= image_tag user.avatar, class: 'avatar'
+  %h3= user.username
+  %p
+    %i.icon-time
+    Joined on #{user.join_date}
+  %p
+    %i.icon-food
+    Recipes: #{user.authored_recipes.count}
+  %p
+    %i.icon-star
+    Favorites: #{user.favorites.count}
+
+.span9
+  %h3 Your Recipes:
+  %ul#recipes-list
+    -if @recipes.present?
+      = render :partial => 'partials/recipe', :collection => @recipes
+    -else
+      No recipes added yet!
