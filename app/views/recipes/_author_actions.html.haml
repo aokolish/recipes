@@ -1,0 +1,4 @@
+= link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit recipe' do
+  %i.icon-pencil
+= link_to recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete recipe' do
+  %i.icon-trash

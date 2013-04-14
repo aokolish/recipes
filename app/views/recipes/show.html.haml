@@ -12,25 +12,7 @@
       - recipe.directions_array.each do |direction|
         %p= direction
 
-      #review-section
-        %h2 Reviews
-        %h4 Average Review
-        %p
-          = render partial: 'partials/rating', locals: { rating: recipe.rating }
-          = link_to "(#{recipe.review_count} reviews)", recipe_reviews_path(recipe)
-        #reviews
-          - recipe.recent_reviews.each do |rev|
-            = render rev
-
-        - if current_user
-          -if !current_user.has_reviewed?(recipe)
-            #review_form
-              .well.add-review
-                %h3 Write a Review
-                =render partial: "reviews/form", locals: { recipe: recipe, remote: true }
-        - else
-          %p
-            = link_to 'log in to review this!', login_path
+      = render partial: 'reviews_section'
 
     - if current_user
       .actions.span1
@@ -38,55 +20,9 @@
           %a.remove_favorite.btn.disabled(href="#")
             %i.icon-bookmark
         -else
-          = form_for [current_user, favorite] do |f|
-            = hidden_field_tag "favorite[recipe_id]", recipe.id
-            = hidden_field_tag "favorite[user_id]", current_user.id
-            -# the following is ugly
-            = button_tag '', title: 'Favorite recipe', class: 'btn tooltipped', id: 'favorite-recipe' do
-              %i.icon-bookmark-empty
+          = render partial: 'favorite_form'
         - if current_user.author?(recipe)
-          = link_to edit_recipe_path(recipe), :class => 'btn edit tooltipped', :title => 'Edit recipe' do
-            %i.icon-pencil
-          = link_to recipe, :confirm => 'Are you sure?', :method => :delete, :class => 'btn delete tooltipped', :title => 'Delete recipe' do
-            %i.icon-trash
+          = render partial: 'author_actions'
 
 - content_for :sidebar do
-  #recipe_info
-    - if recipe.pictures.empty?
-      = link_to recipe_pictures_path(recipe), :class => 'add-photo btn btn-large' do
-        %i.icon-camera.icon-large
-        Add A Photo
-    - else
-      .flexslider
-        %ul(class="slides")
-          - recipe.pictures.top_five.each do |pic|
-            %li
-              %a(href="#{pic.image_url(:large)}" title="#{pic.caption}" rel="galler")
-                = image_tag pic.image_url(:small)
-        %p.click-for-large Click for a larger image
-        %ul.custom-controls
-          - recipe.pictures.top_five.each do |pic|
-            %li
-              %a(href="#")
-                = image_tag pic.image_url(:micro)
-      %p.add-photos
-        = link_to 'Add Photos', recipe_pictures_path(recipe)
-
-    %h3.first Author:
-    %p= recipe.author
-
-    %h3 Total time:
-    %p= recipe.total_time
-
-    %h3 Yield:
-    %p= recipe.yield
-
-    - unless recipe.source_url.blank?
-      %h3 Source url:
-      %p.source_url
-        = link_to truncate(recipe.source_url, :length => 40), recipe.source_url, :target => '_blank'
-
-    %p
-      = link_to 'Write a Review >', '#new_review ', id: 'write-review'
-
-
+  = render partial: 'recipe_sidebar'
