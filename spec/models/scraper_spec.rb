@@ -6,13 +6,15 @@ describe "Scraper" do
   it "scrapes foodnetwork" do
     recipe = scraper.scrape("http://www.foodnetwork.com/example")
     recipe.valid?
-    recipe.title.should eq("Strawberries-and-Cream Tart")
-    recipe.author.should eq("Recipe courtesy of Food Network Magazine")
+    recipe.title.should eq("Strawberry Tarts")
+    recipe.author.should eq("Ina Garten")
     recipe.source_url.should eq("http://www.foodnetwork.com/example")
-    recipe.total_time.should eq("1 hr 25 mins")
-    recipe.yield.should eq("6-8 servings")
-    recipe.ingredients.should include("2\ttablespoons vegetable oil\r|1\tlarge egg plus 1 egg yolk")
-    recipe.directions.should include("Make the crust: Whisk the vegetable oil, egg yolk, milk and vinegar in a bowl. Pulse the flour, baking powder, sugar and salt in a food processor to combine; add the butter and pulse until the mixture looks like coarse meal. Add the milk mixture and pulse once or twice, just to moisten the flour.\r|Transfer the dough")
+    recipe.total_time.should eq("2 hrs")
+    recipe.yield.should eq("4 tarts")
+    recipe.ingredients.should include(
+      "1 1/4 cups all-purpose flour\r|3 tablespoons sugar\r|1/2 teaspoon kosher salt\r|6 tablespoons")
+    recipe.directions.should include(
+      "Combine the flour, sugar, and salt in a small bowl and place in the freezer for 30 minutes.")
   end
 
   it "scrapes cookingchanneltv" do
