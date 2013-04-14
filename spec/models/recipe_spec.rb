@@ -4,20 +4,6 @@ describe Recipe do
   let(:recipe) { Recipe.new(:title => 'Pasta',
                                :ingredients => '1 pound spaghetti|water|salt',
                                :directions => 'boil generous amount of water|add salt|boil pasta') }
-  describe "validations" do
-    let(:recipe) { FactoryGirl.build(:recipe) }
-    it "requires total time to be a time" do
-      recipe.total_time = 'a long time'
-      recipe.should_not be_valid
-      recipe.errors[:total_time].should eq(["must be a time such as '1 hour' or '45 minutes'"])
-
-      recipe.total_time = '15 mins'
-      recipe.should be_valid
-
-      recipe.total_time = 'one hour'
-      recipe.should be_valid
-    end
-  end
 
   describe "#ingredients" do
     it "splits the ingredients on pipes" do
@@ -109,18 +95,6 @@ describe Recipe do
       reviews.should_receive(:order).with('created_at DESC').and_return(
         double :reviews, limit: true)
       subject.recent_reviews
-    end
-  end
-
-  describe "#total_time" do
-    it "outputs the time as a string" do
-      recipe.total_time = 60
-      recipe.total_time.should eq ('1 min')
-    end
-
-    it "stores the time as an integer" do
-      recipe.total_time = '1 min'
-      recipe.total_time_before_type_cast.should eq(60)
     end
   end
 
