@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.2.0'
 gem 'nokogiri'
-gem 'chronic_duration'
 gem 'jquery-rails'
 gem 'will_paginate'
 gem 'simple_form'
