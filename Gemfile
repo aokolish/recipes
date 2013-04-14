@@ -37,7 +37,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', :require => false
+  gem 'simplecov', :git => 'git@github.com:ao140505/simplecov.git', :branch => 'ao-fix-nocov'
   #gem 'simplecov', :require => false , :path => '~/code/gems/simplecov/'
   gem "capybara"
   gem "poltergeist"

@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:ao140505/simplecov.git
+  revision: 37d97bf339308a3f5fe7d29319bc40d38f35e545
+  branch: ao-fix-nocov
+  specs:
+    simplecov (0.7.1)
+      multi_json
+      simplecov-html (~> 0.7.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -205,9 +214,6 @@ GEM
     simple_form (2.0.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    simplecov (0.7.1)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
     slop (3.4.3)
     spinach (0.7.0)
@@ -284,7 +290,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.5)
   simple-navigation
   simple_form
-  simplecov
+  simplecov!
   spinach-rails
   sqlite3
   thin
