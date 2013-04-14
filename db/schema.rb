@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414035003) do
+ActiveRecord::Schema.define(:version => 20130414061443) do
 
   create_table "favorites", :force => true do |t|
     t.integer  "recipe_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20130414035003) do
     t.string   "title"
     t.string   "author"
     t.string   "source_url"
-    t.integer  "total_time",  :limit => 255
+    t.integer  "old_total_time", :limit => 255
     t.string   "yield"
     t.text     "ingredients"
     t.text     "directions"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130414035003) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "image"
+    t.string   "total_time"
   end
 
   create_table "reviews", :force => true do |t|
