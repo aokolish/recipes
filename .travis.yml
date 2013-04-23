@@ -3,8 +3,8 @@ bundler_args: --without development production
 rvm:
   - 1.9.3
 script:
-  - bundle exec rspec spec --format documentation
-  - bundle exec spinach
+  - WITHOUT_VCR=1 bundle exec rspec spec --format documentation
+  - WITHOUT_VCR=1 bundle exec spinach
 
 before_script:
   - "export DISPLAY=:99.0"
