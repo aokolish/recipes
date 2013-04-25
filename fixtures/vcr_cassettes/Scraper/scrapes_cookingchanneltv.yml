@@ -1,0 +1,1521 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake-recipe/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - Apache/2.2.15 (Red Hat)
+      Location:
+      - http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake.html
+      Content-Length:
+      - '367'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Date:
+      - Tue, 23 Apr 2013 15:10:42 GMT
+      Connection:
+      - keep-alive
+      Vary:
+      - User-Agent
+    body:
+      encoding: US-ASCII
+      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake.html">here</a>.</p>
+
+        <hr>
+
+        <address>Apache/2.2.15 (Red Hat) Server at www.cookingchanneltv.com Port 80</address>
+
+        </body></html>
+
+'
+    http_version: 
+  recorded_at: Tue, 23 Apr 2013 15:10:42 GMT
+- request:
+    method: get
+    uri: http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (Red Hat)
+      Content-Length:
+      - '157068'
+      Content-Type:
+      - text/html;charset=utf-8
+      Set-Cookie:
+      - SMIDENTITY=iKUpFTJd+ICfBVgn3lGgTZLt1hIfvG2MTkP/DsmNTRkNglDOMnaUlR4FXkjU2tZ2o3Qo5TFcWoZyjhmwzTJKxfFbBBTi79tcjgfd952XdJmbAftFtRy+EHzLOUIENaSFRXKKR+Z3BVvaYrjfSGv+C4rcNvViL/7ec8Jh+PWcGjdzMZCiRdfC6VCJBKV+cSP08hasBndknSeiigrBxmFDtKQjjAwoo3TXPWetAiZbv02gAk0fnYt4lVvLGi9/2kiGmL0fR0TTQP6ztCH3MmPNVOoWPt4gJY7KVyz12QcWeFglEHm6dKmYTEAzcb1V5meT9SxppcvQjRyM9+Yx9a88odMVZGF6Jey+jCrGZOBGVAG71ZeYIGoV+bqk+5qM+VJx818dr3HnVXKCSpKw6PQTz4zqWZUmm2qOnj7Ags2mMkDfMD17lezVd4FnuuFapYd+nAuovbdZCuG6A4n/3Ioj+9bg4C022vT4;
+        path=/; domain=.cookingchanneltv.com
+      - SMIDENTITY=qITFhBBg58IU4kaT6mFrbnev3YuxXov/DfqJ1Gb3HRXjiRt/L9mC2oRdFOcmsIBsNgWEMfNT28Vp/sB5x4b+P6AuqwhYDR+gJMf7/HjsK8ks19gTO58cL6sO7K6BxN81PEUtdmciQznkK1+Gc07tw/aM/Bs4oCpTBpxUjsF9vP4Ptk1BKXbSElccyWnyDsmSCUSvH4QRAxWc7PyA0rJXBVEdt1kVokqonfnliFQwd7g0U2XutsULdAR0qD+d+FtOP2G1IWqF9x86YABHbBFiUR1rtWuriz+ETxKZnpSEeIObqZddWyblnpfVTPKKjWuNeyy4N1BesWlWyijH4GReePt2KcwRHjD8r1UkeuGe/WrpPQlgCVL05HafEHj3lpD2AfyTEutShnVN/JYnbT757bYx9Gt0wY6ipBKxlyjTB4vvY1TvdWY236K2JPgZ/qBKhfCrWebBEqv9zaURA3erHccnJX1tUGKb;
+        path=/; domain=.cookingchanneltv.com
+      Vary:
+      - User-Agent
+      Date:
+      - Tue, 23 Apr 2013 15:10:44 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n\n\n\n
+        \n\n\n\n<head>\n    <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=UTF-8\"/>\n    \n    \n\n\n \n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+        \  \n \n\n\n\n\n\n\n\n\n\n \n\n<script type=\"text/javascript\" src=\"/etc/designs/cook/config.js\"></script>\n<script
+        type=\"text/javascript\">\nCQURLInfo = {\n    \"contextPath\": null,\n    \"requestPath\":
+        '\\/content\\/cook\\/recipes\\/no-chef\\/m\\/mo\\/mon\\/monk\\/monkey-tail-banana-cake',\n
+        \   \"selectorString\": null,\n    \"selectors\": [],\n    \"extension\":
+        'html',\n    \"suffix\": null,\n    \"systemId\": '6ed6ee2e-3b3d-4f57-bcdd-647e25ba82e7',\n
+        \   \"runModes\": 'publish,prod'\n};</script>\n<script type=\"text/javascript\"
+        src=\"/etc/clientlibs/foundation/librarymanager.js\"></script>\n<script type=\"text/javascript\">\nCQClientLibraryManager.write([{\"p\":\"/etc/clientlibs/foundation/jquery.js\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/shared.js\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/jquery-ui.js\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/personalization/jcarousel.js\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/personalization/jcarousel.css\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/personalization.js\",\"c\":[]},{\"p\":\"/etc/designs/cook/clientlib.js\",\"c\":[]},{\"p\":\"/etc/designs/cook/clientlib.css\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/jquery-ui/themes/default.css\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/personalization/themes/default.css\",\"c\":[]},{\"p\":\"/etc/clientlibs/foundation/personalization/ie6/themes/default.css\",\"c\":[\"ie6\"]}],false);\n</script>\n<link
+        href=\"/etc/designs/default.css\" rel=\"stylesheet\" type=\"text/css\"/>\n\n\n\n\n\n
+        \n\n<script type=\"text/javascript\">\n\n    var mdManager=new MetaDataManager();\n
+        \   mdManager.addParameter(\"Url\", window.location.pathname == \"/\" ? window.location.host
+        : window.location.pathname);\n\n    (function(){\n      var mdManagerProps
+        = {\"Title\":\"Monkey Tail Banana Cake\",\"Site\":\"cook\",\"CategoryDspName\":\"recipes\",\"SctnDspName\":\"recipes\",\"Classification\":\"recipes,cook\",\"Type\":\"recipe\",\"DetailId\":\"7ff135df-e4e9-4ff4-8235-66c63b4be768\",\"PageNumber\":\"1\",\"UniqueID\":\"cook|recipe|7ff135df-e4e9-4ff4-8235-66c63b4be768|1\",\"AdKey1\":\"baking\",\"AdKey2\":\"\",\"Delivery_Channel\":\"Web\",\"HubID\":\"7ff135df-e4e9-4ff4-8235-66c63b4be768\",\"HubType\":\"recipe\",\"HubSponsor\":\"CC_HOLIDAY_BAKING\",\"Sponsorship\":\"CC_HOLIDAY_BAKING\",\"PackageName\":\"Holiday
+        and Christmas Dessert Recipes and Ideas\",\"ContentTag1\":\"banana\",\"ContentTag2\":\"cake\",\"Show_Abbr\":\"\",\"talentName\":\"\",\"Source\":\"food\"};\n
+        \     $CQ.each(mdManagerProps, function(key, value) { mdManager.addParameter(key,
+        value) });\n    })();\n</script>\n\n\n\n\n \n\n\n<script type=\"text/javascript\">\n
+        \   \n        \n            mdManager.addParameter(\"CrosslinkTerms\", \";whipping
+        cream,;bananas\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Cuisine\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Techniques\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Dish\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"MealPart\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Taste\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Nutrition\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"MainIngredient\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Occasions\",
+        \"\");\n        \n        \n    \n        \n            mdManager.addParameter(\"MealType\",
+        \"\");\n        \n        \n    \n        \n        \n           mdManager.addParameter(\"ImgUrl\",
+        \"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/7/25/0/CCPRF104_Monkey-Tail-Banana-Cake-2_s4x3.jpg/jcr:content/renditions/cq5dam.web.266.200.jpeg\");\n
+        \       \n    \n        \n            mdManager.addParameter(\"PrepTime\",
+        \"45\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Difficulty\",
+        \"intermediate\");\n        \n        \n    \n        \n            mdManager.addParameter(\"Courses\",
+        \"\");\n        \n        \n    \n</script>\n\n\n\n<script type=\"text/javascript\">\n\n
+        \   mdManager.addParameter('UserId', userIdCookieUserId);\n    mdManager.addParameter('UserIdEmail',
+        userIdEmail);\n    mdManager.addParameter('UserIdCreateDt', userIdCookieCreateDt);\n
+        \   mdManager.addParameter('UserIdVersion',  userIdCookieVersion);\n\n    \n</script>\n\n<script
+        type=\"text/javascript\">\n    var adManager = new AdManager();\n    initAdManager(adManager,
+        mdManager);\n</script>\n\n    \n    <title>Monkey Tail Banana Cake : Recipes
+        : Cooking Channel</title>\n    <meta name=\"description\" content=\"Cooking
+        Channel serves up this Monkey Tail Banana Cake recipe  plus many other recipes
+        at CookingChannelTV.com\"/>\n    \n    \n    <link rel=\"icon\" type=\"image/vnd.microsoft.icon\"
+        href=\"/etc/designs/default/favicon.ico\"/>\n    <link rel=\"shortcut icon\"
+        type=\"image/vnd.microsoft.icon\" href=\"/etc/designs/default/favicon.ico\"/>\n
+        \   \n    \n    \n    <link href=\"https://plus.google.com/110333316274703220914\"
+        rel=\"publisher\"/>\n    \n</head>\n\n\n\n\n\n\n \n\n\n\n\n\n\n    \n<body
+        id=\"recipes\" class=\"recipes recipe-detail recipe page page-with-head-foot
+        \">\n    <script type=\"text/javascript\">\n    $CQ(function() {\n        CQ_Analytics.SegmentMgr.loadSegments(\"/etc/segmentation\");\n
+        \       CQ_Analytics.ClientContextUtils.init(\"/etc/clientcontext/default\",\"/content/cook/recipes/no-chef/m/mo/mon/monk/monkey-tail-banana-cake\");\n
+        \       CQ_Analytics.ClientContextUtils.initUI(\"/etc/clientcontext/default\",\"/content/cook/recipes/no-chef/m/mo/mon/monk/monkey-tail-banana-cake\");\n
+        \   });\n</script>\n\n\n\n\n\n \n\n    <div id=\"leaderboard\">\n        <script
+        type=\"text/javascript\">\n            LeaderboardAd(1);\n        </script>\n
+        \   </div>\n\n\n\n\n\n \n\n\n\n\n<!-- PAGE OK -->\n\n<div id=\"sni-hd\">\n\n\n
+        \   \n        \n        <div class=\"module page default-header\">\n\n\n \n\n\n\n\n\n
+        \n\n\n\n\n<div class=\"masthead clrfix\"> \n    <a class=\"logo-wrap\" href=\"http://www.cookingchanneltv.com/\"
+        title=\"Cooking Channel Logo\" rel=\"gh-logo\">\n        <img alt=\"Cooking
+        Channel Logo\" id=\"cc-logo\" src=\"/etc/designs/cook/clientlib/imgs/CC_logo-header.gif\"/>\n
+        \   </a>\n\n    <div class=\"search\">\n        <form id=\"ccSearchForm\"
+        name=\"HeaderSearchForm\" action=\"/search-results.html\" method=\"get\" class=\"clrfix\">\n\n
+        \           <div class=\"searchbox clrfix\">\n\n                <div class=\"input-box\">\n
+        \                   <span><input type=\"Text\" name=\"searchTerm\" id=\"cc-search-input\"/></span>\n
+        \               </div>\n                <div class=\"btn-cont\">\n                    <button
+        class=\"button\" type=\"submit\"><span><em>Search</em></span></button>\n                </div>\n\n
+        \           </div>\n        </form>\n    </div>\n\n    <div class=\"ad-sponsor-logo\"
+        style=\"margin-top:10px;\">\n    </div>\n    \n    \n</div>\n<style>\n    .sni-sub-nav
+        br {display:none}\n</style>\n<div class=\"nav-wrapper\">\n    <div class=\"nav
+        clrfix\">\n        <ul id=\"nav-w\" class=\"menu sni-sub-nav\">\n            <!--
+        navigation flyouts inserted here -->\n            \n            \n                \n
+        \               \n\n\n \n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n
+        \ \n  \n  \n    <li id=\"gh-nav-379079128\" class=\"nav-item\">\n  \n\n\n
+        \       <a href=\"/shows.html\" class=\"nav-item-title\">\n            TV
+        Shows\n        </a>\n    \n        <div class=\"flyout fxlg\">\n            <div
+        class=\"fly-hd\"></div>\n            <div class=\"fly-bd clrfix\">\n                <span
+        class=\"button close\">x</span>\n            \n                <!-- FEATURED
+        -->\n                \n                    <div class=\"columns imgcol\">\n
+        \                       <h3>FEATURED</h3>\n                        \n                        <ul
+        class=\"list\">\n                            \n                                <li>\n
+        \                                   <a href=\"/shows/drop-5-lbs-with-good-housekeeping.html\">
+        \              \n                                        <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/12/21/0/CCDRP_Melissa-DArabian-05_s4x3.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Drop 5 Lbs\" title=\"Drop 5 Lbs\" class=\"thumb\"/>\n                                        <span
+        class=\"show_title\">Drop 5 Lbs</span>\n                                    </a>\n
+        \                               </li>\n                            \n                                <li>\n
+        \                                   <a href=\"/shows/brunch-at-bobbys.html\">
+        \              \n                                        <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/9/19/0/CCBAB_bobby-flay-brunch-at-bobbys_s4x3.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Brunch @ Bobby's \" title=\"Brunch @ Bobby's\" class=\"thumb\"/>\n                                        <span
+        class=\"show_title\">Brunch @ Bobby's </span>\n                                    </a>\n
+        \                               </li>\n                            \n                                <li>\n
+        \                                   <a href=\"/shows/nadia-gs-bitchin-kitchen.html\">
+        \              \n                                        <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2010/9/24/0/CC_Nadia-G-Pasta_s3x4.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Nadia G's Bitchin' Kitchen\" title=\"Nadia G's Bitchin' Kitchen\" class=\"thumb\"/>\n
+        \                                       <span class=\"show_title\">Nadia G's
+        Bitchin' Kitchen</span>\n                                    </a>\n                                </li>\n
+        \                           \n                        </ul>            \n
+        \                   </div>       \n                \n            \n                <!--
+        TAB1 -->\n                \n                    <div class=\"columns\">\n
+        \                       <h3>TV Shows</h3>\n                        \n                            <ul
+        class=\"list\">\n                                \n                                    <li><a
+        href=\"/shows/americas-best-bites.html\">America's Best Bites</a></li>\n                                \n
+        \                                   <li><a href=\"/shows/brunch-at-bobbys.html\">Brunch
+        @ Bobby's</a></li>\n                                \n                                    <li><a
+        href=\"/shows/classy-ladies.html\">Classy Ladies</a><a href=\"/shows/taste-in-translation.html\"></a></li>\n
+        \                               \n                                    <li><a
+        href=\"/shows/drop-5-lbs-with-good-housekeeping.html\">Drop 5 Lbs<br>\n </a></li>\n
+        \                               \n                                    <li><a
+        href=\"/shows/rachael-rays-week-in-a-day.html\"></a><a href=\"/shows/eat-street.html\">Eat
+        St.<br>\n </a></li>\n                                \n                                    <li><a
+        href=\"/shows/drop-5-lbs-with-good-housekeeping.html\"></a><a href=\"/shows/everyday-italian.html\">Everyday
+        Italian</a></li>\n                                \n                                    <li><span
+        style=\"font-size: 12px;\"><a href=\"/shows/extra-virgin.html\"></a><a href=\"/shows/extra-virgin.html\">Extra
+        Virgin</a><br>\n </span></li>\n                                \n                                    <li><a
+        href=\"/shows/french-food-at-home.html\"></a><a href=\"/shows/fodder.html\">Fodder</a></li>\n
+        \                               \n                                    <li><a
+        href=\"/shows/french-food-at-home.html\">French Food at Home</a></li>\n                                \n
+        \                           </ul>\n                        \n                            <ul
+        class=\"list\">\n                                \n                                    <li><a
+        href=\"/shows/good-eats.html\">Good Eats</a></li>\n                                \n
+        \                                   <li><a href=\"/shows/good-to-know.html\">Good
+        to Know<br>\n </a></li>\n                                \n                                    <li><a
+        href=\"/shows/man-fire-food.html\"></a><a href=\"/shows/kelseys-essentials.html\">Kelsey's
+        Essentials</a></li>\n                                \n                                    <li><span
+        style=\"font-size: 12px;\"><a href=\"/shows/sandra-lees-taverns-lounges-and-clubs.html\"></a><a
+        href=\"/shows/nadia-gs-bitchin-kitchen.html\">Nadia G's Bitchin' Kitchen</a><br>\n
+        </span></li>\n                                \n                                    <li><a
+        href=\"/shows/symons-suppers.html\"></a><a href=\"/shows/not-my-mamas-meals.html\">Not
+        My Mama's Meals</a></li>\n                                \n                                    <li><a
+        href=\"/shows/unique-eats.html\"></a><a href=\"/shows/rachael-rays-week-in-a-day.html\">Rachael
+        Ray's Week in a Day</a></li>\n                                \n                                    <li><a
+        href=\"/shows/unique-eats.html\">Unique Eats</a></li>\n                                \n
+        \                                   <li><a href=\"/shows/unique-sweets.html\">Unique
+        Sweets</a></li>\n                                \n                            </ul>\n
+        \                                      \n                    \n                        \n
+        \                       \n                    </div>\n                \n    \n
+        \               <!-- TAB2 -->\n                \n            \n                <!--
+        TAB3 -->\n                \n                    <div class=\"columns\">\n
+        \                       <h3>More In TV Shows</h3>\n    \n                        <ul
+        class=\"menu\">\n                            \n                                <li><a
+        href=\"/shows/a-z.html\">TV Shows A-Z</a></li>\n                            \n
+        \                               <li><a href=\"/shows/programweekly.weekly.html\">Weekly
+        Schedule</a></li>\n                            \n                                <li><a
+        href=\"/shows/programdaily.html\">Daily Schedule</a></li>\n                            \n
+        \                       </ul>\n                    </div>\n                \n
+        \           </div>\n            <div class=\"fly-ft\"></div>        \n        </div>\n
+        \   </li>\n    <script type=\"text/javascript\">\n        SNI.Analytics.initializeClickTracking('#gh-nav-379079128',
+        'sni-wcm/components/modules/default-navigation-flyout/styles/feature-navigation-flyout','/content/modules/cook/nav-flyouts/tv-shows/jcr:content/parsys/module');\n
+        \   </script>\n  \n\n            \n                \n                \n\n\n
+        \n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n  \n  \n  \n    <li
+        id=\"gh-nav-1271505758\" class=\"nav-item\">\n  \n\n\n        <a href=\"/chefs.html\"
+        class=\"nav-item-title\">\n            Chefs & Hosts\n        </a>\n    \n
+        \       <div class=\"flyout flg\">\n            <div class=\"fly-hd\"></div>\n
+        \           <div class=\"fly-bd clrfix\">\n                <span class=\"button
+        close\">x</span>\n            \n                <!-- FEATURED -->\n                \n
+        \           \n                <!-- TAB1 -->\n                \n                    <div
+        class=\"columns\">\n                        <h3>Featured Chefs &amp; Hosts</h3>\n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><a
+        href=\"/chefs/alie-ward-and-georgia-hardstark.html\">Alie Ward and Georgia
+        Hardstark</a></li>\n                                \n                                    <li><a
+        href=\"/chefs/alton-brown.html\">Alton Brown</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/bobby-deen.html\"></a><a
+        href=\"/chefs/aarti-sequeira.html\">Aarti Sequeira</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/chuck-hughes.html\"></a><a
+        href=\"/chefs/bobby-deen.html\">Bobby Deen</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/debi-mazar-and-gabriele-corcos.html\"></a><a
+        href=\"/chefs/bobby-flay.html\">Bobby Flay</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/eden-grinshpan.html\"></a><a
+        href=\"/chefs/ching-he-huang.html\">Ching-He Huang</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/chuck-hughes.html\">Chuck
+        Hughes</a></li>\n                                \n                            </ul>\n
+        \                                      \n                    \n                        \n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><a
+        href=\"/chefs/g-garvin.html\"></a><a href=\"/chefs/debi-mazar-and-gabriele-corcos.html\">Debi
+        Mazar and Gabriele Corcos</a></li>\n                                \n                                    <li><a
+        href=\"/chefs/giada-de-laurentiis.html\">Giada de Laurentiis</a></li>\n                                \n
+        \                                   <li><span style=\"font-size: 12px;\"><a
+        href=\"/chefs/kelsey-nixon.html\">Kelsey Nixon</a></span></li>\n                                \n
+        \                                   <li><a href=\"/chefs/laura-calder.html\">Laura
+        Calder</a></li>\n                                \n                                    <li><a
+        href=\"/chefs/melissa-darabian.html\">Melissa d'Arabian</a></li>\n                                \n
+        \                                   <li><a href=\"/chefs/nadia-g.html\">Nadia
+        G.</a></li>\n                                \n                                    <li><a
+        href=\"/chefs/roger-mooking.html\">Roger Mooking</a></li>\n                                \n
+        \                           </ul>\n                        \n                    </div>\n
+        \               \n    \n                <!-- TAB2 -->\n                \n
+        \           \n                <!-- TAB3 -->\n                \n                    <div
+        class=\"columns\">\n                        <h3>Inside Chefs &amp; Hosts</h3>\n
+        \   \n                        <ul class=\"menu\">\n                            \n
+        \                               <li><a href=\"/chefs/a-z.html\">Chefs &amp;
+        Hosts A - Z</a></li>\n                            \n                        </ul>\n
+        \                   </div>\n                \n            </div>\n            <div
+        class=\"fly-ft\"></div>        \n        </div>\n    </li>\n    <script type=\"text/javascript\">\n
+        \       SNI.Analytics.initializeClickTracking('#gh-nav-1271505758', 'sni-wcm/components/modules/default-navigation-flyout/styles/twocolumn-navigation-flyout','/content/modules/cook/nav-flyouts/chefs-and-hosts/jcr:content/parsys/module');\n
+        \   </script>\n  \n\n            \n                \n                \n\n\n
+        \n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n  \n  \n    <li id=\"gh-nav--1547897723\"
+        class=\"nav-item active\">\n  \n  \n\n\n        <a href=\"/recipes.html\"
+        class=\"nav-item-title\">\n            Recipes\n        </a>\n    \n        <div
+        class=\"flyout flg\">\n            <div class=\"fly-hd\"></div>\n            <div
+        class=\"fly-bd clrfix\">\n                <span class=\"button close\">x</span>\n
+        \           \n                <!-- FEATURED -->\n                \n            \n
+        \               <!-- TAB1 -->\n                \n                    <div
+        class=\"columns\">\n                        <h3>HEALTHY RECIPES</h3>\n                        \n
+        \                           <ul class=\"list\">\n                                \n
+        \                                   <li><a href=\"/recipes/quick-healthy-weeknight-dinner-recipes.html\">Easy
+        Dinner Recipes</a></li>\n                                \n                                    <li><a
+        href=\"/recipes/healthy-salmon-recipes.html\">Salmon Recipes</a></li>\n                                \n
+        \                                   <li><a href=\"/recipes/kale-recipes.html\">Kale
+        Recipes</a></li>\n                                \n                                    <li><a
+        href=\"/recipes/low-calorie-dessert-recipes.html\">Low-Calorie Desserts</a></li>\n
+        \                               \n                            </ul>\n                                       \n
+        \                   \n                        \n                            <h3>COMFORT
+        FOOD RECIPES</h3>\n                        \n                        \n                            <ul
+        class=\"list\">\n                                \n                                    <li><a
+        href=\"/recipes/macaroni-and-cheese-recipes.html\">Macaroni and Cheese</a></li>\n
+        \                               \n                                    <li><a
+        href=\"/recipes/best-chili-recipes.html\">Chili Recipes</a></li>\n                                \n
+        \                                   <li><a href=\"/recipes/easy-casserole-recipes.html\">Easy
+        Casseroles</a></li>\n                                \n                                    <li><a
+        href=\"/recipes/chocolate-desserts.html\">Chocolate Desserts</a></li>\n                                \n
+        \                           </ul>\n                        \n                    </div>\n
+        \               \n    \n                <!-- TAB2 -->\n                \n
+        \                   <div class=\"columns\">\n                        <h3>MEALS</h3>\n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><a
+        href=\"/recipes/breakfast-brunch-recipes-ideas.html\">Breakfast and Brunch</a></li>\n
+        \                               \n                                    <li><a
+        href=\"/topics/lunch.html\">Lunch Recipes</a></li>\n                                \n
+        \                                   <li><a href=\"/topics/dinner.html\">Dinner
+        Recipes</a></li>\n                                \n                            </ul>\n
+        \                                      \n                    \n                        \n
+        \                           <h3>POPULAR CUISINES</h3>\n                        \n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><a
+        href=\"/topics/chinese.html\">Chinese</a></li>\n                                \n
+        \                                   <li><a href=\"/shows/spice-goddess.html\">Indian</a></li>\n
+        \                               \n                                    <li><a
+        href=\"/recipes/best-italian-recipes-and-menus.html\">Italian</a></li>\n                                \n
+        \                                   <li><a href=\"/recipes/best-mexican-recipes-and-menus.html\">Mexican</a></li>\n
+        \                               \n                            </ul>\n                        \n
+        \                   </div>\n                \n            \n                <!--
+        TAB3 -->\n                \n                    <div class=\"columns\">\n
+        \                       <h3>MORE RECIPES</h3>\n    \n                        <ul
+        class=\"menu\">\n                            \n                                <li><a
+        href=\"/recipes/spring-fruit-and-vegetable-recipes.html\">30 Spring Recipes</a></li>\n
+        \                           \n                                <li><a href=\"/recipes/valentines-day-dinner-recipes.html\">Menu
+        for Two</a></li>\n                            \n                                <li><a
+        href=\"/recipes.html\">Browse All Recipes</a></li>\n                            \n
+        \                       </ul>\n                    </div>\n                \n
+        \           </div>\n            <div class=\"fly-ft\"></div>        \n        </div>\n
+        \   </li>\n    <script type=\"text/javascript\">\n        SNI.Analytics.initializeClickTracking('#gh-nav--1547897723',
+        'sni-wcm/components/modules/default-navigation-flyout/styles/twocolumn-navigation-flyout','/content/modules/cook/nav-flyouts/recipes/jcr:content/parsys/module');\n
+        \   </script>\n  \n\n            \n                \n                \n\n\n
+        \n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n  \n  \n  \n    <li
+        id=\"gh-nav-35124958\" class=\"nav-item\">\n  \n\n\n        <a href=\"/videos/cooking-channel-video-collection.html\"
+        class=\"nav-item-title\">\n            Cooking Videos\n        </a>\n    \n
+        \       <div class=\"flyout flg\">\n            <div class=\"fly-hd\"></div>\n
+        \           <div class=\"fly-bd clrfix\">\n                <span class=\"button
+        close\">x</span>\n            \n                <!-- FEATURED -->\n                \n
+        \           \n                <!-- TAB1 -->\n                \n                    <div
+        class=\"columns\">\n                        <h3>HEALTHY VIDEOS</h3>\n                        \n
+        \                           <ul class=\"list\">\n                                \n
+        \                                   <li><a href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel=/content/cook/videos/channels/g/guilt-free-party-appetizers&amp;video=0139629\">Guilt-Free
+        Party Appetizers&nbsp;</a></li>\n                                \n                                    <li><a
+        href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel=/content/cook/videos/channels/s/slimmed-down-comfort-food&amp;video=0146912\">Lighter
+        Comfort Foods</a></li>\n                                \n                                    <li><a
+        href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel=/content/cook/videos/channels/h/healthy-dinner-recipes&amp;video=0157841\">Healthy
+        Dinner Recipes</a></li>\n                                \n                                    <li><a
+        href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel=/content/cook/videos/channels/b/bobbys-best-meal-makeovers&amp;video=0180937\">Bobby
+        Dean's Best Meal Makeovers</a></li>\n                                \n                            </ul>\n
+        \                                      \n                    \n                        \n
+        \                           <h3>COOKING 101</h3>\n                        \n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><a
+        href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel= /content/cook/videos/channels/h/healthy-cooking-tips-and-techniques&amp;video=0139579\">Stock
+        a Healthy Kitchen</a></li>\n                                \n                                    <li><a
+        href=\"/videos/cooking-healthy-food-and-recipe-videos.html?channel= /content/cook/videos/channels/h/healthy-cooking-tips-and-techniques&amp;video=0155203\">How
+        to Steam Foods</a></li>\n                                \n                                    <li><a
+        href=\"/videos/cooking-how-to-cook-everything.html?channel=/content/cook/videos/channels/c/culinary-guide-a-f&amp;video=0190587\">Culinary
+        Guide, A to Z</a></li>\n                                \n                                    <li><a
+        href=\"/shows/good-eats/cooking-good-eats.html\">Ask Alton Brown</a></li>\n
+        \                               \n                            </ul>\n                        \n
+        \                   </div>\n                \n    \n                <!-- TAB2
+        -->\n                \n                    <div class=\"columns\">\n                        <h3><p>POPULAR
+        SHOWS</p>\n<p><br type=\"_moz\">\n</p></h3>\n                        \n                            <ul
+        class=\"list\">\n                                \n                                    <li><a
+        href=\"/shows/chucks-day-off/cooking-chucks-day-off.html?channel=/content/cook/videos/channels/c/chucks-day-on&amp;video=0164309\">Chuck's
+        Day Off</a></li>\n                                \n                                    <li><a
+        href=\"/shows/good-eats.html\">Good Eats</a></li>\n                                \n
+        \                                   <li><a href=\"/videos/the-sweet-side-of-kelseys-essentials.html\">Kelsey's
+        Essentials</a></li>\n                                \n                                    <li><a
+        href=\"/shows/rachael-rays-week-in-a-day/cooking-rachael-ray-week-in-a-day.html?/content/cook/videos/channels/o/one-pot-week&amp;video=0158421\">Rachael
+        Ray's Week In a Day</a></li>\n                                \n                            </ul>\n
+        \                                      \n                    \n                        \n
+        \                           <h3>WHAT TO WATCH NOW</h3>\n                        \n
+        \                       \n                            <ul class=\"list\">\n
+        \                               \n                                    <li><p><a
+        href=\"/videos/cooking-channel-video-collection.html?channel=/content/cook/videos/channels/f/food-bites?video=0196167\">Food
+        Bites</a></p></li>\n                                \n                                    <li><a
+        href=\"/shows/classy-ladies.html\">Classy Ladies</a></li>\n                                \n
+        \                                   <li><a href=\"/shows/good-to-know.html\">Kitchen
+        DIY and Hacks</a></li>\n                                \n                                    <li><a
+        href=\"/shows/fodder/fodder.html\">Food + Humor Series</a></li>\n                                \n
+        \                           </ul>\n                        \n                    </div>\n
+        \               \n            \n                <!-- TAB3 -->\n                \n
+        \                   <div class=\"columns\">\n                        <h3>More</h3>\n
+        \   \n                        <ul class=\"menu\">\n                            \n
+        \                               <li><a href=\"/videos/cooking-channel-video-collection.html\">Browse
+        All Videos</a></li>\n                            \n                        </ul>\n
+        \                   </div>\n                \n            </div>\n            <div
+        class=\"fly-ft\"></div>        \n        </div>\n    </li>\n    <script type=\"text/javascript\">\n
+        \       SNI.Analytics.initializeClickTracking('#gh-nav-35124958', 'sni-wcm/components/modules/default-navigation-flyout/styles/twocolumn-navigation-flyout','/content/modules/cook/nav-flyouts/cooking-videos/jcr:content/parsys/module');\n
+        \   </script>\n  \n\n            \n            <li id=\"gh-blog\" class=\"nav-item\"><a
+        class=\"nav-item-title\" href=\"http://blog.cookingchanneltv.com\">blog</a></li>\n
+        \       </ul>\n\n        <!-- navigation links inserted here (provides ul#nav-e.menu.sni-sub-nav)
+        -->        \n        \n            \n            \n\n\n \n\n\n<style>\n#sni-hd
+        #nav-e li.nav-item em a.nav-item-title {\n    color: #999999;\n}\n#sni-hd
+        .sni-sub-nav a.nav-item-title, #sni-hd .sni-sub-nav em a.nav-item-title {\n
+        \   font-weight: bold;\n}\n</style>\n<ul id=\"nav-e\" class=\"menu sni-sub-nav\">\n
+        \   <li class=\"nav-item\"><em><a class=\"nav-item-title\" href=\"/recipes/best-international-recipes-global-and-cooking.html\">Favorite
+        Cuisines:</a></em></li>\n    \n        <li class=\"nav-item\"><a class=\"nav-item-title\"
+        href=\"/recipes/easy-chinese-recipes-and-menus.html\">Chinese</a></li>\n    \n
+        \       <li class=\"nav-item\"><a class=\"nav-item-title\" href=\"/recipes/best-italian-recipes-and-menus.html\">Italian</a></li>\n
+        \   \n        <li class=\"nav-item\"><a class=\"nav-item-title\" href=\"/recipes/best-mexican-recipes-and-menus.html#packagenav_package_nav_button\">Mexican</a></li>\n
+        \   \n</ul>\n<script type=\"text/javascript\">\n    SNI.Analytics.initializeClickTracking('#nav-e',
+        'sni-wcm/components/modules/default-navigation-links','/content/modules/cook/navigational-links/header-navigational-links/jcr:content/parsys/module');\n</script>\n
+        \       \n    </div>\n\n</div>\n<script type=\"text/javascript\">    SNI.CC.GlobalHeader.init();
+        </script>\n</div>\n\n         \n    \n    \n\n</div>\n\n<div id=\"site-wrapper\">\n
+        \   \n\n        <div class=\"iax_outer\" id=\"pushdown_adtag\">\n            <div
+        class=\"iax_inner\">\n                <script type=\"text/javascript\">SNIAd('PUSHDOWN',
+        '', 1);</script>\n            </div>\n            <div id=\"brandscape\"></div>\n
+        \       </div>\n\n\n     <div id=\"sni-bd\" class=\"clrfix\">\n\n        \n
+        \           \n\n\n \n\n\n\n\n\n\n        \n        \n        \n        \n\n\n\n\n\n
+        \n\n\n\n<div class=\"breadcrumb\">\n\n\n\n \n\n\n                    \n                    \n\n\n
+        \   \n    <!--  <div class=\"breadcrumb clrfix\">-->\n  \n        <ul class=\"clrfix\">\n
+        \       <li>\n              <div itemscope itemtype=\"http://data-vocabulary.org/Breadcrumb\">\n
+        \               \n                  \n                \n                   <a
+        href=\"/home.html\">\n                        <span itemprop=\"title\">Home</span>\n
+        \                   </a>\n                \n             \n              </div>\n
+        \       </li>\n        <li>&#62;</li>\n        <li>\n             <div itemscope
+        itemtype=\"http://data-vocabulary.org/Breadcrumb\">\n                \n                \n
+        \               \n                    <span itemprop=\"title\">\n                        Recipes\n
+        \                   </span>\n                \n                \n             </div>\n
+        \       </li>\n            \n                 <li>&#62;</li>\n                 <li>\n
+        \                    <div itemscope itemtype=\"http://data-vocabulary.org/Breadcrumb\">\n
+        \                   <a href=\"/recipes/holiday-and-christmas-dessert-recipes-and-ideas.html\">\n
+        \                   <span itemprop=\"title\">\n                     Holiday
+        and Christmas Dessert Recipes and Ideas\n                    </span>\n                    </a>\n
+        \                   </div>\n                 </li>\n            \n        <li>&#62;</li>\n
+        \       <li>\n             <div itemscope itemtype=\"http://data-vocabulary.org/Breadcrumb\">\n
+        \            <span itemprop=\"title\">\n              Monkey Tail Banana Cake\n
+        \           </span>\n            </div>   \n         </li>\n        </ul>\n
+        \   <!--  </div>-->\n    \n    \n    \n\n</div>\n\n        \n        <div
+        id='sni-w' name='sni-w' class='clrfix'>\n            <div class=\"hrecipe\"
+        lang=\"en\">\n                \n            \n                <div id=\"sni-w-hd\">\n
+        \                  \n                   \n\n\n \n\n\n           \n\n<h1>\n
+        \   <span class=\"rTitle fn\">Monkey Tail Banana Cake</span>\n</h1>\n\n\n\n<div>\n<p
+        class=\"summary\"></p>\n    <div class=\"r-attribution clrfix\">\n            \n
+        \               \n                \n                    <div class=\"rByline
+        clrfix\">\n                    Recipe courtesy Sara A. Hodgson for 2011 Cooking
+        Channel, LLC. All Rights Reserved.\n                \n            \n            <br>\n
+        \           \n            <span>\n                Show:\n                <a
+        class=\"rattrib\" href=\"/shows/the-perfect-3.html\">The Perfect 3</a>\n            </span>\n
+        \            \n            \n            <span>\n                Episode:\n
+        \               <a class=\"rattrib\" href=\"/shows/the-perfect-3/100/cakes.html\">Cakes</a>\n
+        \           </span>\n            \n        </div>\n    </div>\n    <div class=\"sponsor-multi-logo\">\n\t\t<script
+        type=\"text/javascript\">\n\t\t\tMultiLogoAd('LOGO',4);\n\t\t</script>\n    </div>\n</div>\n\n
+        \               </div>\n            \n                <div id=\"sni-w-hub\">\n
+        \                  \n\n\n \n\n\n\n    \n    \n        \n        \n            \n\n
+        <!-- Community code to get the review count -->\n <!-- Call only when it not
+        master or reviews tab to avoid duplicate call to community -->\n  \n    \n
+        \   <div id=\"hub-nav\">\n        <ul style=\"display:inline\" class=\"menu
+        button-nav clrfix\">\n            \n                <li class=\"hub-recipe\"><a
+        href=\"/recipes/monkey-tail-banana-cake.html\"><span>Recipe</span></a></li>\n
+        \           \n            \n                <li class=\"hub-reviews\"><a href=\"/recipes/monkey-tail-banana-cake/reviews.html\"><span>Rating
+        &amp; Reviews <em id='revc'></em></span></a></li>\n            \n            \n
+        \           \n            \n                 \n                 <li class=\"hub-vid\">\n
+        \                       <a href=\"/recipes/monkey-tail-banana-cake/monkey-tail-banana-cake.html\">\n
+        \                           <span>Videos (1)</span>\n                        </a>\n
+        \                </li>\n            \n            \n        </ul>\n    </div>\n
+        \   \n    <script type=\"text/javascript\">\n    /*$(function() {\n        if(TotalNumComments
+        > 0) {\n           $('#revc').text('(' + TotalNumComments + ')').css('display','inline-block');\n
+        \       }\n    }*/\n  if(false){\n        var reviewCount = document.getElementById('revc');\n
+        \       reviewCount.innerHTML='<b>('+ TotalNumComments +')</b>';\n        }\n
+        \   </script>   \n\n\n\n        \n        \n        \n        \n    \n\n                </div>\n
+        \               \n                <!-- recipe head -->\n                <div
+        id=\"recipe-head\" class=\"rhead clrfix\">\n                    \n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n
+        \   \n    \n    \n    \n    \n        \n\n\n \n\n\n\n        <div class=\"sm-photo-cont
+        clrfix\">\n            <div class=\"media\">\n                <div id=\"rec-photo\">\n
+        \                                  \n                       \n                              \n
+        \                       <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/7/25/0/CCPRF104_Monkey-Tail-Banana-Cake-2_s4x3.jpg/jcr:content/renditions/cq5dam.web.266.200.jpeg\"
+        class=\"photo\"/>\n                    \n                    \n                    <a
+        class=\"img-enlarge\" href=\"/content/dam/images/cook/fullset/2011/7/25/0/CCPRF104_Monkey-Tail-Banana-Cake-2_s4x3.jpg/_jcr_content/renditions/cq5dam.web.616.462.jpeg\">View</a>\n
+        \               </div>\n                <p class=\"rByline\">\n                    Photo:\n
+        \                   <a href=\"#\">Monkey Tail Banana Cake</a>\n                </p>\n
+        \           </div>\n            \n            <div class=\"rspecs\">\n                \n\n\n
+        \n\n\n\n\n\n\n<input type=\"hidden\" name=\"reviewsPageUrl\" id=\"reviewsPageUrl\"
+        value=\"/content/cook/recipes/no-chef/m/mo/mon/monk/monkey-tail-banana-cake/reviews.html\">\n\n<div
+        id=\"review-summary\"></div>\n\n<script type=\"text/javascript\">\n\nvar ratingsPageUrl
+        = document.getElementById('reviewsPageUrl').value;\n\nfunction writeReviewSummary(numberOfReviews,
+        averageRating) {\n    if (numberOfReviews === undefined || averageRating ===
+        undefined) {\n        return false;\n    }\n\n    var roundRating = Math.ceil(RatingsCumulative/TotalNumComments);\n
+        \   var reviewDiv = document.getElementById('review-summary');\n\tvar reviewCount
+        = document.getElementById('revc');\n    var text = \"\";\n    \n    if (numberOfReviews
+        >0) {\n        text += '<p class=\"hreview-aggregate review rcp-vsp\">';\n
+        \       text += '<span class=\"rating value-title stars' + roundRating +  '\"
+        rating=\"' + roundRating + '\">Rated: ' + roundRating + ' stars out of 5</span>';\n
+        \       text += '<a class=\"rate-it-link\" href=\"' + ratingsPageUrl + '\">Rate
+        it!</a>';\n        text += '<span class=\"reviews-link\">';\n        text
+        += '<a href=\"' + ratingsPageUrl + '#user-reviews-top\">Read <span class=\"count\">'
+        + numberOfReviews + '</span> reviews</a>';\n        text += '</span></p>';\n
+        \   } else {\n        text += '<p class=\"review\">';\n        text += '<a
+        href=\"' + ratingsPageUrl + '\">Be the first to review this recipe</a>';\n
+        \       text += '</p>';\n    }\n\n    reviewDiv.innerHTML = text;\n    reviewCount.innerHTML='<b>('+
+        TotalNumComments +')</b>';\n    return true;\n}\n\n</script>\n                <div
+        class=\"totaltime clrfix\">\n                    <span class=\"rspec-total-time\">TOTAL
+        TIME:</span>\n                    <span class=\"rspec-value-big value-title\"
+        title=\"PT2H8M\">2 hr 8 min</span>\n                </div>\n                <div
+        class=\"prepTime rspec-label-small clrfix\">\n                    <span class=\"rspec-label\">Prep:</span>\n
+        \                   <span class=\"value-title rspec-value-small\" title=\"PT0H45M\">
+        45 min</span>\n                </div>\n                <div class=\"rspec-label-small
+        clrfix\">\n                    <span class=\"rspec-label\">Inactive Prep:</span>\n
+        \                   <span class=\"value-title rspec-value-small\" title=\"PT0H30M\">
+        30 min</span>\n                </div>\n                <div class=\"rspec-label-small
+        rspec-cook-time clrfix\">\n                    <span class=\"rspec-label\">Cook:</span>\n
+        \                   <span class=\"value-title rspec-value-small\" title=\"PT0H53M\">
+        53 min</span>\n                </div>\n                <div class=\"rspec-divider
+        clrfix\">&nbsp;</div>\n                <div class=\"rspec-label-big rspec_ccyield
+        clrfix\">\n                    <span class=\"rspec-label\">YIELD:</span>\n
+        \                   <span class=\"value yield rspec-value-small\">12 servings</span>\n
+        \               </div>\n                <div class=\"rspec-label-big rspec-diff
+        clrfix\">\n                    <span class=\"rspec-label\">LEVEL:</span>\n
+        \                   <span class=\"value rspec-value-small\">Intermediate</span>\n
+        \               </div>\n            </div>\n        </div>\n        <script
+        type=\"text/javascript\">\n        SNI.Util.ImageEnlarge.init(\"#recipe-head\");\n
+        \       </script>\n    \n\n\n\n<div id=\"ingr-first\" class=\"list ingredients
+        clrfix\">\n    <h2>ingredients</h2>\n    \n       \n\t   \n              \n
+        \      \n       \n           <div class=\"list clear\"></div><span class=\"ingr-divider\"><b>BANANA
+        CAKE:</b></span><div class=\"list clear\"></div><ul class=\"col1\"><li class=\"ingredient\"><em>3/4
+        </em>cup  <a href=\"http://www.foodterms.com/encyclopedia/butter/index.html\"
+        class=\"crosslink\" debug=\"25 40\">unsalted butter</a>, at room temperature</li><li
+        class=\"ingredient\"><em>1 1/2 </em>cups packed light  <a href=\"http://www.foodterms.com/encyclopedia/sugar/index.html\"
+        class=\"crosslink\" debug=\"90 101\">brown sugar</a></li><li class=\"ingredient\"><em>1
+        1/2 </em>cups  <a href=\"http://www.foodterms.com/encyclopedia/sugar/index.html\"
+        class=\"crosslink\" debug=\"117 133\">granulated sugar</a></li><li class=\"ingredient\"><em>3
+        </em>large  <a href=\"http://www.foodterms.com/encyclopedia/eggs/index.html\"
+        class=\"crosslink\" debug=\"146 150\">eggs</a></li><li class=\"ingredient\"><em>6
+        </em>medium-size ripe bananas, mashed</li><li class=\"ingredient\"><em>1 </em>(16-ounce)
+        container  <a href=\"http://www.foodterms.com/encyclopedia/sour-cream/index.html\"
+        class=\"crosslink\" debug=\"217 227\">sour cream</a></li><li class=\"ingredient\"><em>2
+        </em>teaspoons pure  <a href=\"http://www.foodterms.com/encyclopedia/extracts/index.html\"
+        class=\"crosslink\" debug=\"249 264\">vanilla extract</a></li></ul><ul class=\"col2\"><li
+        class=\"ingredient\"><em>4 1/2 </em>cups  <a href=\"http://www.foodterms.com/encyclopedia/flour/index.html\"
+        class=\"crosslink\" debug=\"280 297\">all-purpose flour</a></li><li class=\"ingredient\"><em>1
+        </em>tablespoon baking soda</li><li class=\"ingredient\">Salt</li><li class=\"ingredient\"><em>1
+        </em>cup chopped  <a href=\"http://www.foodterms.com/encyclopedia/pecan/index.html\"
+        class=\"crosslink\" debug=\"354 360\">pecans</a>, optional</li><li class=\"ingredient\"><em>1
+        </em>cup mini  <a href=\"http://www.foodterms.com/encyclopedia/chocolate/index.html\"
+        class=\"crosslink\" debug=\"386 405\">semisweet chocolate</a> chips</li><li
+        class=\"ingredient\"><em>1 </em>(13-ounce) container chocolate-hazelnut spread
+        (recommended: Nutella)</li></ul><div class=\"list clear\"></div><span class=\"ingr-divider\"><b><A
+        href=\"HTTP://WWW.FOODTERMS.COM/ENCYCLOPEDIA/CREAM/INDEX.HTML\" class=\"CROSSLINK\"
+        debug=\"492 505\">WHIPPED CREAM</A> CHEESE FROSTING:</b></span><div class=\"list
+        clear\"></div><ul class=\"col1\"><li class=\"ingredient\"><em>1 </em>(8-ounce)
+        block cream cheese, softened</li><li class=\"ingredient\"><em>1/2 </em>cup
+        confectioner's sugar</li></ul><ul class=\"col2\"><li class=\"ingredient\"><em>1
+        </em>teaspoon pure vanilla extract</li><li class=\"ingredient\"><em>2 </em>cups
+        heavy  <a href=\"http://www.foodterms.com/encyclopedia/whipping-cream/index.html\"
+        class=\"crosslink\" debug=\"654 668\">whipping cream</a></li></ul>\n       \n
+        \   \n</div>  \n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n<!-- social toolbar start
+        -->\n<div id=\"recipe-tools\" class=\"tools clrfix  \">\n<div class=\"hd toolbar\">\nrecipe
+        tools\n</div>\n<ul>\n\n<li id=\"toolbox-f-01_93219_545263\" class=\"favorite\">\n<div
+        id=\"fav_01\"><a href=\"#\">Save to Favorite</a></div></li> \n\n\n<!-- http://my.cookingchanneltv.com/decorator.do?wid=1210702&assets=93219_545263
+        -->\n\n\n\n\n\n\r\n\r\n\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\n\r\n\t\t\t\n\t\t\t<div
+        id='formcontainer'></div>\n\t\t\t<script language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/externalwidget.js\"></script>\n\t\t\t<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/widgethelper.js\"></script>\r\n\t\t\t\n\t\t\t\n\t\t\t<input
+        type=hidden name=\"styleid2\" value=\"10544\"/>\n\t\t\t\n\t\t\t\n\t\t\t\t<script
+        language=\"javascript\">includeCss(\"http://my.cookingchanneltv.com/skins/css/widgets/userprofile-layout.css\");includeCss(\"http://my.cookingchanneltv.com/skins/css/widgets/cooking-reg-style.css\");</script>\n\t\t\t\n\t\t\t</script>\r\n\t\t\t\t\t\r\n\t\t\t<!--
+        Are we getting latest content 0-->\n\t\t\t\n\t\t\t<!-- Are we getting latest
+        content http://my.cookingchanneltv.com -->\n\t\t\t<script language=\"javascript\">\n\n\t\t\t\n\t\t\t\n\t\t\t\nrootUrl=\"http://my.cookingchanneltv.com\";\n\n\n\t\n\tSNI.Community.Toolbox.executeCode
+        = \"renderFavorites('toolbox-f-01_93219_545263','favoriteType1','545263','-1','960556','93219','Cooking
+        Channel');\"; \n\tSNI.Community.Toolbox.cWidgetProjectName = \"Cooking Channel
+        Community Toolbox\"; \n \n \n renderMethods();\n\n </script>\n\n\n\n\n\n\n\n\n\n\n<script
+        type=\"text/javascript\">\nSNI.Community.UR.baseOfLoginProject= 'http://my.cookingchanneltv.com';\nSNI.Community.UR.secureDomainFromLoginProject=
+        'https://mysecure.cookingchanneltv.com';\nSNI.Community.UR.currentBaseUrl=
+        'http://my.cookingchanneltv.com';\nSNI.Community.UR.loginProjectUrl= 'http://my.cookingchanneltv.com/registration/login.esi';\nSNI.Community.UR.baseUrlForAUrl=
+        'http://my.cookingchanneltv.com';\nSNI.Community.UR.FBAPIKeyForUrl= '206130166083574';\n</script>\n\n\n\n\n\n\n\n<script
+        language=\"javascript\">\n\n\n\n\n\tSNI.Community.Toolbox.subPath = \"\";\n\tSNI.Community.Toolbox.isCommunityToolboxWidget
+        = 'true';\n\t\n\tif(SNI.Community.Toolbox.isCommunityToolboxWidget=='true')\n\t{\n\t\tSNI.Community.Toolbox.subPath
+        = \"/communitytools\";\n\t}\n\n\n \n\n\t\tSNI.Community.Toolbox.domainName
+        = window.location.href.substring(window.location.href.indexOf(\".\"), window.location.href.indexOf(\"/\",window.location.href.indexOf(\".\"))
+        );\n\t\n\t//SNI.Community.Toolbox.domainName = \".cookingchanneltv.com\";\n\tSNI.Community.Toolbox.notLocal
+        = true;\n\tSNI.Community.Toolbox.registUrl = \"http://my.cookingchanneltv.com/registration/\";\n\tSNI.Community.Toolbox.baseDomainOfLoginProject
+        = \"http://my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.absoluteURLPathForTargetString
+        = \"http://my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.baseHostPlusDomain
+        = \"my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.returl = \"http://my.cookingchanneltv.com/registration\";\n\tSNI.Community.Toolbox.homeProjectUrl
+        = \"http://www.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.siteId = \"13\";\n\n\tvar
+        base_Url = \"http://my.cookingchanneltv.com\";\n\t\n</script>\r\n\n<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/login.js\"></script>\n<div
+        id=\"aim_LoginHook\"></div> \n\t\t\t<div id=\"com-signin\" style=\"position:absolute;top:0px;left:0px;\">\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"com-signin-lip\" id=\"com-signin-lip\">\n\t\t\t\n\t\t\t\n\t\t\t\t\t<div
+        id=\"com-signin-top\"></div>\n\t\t\t\t\t<div id=\"ieDiv\"></div>\n\t\t\t\t\t<div
+        id=\"com-signin-middle\">\n\t\t\t\t\t\t<div id=\"com-signin-middle-container\">\n\t\t\t\t\t\t\t<div
+        id=\"com-signin-middle-title\">\n\t\t\t\t\t\t\t\t<div id=\"com-signin-title-text\"><h2
+        id=\"header_text\">COMMENT ON THIS PROJECT</h2></div>\n\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-close\"><a href=\"javascript:displayOff('up-ur-signup-error');displayOff('com-signin');displayOn('com-signin-content');displayOff('com-signin-content02');displayOff('com-signin-content03');displayOff('com-signin-content04');\"><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"com-signin-left\">\n\t\t\t\t\t\t\t<!--TYPE
+        01//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-title-text\">\n\t\t\t\t\t\t\t\t\t<h2>Sign
+        in</h2>\n\t\t\t\t\t\t\t\t\t<p>All fields are required.</p>\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t<div id=\"up-ur-signup-error\" style=\"display:
+        none;\"></div>\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-email\">\n\t\t\t\t\t\t\t\t\t\t<p id=\"e-m\">E-mail Address:</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"text\"
+        name=\"com_signin_email\" id=\"com-signin-email\" tabindex=\"1\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password\">\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-password-titles\">\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password-left\"><p
+        id=\"p-w\">Password:</p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password-right\"><p><a
+        href=\"javascript:displayOff('up-ur-signup-error');displayOff('com-signin-content');
+        displayOff('up-ur-signup-error'); displayOn('com-signin-content03');displayOff('com-signin-content05');\">Forgot
+        Password?</a></p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"password\"
+        name=\"com_signin_password\" id=\"com-signin-email\" tabindex=\"2\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-remember\" >\n\t\t\t\t\t\t\t\t\t\t<p><input type=\"checkbox\"
+        id=\"SMSAVECREDS\" name=\"SMSAVECREDS\" value=\"YES\"> Remember me on this
+        computer</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button-container\">\n\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-off\" /><a href=\"javascript:SNI.Community.UR.d2cLogin()\"><em>Sign
+        In</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        02//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content02\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-signing\">\n\t\t\t\t\t\t\t\t\t\t<p>Signing in</p>\n\t\t\t\t\t\t\t\t\t\t<p><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-content05\" style=\"display:none\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-signing\">\n\t\t\t\t\t\t\t\t\t\t<p>Sending Password</p>\n\t\t\t\t\t\t\t\t\t\t<p><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        03//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content03\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-message\">\n\t\t\t\t\t\t\t\t\t\t<p>Please enter your email
+        address and we will send your password</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-email\">\n\t\t\t\t\t\t\t\t\t\t<p id=\"Fe-m\">E-mail Address</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"text\"
+        name=\"com_forgot_email\" id=\"com-signin-email\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button-container02\">\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-request\">\n\t\t\t\t\t\t\t\t\t\t\t<ul id=\"widget-nav\"><li
+        id=\"widget-nav-item-off\" /><a href=\"javascript: sendpassword();\"><em>Request
+        Password</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-orcancel\"><p>or
+        <a href=\"javascript:displayOff('com-signin');displayOn('com-signin-content');displayOff('com-signin-content02');displayOff('com-signin-content03');displayOff('com-signin-content04');\">Cancel</a></p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        04//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content04\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-message\">\n\t\t\t\t\t\t\t\t\t\t<p>Your password has been
+        sent and should arrive in your mailbox very soon.</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button-container\">\n\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-inactive\" /><a id=\"fogot_button\"><em>Sign
+        In</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div
+        id=\"com-signin-right\">\n\t\t\t\t\t\t\t\t<div id=\"com-signin-notmember\"
+        style=\"position: relative;\">\n\t\t\t\t\t\t\t\t\t<h2 style=\"position: relative;\">Not
+        a member?</h2>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<p style=\"position:
+        relative;\">Sign up for My Cooking Channel to share photos, show off your
+        style, and connect to an enthusiastic and helpful community.</p>\n\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<p>It's
+        free and easy.</p>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-joinin-button-container\">\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-off\" /><a href=\"javascript:registration();\"><em>Register
+        Now</em></a></li></ul>\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div
+        id=\"com-signin-bottom\"></div>\n\t\t\t\t</div>\t\t\t\n\n\n\r\n\r\n\r\n\n\n\n\r\n\r\n\n\n<li
+        class=\"print\">\n\n    \n        \n    \n        \n\n<a rel=\"nofollow\"
+        href=\"/recipes/monkey-tail-banana-cake.print.html\" target=\"_blank\">Print
+        Recipe</a>\n</li>\n<li id=\"email\" class=\"email\">\n<a href=\"\">email</a>\n</li>\n
+        </ul> \n <ul class=\"sharing\">\n     <li id=\"tb-tweet\"></li>\n     <li
+        id=\"tb-facebook\"></li>\n     <li id=\"tb-gplus\"></li>\n     <li id=\"tb-pinit\"></li>\n
+        </ul>\n </div>      \n\n <div id=\"email-a-friend\" name=\"email-a-friend\"
+        class=\"email-a-friend flyout flg\">\n        <div class=\"fly-hd\">\n        </div>\n
+        \       <div class=\"fly-bd\">\n            <h3>E-mail This Page to Your Friends
+        <span class=\"close\">x</span></h3>\n            <form method=\"post\" action=\"/app/emailservice2/sendEmail.json\">\n
+        \               <p class=\"minor message\">\n                    All fields
+        are required.\n                </p>\n                <fieldset class=\"sm-field\">\n
+        \                   <label for=\"your-name\">Your Name</label>\n                    <div
+        class=\"input-box\">\n                        <span><input id=\"your-name\"
+        name=\"from_name\" type=\"text\" class=\"text\"/></span>\n                    </div>\n
+        \               </fieldset>\n                <fieldset class=\"sm-field sm-right\">\n
+        \                   <label for=\"your-email\">Your E-mail Address</label>\n
+        \                   <div class=\"input-box\">\n                        <span><input
+        id=\"your-email\" name=\"from_email\" type=\"text\" class=\"text isemail\"/></span>\n
+        \                   </div>\n                </fieldset>\n                <fieldset
+        class=\"lg-field\">\n                    <label for=\"friends-email\">Friend's
+        E-mail Addresses</label>\n                    <div class=\"input-box\">\n
+        \                       <span><input name=\"to_emails\" id=\"friends-email\"
+        type=\"text\" class=\"text isemail\"/></span>\n                    </div>\n
+        \                   <p class=\"minor\">\n                        Separate
+        multiple e-mail addresses with a comma\n                    </p>\n                    <p
+        class=\"minor\">\n                        (i.e. sally@email.com, steve@email.com)\n
+        \                   </p>\n                </fieldset>\n                <fieldset
+        class=\"lg-field\">\n                    <label>Message</label>\n                    <div
+        class=\"txtarea-box\">\n                        <span><textarea name=\"body\"
+        cols=\"60\" rows=\"4\">I think this is just what you've been looking for.</textarea></span>\n
+        \                   </div>\n                </fieldset>\n                <fieldset
+        class=\"sm-field\">\n                    <label for=\"captcha_answer\">Retype
+        the characters below. <span class=\"minor\">(Just to make sure you are human.)</span></label>\n
+        \                   <div class=\"input-box two-col\">\n                        <span><input
+        id=\"captcha_answer\" name=\"captcha_answer\" type=\"text\" class=\"text\"/></span>\n
+        \                   </div>\n                    <div id=\"captcha-img\">\n
+        \                   </div>\n                    <span id=\"captcha-request\"><a
+        href=\"#\">Refresh Image</a></span>\n                </fieldset>\n                <input
+        type=\"hidden\" name=\"subject\" value=\"Check out this page on cookingchanneltv.com!\">\n
+        \               <div class=\"loading\">\n                    <p>\n                        Sending
+        E-mail\n                    </p>\n                    <img src=\"http://cooktv.sndimg.com/webcook/imgs/le/cc-loader.gif\"
+        alt=\"Sending E-mail\" width=\"30\" height=\"30\">\n                </div>\n
+        \               <p class=\"form-submit\">\n                    <button class=\"button\"
+        type=\"submit\"><span><em>Send E-mail</em></span></button> or <a href=\"#\">Cancel</a>\n
+        \               </p>\n            </form>\n            <div class=\"success\">\n
+        \               <p>\n                    Success!\n                </p>\n
+        \               <p>\n                    A link to <strong>%this page%</strong>
+        was e-mailed\n                </p>\n            </div>\n        </div>\n        <div
+        class=\"fly-ft\">\n        </div>\n    </div>\n\n\n \n<script type=\"text/javascript\">\n
+        \   SNI.Util.ImageEnlarge.init(\"#recipe-head\");\n    SNI.CC.RecipeTools();\n</script>\n
+        \ \n<!-- social toolbar end -->\n\n\n\n                </div>\n                <!--
+        end recipe head -->\n                \n                <!-- content well left
+        -->\n                <div id=\"sni-ww\" class=\"sni-ww clrfix\">\n                   \n\n\n
+        \n\n\n\n<div class=\"steps\">\n<h2>Directions</h2>\n\n\n    \n        <div
+        class=\"instructions\">\n            For the cake: Preheat the oven to 350
+        degrees F. <a href=\"http://www.foodterms.com/encyclopedia/grease/index.html\"
+        class=\"crosslink\" debug=\"49 55\">Grease</a> 3 (9-inch) round <a href=\"http://www.foodterms.com/encyclopedia/cake-pans/index.html\"
+        class=\"crosslink\" debug=\"73 82\">cake pans</a> with <a href=\"http://www.foodterms.com/encyclopedia/cooking-spray/index.html\"
+        class=\"crosslink\" debug=\"88 101\">cooking spray</a>. In large bowl, cream
+        together the butter, light brown sugar, and granulated sugar until light and
+        fluffy. Mix in the eggs, mashed bananas, sour cream, and vanilla until smooth.<b></b><P>In
+        a separate bowl <a href=\"http://www.foodterms.com/encyclopedia/sift/index.html\"
+        class=\"crosslink\" debug=\"303 307\">sift</a> together the flour, <a href=\"http://www.foodterms.com/encyclopedia/baking-soda/index.html\"
+        class=\"crosslink\" debug=\"328 339\">baking soda</a>, and 1/2 teaspoon salt.
+        Add the sifted ingredients to the <a href=\"http://www.foodterms.com/encyclopedia/batter/index.html\"
+        class=\"crosslink\" debug=\"398 404\">batter</a>.<b></b><P>Stir in <a href=\"http://www.foodterms.com/encyclopedia/nuts/index.html\"
+        class=\"crosslink\" debug=\"418 422\">nuts</a>, if using, and <a href=\"http://www.foodterms.com/encyclopedia/chocolate/index.html\"
+        class=\"crosslink\" debug=\"438 453\">chocolate chips</a>. Divide the batter
+        evenly among the prepared pans. Bake for 45 minutes to 1 hour or until a toothpick
+        inserted in the center comes out clean. Cool the <a href=\"http://www.foodterms.com/encyclopedia/cake/index.html\"
+        class=\"crosslink\" debug=\"605 610\">cakes</a> in the pans for 10 to 15 minutes
+        and then turn out onto a wire rack to cool completely.<b></b><P>For the frosting:
+        Prepare the <a href=\"http://www.foodterms.com/encyclopedia/frosting/index.html\"
+        class=\"crosslink\" debug=\"733 741\">frosting</a> by whipping the cream cheese,
+        sugar, and vanilla together until creamy. Increase the mixing speed, then
+        slowly pour in the <a href=\"http://www.foodterms.com/encyclopedia/cream/index.html\"
+        class=\"crosslink\" debug=\"865 876\">heavy cream</a> and beat until smooth
+        and thick and the frosting is the consistency of whipped cream. Store in the
+        refrigerator until you are ready to use.<b></b><P>To assemble the cake, place
+        1 cake layer on a cake plate. Spread with 1/2 the container of chocolate-hazelnut
+        spread and top with a thin layer of whipped <a href=\"http://www.foodterms.com/encyclopedia/cream-cheese/index.html\"
+        class=\"crosslink\" debug=\"1175 1187\">cream cheese</a> frosting, about 1/2
+        cup. Repeat with the second layer, using the remaining 1/2 of the chocolate-hazelnut
+        spread and 1/2 cup whipped frosting. Cook's Note: You will use the chocolate
+        spread only for the bottom 2 layers.<b></b><P>Top with the final cake layer
+        and frost or decorate with the remaining whipped frosting. <a href=\"http://www.foodterms.com/encyclopedia/garnish/index.html\"
+        class=\"crosslink\" debug=\"1500 1507\">Garnish</a>, as desired.<b></b><P>Cook's
+        Note: There are a couple different things that make this cake above and beyond,
+        but by adding the \"secret\" ingredient of sour cream to the cake really makes
+        for a much more moist cake. Also I love the sudden surprise of the Nutella
+        in between each layer. For me it brings me back to being a kid and eating
+        chocolate dipped <a href=\"http://www.foodterms.com/encyclopedia/banana/index.html\"
+        class=\"crosslink\" debug=\"1855 1862\">bananas</a> on a stick...known to
+        some as the \"Monkey Tail\".\n        </div>\n    \n\n\n</div>\n<div class=\"rec-footer
+        clrfix\" id=\"recipe-footer\">\n    \n\n\n \n\n\n\n\n    \n     \n\n<a target=\"_blank\"
+        href=\"/recipes/monkey-tail-banana-cake.print.html\" rel=\"nofollow\" class=\"sharing
+        rfooterPrint clrfix\" id=\"print-recipe\">Print this recipe</a>\n\n</div>\n\n<div
+        class=\"next-recipe\">\n\n\n \n\n\n\n\n\n\n\n\n\n\n    \n    <div class=\"next
+        clrfix\">\n        <h3>Next Recipe</h3>\n        <div class=\"rlink\">\n            <a
+        href=\"/recipes/kelsey-nixon/gingerbread-cake-truffles.html\">\n                   \n
+        \                   <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/10/27/0/CCKEL212_Gingerbread-Cake-Truffles_s4x3.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Gingerbread Cake Truffles image\"/>\n                \n                Gingerbread
+        Cake Truffles\n            </a>\n        </div>\n        \n            Recipe
+        courtesy\n            <a href=\"/chefs/kelsey-nixon.html\">\n                Kelsey
+        Nixon\n            </a>\n        \n    </div>\n</div>\n\n                </div>\n
+        \               \n                <!-- content well right -->\n                <div
+        id=\"sni-we\" class=\"sni-we clrfix\">\n                   \n\n\n \n\n\n\n\n<div
+        class=\"similar-recipes\">\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n</div>\n\n\n\n<div
+        class=\"explore-more-on\">\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n<!--  -->\n\n    <div
+        id=\"explore-more\" class=\"pod explore clrfix\">\n        <h3>Explore More
+        On</h3>\n        <ul class=\"list\">\n            \n                <li><a
+        href=\"/topics/chocolate.html\">Chocolate</a></li>\n            \n                <li><a
+        href=\"/topics/cream-cheese.html\">Cream Cheese</a></li>\n            \n                <li><a
+        href=\"/topics/nuts.html\">Nuts</a></li>\n            \n        </ul>\n        <a
+        href=\"/topics/a-z.html\" class=\"morelink\">All Topics</a>\n    </div>\n</div>\n\n\n\n\n\n
+        \   <div class=\"more-from-this-episode\">\n\n\n \n\n\n\n<div id=\"more-from-episode\"
+        class=\"pod\">\n    <h3 class=\"title-bar\">more from this episode</h3>\n
+        \   <ul class=\"list\">\n       \n        \n          \n           \n               \n
+        \              \n               \n               \n               \n               \n
+        \              <li><a href=\"/recipes/parma-style-carrot-cake.html\">Parma-Style
+        Carrot Cake</a></li>\n           \n         \n          \n           \n               \n
+        \              \n               \n               \n               \n               \n
+        \              <li><a href=\"/recipes/paula-deen/grandmother-paulas-red-velvet-cake.html\">Grandmother
+        Paula's Red Velvet Cake</a></li>\n           \n         \n          \n           \n
+        \              \n               \n               \n               \n               \n
+        \              \n               <li><a href=\"/recipes/ina-garten/beattys-chocolate-cake.html\">Beatty's
+        Chocolate Cake</a></li>\n           \n         \n          \n           \n
+        \        \n          \n           \n               \n               \n               \n
+        \              \n               \n               \n               <li><a href=\"/recipes/old-fashioned-butterscotch-cake.html\">Old-Fashioned
+        Butterscotch Cake</a></li>\n           \n         \n          \n           \n
+        \              \n               \n               \n               \n               \n
+        \              \n               <li><a href=\"/recipes/super-chocolate-cake.html\">Super
+        Chocolate Cake</a></li>\n           \n        \n    </ul>\n</div>\n</div>\n\n\n
+        \               </div>\n                \n                \n                \n\n\n
+        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\n\n\n\n\n\n\n\n\n\t\t\n\n<script
+        language=\"javascript\">\n\tif( typeof(SNI)=='undefined' ){\n\t\tSNI = {};\n\t}\nif(
+        typeof(SNI.Community)=='undefined' ){\n\t\tSNI.Community = {};\n\t}\nif( typeof(SNI.Community.Toolbox)=='undefined'
+        ){\n\t\tSNI.Community.Toolbox = {};\n\t}\n\t\nif( typeof(SNI.Community.Widgets)
+        == 'undefined' )\n{\n   SNI.Community.Widgets = {};\n}\n\t\n</script>\n<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/cp_commenting.js\"></script>\n\n
+        \n<script language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/externalwidget.js\"></script>\n<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/widget.js\"></script>\t\n<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/widgethelper.js\"></script>\t\t\n\t\t\t\t\n\t<script
+        language=\"javascript\">includeCss(\"http://my.cookingchanneltv.com/skins/css/widgets/cooking-reg-style.css\");</script>\n\t\n\n<script
+        language=\"javascript\">\nif(!SNI.Community.Toolbox.cWidgetNameUsedInApp)\n\tSNI.Community.Toolbox.cWidgetNameUsedInApp
+        = \"Cooking Channel\";\nSNI.Community.Toolbox.ur = true;\nSNI.Community.Toolbox.rootUrl
+        = 'http://my.cookingchanneltv.com';\nSNI.Community.Toolbox.cSiteId = '13';\nSNI.Community.Toolbox.cAdminRootUrl
+        = 'http://pickleadmin.scrippsnetworks.com';\nSNI.Community.Toolbox.cPublicRootUrl
+        = 'http://my.cookingchanneltv.com';\nSNI.Community.Toolbox.csoFarVoteval =
+        '0';\nSNI.Community.Toolbox.cObjectType = '93219';\nSNI.Community.Toolbox.cAssetId
+        = '545263';\nSNI.Community.Toolbox.cAssetUrl = 'http://www.cookingchanneltv.com/content/cook/recipes/no-chef/m/mo/mon/monk/monkey-tail-banana-cake.html';\nSNI.Community.Toolbox.cAssetTitle
+        = 'Monkey Tail Banana Cake';\nSNI.Community.Toolbox.cCollId = '24093027';\nSNI.Community.Toolbox.cSelectedId
+        = '24093027';\nSNI.Community.Toolbox.cWidInsId = '1624020';\nSNI.Community.Toolbox.cGlobalUserId
+        = '0';\nSNI.Community.Toolbox.cGlobalUserDisplayName = '';\nSNI.Community.Toolbox.cGlobalUserEmail
+        = '';\nSNI.Community.Toolbox.cClientUrl = '/recipes/monkey-tail-banana-cake.html';\nSNI.Community.Toolbox.cGlobalCounterText
+        = '';\nSNI.Community.Toolbox.cGlobalOrigWidgetProjectId = '1340233';\nSNI.Community.Toolbox.cWidgetProjectName
+        = 'Cooking Channel Community Toolbox';\nSNI.Community.Toolbox.cIsCommentEnabled
+        = true;\n\nvar t_temp = document.location+\"\";\n\tif(t_temp.indexOf(\":80\")==-1
+        && SNI.Community.Toolbox.rootUrl.indexOf(\":80\")!=-1 && SNI.Community.Toolbox.rootUrl.indexOf(\"8005\")==-1)\n\t\tSNI.Community.Toolbox.rootUrl
+        = SNI.Community.Toolbox.rootUrl.substring(0,SNI.Community.Toolbox.rootUrl.indexOf(\":80\"));\n\t\t\n</script>\n\n<input
+        type=\"hidden\" id=\"objectRating\" value=\"0\">\n<input type=\"hidden\" id=\"currentPage\"
+        value=\"1\">\n\n\n\n\n\n\n\n\n\n\n\n<script type=\"text/javascript\">\nSNI.Community.UR.baseOfLoginProject=
+        'http://my.cookingchanneltv.com';\nSNI.Community.UR.secureDomainFromLoginProject=
+        'https://mysecure.cookingchanneltv.com';\nSNI.Community.UR.currentBaseUrl=
+        'http://my.cookingchanneltv.com';\nSNI.Community.UR.loginProjectUrl= 'http://my.cookingchanneltv.com/registration/login.esi';\nSNI.Community.UR.baseUrlForAUrl=
+        'http://my.cookingchanneltv.com';\nSNI.Community.UR.FBAPIKeyForUrl= '206130166083574';\n</script>\n\n\n\n\n\n\n\n<script
+        language=\"javascript\">\n\n\n\n\n\tSNI.Community.Toolbox.subPath = \"\";\n\tSNI.Community.Toolbox.isCommunityToolboxWidget
+        = 'true';\n\t\n\tif(SNI.Community.Toolbox.isCommunityToolboxWidget=='true')\n\t{\n\t\tSNI.Community.Toolbox.subPath
+        = \"/communitytools\";\n\t}\n\n\n \n\n\t\tSNI.Community.Toolbox.domainName
+        = window.location.href.substring(window.location.href.indexOf(\".\"), window.location.href.indexOf(\"/\",window.location.href.indexOf(\".\"))
+        );\n\t\n\t//SNI.Community.Toolbox.domainName = \".cookingchanneltv.com\";\n\tSNI.Community.Toolbox.notLocal
+        = true;\n\tSNI.Community.Toolbox.registUrl = \"http://my.cookingchanneltv.com/registration/\";\n\tSNI.Community.Toolbox.baseDomainOfLoginProject
+        = \"http://my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.absoluteURLPathForTargetString
+        = \"http://my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.baseHostPlusDomain
+        = \"my.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.returl = \"http://my.cookingchanneltv.com/registration\";\n\tSNI.Community.Toolbox.homeProjectUrl
+        = \"http://www.cookingchanneltv.com\";\n\tSNI.Community.Toolbox.siteId = \"13\";\n\n\tvar
+        base_Url = \"http://my.cookingchanneltv.com\";\n\t\n</script>\r\n\n<script
+        language=\"javascript\" src=\"http://my.cookingchanneltv.com/skins/js/login.js\"></script>\n<div
+        id=\"aim_LoginHook\"></div> \n\t\t\t<div id=\"com-signin\" style=\"position:absolute;top:0px;left:0px;\">\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"com-signin-lip\" id=\"com-signin-lip\">\n\t\t\t\n\t\t\t\n\t\t\t\t\t<div
+        id=\"com-signin-top\"></div>\n\t\t\t\t\t<div id=\"ieDiv\"></div>\n\t\t\t\t\t<div
+        id=\"com-signin-middle\">\n\t\t\t\t\t\t<div id=\"com-signin-middle-container\">\n\t\t\t\t\t\t\t<div
+        id=\"com-signin-middle-title\">\n\t\t\t\t\t\t\t\t<div id=\"com-signin-title-text\"><h2
+        id=\"header_text\">COMMENT ON THIS PROJECT</h2></div>\n\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-close\"><a href=\"javascript:displayOff('up-ur-signup-error');displayOff('com-signin');displayOn('com-signin-content');displayOff('com-signin-content02');displayOff('com-signin-content03');displayOff('com-signin-content04');\"><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"com-signin-left\">\n\t\t\t\t\t\t\t<!--TYPE
+        01//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-title-text\">\n\t\t\t\t\t\t\t\t\t<h2>Sign
+        in</h2>\n\t\t\t\t\t\t\t\t\t<p>All fields are required.</p>\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t<div id=\"up-ur-signup-error\" style=\"display:
+        none;\"></div>\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-email\">\n\t\t\t\t\t\t\t\t\t\t<p id=\"e-m\">E-mail Address:</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"text\"
+        name=\"com_signin_email\" id=\"com-signin-email\" tabindex=\"1\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password\">\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-password-titles\">\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password-left\"><p
+        id=\"p-w\">Password:</p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-password-right\"><p><a
+        href=\"javascript:displayOff('up-ur-signup-error');displayOff('com-signin-content');
+        displayOff('up-ur-signup-error'); displayOn('com-signin-content03');displayOff('com-signin-content05');\">Forgot
+        Password?</a></p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"password\"
+        name=\"com_signin_password\" id=\"com-signin-email\" tabindex=\"2\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-remember\" >\n\t\t\t\t\t\t\t\t\t\t<p><input type=\"checkbox\"
+        id=\"SMSAVECREDS\" name=\"SMSAVECREDS\" value=\"YES\"> Remember me on this
+        computer</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button-container\">\n\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-off\" /><a href=\"javascript:SNI.Community.UR.d2cLogin()\"><em>Sign
+        In</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        02//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content02\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-signing\">\n\t\t\t\t\t\t\t\t\t\t<p>Signing in</p>\n\t\t\t\t\t\t\t\t\t\t<p><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-content05\" style=\"display:none\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-signing\">\n\t\t\t\t\t\t\t\t\t\t<p>Sending Password</p>\n\t\t\t\t\t\t\t\t\t\t<p><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        03//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content03\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-message\">\n\t\t\t\t\t\t\t\t\t\t<p>Please enter your email
+        address and we will send your password</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-email\">\n\t\t\t\t\t\t\t\t\t\t<p id=\"Fe-m\">E-mail Address</p>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-text-field\"><div id=\"cgp-inner-text-field\"><input type=\"text\"
+        name=\"com_forgot_email\" id=\"com-signin-email\"></div></div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button-container02\">\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-request\">\n\t\t\t\t\t\t\t\t\t\t\t<ul id=\"widget-nav\"><li
+        id=\"widget-nav-item-off\" /><a href=\"javascript: sendpassword();\"><em>Request
+        Password</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-orcancel\"><p>or
+        <a href=\"javascript:displayOff('com-signin');displayOn('com-signin-content');displayOff('com-signin-content02');displayOff('com-signin-content03');displayOff('com-signin-content04');\">Cancel</a></p></div>\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<!--TYPE
+        04//-->\n\t\t\t\t\t\t\t\t<div id=\"com-signin-content04\">\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-message\">\n\t\t\t\t\t\t\t\t\t\t<p>Your password has been
+        sent and should arrive in your mailbox very soon.</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button-container\">\n\t\t\t\t\t\t\t\t\t\t<div id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-inactive\" /><a id=\"fogot_button\"><em>Sign
+        In</em></a></ul>\n\t\t\t\t\t\t\t\t\t\t\t<div id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div
+        id=\"com-signin-right\">\n\t\t\t\t\t\t\t\t<div id=\"com-signin-notmember\"
+        style=\"position: relative;\">\n\t\t\t\t\t\t\t\t\t<h2 style=\"position: relative;\">Not
+        a member?</h2>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<p style=\"position:
+        relative;\">Sign up for My Cooking Channel to share photos, show off your
+        style, and connect to an enthusiastic and helpful community.</p>\n\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<p>It's
+        free and easy.</p>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div
+        id=\"com-joinin-button-container\">\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"com-signin-button\">\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-off\" /><a href=\"javascript:registration();\"><em>Register
+        Now</em></a></li></ul>\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div
+        id=\"com-signin-bottom\"></div>\n\t\t\t\t</div>\t\t\t\n\n\n\r\n\r\n\r\n\n\n\n\n<script
+        language=\"javascript\">\ndocument.getElementById(\"com-signin\").style.display=\"none\";\n</script>\n\r\n\n\t<div
+        id=\"commentsshell\" class=\"clrfix\">\n\t\t<div id=\"rz-w\">\n\t\t\t\n\n\n\n\n\t\n\n\n\n\n\t\t\t\t
+        \ \n\n\n\t<script language=\"javascript\">\n\tif( typeof(SNI)=='undefined'
+        ){\n\t\tSNI = {};\n\t}\n\tif( typeof(SNI.Community)=='undefined' ){\n\t\tSNI.Community
+        = {};\n\t}\n\tif( typeof(SNI.Community.Toolbox)=='undefined' ){\n\t\tSNI.Community.Toolbox
+        = {};\n\t}\n\t\t\n\tif( typeof(SNI.Community.Widgets) == 'undefined' ){\n\t\tSNI.Community.Widgets
+        = {};\n\t}\n\t\n</script>\n\n\n<input type=\"hidden\" id=\"sendalertemailValue\"
+        name=\"sendalertemailValue\" value=\"1\">\n<input type=\"hidden\" id=\"deactivateItemValue\"
+        name=\"deactivateItemValue\" value=\"1\">\n<input type=\"hidden\" id=\"sendalertemailthreshold\"
+        name=\"sendalertemailthreshold\" value=\"1\">\n<input type=\"hidden\" id=\"deactivateItemthreshold\"
+        name=\"deactivateItemthreshold\" value=\"2\">\n<input type=\"hidden\" id=\"moderationFlag\"
+        name=\"moderationFlag\" value=\"1\">\n<input type=\"hidden\" id=\"cachekey\"
+        value=\"24093027.-1.ReviewsVO\">\n<input type=\"hidden\" id=\"loginproURL\"
+        value=\"http://my.cookingchanneltv.com/registration/login.esi\">\n<input type=\"hidden\"
+        id=\"wp_obj_type\" value = \"93219\" />\n<input type=\"hidden\" id=\"wp_pro_name\"
+        value = \"Cooking Channel Community Toolbox\" />\n<input type=\"hidden\" id=\"wpid_hid\"
+        value = \"960556\" />\n\n  \n\n\n<!--  BEGIN COPYING IN RZ REVIEWS CONTENT
+        -->\n<div class=\"rz-ratings-reviews\">\n\t\n\t\n\t\n\t <div class=\"pod post-review\">\n\t\t<div
+        class=\"rz-hd\"></div>\t\t\n\t\t<div class=\"rz-bd enter-rating\" style=\"display:
+        block;\" id=\"write_cmt\">\n\t\t\t<h2 class=\"title\">Review This Recipe</h2>\n\t\t\t<p>You
+        must be logged in to review this recipe.</p>\n\t\t\t<div class=\"clrfix\">\n\t\t\t\t<ul
+        id=\"widget-nav\"><li id=\"widget-nav-item-off\"><a href=\"javascript:void(0)\"
+        id=\"post\" onclick=\"SNI.Community.Toolbox.populateLoginLink();\"><em>Log
+        In</em></a></li></ul>\n\t\t\t\t<p>or <a href=\"javascript:void(0)\" id=\"register\"
+        onclick=\"SNI.Community.Toolbox.populateRegLink();\">Sign Up to Review</a></p>
+        \n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"rz-ft\"></div>\t\t\n\t</div>\n\t\n\t\n\t\t\n\t<div
+        class=\"rz-bd review-sent\" id=\"post_message\" style = \"display:none\">\n\t\t<h2>Review
+        This Recipe</h2>\n\t\t<p>Your review has been submitted for approval and will
+        appear shortly. Thanks!</p>\n\t</div>\n\t\n\t<div id=\"rz-lst\">\t\t\n\t\t<div
+        class=\"rz-ft\"></div>\n\n\t\t\n\t\t<div class=\"reviewlisttitle clrfix\">\n\t\t\t\n\t\t\t<div
+        class=\"hreview-aggregate\">\t\n\t\t\t<span class=\"rating stars4\" rating=\"4\">4</span>\n\t\t\t\n\t\t\t\n\t\t\t\t<h2>Newest
+        Ratings and Reviews</h2>\n\t\t\t\t\n\t\t\t\t<p><a href=\"/recipes/monkey-tail-banana-cake/reviews.html\">Read
+        all <span class=\"count\">11</span> reviews</a></p>\n\t\t\t\t\n\t\t\t\n\t\t\t</div>\t\n\t\t\t\n\t\t</div>\n\t\t<div
+        class=\"pod ratings-reviews-list\" id=\"ratings-reviews-list\">\n\t\t\t<div
+        id=\"ratings-reviews-list-inner\">\n\t\t\t\t<!--  JEE REMOVING LINE ITEM CONTENT
+        FROM HERE -->\n\t\t\t\t\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n<ul id=\"rating_review_list_ul\">\t\r\n\t\t\t\r\n\t\t\t\t<!--
+        \ BEGIN INDIVIDUAL COMMENT -->\r\n\t\t\t\t<li itemprop=\"reviews\" itemscope
+        itemtype=\"http://schema.org/Review\" class=\"clrfix rating_review\">\r\n\t\t\t\t\t<div
+        class=\"rz-w\">\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<a
+        href=\"http://my.cookingchanneltv.com/community/Markly/style.esi?userid=42790486\"
+        ><img height=\"48\" width=\"48\" alt=\"\" src=\"http://my.cookingchanneltv.com/skins/main/images/profilephotolookup/66_square.gif\"></a>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<div
+        class=\"about-recipe-info\">\r\n\t\t\t\t\t\t\t<div class=\"user-info clrfix\">\r\n\t\t\t\t\t\t\t\t
+        \r\n\t\t\t\t\t\t\t\t\t<p>By <a href=\"http://my.cookingchanneltv.com/community/Markly/style.esi?userid=42790486\"
+        ><span itemprop=\"author\">Markly</span></a></p>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div
+        id=\"cl-l-address\" ><p>louisiana</p></div>\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<meta
+        itemprop=\"about\" content=\"item reviewed\"></meta>\t\t\t\r\n\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<p>on
+        September 18, 2012</p><meta itemprop=\"datepublished\" content=\"September
+        18, 2012\"\\>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t<!--
+        \ note...something about this class=\"rz-e\" causes this div not to appear
+        sometimes in IE7 -->\r\n\t\t\t\t\t<div class=\"rz-e\"  >\r\n\t\t\t\t\t\t<div
+        class=\"rz-hd\"></div>\r\n\t\t\t\t\t\t<div class=\"rz-bd\">\t\t\r\n\t\t\t\t\t\t\t<div
+        class=\"arrow\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div class=\"upper-quote
+        clrfix\">\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div class=\"upper-quote-hd\"></div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-bd clrfix reviewminilist\">\r\n\t\t\t\t\t\t\t\t\t\t<p
+        class=\"comment-rating\"><span class=\"rating-sm-5\"></span>\t</p>\r\n\t\t\t\t\t\t\t\t\t\t<span
+        itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\">\r\n\t\t\t\t\t\t\t\t\t\t<meta
+        itemprop=\"ratingvalue\" content=\"5\">\r\n\t\t\t\t\t\t\t\t\t\t</span>\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"objCommentFlag0\" class=\"flag\"><a id=\"commens_link_24446451\" href=\"javascript:void(0);\"
+        onclick=\"SNI.Community.Toolbox.doCommentsFlag('24446451',this);\">Flag</a></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-container\" style=\"z-index: 15000;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-a\" style=\"z-index: 15001;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-24446451\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-top\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"ieDiv3-d2c\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-middle\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"cgp-flyout-content\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-t\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-title\"><h3>Flag This Review?</h3></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-close\" onclick=\"SNI.Community.Widgets.displayOff('cgp-flyout-24446451');\"
+        ><a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-24446451');\"><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></a></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"errorTextAltered_24446451\" style=\"display: none;\">You must provide
+        a reason for flagging this review.</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-list\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!--  <p>Are
+        you sure you want to flag this comment?</p> -->\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \t<p>Please provide the reason why you think this review is <b>inappropriate</b>.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"comment_flag_reason_error_24446451\" class=\"flp\" style=\"display:none;\"></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-inner-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea
+        id=\"comment_flag_reason_24446451\" style=\"width: 200px;\"></textarea>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-02-button\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-nav\" style=\"float: left;\"><ul id=\"widget-nav\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        id=\"widget-nav-item\"><a href=\"javascript:void(0);\" onclick=\"SNI.Community.Widgets.flagAsInappropriate('24446451','reviews','commens_link_24446451','comments_text24446451','42790486');\"><em>Submit</em></a></li></ul></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-button02\"><p>or <a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-24446451');\">Cancel</a></p></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-bottom\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-ft\"></div>\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t<p
+        id=\"comments_text24446451\" class=\"quote\" itemprop=\"reviewBody\">Made
+        this today. Wow it&#39;s rich, have to eat small pieces at a time.  It&#39;s
+        also huge, too tall to fit in my cake holder.  I didn&#39;t let the cake cool
+        COMPLETELY before i assembled and frosted it so i had a little bit of sliding
+        of the top layer.  Love the flavor combo, we&#39;ll make this again.</p>\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"end-quote\"></div>\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"feeback-wrapper clrfix\">\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<small
+        class=\"number-helpful\"><label id=\"vote_use_24446451\">1</label> people
+        found this review Helpful.</small>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"comment_24446451\">\r\n\t\t\t\t\t\t\t\t\t\t<small class=\"helpful-vote\"
+        id=\"was_this_928418\">Was this review helpful to you? \r\n\t\t\t\t\t\t\t\t\t\t
+        <a href=\"javascript:void(0);\" id=\"yes_24446451\" onclick=\"javascript:SNI.Community.Toolbox.secureReview('add','24446451','-1','24093027');\"><strong>Yes</strong></a>
+        |\r\n\t\t\t\t\t\t\t\t\t\t <a href=\"javascript:void(0);\" id=\"no_24446451\"
+        onclick=\"javascript:SNI.Community.Toolbox.secureReview('remove','24446451','-1','24093027');\"><strong>No</strong></a></small>\r\n\t\t\t\t\t\t\t\t\t\t
+        </div>\r\n\t\t\t\t\t\t\t\t\t\t <script type=\"text/javascript\">\r\n\t\t\t\t\t\t\t\t\t\t
+        if(SNI.Community.Widgets.isAlreadyReviewed(\"Yes\",'-1','24446451') || SNI.Community.Widgets.isAlreadyReviewed(\"No\",'-1','24446451')){\r\n\t\t\t\t\t\t\t\t\t\t\t
+        if((document.getElementById(\"comment_\"+24446451) != null))\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tdocument.getElementById(\"comment_\"+24446451).style.display
+        = \"none\";\r\n\t\t\t\t\t\t\t\t\t\t }\r\n\t\t\t\t\t\t\t\t\t\t </script>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"rz-ft\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t</li>\r\n\t\t\t\t\r\n\t\t\t\t<!--
+        \ END INDIVIDUAL COMMENT -->\r\n\t\t\t\t\t\t\r\n\t\t\t\t<!--  BEGIN INDIVIDUAL
+        COMMENT -->\r\n\t\t\t\t<li itemprop=\"reviews\" itemscope itemtype=\"http://schema.org/Review\"
+        class=\"clrfix rating_review\">\r\n\t\t\t\t\t<div class=\"rz-w\">\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<a
+        href=\"http://my.cookingchanneltv.com/community/Sara_88/style.esi?userid=41205500\"
+        ><img height=\"48\" width=\"48\" alt=\"\" src=\"http://my.cookingchanneltv.com/skins/main/images/profilephotolookup/56_square.gif\"></a>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<div
+        class=\"about-recipe-info\">\r\n\t\t\t\t\t\t\t<div class=\"user-info clrfix\">\r\n\t\t\t\t\t\t\t\t
+        \r\n\t\t\t\t\t\t\t\t\t<p>By <a href=\"http://my.cookingchanneltv.com/community/Sara_88/style.esi?userid=41205500\"
+        ><span itemprop=\"author\">Sara_88</span></a></p>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div
+        id=\"cl-l-address\" ><p>Houston, TX</p></div>\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<meta
+        itemprop=\"about\" content=\"item reviewed\"></meta>\t\t\t\r\n\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<p>on
+        September 21, 2011</p><meta itemprop=\"datepublished\" content=\"September
+        21, 2011\"\\>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t<!--
+        \ note...something about this class=\"rz-e\" causes this div not to appear
+        sometimes in IE7 -->\r\n\t\t\t\t\t<div class=\"rz-e\"  >\r\n\t\t\t\t\t\t<div
+        class=\"rz-hd\"></div>\r\n\t\t\t\t\t\t<div class=\"rz-bd\">\t\t\r\n\t\t\t\t\t\t\t<div
+        class=\"arrow\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div class=\"upper-quote
+        clrfix\">\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div class=\"upper-quote-hd\"></div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-bd clrfix reviewminilist\">\r\n\t\t\t\t\t\t\t\t\t\t<p
+        class=\"comment-rating\"><span class=\"rating-sm-5\"></span>\t</p>\r\n\t\t\t\t\t\t\t\t\t\t<span
+        itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\">\r\n\t\t\t\t\t\t\t\t\t\t<meta
+        itemprop=\"ratingvalue\" content=\"5\">\r\n\t\t\t\t\t\t\t\t\t\t</span>\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"objCommentFlag1\" class=\"flag\"><a id=\"commens_link_22973852\" href=\"javascript:void(0);\"
+        onclick=\"SNI.Community.Toolbox.doCommentsFlag('22973852',this);\">Flag</a></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-container\" style=\"z-index: 15000;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-a\" style=\"z-index: 15001;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-22973852\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-top\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"ieDiv3-d2c\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-middle\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"cgp-flyout-content\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-t\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-title\"><h3>Flag This Review?</h3></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-close\" onclick=\"SNI.Community.Widgets.displayOff('cgp-flyout-22973852');\"
+        ><a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-22973852');\"><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></a></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"errorTextAltered_22973852\" style=\"display: none;\">You must provide
+        a reason for flagging this review.</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-list\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!--  <p>Are
+        you sure you want to flag this comment?</p> -->\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \t<p>Please provide the reason why you think this review is <b>inappropriate</b>.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"comment_flag_reason_error_22973852\" class=\"flp\" style=\"display:none;\"></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-inner-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea
+        id=\"comment_flag_reason_22973852\" style=\"width: 200px;\"></textarea>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-02-button\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-nav\" style=\"float: left;\"><ul id=\"widget-nav\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        id=\"widget-nav-item\"><a href=\"javascript:void(0);\" onclick=\"SNI.Community.Widgets.flagAsInappropriate('22973852','reviews','commens_link_22973852','comments_text22973852','41205500');\"><em>Submit</em></a></li></ul></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-button02\"><p>or <a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-22973852');\">Cancel</a></p></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-bottom\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-ft\"></div>\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t<p
+        id=\"comments_text22973852\" class=\"quote\" itemprop=\"reviewBody\">This
+        cake was unique! I loved how all the flavours combined well together. I followed
+        the recipe exactly as written, and baked the layers the night before. The
+        next day all I did was assemble and whip up the frosting. Not only does that
+        cut time, but it creates a rich and flavourful cake!</p>\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"end-quote\"></div>\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"feeback-wrapper clrfix\">\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<small
+        class=\"number-helpful\"><label id=\"vote_use_22973852\">4</label> people
+        found this review Helpful.</small>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"comment_22973852\">\r\n\t\t\t\t\t\t\t\t\t\t<small class=\"helpful-vote\"
+        id=\"was_this_928418\">Was this review helpful to you? \r\n\t\t\t\t\t\t\t\t\t\t
+        <a href=\"javascript:void(0);\" id=\"yes_22973852\" onclick=\"javascript:SNI.Community.Toolbox.secureReview('add','22973852','-1','24093027');\"><strong>Yes</strong></a>
+        |\r\n\t\t\t\t\t\t\t\t\t\t <a href=\"javascript:void(0);\" id=\"no_22973852\"
+        onclick=\"javascript:SNI.Community.Toolbox.secureReview('remove','22973852','-1','24093027');\"><strong>No</strong></a></small>\r\n\t\t\t\t\t\t\t\t\t\t
+        </div>\r\n\t\t\t\t\t\t\t\t\t\t <script type=\"text/javascript\">\r\n\t\t\t\t\t\t\t\t\t\t
+        if(SNI.Community.Widgets.isAlreadyReviewed(\"Yes\",'-1','22973852') || SNI.Community.Widgets.isAlreadyReviewed(\"No\",'-1','22973852')){\r\n\t\t\t\t\t\t\t\t\t\t\t
+        if((document.getElementById(\"comment_\"+22973852) != null))\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tdocument.getElementById(\"comment_\"+22973852).style.display
+        = \"none\";\r\n\t\t\t\t\t\t\t\t\t\t }\r\n\t\t\t\t\t\t\t\t\t\t </script>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"rz-ft\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t</li>\r\n\t\t\t\t\r\n\t\t\t\t<!--
+        \ END INDIVIDUAL COMMENT -->\r\n\t\t\t\t\t\t\r\n\t\t\t\t<!--  BEGIN INDIVIDUAL
+        COMMENT -->\r\n\t\t\t\t<li itemprop=\"reviews\" itemscope itemtype=\"http://schema.org/Review\"
+        class=\"clrfix rating_review\">\r\n\t\t\t\t\t<div class=\"rz-w\">\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<a
+        href=\"http://my.cookingchanneltv.com/community/mwahthecook/style.esi?userid=42789285\"
+        ><img height=\"48\" width=\"48\" alt=\"\" src=\"http://my.cookingchanneltv.com/skins/main/images/profilephotolookup/57_square.gif\"></a>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\t<div
+        class=\"about-recipe-info\">\r\n\t\t\t\t\t\t\t<div class=\"user-info clrfix\">\r\n\t\t\t\t\t\t\t\t
+        \r\n\t\t\t\t\t\t\t\t\t<p>By <a href=\"http://my.cookingchanneltv.com/community/mwahthecook/style.esi?userid=42789285\"
+        ><span itemprop=\"author\">mwahthecook</span></a></p>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div
+        id=\"cl-l-address\" ><p>HOUSTON, TX</p></div>\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<meta
+        itemprop=\"about\" content=\"item reviewed\"></meta>\t\t\t\r\n\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<p>on
+        September 20, 2011</p><meta itemprop=\"datepublished\" content=\"September
+        20, 2011\"\\>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t<!--
+        \ note...something about this class=\"rz-e\" causes this div not to appear
+        sometimes in IE7 -->\r\n\t\t\t\t\t<div class=\"rz-e\"  >\r\n\t\t\t\t\t\t<div
+        class=\"rz-hd\"></div>\r\n\t\t\t\t\t\t<div class=\"rz-bd\">\t\t\r\n\t\t\t\t\t\t\t<div
+        class=\"arrow\"></div>\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<div class=\"upper-quote
+        clrfix\">\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div class=\"upper-quote-hd\"></div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-bd clrfix reviewminilist\">\r\n\t\t\t\t\t\t\t\t\t\t<p
+        class=\"comment-rating\"><span class=\"rating-sm-5\"></span>\t</p>\r\n\t\t\t\t\t\t\t\t\t\t<span
+        itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\">\r\n\t\t\t\t\t\t\t\t\t\t<meta
+        itemprop=\"ratingvalue\" content=\"5\">\r\n\t\t\t\t\t\t\t\t\t\t</span>\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"objCommentFlag2\" class=\"flag\"><a id=\"commens_link_22972918\" href=\"javascript:void(0);\"
+        onclick=\"SNI.Community.Toolbox.doCommentsFlag('22972918',this);\">Flag</a></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-container\" style=\"z-index: 15000;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-a\" style=\"z-index: 15001;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-22972918\" style=\"display: none;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-top\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"ieDiv3-d2c\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-middle\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div id=\"cgp-flyout-content\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-t\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-title\"><h3>Flag This Review?</h3></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-close\" onclick=\"SNI.Community.Widgets.displayOff('cgp-flyout-22972918');\"
+        ><a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-22972918');\"><img
+        src=\"http://my.cookingchanneltv.com/skins/main/images/account/dot.gif\" border=\"0\"></a></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"errorTextAltered_22972918\" style=\"display: none;\">You must provide
+        a reason for flagging this review.</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-list\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!--  <p>Are
+        you sure you want to flag this comment?</p> -->\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \t<p>Please provide the reason why you think this review is <b>inappropriate</b>.</p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p
+        id=\"comment_flag_reason_error_22972918\" class=\"flp\" style=\"display:none;\"></p>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"emf-inner-textarea-field\" style=\"width: 210px;\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea
+        id=\"comment_flag_reason_22972918\" style=\"width: 200px;\"></textarea>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"up-clear\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-02-button\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-nav\" style=\"float: left;\"><ul id=\"widget-nav\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li
+        id=\"widget-nav-item\"><a href=\"javascript:void(0);\" onclick=\"SNI.Community.Widgets.flagAsInappropriate('22972918','reviews','commens_link_22972918','comments_text22972918','42789285');\"><em>Submit</em></a></li></ul></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-flyout-01-button02\"><p>or <a href=\"javascript:SNI.Community.Widgets.displayOff('cgp-flyout-22972918');\">Cancel</a></p></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        style=\"clear: both;\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"cgp-d2c-flyout-bottom\"></div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"upper-quote-ft\"></div>\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t</div>\t\r\n\t\t\t\t\t\t\t\t\t<p
+        id=\"comments_text22972918\" class=\"quote\" itemprop=\"reviewBody\">This
+        cake was delicious.  The cake was had a wonderful light banana taste, that
+        was kicked up with the pecans and chocolate chips.  The nutella as a filling
+        and the whipped cream cheese frosting was the icing on the cake.  This recipe
+        is a keeper. My husband, children and neighbors loved it.</p>\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"end-quote\"></div>\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t<div
+        class=\"feeback-wrapper clrfix\">\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<small
+        class=\"number-helpful\"><label id=\"vote_use_22972918\">3</label> people
+        found this review Helpful.</small>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t<div
+        id=\"comment_22972918\">\r\n\t\t\t\t\t\t\t\t\t\t<small class=\"helpful-vote\"
+        id=\"was_this_928418\">Was this review helpful to you? \r\n\t\t\t\t\t\t\t\t\t\t
+        <a href=\"javascript:void(0);\" id=\"yes_22972918\" onclick=\"javascript:SNI.Community.Toolbox.secureReview('add','22972918','-1','24093027');\"><strong>Yes</strong></a>
+        |\r\n\t\t\t\t\t\t\t\t\t\t <a href=\"javascript:void(0);\" id=\"no_22972918\"
+        onclick=\"javascript:SNI.Community.Toolbox.secureReview('remove','22972918','-1','24093027');\"><strong>No</strong></a></small>\r\n\t\t\t\t\t\t\t\t\t\t
+        </div>\r\n\t\t\t\t\t\t\t\t\t\t <script type=\"text/javascript\">\r\n\t\t\t\t\t\t\t\t\t\t
+        if(SNI.Community.Widgets.isAlreadyReviewed(\"Yes\",'-1','22972918') || SNI.Community.Widgets.isAlreadyReviewed(\"No\",'-1','22972918')){\r\n\t\t\t\t\t\t\t\t\t\t\t
+        if((document.getElementById(\"comment_\"+22972918) != null))\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tdocument.getElementById(\"comment_\"+22972918).style.display
+        = \"none\";\r\n\t\t\t\t\t\t\t\t\t\t }\r\n\t\t\t\t\t\t\t\t\t\t </script>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div
+        class=\"rz-ft\"></div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t</li>\r\n\t\t\t\t\r\n\t\t\t\t<!--
+        \ END INDIVIDUAL COMMENT -->\r\n\t\t\t\t\t\t\r\n\t\t\r\n\r\n\t</ul>\r\n\t\r\n\t\t\t\n\t\t\t</div><!--end
+        ratings-reviews-list-inner-->\n\t\t</div>\n\t\n\t\t \n\t\t\n\t\t\n  \n\t</div>\t\n\t\n\t\t<div
+        id=\"no-rev-msg\" class=\"ft-rev\">\n\t\t\t<div class=\"clrfix\">\n\t\t\t\t<p><a
+        href=\"/recipes/monkey-tail-banana-cake/reviews.html\">Read all 11 reviews</a></p>
+        \n\t\t\t</div>\n\t\t</div>\t\t\n\t\t\n\t\t\n\t\t\n\t <!-- #ratings-reviews
+        -->\n\t</div>\n\t\t\t\t\n\n\t\t\t\n \n\n\t\n\t</div>\t\t\n\t<input type=\"hidden\"
+        name=\"Community_totalNumberOfComments\" id=\"Community_totalNumberOfComments\"
+        value=\"11\">\n\t<input type=\"hidden\" name=\"Community_ratingCumulative\"
+        id=\"Community_ratingCumulative\" value=\"45.0\">\t\n\t\t\n\t</div>\n\t<script
+        language=\"javascript\">\n\tvar TotalNumComments = document.getElementById(\"Community_totalNumberOfComments\").value;\n\tvar
+        RatingsCumulative = document.getElementById(\"Community_ratingCumulative\").value;\n\tmdManager.addParameter(\"Community_totalNumberOfComments\",TotalNumComments);\n\tmdManager.addParameter(\"Community_ratingCumulative\",RatingsCumulative);\n\t</script>\n\t\n\t<!--
+        <b>The date is: Tue Apr 23 11:10:43 EDT 2013\n</b> -->\n\t\n\t\n\t\n\n<script
+        type=\"text/javascript\">\n    var totalReviewsEl = document.getElementById('Community_totalNumberOfComments');\n
+        \   var reviewAverageEl = document.getElementById('Community_ratingCumulative');\n
+        \   if (reviewAverageEl && totalReviewsEl) {\n        var totalReviews = totalReviewsEl.value;\n
+        \       var reviewAverage = reviewAverageEl.value;\n        writeReviewSummary(totalReviews,
+        reviewAverage);\n    }\n</script>\n\n                \n                \n
+        \               \n\n\n \n\n\n<div class=\"google-text-ads\">\n\n\n \n\n\n\n<div
+        class=\"ad-text clrfix\">\n    <script type=\"text/javascript\">GoogleLeaderboardAd(1);</script>\n</div></div>\n\n
+        \           </div>\n        </div>\n        <div id='sni-e' name='sni-e'>\n\n\n\n
+        \n\n\n\n\n\n<div class=\"parsys\"><div class=\"parsys section\"><div class=\"parbase
+        section reference\"><div style=\"display:inline;\" class=\"cq-dd-paragraph\"><div
+        class=\"page right-rail module-editor\">\n\n\n\n \n\n\n\n<div class=\"parsys
+        right-rail\"><div class=\"parbase section reference\"><div style=\"display:inline;\"
+        class=\"cq-dd-paragraph\"><div class=\"big-box-ad big_box_ad\">\n\n\n \n\n\n\n\n<div
+        class=\"bigboxad clrfix\">\n    <div id=\"bigbox\">\n        <script type=\"text/javascript\">BigboxAd(5);</script>\n
+        \    </div>\n    <span>Advertisement</span>\n\n</div>\n</div>\n</div>\n</div>\n<div
+        class=\"parbase teaser section\"><script type=\"text/javascript\">$CQ(function()
+        {initializeTeaserLoader([{\"path\":\"/content/campaigns/cook/sp-top/jeffrey-saad-global-kitchen\",\"name\":\"jeffrey-saad-global-kitchen\",\"title\":\"Jeffrey
+        Saad Global Kitchen\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/jeffrey-saad-global-kitchen.thumb.png\",\"id\":\"sp-top_jeffrey-saad-global-kitchen\",\"segments\":[\"/etc/segmentation/cook/jeffrey-saad-global-kitchen\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/more-healthy-living-inspirations\",\"name\":\"more-healthy-living-inspirations\",\"title\":\"More
+        Healthy Living Inspirations\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/more-healthy-living-inspirations.thumb.png\",\"id\":\"sp-top_more-healthy-living-inspirations\",\"segments\":[\"/etc/segmentation/cook/segment-targeting-main-section\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/more-game-day-favorites\",\"name\":\"more-game-day-favorites\",\"title\":\"More
+        Game Day Favorites\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/more-game-day-favorites.thumb.png\",\"id\":\"sp-top_more-game-day-favorites\",\"segments\":[\"/etc/segmentation/cook/more-game-day-favorites\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/more-vday-inspirations\",\"name\":\"more-vday-inspirations\",\"title\":\"More
+        Valentine's Day Inspirations\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/more-vday-inspirations.thumb.png\",\"id\":\"sp-top_more-vday-inspirations\",\"segments\":[\"/etc/segmentation/cook/more-vday-inspirations\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/cooking-channel_s-americas-best-bites\",\"name\":\"cooking-channel_s-americas-best-bites\",\"title\":\"Cooking
+        Channel\\u2019s America\\u2019s Best Bites\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/cooking-channel_s-americas-best-bites.thumb.png\",\"id\":\"sp-top_cooking-channel_s-americas-best-bites\",\"segments\":[\"/etc/segmentation/cook/cooking-channel_s-americas-best-bites\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/FN-st-pats\",\"name\":\"FN-st-pats\",\"title\":\"Food
+        Network\\u2019s St. Paddy\\u2019s Desserts\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/FN-st-pats.thumb.png\",\"id\":\"sp-top_FN-st-pats\",\"segments\":[\"/etc/segmentation/cook/FN-st-pats\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/on-tv-app\",\"name\":\"on-tv-app\",\"title\":\"Watch
+        Your Favorite FN Shows Anywhere!\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/on-tv-app.thumb.png\",\"id\":\"sp-top_on-tv-app\",\"segments\":[\"/etc/segmentation/cook/on-tv-app\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/more-mexican-inspirations\",\"name\":\"more-mexican-inspirations\",\"title\":\"More
+        Mexican Inspirations\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/more-mexican-inspirations.thumb.png\",\"id\":\"sp-top_more-mexican-inspirations\",\"segments\":[\"/etc/segmentation/cook/more-mexican-inspirations\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/Alex-Guarnaschellis-Debut-Cookbook\",\"name\":\"Alex-Guarnaschellis-Debut-Cookbook\",\"title\":\"Alex
+        Guarnaschelli\\u2019s Debut Cookbook!\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/Alex-Guarnaschellis-Debut-Cookbook.thumb.png\",\"id\":\"sp-top_Alex-Guarnaschellis-Debut-Cookbook\",\"segments\":[\"/etc/segmentation/cook/Alex-Guarnaschellis-Debut-Cookbook\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-top/city-eats\",\"name\":\"city-eats\",\"title\":\"city
+        eats, powered by food network\",\"campainName\":\"sp-top\",\"thumbnail\":\"/content/campaigns/cook/sp-top/city-eats.thumb.png\",\"id\":\"sp-top_city-eats\",\"segments\":[\"/etc/segmentation/cook/city-eats\"],\"tags\":[]}],
+        \"first\", \"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser\",
+        \"false\", \"http://localhost:4502/libs/wcm/stats/tracker\", \"/content/modules/cook/right-rails/recipes-right-rail/jcr:content/par/right-rail/right-rail/teaser\");\n
+        \       });</script><div id=\"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser\"
+        class=\"campaign campaign-sp-top\"></div></div>\n<div class=\"parbase section
+        reference\"><div style=\"display:inline;\" class=\"cq-dd-paragraph\"><div
+        class=\"on-tv-now\">\n\n\n\n \n\n\n\n\n\n    \n<div class=\"pod schedule\"
+        id=\"onTvMod\">\n    <div class=\"schedule-hd clrfix\">\n        <h3>On TV</h3>\n
+        \       <span>*ALL TIMES EASTERN</span>\n        <ul>\n            <li>\n
+        \               <a href=\"/shows/programdaily.html\">Full Schedule</a>\n            </li>\n
+        \           <li class=\"last\">\n                <a rel=\"otv-2\" href=\"/shows/a-z.html\">Shows
+        A-Z</a>\n            </li>\n        </ul>\n    </div> <!--  end schedule-hd
+        --> \n    <div id=\"onTVnow\">\n            <div class=\"show clrfix\">\n
+        \               <div class=\"tslot\">\n                    <div class=\"sm\">ON
+        AIR</div>\n                    <span>NOW</span>\n                </div> \n
+        \                <div class=\"des\">                    \n                     <a
+        class=\"showtitle\" href=\"#\" style=\"display:none\"></a>\n                 </div>\n
+        \           </div>\n            <div class=\"show clrfix\">\n                <div
+        class=\"tslot\">\n                    <div class=\"sm\">TONIGHT</div>\n                    <span
+        class=\"sh-time\">10:00 </span><div class=\"sm ampm\">PM</div>\n                </div>\n
+        \               <div class=\"des\">\n                    <a href=\"#\" class=\"showtitle\"
+        style=\"display:none\"></a>\n                </div>\n            </div>          \n
+        \   </div>  <!--  end onTVnow -->\n \n\n    \n    <div id=\"onTVpromo\">\n
+        \       <div class=\"new-shows clrfix\">\n            <h3>what's hot</h3>\n
+        \           <a href=\"/shows/eat-street.html\" class=\"n-shows\">               \n
+        \               <img src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/3/21/0/CCEAT_Host-James-Cunningham-01_s4x3.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Eat St.\" title=\"CCEAT_Host-James-Cunningham-01_s4x3\"/>                    \n
+        \           </a>            \n            <div class=\"cont\">\n                <span
+        class=\"showtitle\"><a href=\"/shows/eat-street.html\">Eat St.</a></span>\n
+        \               <span class=\"sni-capital small\">Host: <a href=\"/chefs/james-cunningham.html\">James
+        Cunningham</a></span>\n            </div>\n        </div>\n        <!-- Learn
+        How button -->\n        \n\n\n \n\n\n\n\n<div class=\"learn-how clrfix\">
+        \n  <p> \n    <em>Get Cooking Channel on your TV.</em> \n      <div class=\"btn-cont\">
+        \n        <a href=\"#\" onclick=\"SNI.Util.popup('http://cookingchannel.viewerlink.tv/',
+        670, 550); return false;\" class=\"button\"> \n          <span>Learn How</span>
+        \n        </a> \n      </div> \n  </p> \n</div>\n     </div>   <!--  end onTVpromo
+        -->\n</div> <!--  end onTvMod -->\n<script type=\"text/javascript\">\n    SNI.Analytics.initializeClickTracking('#onTvMod',
+        'sni-wcm/components/modules/on-tv-now','/content/modules/cook/on-tv/on-tv-now/jcr:content/par/on-tv-now');\n</script>\n\n<script
+        type=\"text/javascript\">\n   SNI.CC.ProgramGuide.getOnTvNow();\n</script></div>\n</div>\n</div>\n<div
+        class=\"parbase teaser section\"><script type=\"text/javascript\">$CQ(function()
+        {initializeTeaserLoader([{\"path\":\"/content/campaigns/cook/sp-mid/gac-farm-kings\",\"name\":\"gac-farm-kings\",\"title\":\"GAC\\u2019s
+        Farm Kings: Thursdays 9/8c.\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/gac-farm-kings.thumb.png\",\"id\":\"sp-mid_gac-farm-kings\",\"segments\":[\"/etc/segmentation/cook/gac-farm-kings\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/BFF\",\"name\":\"BFF\",\"title\":\"Bobby
+        Flay Fit\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/BFF.thumb.png\",\"id\":\"sp-mid_BFF\",\"segments\":[\"/etc/segmentation/cook/BFF\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/winter-adventures-to-stay-fit\",\"name\":\"winter-adventures-to-stay-fit\",\"title\":\"Winter
+        Adventures to Stay Fit\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/winter-adventures-to-stay-fit.thumb.png\",\"id\":\"sp-mid_winter-adventures-to-stay-fit\",\"segments\":[\"/etc/segmentation/cook/winter-adventures-to-stay-fit\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/get-game-day-recipes-on-the-go\",\"name\":\"get-game-day-recipes-on-the-go\",\"title\":\"Get
+        Game Day Recipes On the Go\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/get-game-day-recipes-on-the-go.thumb.png\",\"id\":\"sp-mid_get-game-day-recipes-on-the-go\",\"segments\":[\"/etc/segmentation/cook/get-game-day-recipes-on-the-go\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/amazon\",\"name\":\"amazon\",\"title\":\"Food
+        Network, Now on Amazon!\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/amazon.thumb.png\",\"id\":\"sp-mid_amazon\",\"segments\":[\"/etc/segmentation/cook/amazon\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/travel-channel_s-burger-land--mondays-10-9c-\",\"name\":\"travel-channel_s-burger-land--mondays-10-9c-\",\"title\":\"Travel
+        Channel\\u2019s Burger Land: Mondays 10/9c.\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/travel-channel_s-burger-land--mondays-10-9c-.thumb.png\",\"id\":\"sp-mid_travel-channel_s-burger-land--mondays-10-9c-\",\"segments\":[\"/etc/segmentation/cook/travel-channel_s-burger-land--mondays-10-9c-\"],\"tags\":[]},{\"path\":\"/content/campaigns/cook/sp-mid/travel-channel-s-april-giveaway\",\"name\":\"travel-channel-s-april-giveaway\",\"title\":\"Travel
+        Channel's April Giveaway\",\"campainName\":\"sp-mid\",\"thumbnail\":\"/content/campaigns/cook/sp-mid/travel-channel-s-april-giveaway.thumb.png\",\"id\":\"sp-mid_travel-channel-s-april-giveaway\",\"segments\":[\"/etc/segmentation/cook/travel-channel-s-april-sweeps\"],\"tags\":[]}],
+        \"first\", \"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser_0\",
+        \"false\", \"http://localhost:4502/libs/wcm/stats/tracker\", \"/content/modules/cook/right-rails/recipes-right-rail/jcr:content/par/right-rail/right-rail/teaser_0\");\n
+        \       });</script><div id=\"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser_0\"
+        class=\"campaign campaign-sp-mid\"></div></div>\n<div class=\"parbase section
+        reference\"><div style=\"display:inline;\" class=\"cq-dd-paragraph\"><div
+        class=\"most-popular-recipes\">\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n<!--  Recipe
+        1 Start -->\n\n\n<!--  Recipe 1 Asset Details -->\n\n\n\n\n\n<!--  Recipe
+        1 Properties -->\n\n\n<!--  Recipe 1 Properties End -->\n<!--  Recipe 1 End
+        -->\n\n<!--  Recipe 2 Start -->\n\n\n\n<!--  Recipe 2 End -->\n<!--  Recipe
+        3 Start -->\n\n\n\n<!--  Recipe 3 End -->\n\n<!--  Recipe 4 Start -->\n\n\n\n<!--
+        \ Recipe 4 End -->\n\n<!--  Recipe 5 Start -->\n\n\n\n<!--  Recipe 5 End -->\n\n\n<div
+        class=\"pod popular clrfix\" id=\"most-popular\">\n     <h3>Most Popular Recipes</h3>\n
+        \    <ol>\n         <li>\n            <span class=\"popularNum\">1</span>\n
+        \           \n            <a href=\"/recipes/ching-he-huang/chicken-chow-mein.html\"
+        title=\"Chicken Chow Mein\" rel=\"mpri-1\" class=\"thumb\">\n                <img
+        src=\"http://cook.sndimg.com/content/dam/images/cook/fullset/2011/12/13/0/CC-ching-he-huang_chicken-chow-mein-recipe_s4x3.jpg/jcr:content/renditions/cq5dam.web.92.69.jpeg\"
+        alt=\"Chicken Chow Mein\"/>\n            </a>\n            \n            <a
+        title=\"Chicken Chow Mein\" href=\"/recipes/ching-he-huang/chicken-chow-mein.html\"
+        rel=\"mpr-1\" class=\"description\">Chicken Chow Mein</a>\n         </li>\n
+        \        <li>\n            <span class=\"popularNum\">2</span>\n            <a
+        title=\"Salmon en Croute\" href=\"/recipes/laura-calder/salmon-en-croute.html\"
+        rel=\"mpr-2\" class=\"description\">Salmon en Croute</a>\n         </li>\n
+        \        <li>\n            <span class=\"popularNum\">3</span>\n            <a
+        title=\"Slow Cooker Bolognese Sauce\" href=\"/recipes/kelsey-nixon/slow-cooker-bolognese-sauce.html\"
+        rel=\"mpr-2\" class=\"description\">Slow Cooker Bolognese Sauce </a>\n         </li>\n
+        \        <li>\n            <span class=\"popularNum\">4</span>\n            <a
+        title=\"Stuffed Pizza\" href=\"/recipes/stuffed-pizza.html\" rel=\"mpr-2\"
+        class=\"description\">Stuffed Pizza </a>\n         </li>\n         <li><span
+        class=\"popularNum\">5</span>\n            <a title=\"Pecan Pie Monkey Bread\"
+        href=\"/recipes/bobby-flay/pecan-pie-monkey-bread.html\" rel=\"mpr-2\" class=\"description\">Pecan
+        Pie Monkey Bread </a>\n         </li>\n     </ol>\n </div>\n<script type=\"text/javascript\">\n
+        \   SNI.Analytics.initializeClickTracking('#most-popular', 'sni-wcm/components/modules/most-popular-recipes','/content/modules/cook/most-popular-recipes/most-popular-recipes/jcr:content/par/most-popular-recipes');\n</script></div>\n</div>\n</div>\n<div
+        class=\"parbase teaser section\"><script type=\"text/javascript\">$CQ(function()
+        {initializeTeaserLoader([], \"first\", \"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser_1\",
+        \"false\", \"http://localhost:4502/libs/wcm/stats/tracker\", \"/content/modules/cook/right-rails/recipes-right-rail/jcr:content/par/right-rail/right-rail/teaser_1\");\n
+        \       });</script><div id=\"_content_modules_cook_right-rails_recipes-right-rail_jcr_content_par_right-rail_right-rail_teaser_1\"
+        class=\"campaign campaign-sp-bottom\"></div></div>\n<div class=\"parbase section
+        reference\"><div style=\"display:inline;\" class=\"cq-dd-paragraph\"><div
+        class=\"newsletter-subscribe newsletter_subscribe\">\n\n\n \n\n\n\n<div class=\"pod
+        subscribe controls clrfix\">\n    <h3><em>Join</em> Us</h3>\n\n    <div class=\"bd\">\n
+        \       Subscribe to our newsletter for recipes, tips and ideas from our hot
+        new chefs and shows.\n        <div class=\"btn-cont clrfix\">\n            <a
+        href=\"http://mynewsletters.scrippsnetworks.com/?mode=subscribe&nlbrand=cooking&source=2011_CC_MODULE&cc_news=Y\"
+        target=\"_blank\" class=\"button\">\n            \t<span>Subscribe</span>\n
+        \          \t</a>\n        </div>\n    </div>\n</div>  </div>\n</div>\n</div>\n<div
+        class=\"parbase section reference\"><div style=\"display:inline;\" class=\"cq-dd-paragraph\"><div
+        class=\"facebook-fan-box\"><div id=\"facebook-fan\" class=\"pod facebook\">\n
+        \    <script type=\"text/javascript\"> \n          $(function() { \n             $('#facebook-fan').html('<iframe
+        scrolling=\\\"no\\\" width=\\\"336\\\" height=\\\"246\\\" frameborder=\\\"0\\\"
+        src=\\\"http://www.facebook.com/connect/connect.php?id=153561472759&connections=10&stream=0\\\"
+        allowtransparency=\\\"true\\\"></iframe>');\n          }); \n      </script>
+        \n</div></div>\n</div>\n</div>\n<div class=\"parbase section reference\"><div
+        style=\"display:inline;\" class=\"cq-dd-paragraph\"><div class=\"vsw-feature-links
+        big_box_ad\">\n\n\n \n\n\n<div class=\"VswAd\" id=\"VswAd\">\n    <script
+        type=\"text/javascript\">VswAd(1);</script>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=\"parbase section reference\">\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n\n</div>
+        \  \n     </div>\n     <script type=\"text/javascript\">\n         SNI.Analytics.initCrosslinkClickTracking('#sni-w
+        .ingredients, #sni-w .steps', 'sni-wcm/components/pagetypes/recipe', '/content/cook/recipes/no-chef/m/mo/mon/monk/monkey-tail-banana-cake/jcr:content');\n
+        \    </script>  \n</div>\n\n<div id=\"sni-ft\" class=\"clrfix\">\n    \n\n\n
+        \n\n\n\n\n\n    \n        \n        <div class=\"module page default-footer\">\n\n\n
+        \n\n\n\n\n\n \n\n\n\n\n\n\n    \n\n\n\n    <div class=\"ft-wrap-top\">\n        \n
+        \           \n            \n\n\n \n\n\n<!-- Sponsored Footer Start -->\n<style
+        type=\"text/css\">#sponsor-links em { font-style: italic; }</style>\n<div
+        id=\"sponsor-links\">\n    <div class=\"wrap\">\n        <div class=\"bd clrfix\">\n
+        \           <h4><p>ideas from cooking channel</p></h4>\n                \n
+        \                   <ul class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/easy-chinese-recipes-and-menus.html\">Easy Chinese Recipes</a></li>\n
+        \                       \n                     </ul>\n                \n                    <ul
+        class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/bracket-battle-best-college-eats.html\">Best College Eats</a></li>\n
+        \                       \n                     </ul>\n                \n                    <ul
+        class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/chocolate-desserts.html\">50 Chocolate Desserts</a></li>\n
+        \                       \n                     </ul>\n                \n                    <ul
+        class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/margarita-recipes.html\">15 Great Margaritas</a></li>\n                        \n
+        \                    </ul>\n                \n                    <ul class=\"list\">\n
+        \                       \n                             <li><a href=\"/recipes/quick-healthy-weeknight-dinner-recipes.html\">Weeknight
+        Dinner Ideas</a></li>\n                        \n                     </ul>\n
+        \               \n                    <ul class=\"list\">\n                        \n
+        \                            <li><a href=\"/recipes/our-best-one-pot-meals.html\">Easy
+        One-Pot Meals</a></li>\n                        \n                     </ul>\n
+        \               \n                    <ul class=\"list\">\n                        \n
+        \                            <li><a href=\"/recipes/comfort-food-recipes.html\">Comfort
+        Food Favorites</a></li>\n                        \n                     </ul>\n
+        \               \n                    <ul class=\"list\">\n                        \n
+        \                            <li><a href=\"/recipes/the-best-slow-cooker-recipes.html\">Slow-Cooker
+        Recipes</a></li>\n                        \n                     </ul>\n                \n
+        \                   <ul class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/cocktails-and-drinks.html\">Cocktails and Drinks</a></li>\n
+        \                       \n                     </ul>\n                \n                    <ul
+        class=\"list\">\n                        \n                             <li><a
+        href=\"/recipes/party-drinks-and-bar-snacks.html\">Party Snacks</a></li>\n
+        \                       \n                     </ul>\n                 \n
+        \       </div>\n   </div>\n</div>\n<!-- Sponsored Footer End -->\n    \n        \n
+        \           \n            \n\n\n \n\n\n\n<div id=\"sister-site-wrap\" class=\"sis-wrapper
+        clrfix\">\n    <div id=\"sister-sites\" class=\"group links\">\n        <div
+        class=\"left_box_border\">\n            \n                \n                \n\n\n
+        \n\n\n\n<div id=\"more-from-sni\">\n    <h5>More from Cooking Channel</h5>
+        \n        \n         <ul class=\"list\">\n             \n                  <li><a
+        href=\"http://www.facebook.com/CookingChannel\" target=\"_blank\">Facebook</a></li>\n
+        \            \n          </ul>\n        \n         <ul class=\"list\">\n             \n
+        \                 <li><a href=\"http://www.twitter.com/cookingchannel\" target=\"_blank\">Twitter</a></li>\n
+        \            \n          </ul>\n        \n         <ul class=\"list\">\n             \n
+        \                 <li><a href=\"/topics/a-z.html\" title=\"Topics\">Topics
+        A-Z</a></li>\n             \n          </ul>\n        \n         <ul class=\"list\">\n
+        \            \n                  <li><a href=\"/chefs/a-z.html\" title=\"Chefs\">Talents
+        A-Z</a></li>\n             \n          </ul>\n        \n         <ul class=\"list\">\n
+        \            \n                  <li><a title=\"Shows\" href=\"/shows/a-z.html\">Shows
+        A-Z</a></li>\n             \n          </ul>\n        \n         <ul class=\"list\">\n
+        \            \n                  <li><a href=\"/recipes/a-z.html\" title=\"Recipes\">Recipes
+        A-Z</a></li>\n             \n          </ul>\n        \n\n</div>\n\n\n                        \n
+        \       </div>\n        <div class=\"right_box_border\">\n            <h5
+        class=\"colspan\">Cooking Channel Family</h5>\n            <div class=\"col
+        daily\">\n                \n                \n                        \n                \n
+        \               \n\n\n\n \n\n\n\n\n\n\n\n\n\n\n<h5>\n    <a href=\"http://www.foodnetwork.com/?xp=cc_footer\"
+        target=\"_blank\">Food Network</a>\n</h5>\n\n\n\n    \n    \n        \n    \n\n\n
+        \   \n        \n            \n                <a href=\"http://www.foodnetwork.com/healthy-main-dishes/package/index.html?xp=cc_footer\">\n
+        \                   <img src=\"http://img.foodnetwork.com/FOOD/2008/12/23/FNmag_Slow-Cooker-Pork-Ta_s4x3_sm.jpg\"
+        alt=\"Food Network\" title=\"Food Network\" height=\"69\" width=\"92\">\n
+        \               </a>                    \n                \n             \n
+        \                \n    \n        \n \n        \n\n        \n<p><a href=\"http://www.foodnetwork.com/healthy-main-dishes/package/index.html?xp=cc_footer\">Get
+        60+ Healthy</a></p>\n<p><a href=\"http://www.foodnetwork.com/healthy-main-dishes/package/index.html?xp=cc_footer\">and
+        Delicous Dinner</a></p>\n<p><a href=\"http://www.foodnetwork.com/healthy-main-dishes/package/index.html?xp=cc_footer\">Recipes</a></p>\n\n\n\n
+        \           </div>\n            <div class=\"col daily\">\n                \n
+        \               \n                        \n                \n                \n\n\n\n\n<h5><a
+        href=\"http://www.food.com/?xp=cc_footer\" target=\"_blank\">Food.com</a></h5><ul
+        class=\"list\">\n\n\n\n<li><a href=\"http://www.food.com/slideshow/low-calorie-snack-recipes-for-busy-moms-178?xp=cc_footer\">Smart
+        100-Calorie Snacks</a></li>\n\n\n<li><a href=\"http://www.food.com/copycat-recipes/home/package?xp=cc_footer\">Top
+        Copycat Restaurant Recipes</a></li>\n\n\n<li><a href=\"http://www.food.com/slideshow/10-things-to-make-with-pizza-dough-180?xp=cc_footer\">Pizza
+        Dough Cinnamon Rolls</a></li>\n</ul>\n            </div>\n            <div
+        class=\"col daily\">\n                \n                        \n                \n
+        \               \n                \n\n\n\n\n<h5><a href=\"http://www.hgtv.com/?xp=cc_footer\"
+        target=\"_blank\">HGTV</a></h5><ul class=\"list\">\n\n\n\n<li><a href=\"http://www.hgtv.com/smart-home/index.html?xp=smart\">Tour
+        HGTV Smart Home</a></li>\n\n\n<li><a href=\"http://www.hgtv.com/water-features-for-the-garden/package/index.html?xp=cc_footer\">Amazing
+        Water Features</a></li>\n\n\n<li><a href=\"http://www.hgtv.com/decorating-basics/living-room-design-styles/pictures/index.html?xp=cc_footer\">Stunning
+        Living Room Designs</a></li>\n</ul>\n            </div>\n            <div
+        class=\"col daily\">\n                \n                \n                        \n
+        \               \n                \n\n\n\n\n<h5><a href=\"http://www.travelchannel.com/?xp=cc_footer\"
+        target=\"_blank\">Travel Channel</a></h5><ul class=\"list\">\n\n\n\n<li><a
+        href=\"http://www.travelchannel.com/sweepstakes?xp=cc_footer\">Travel Channel
+        Orlando Sweeps</a></li>\n\n\n<li><a href=\"http://www.travelchannel.com/interests/spring?xp=cc_footer\">Ready
+        for a Spring Fling?</a></li>\n\n\n<li><a href=\"http://www.travelchannel.com/interests/romance-and-honeymoons/articles/2013s-most-romantic-honeymoon-destinations?xp=cc_footer\">Best
+        Honeymoons in 2013</a></li>\n</ul>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n
+        \   \n        \n    </div>\n\n\n<div class=\"ft-wrap-bottom\" id=\"global-footer\">\n
+        \   <div class=\"ft-bottom\">\n        <div class=\"ft-nav clrfix\">\n            <a
+        rel=\"gf-logo\" href=\"/\" class=\"ft-logo\"><img alt=\"Cooking Channel Logo\"
+        id=\"cc-logo\" src=\"/etc/designs/cook/clientlib/imgs/CC_logo-footer.gif\"
+        name=\"cc-logo\"></a>\n\n            <ul>\n                  \n                      <li><a
+        href=\"/shows.html\">TV Shows</a></li>\n                  \n                      <li><a
+        href=\"/chefs.html\">Chefs &amp; Hosts</a></li>\n                  \n                      <li><p><a
+        href=\"/recipes.html\">Recipes</a></p>\n<p>&nbsp;</p></li>\n                  \n
+        \                     <li><a href=\"/videos/cooking-channel-video-collection.html\">Cooking
+        Videos</a></li>\n                  \n                      <li><a href=\"/shows/programweekly.weekly.html\">Tv
+        Schedule</a></li>\n                  \n                      <li><p><a href=\"http://blog.cookingchanneltv.com/\">Blog</a></p>\n<p>&nbsp;</p></li>\n
+        \                 \n            </ul>\n        </div>\n\n        <div class=\"search\">\n
+        \           <form class=\"clrfix\" method=\"get\" action=\"/search-results.html\"
+        name=\"HeaderSearchForm\" id=\"ccSearchForm\">\n                <div class=\"searchbox
+        clrfix\">\n                    <div class=\"input-box\">\n                        <span><input
+        type=\"text\" id=\"cc-search-input-footer\" name=\"searchTerm\" value=\"Search
+        Recipes, Shows and Chefs\" class=\"input-hint\"></span>\n                    </div>\n\n
+        \                   <div class=\"btn-cont\">\n                        <button
+        type=\"submit\" class=\"button\"><span><em>Search</em></span></button>\n                    </div>\n
+        \               </div>\n            </form>\n        </div>\n        \n        <script
+        type=\"text/javascript\">\n            SNI.Util.inputField(\"#cc-search-input-footer\",
+        \"Search Recipes, Shows and Chefs\");\n        </script>\n\n        <div class=\"ft-links
+        clrfix\">\n            <div class=\"column\">\n                <!--Empty column-->\n
+        \           </div>\n\n            <div class=\"sitefooter\">\n                <div
+        class=\"farm\">\n                    <div class=\"legal\">\n                        <div
+        class=\"pack\">\n                            <div class=\"left\">\n                                <div
+        class=\"legal-copy\">\n                                    <span>&copy; 2013
+        <a href=\"http://www.scrippsnetworks.com/\">Cooking Channel</a>, LLC. All
+        Rights Reserved.</span>\n                                </div>\n                            </div>\n\n
+        \                           <div class=\"right\">\n                                <div
+        class=\"click-wrap\" id=\"all-scripps\">\n                                    <!--Start
+        Pop-->\n\n                                    <div style=\"position: relative;\"
+        class=\"sister_sites_link_container\">\n                                        <div
+        style=\"display: block;\" id=\"sister_sites_container\">\n                                            <div
+        style=\"display: none;\" id=\"sister_sites_popup\">\n                                                <div
+        class=\"hd\"></div>\n\n                                                <div
+        class=\"bd clrfix\">\n                                                    <h3>SCRIPPS
+        NETWORKS DIGITAL</h3><span class=\"close\">x</span>\n\n                                                    <ul>\n
+        \                                                       \n                                                            <li><a
+        href=\"http://www.foodnetwork.com/\" target=\"_blank\">Food Network</a></li>\n
+        \                                                       \n                                                            <li><span
+        style=\"font-size: 12px;\"><a href=\"http://www.food.com/\" target=\"_blank\">Food.com</a></span></li>\n
+        \                                                       \n                                                            <li><a
+        href=\"http://www.cityeats.com/\" target=\"_blank\">CityEats.com</a></li>\n
+        \                                                       \n                                                            <li><a
+        href=\"http://www.hgtv.com/\" target=\"_blank\">HGTV</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.diynetwork.com/\"
+        target=\"_blank\">DIY Network</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.frontdoor.com/\"
+        target=\"_blank\">FrontDoor.com</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.hgtvremodels.com/\"
+        target=\"_blank\">HGTVRemodels.com</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.hgtvgardens.com/\"
+        target=\"_blank\">HGTVGardens.com</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.travelchannel.com/\"
+        target=\"_blank\">Travel Channel</a></li>\n                                                        \n
+        \                                                           <li><a href=\"http://www.gactv.com/\"
+        target=\"_blank\">GAC</a></li>\n                                                        \n
+        \                                                   </ul>\n\n                                                    \n
+        \                                               </div>\n\n                                                <div
+        class=\"ft\"></div>\n                                            </div>\n
+        \                                       </div><!--End Pop-->\n                                        <a
+        id=\"sister_sites_link\" href=\"\" name=\"sister_sites_link\">See All of Scripps
+        Networks Digital <span id=\"sister_sites_link_arrow\">&nbsp;</span></a>\n
+        \                                   </div>\n                                </div>\n\n
+        \                               <p>\n                                    \n
+        \                                       <span style=\"font-size: 12px;\"><a
+        href=\"/site/site-map.html\">Site Map</a></span>\n                                         |
+        \n                                    \n                                        <a
+        href=\"http://www.scrippsnetworks.com/terms.aspx\" target=\"_blank\">Terms
+        of Use</a>\n                                         | \n                                    \n
+        \                                       <span style=\"font-size: 12px;\"><a
+        href=\"http://www.scrippsnetworks.com/privacy.aspx\" target=\"_blank\">Privacy
+        Policy</a></span>\n                                         | \n                                    \n
+        \                                       <span style=\"font-size: 12px;\"><a
+        href=\"http://dv.privacychoice.org/index.php/preferenceManager/global?company_id=40\"
+        target=\"_blank\">Ad Choices</a></span>\n                                         |
+        \n                                    \n                                        <span
+        style=\"font-size: 12px;\"><a href=\"/site/about-us/infringement.html\">Infringements</a></span>\n
+        \                                        | \n                                    \n
+        \                                       <span style=\"font-size: 12px;\"><a
+        href=\"/site/about-us.html\">About</a></span>\n                                         |
+        \n                                    \n                                        <a
+        href=\"http://www.scrippsnetworksdigital.com/foodcat/default.aspx\" target=\"_blank\">Advertise
+        With Us</a>\n                                         | \n                                    \n
+        \                                       <span style=\"font-size: 12px;\"><a
+        href=\"/site/about-us/questions.html\">Help</a></span>\n                                         |
+        \n                                    \n                                        <span
+        style=\"font-size: 12px;\"><a href=\"/site/contact-us.html\">Contact Us</a></span>\n
+        \                                       \n                                    \n
+        \                                                  \n                                </p>\n\n
+        \                           </div>\n                        </div>\n                    </div>\n
+        \               </div>\n            </div>\n        </div>\n\n        <div
+        class=\"cright\">\n            <!--Previous copyright-->\n        </div>\n
+        \   </div>\n</div>\n\n<script type=\"text/javascript\">\n$(document).ready(function(){\n
+        \   /*Cooking Channel misc footer*/\n    $(\"#sister-sites.group.links div.right_box_border
+        div.col.daily:last\").css(\"border-right\",\"none\");\n    $('#sister_sites_container').css('display',
+        'block');  \n    /*User Intent Plugin sni-core*/\n    $(\"a#sister_sites_link\").userIntent();\n});\n</script>\n</div>\n\n
+        \       \n    \n    \n\n</div>\n\n\n\n\n\n \n\n\n\n        <script type=\"text/javascript\">\n
+        \         SuperstitialAd(2);\n          SuperstitialAd(3);\n        </script>\n\n
+        \       <div class=\"servicecomponents\"><div class=\"sitecatalyst cloudservice\">\n\n\n<script
+        type=\"text/javascript\" src=\"/etc/clientlibs/foundation/sitecatalyst/sitecatalyst.js\"></script>\n\n<script
+        type=\"text/javascript\" src=\"/content/cook/_jcr_content/analytics.sitecatalyst.js\"></script>\n<script
+        type=\"text/javascript\" src=\"/etc/clientlibs/foundation/sitecatalyst/plugins.js\"></script>\n\n<script
+        type=\"text/javascript\">\n<!--\n/* You may give each page an identifying
+        name, server, and channel on\nthe next lines. */\n\nCQ_Analytics.Sitecatalyst.frameworkComponents
+        = ['sni-wcm/components/modules/browse-more-recipes','sni-wcm/components/modules/blog-homepage','sni-wcm/components/modules/static-lead-single','foundation/components/page','sni-wcm/components/modules/static-lead-triple-promo','sni-wcm/components/util/page','sni-wcm/components/modules/integrated-ads','sni-wcm/components/modules/default-header','sni-wcm/components/modules/static-lead-tv-promo','sni-wcm/components/modules/on-tv-now','sni-wcm/components/modules/double-column-list/link-reuse','sni-wcm/components/modules/tdi-slug','sni-wcm/components/modules/most-popular','sni-wcm/components/modules/center-column-hero','sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab','sni-wcm/components/modules/single-column-list','sni-wcm/components/modules/static-lead-til-list','sni-wcm/components/modules/til-one','sni-wcm/components/modules/static-lead-til-triad'];\n/**\n
+        * Sets SiteCatalyst variables accordingly to mapped components. If <code>options</code>
+        \n * object is provided only variables matching the options.componentPath
+        are set.\n *\n * @param {Object} options Parameter object from CQ_Analytics.record()
+        call. Optional.\n */\nCQ_Analytics.Sitecatalyst.updateEvars = function(options)
+        {\n    var mapping = [];\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/browse-more-recipes\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/blog-homepage\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-single\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-triple-promo\"});\n\tmapping.push({scVar:\"eVar4\",cqVar:\"pagedata.searchTerms\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar5\",cqVar:\"pagedata.dimensions\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"event14\",cqVar:\"pagedata.searchTerms\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar9\",cqVar:\"pagedata.searchSort\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar6\",cqVar:\"pagedata.dimensionValues\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar7\",cqVar:\"pagedata.noSearchResults\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop60\",cqVar:\"pagedata.deliveryChannel\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop12\",cqVar:\"pagedata.talentName\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar45\",cqVar:\"pagedata.spotlight2\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop10\",cqVar:\"pagedata.type\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop11\",cqVar:\"pagedata.hubType\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop40\",cqVar:\"pagedata.adkey1\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop30\",cqVar:\"pagedata.noSearchResults\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop32\",cqVar:\"pagedata.userId\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop53\",cqVar:\"pagedata.siteName\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eventdata.events.pageView\",cqVar:\"event1\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop74\",cqVar:\"pagedata.searchSort\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop39\",cqVar:\"pagedata.deliveryFormat\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"event28\",cqVar:\"pagedata.spotlight1\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"pageName\",cqVar:\"pagedata.url\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop27\",cqVar:\"pagedata.noSearchResults\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar10\",cqVar:\"pagedata.userId\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop1\",cqVar:\"pagedata.hubId\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop23\",cqVar:\"pagedata.dimensions\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop24\",cqVar:\"pagedata.dimensionValues\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop25\",cqVar:\"pagedata.searchFilter\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop21\",cqVar:\"pagedata.searchTerms\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop22\",cqVar:\"pagedata.keyterm\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop44\",cqVar:\"pagedata.showAbbreviation\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar60\",cqVar:\"pagedata.deliveryChannel\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop43\",cqVar:\"pagedata.adkey2\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop42\",cqVar:\"pagedata.contentTag2\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop41\",cqVar:\"pagedata.contentTag1\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop46\",cqVar:\"pagedata.source\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop5\",cqVar:\"pagedata.sectionDisplayName\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop6\",cqVar:\"pagedata.title\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop9\",cqVar:\"pagedata.uniqueId\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"channel\",cqVar:\"pagedata.categoryDisplayName\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eVar41\",cqVar:\"pagedata.spotlight1\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop7\",cqVar:\"pagedata.sponsorship\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"prop8\",cqVar:\"pagedata.classification\",resourceType:\"sni-wcm/components/util/page\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/integrated-ads\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/default-header\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-tv-promo\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/on-tv-now\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/double-column-list/link-reuse\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/tdi-slug\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/most-popular\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/center-column-hero\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/featured-chefs/components/featured-chefs-tab\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/single-column-list\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-list\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/til-one\"});\n\tmapping.push({scVar:\"eventdata.events.linkclicked\",cqVar:\"event24\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"eVar16\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"prop18\",cqVar:\"eventdata.originUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"prop16\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"prop17\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"prop14\",cqVar:\"eventdata.componentName\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"prop15\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"eVar17\",cqVar:\"eventdata.linkPosition\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"eVar18\",cqVar:\"eventdata.linkTitle\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n\tmapping.push({scVar:\"eVar19\",cqVar:\"eventdata.targetUrl\",resourceType:\"sni-wcm/components/modules/static-lead-til-triad\"});\n
+        \   for (var i=0; i<mapping.length; i++){\n\t\tvar m = mapping[i];\n\t\tif
+        (!options || (options.componentPath == m.resourceType)) {\n\t\t\tCQ_Analytics.Sitecatalyst.setEvar(m.scVar,m.cqVar);\n\t\t}\n
+        \   }\n}\n\nCQ_Analytics.CCM.addListener(\"storesinitialize\", function(e)
+        {\n    var lte = s.linkTrackEvents;\n    // set page name\n    s.pageName=\"recipes:no-chef:m:mo:mon:monk:monkey-tail-banana-cake\";\n
+        \   // collect component events\n    CQ_Analytics.Sitecatalyst.collect();\n
+        \   // update \n    CQ_Analytics.Sitecatalyst.updateEvars();\n    /*************
+        DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/\n    var s_code=s.t();if(s_code)document.write(s_code);\n
+        \   s.linkTrackEvents = lte;\n    if(s.linkTrackVars.indexOf('events')==-1){delete
+        s.events};\n});\n\n\n//-->\n</script>\n<script type=\"text/javascript\">\n<!--\nif(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\\!-'+'-')\n//-->\n</script>\n\n<noscript><img
+        src=\"http://ewscripps.112.2o7.net/b/ss/scrippsfoodglobal,scrippscookingchannel/1/H.25--NS/1366729843291?cdp=2&amp;gn=recipes%3Ano-chef%3Am%3Amo%3Amon%3Amonk%3Amonkey-tail-banana-cake\"
+        height=\"1\" width=\"1\" border=\"0\" alt=\"\"/></noscript>\n\n<!-- send page
+        view and other values if need it -->\n<span record=\"'pageView', {}\"></span></div>\n<div
+        class=\"cloudservice tagmanager\">\n\n  <script type=\"text/javascript\" src=\"/etc/designs/sni-wcm/clientlibs/tagmanager.js\"></script>\n
+        \ \n\n\n<script type=\"text/javascript\">//<![CDATA[\n\nif (TagContainerLoader)
+        {\n    var t=new TagContainerLoader();\n\n    t.tagContainerDC=\"d1\";\n    t.tagContainerNamespace=\"ewscripps\";\n
+        \   t.tagContainerName=\"FoodCQ\";\n\n    CQ_Analytics.CCM.addListener(\"storesinitialize\",
+        function(e) {\n            t.loadTagContainer();\n    });\n}\n//]]></script></div>\n</div>\n\n\n
+        \       \n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Tue, 23 Apr 2013 15:10:43 GMT
+recorded_with: VCR 2.1.1

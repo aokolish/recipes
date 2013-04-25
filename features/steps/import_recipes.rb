@@ -2,6 +2,8 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
   attr_accessor :user
   include CommonSteps::Login
 
+  FN_URL = "http://www.foodnetwork.com/recipes/ina-garten/strawberry-tarts-recipe/index.html"
+
   def import_recipe(url)
     if page.current_path != import_recipes_path
       visit import_recipes_path
@@ -12,7 +14,7 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
   end
 
   step 'I submit the import form' do
-    import_recipe "http://www.foodnetwork.com/example"
+    import_recipe FN_URL
   end
 
   step 'a recipe should be created' do
@@ -20,8 +22,8 @@ class Spinach::Features::ImportRecipes < Spinach::FeatureSteps
   end
 
   step 'I import the same recipe twice' do
-    import_recipe "http://www.foodnetwork.com/example"
-    import_recipe "http://www.foodnetwork.com/example"
+    import_recipe FN_URL
+    import_recipe FN_URL
   end
 
   step 'I should see that it has already been imported' do

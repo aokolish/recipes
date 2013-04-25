@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'simplecov'
+require 'database_cleaner'
+require 'vcr'
 
 def zeus_running?
   File.exists? '.zeus.sock'
@@ -8,8 +10,6 @@ end
 if !zeus_running?
   SimpleCov.start
 end
-
-require 'database_cleaner'
 
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
@@ -20,12 +20,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 RSpec.configure do |config|
   config.include(UserMacros)
   config.mock_with :rspec
-
-  # stop on the first failure
   config.fail_fast = true
   config.use_transactional_fixtures = false
-
-  Capybara.javascript_driver = :webkit
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
@@ -38,14 +34,22 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
-  # cache external pages for use in various tests
-  response = `curl -is http://www.foodnetwork.com/recipes/ina-garten/strawberry-tarts-recipe/index.html`
-  FakeWeb.register_uri(:get, "http://www.foodnetwork.com/example", :response => response)
-
-  response = `curl -is http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake-recipe/index.html`
-  FakeWeb.register_uri(:get, "http://www.cookingchanneltv.com/example", :response => response)
 end
+
+Capybara.javascript_driver = :webkit
+
+VCR.configure do |config|
+  config.default_cassette_options = { record: :new_episodes }
+  config.cassette_library_dir = 'fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.ignore_localhost = true
+  config.configure_rspec_metadata!
+  if ENV['WITHOUT_VCR']
+    config.default_cassette_options = {record: :all}
+    puts "VCR: ignoring all cassettes"
+  end
+end
+
 
 # helper to get all images for specs
 def images
