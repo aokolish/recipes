@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Recipe do
   let(:recipe) { Recipe.new(:title => 'Pasta',
-                               :ingredients => '1 pound spaghetti|water|salt',
-                               :directions => 'boil generous amount of water|add salt|boil pasta') }
+                            :ingredients => '1 pound spaghetti|water|salt',
+                            :directions => 'boil generous amount of water|add salt|boil pasta') }
 
   describe "#ingredients" do
     it "splits the ingredients on pipes" do
@@ -21,8 +21,8 @@ describe Recipe do
 
   describe ".search" do
     let(:recipe) { FactoryGirl.build(:recipe, :title => 'Pasta',
-                                 :ingredients => '1 pound spaghetti|water|salt',
-                                 :directions => 'boil generous amount of water|add salt|boil pasta') }
+                                     :ingredients => '1 pound spaghetti|water|salt',
+                                     :directions => 'boil generous amount of water|add salt|boil pasta') }
     it "returns an empty array if nothing is found" do
       Recipe.search('aoeu').should eq([])
     end
