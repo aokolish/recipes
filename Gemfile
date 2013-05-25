@@ -42,10 +42,11 @@ group :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'ruby_gntp'
-  gem "fakeweb"
   gem "rb-fsevent"
   gem "spinach-rails"
   gem 'pg'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :assets do

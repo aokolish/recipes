@@ -3,12 +3,13 @@ require 'spec_helper'
 describe "Scraper" do
   let(:scraper) { Scraper.new }
 
-  it "scrapes foodnetwork" do
-    recipe = scraper.scrape("http://www.foodnetwork.com/example")
+  it "scrapes foodnetwork", vcr: true do
+    url = "http://www.foodnetwork.com/recipes/ina-garten/strawberry-tarts-recipe/index.html"
+    recipe = scraper.scrape(url)
     recipe.valid?
     recipe.title.should eq("Strawberry Tarts")
     recipe.author.should eq("Ina Garten")
-    recipe.source_url.should eq("http://www.foodnetwork.com/example")
+    recipe.source_url.should eq(url)
     recipe.total_time.should eq("2 hr 0 min")
     recipe.yield.should eq("4 tarts")
     recipe.ingredients.should include(
@@ -17,12 +18,13 @@ describe "Scraper" do
       "Combine the flour, sugar, and salt in a small bowl and place in the freezer for 30 minutes.")
   end
 
-  it "scrapes cookingchanneltv" do
-    recipe = scraper.scrape("http://www.cookingchanneltv.com/example")
+  it "scrapes cookingchanneltv", vcr: true do
+    url = "http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake-recipe/index.html"
+    recipe = scraper.scrape(url)
     recipe.valid?
     recipe.title.should eq("Monkey Tail Banana Cake")
     recipe.author.should eq("Recipe courtesy Sara A. Hodgson for 2011 Cooking Channel, LLC. All Rights Reserved.")
-    recipe.source_url.should eq("http://www.cookingchanneltv.com/example")
+    recipe.source_url.should eq(url)
     recipe.total_time.should eq("2 hr 8 min")
     recipe.yield.should eq("12 servings")
     recipe.ingredients.should include("3/4 cup  unsalted butter, at room temperature|1 1/2 cups packed light  brown sugar|")

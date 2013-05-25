@@ -1,6 +1,3 @@
-#not sure if I want to use simple cov w/these tests
-#require 'simplecov'
-#SimpleCov.start
 ENV['RAILS_ENV'] ||= 'spinach'
 require 'rack/test'
 require 'factory_girl'
@@ -10,8 +7,8 @@ require 'rspec/core'
 require 'rspec/expectations'
 require 'capybara/poltergeist'
 require 'database_cleaner'
-require 'fakeweb'
 require 'pry'
+require 'vcr'
 
 begin
   require './spec/factories'
@@ -30,17 +27,27 @@ Capybara.javascript_driver = :poltergeist
 
 DatabaseCleaner.strategy = :truncation
 
-Spinach.hooks.before_run do |scenario_data|
-  # TODO: change this to VCR or something so I can work offline
-  response = `curl -is http://www.foodnetwork.com/recipes/ina-garten/strawberry-tarts-recipe/index.html`
-  FakeWeb.register_uri(:get, "http://www.foodnetwork.com/example", :response => response)
-
-  response = `curl -is http://www.cookingchanneltv.com/recipes/monkey-tail-banana-cake-recipe/index.html`
-  FakeWeb.register_uri(:get, "http://www.cookingchanneltv.com/example", :response => response)
+VCR.configure do |config|
+  config.default_cassette_options = { record: :new_episodes }
+  config.cassette_library_dir = 'fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.ignore_localhost = true
+  if ENV['WITHOUT_VCR']
+    config.default_cassette_options = {record: :all}
+    puts "VCR: ignoring all cassettes"
+  end
 end
 
 Spinach.hooks.around_scenario do |scenario_data, step_definitions, &block|
   DatabaseCleaner.start
   block.call
   DatabaseCleaner.clean
+end
+
+Spinach.hooks.before_scenario do |scenario|
+  VCR.insert_cassette(scenario.name.parameterize)
+end
+
+Spinach.hooks.after_scenario do
+  VCR.eject_cassette
 end
