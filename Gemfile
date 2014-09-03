@@ -22,7 +22,6 @@ gem "rspec-rails" # => cannot be in test group because it breaks rake on heroku
 
 group :development do
   gem 'meta_request'
-  gem 'localtunnel'
   gem "nifty-generators"
 end
 
@@ -44,7 +43,6 @@ group :test do
   gem 'ruby_gntp'
   gem "rb-fsevent"
   gem "spinach-rails"
-  gem 'pg'
   gem 'vcr'
   gem 'webmock'
 end
@@ -56,8 +54,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :production do
+group :production, :test do
   gem 'pg'
+end
+
+group :production do
   gem 'newrelic_rpm'
   gem 'unicorn'
 end
